@@ -7,7 +7,8 @@ namespace ProjektArbete
 {
     class Test
     {
-        //Det här är en testklass
-        string test = "test";
+        //Det är en testklass
+        string test = "täst";
+        //LITEN ÄNDRING.
     }
 }
