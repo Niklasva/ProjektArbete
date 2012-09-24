@@ -8,7 +8,13 @@ namespace ProjektArbete
     class Test
     {
         //Det är en testklass
-        string test = "täst";
+        private string test;
         //LITEN ÄNDRING.
+
+        //konstruktor
+        public Test(string test)
+        {
+            this.test = test;
+        }
     }
 }
