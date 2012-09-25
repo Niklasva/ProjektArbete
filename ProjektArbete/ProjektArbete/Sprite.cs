@@ -14,17 +14,19 @@ namespace ProjektArbete
 {
     class Sprite
     {
-        public Texture2D Texture { get; set; }
-        public Vector2 Position {get; set;}
+        private Texture2D texture { get; set; }
+        private Vector2 position {get; set;}
+
+        //Konstruktor
         public Sprite(Texture2D texture, Vector2 position)
         {
-            Texture = texture;
-            Position = position;
+            this.texture = texture;
+            this.position = position;
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Texture, Position, Color.White);
+            spriteBatch.Draw(texture, position, Color.White);
         }
     }
 }
