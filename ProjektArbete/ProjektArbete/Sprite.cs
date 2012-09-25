@@ -14,8 +14,8 @@ namespace ProjektArbete
 {
     class Sprite
     {
-        private Texture2D texture { get; set; }
-        private Vector2 position {get; set;}
+        private Texture2D texture;
+        private Vector2 position;
 
         //Konstruktor
         public Sprite(Texture2D texture, Vector2 position)
@@ -24,9 +24,36 @@ namespace ProjektArbete
             this.position = position;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        //Ritar ut sprite
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, position, Color.White);
+        }
+
+        //get och set
+        public Texture2D Texture
+        {
+            set
+            {
+                this.texture = value;
+            }
+            get
+            {
+                return this.texture;
+            }
+        }
+
+        //Get och set
+        public Vector2 Position
+        {
+            set
+            {
+                this.position = value;
+            }
+            get
+            {
+                return this.position;
+            }
         }
     }
 }
