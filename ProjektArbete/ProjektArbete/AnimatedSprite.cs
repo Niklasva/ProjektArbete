@@ -35,7 +35,7 @@ namespace ProjektArbete
         }
 
         //Ritar ut den animerade figuren
-        public override void Draw(SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(Texture,
                 Position,

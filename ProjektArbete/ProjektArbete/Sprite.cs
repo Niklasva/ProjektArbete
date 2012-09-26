@@ -25,7 +25,7 @@ namespace ProjektArbete
         }
 
         //Ritar ut sprite
-        public virtual void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, position, Color.White);
         }
