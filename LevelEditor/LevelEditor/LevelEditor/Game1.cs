@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.IO;
 
 namespace LevelEditor
 {
@@ -23,8 +24,9 @@ namespace LevelEditor
         Texture2D texture;
         MouseState currentMouseState;
         MouseState lastMouseState;
-        int noClicks = 0;
         Vector2 mousePosition;
+        Texture2D bgTexture;
+        Stream bgStream;
 
         public Game1()
         {
@@ -55,7 +57,7 @@ namespace LevelEditor
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            bgTexture = Content.Load<Texture2D>(@"images/null");
             texture = Content.Load<Texture2D>(@"images/point");
         }
 
@@ -75,17 +77,29 @@ namespace LevelEditor
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
 
             lastMouseState = currentMouseState;
             currentMouseState = Mouse.GetState();
             mousePosition.X = currentMouseState.X - texture.Width / 2;
             mousePosition.Y = currentMouseState.Y - texture.Height / 2;
-            if (currentMouseState.LeftButton == ButtonState.Released && lastMouseState.LeftButton == ButtonState.Pressed)
+
+            // Läser in bakgrund från en stream i formobjektet
+            bgStream = form.bgStream;
+
+            // Skapar en punkt när man klickar om fönstret är aktivt
+            if (currentMouseState.LeftButton == ButtonState.Released && 
+                lastMouseState.LeftButton == ButtonState.Pressed && 
+                System.Windows.Forms.Form.ActiveForm == (System.Windows.Forms.Control.FromHandle(Window.Handle) as System.Windows.Forms.Control))
             {
                 spriteList.Add(new Sprite(texture, mousePosition));
+            }
+            
+            // Byter bakgrund när man högerklickar
+            // NOTERA: Dum lösning, programmet kraschar ibland när man högerklickar och jag vill nog hellre ha en refreshknapp i Form1.
+            if (currentMouseState.RightButton == ButtonState.Released && lastMouseState.RightButton == ButtonState.Pressed)
+            {
+                //Konverterar bgStream till Texture2D
+                bgTexture = Texture2D.FromStream(GraphicsDevice, bgStream);
             }
 
             base.Update(gameTime);
@@ -97,11 +111,16 @@ namespace LevelEditor
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
+            spriteBatch.Draw(bgTexture, new Rectangle(0, 0, Window.ClientBounds.Width, Window.ClientBounds.Height), Color.White);
+            spriteBatch.End();
+
+            // Ritar ut punkter
             foreach (Sprite s in spriteList)
             {
                 s.Draw(gameTime, spriteBatch);
