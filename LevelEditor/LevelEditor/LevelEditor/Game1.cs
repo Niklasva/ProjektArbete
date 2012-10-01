@@ -19,6 +19,11 @@ namespace LevelEditor
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Form1 form;
+        List<Sprite> spriteList = new List<Sprite>();
+        Texture2D texture;
+        MouseState mouseState;
+        int noClicks = 0;
+        Vector2 mousePosition;
 
         public Game1()
         {
@@ -37,6 +42,7 @@ namespace LevelEditor
             form = new Form1();
             form.ShowInTaskbar = false;
             form.Show();
+            this.IsMouseVisible = true;
             base.Initialize();
         }
 
@@ -49,7 +55,7 @@ namespace LevelEditor
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            texture = Content.Load<Texture2D>(@"images/point");
         }
 
         /// <summary>
@@ -72,7 +78,14 @@ namespace LevelEditor
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
+
+            mouseState = Mouse.GetState();
+            mousePosition.X = mouseState.X - texture.Width / 2;
+            mousePosition.Y = mouseState.Y - texture.Height / 2;
+            if (mouseState.LeftButton == ButtonState.Pressed)
+            {
+                spriteList.Add(new Sprite(texture, mousePosition));
+            }
 
             base.Update(gameTime);
         }
@@ -88,6 +101,10 @@ namespace LevelEditor
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+            foreach (Sprite s in spriteList)
+            {
+                s.Draw(gameTime, spriteBatch);
+            }
         }
     }
 }
