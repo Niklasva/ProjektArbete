@@ -21,7 +21,8 @@ namespace LevelEditor
         Form1 form;
         List<Sprite> spriteList = new List<Sprite>();
         Texture2D texture;
-        MouseState mouseState;
+        MouseState currentMouseState;
+        MouseState lastMouseState;
         int noClicks = 0;
         Vector2 mousePosition;
 
@@ -78,11 +79,11 @@ namespace LevelEditor
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-
-            mouseState = Mouse.GetState();
-            mousePosition.X = mouseState.X - texture.Width / 2;
-            mousePosition.Y = mouseState.Y - texture.Height / 2;
-            if (mouseState.LeftButton == ButtonState.Pressed)
+            lastMouseState = currentMouseState;
+            currentMouseState = Mouse.GetState();
+            mousePosition.X = currentMouseState.X - texture.Width / 2;
+            mousePosition.Y = currentMouseState.Y - texture.Height / 2;
+            if (currentMouseState.LeftButton == ButtonState.Released && lastMouseState.LeftButton == ButtonState.Pressed)
             {
                 spriteList.Add(new Sprite(texture, mousePosition));
             }
