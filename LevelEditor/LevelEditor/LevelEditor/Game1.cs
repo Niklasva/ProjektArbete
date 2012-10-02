@@ -19,17 +19,24 @@ namespace LevelEditor
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+
         Form1 form;
         List<Sprite> spriteList = new List<Sprite>();
         Texture2D texture;
         MouseState currentMouseState;
         MouseState lastMouseState;
+        Vector2 mousePositionPoint;
         Vector2 mousePosition;
         Texture2D bgTexture;
         Stream bgStream;
 
+        private List<Vector2> vertexes;
+        const int maxLines = 32;
+
         public Game1()
         {
+            vertexes = new List<Vector2>();
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
@@ -57,6 +64,7 @@ namespace LevelEditor
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            PolygonDraw.LoadContent(GraphicsDevice);
             bgTexture = Content.Load<Texture2D>(@"images/null");
             texture = Content.Load<Texture2D>(@"images/point");
         }
@@ -80,8 +88,12 @@ namespace LevelEditor
 
             lastMouseState = currentMouseState;
             currentMouseState = Mouse.GetState();
-            mousePosition.X = currentMouseState.X - texture.Width / 2;
-            mousePosition.Y = currentMouseState.Y - texture.Height / 2;
+            mousePositionPoint.X = currentMouseState.X - texture.Width / 2;
+            mousePositionPoint.Y = currentMouseState.Y - texture.Height / 2;
+
+
+            mousePosition.X = currentMouseState.X;
+            mousePosition.Y = currentMouseState.Y;
 
             // Läser in bakgrund från en stream i formobjektet
             bgStream = form.bgStream;
@@ -91,7 +103,9 @@ namespace LevelEditor
                 lastMouseState.LeftButton == ButtonState.Pressed && 
                 System.Windows.Forms.Form.ActiveForm == (System.Windows.Forms.Control.FromHandle(Window.Handle) as System.Windows.Forms.Control))
             {
-                spriteList.Add(new Sprite(texture, mousePosition));
+                vertexes.Add(mousePosition);
+                spriteList.Add(new Sprite(texture, mousePositionPoint));
+                
             }
             
             // Byter bakgrund när man högerklickar
@@ -115,15 +129,36 @@ namespace LevelEditor
 
             // TODO: Add your drawing code here
 
-            base.Draw(gameTime);
+            
+
+            
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
+
+            
             spriteBatch.Draw(bgTexture, new Rectangle(0, 0, Window.ClientBounds.Width, Window.ClientBounds.Height), Color.White);
+            DrawLines();
             spriteBatch.End();
+            base.Draw(gameTime);
 
             // Ritar ut punkter
             foreach (Sprite s in spriteList)
             {
                 s.Draw(gameTime, spriteBatch);
+            }
+        }
+
+        private void DrawLines()
+        {
+            for (int i = 0; i < vertexes.Count - 1; i++)
+            {
+                spriteBatch.DrawLineSegment(vertexes[i], vertexes[i + 1], Color.Orange, 3);
+            }
+
+            if (vertexes.Count > 0 &&
+                System.Windows.Forms.Form.ActiveForm == (System.Windows.Forms.Control.FromHandle(Window.Handle) as System.Windows.Forms.Control))
+            {
+                Vector2 mousePosition = new Vector2(currentMouseState.X, currentMouseState.Y);
+                spriteBatch.DrawLineSegment(vertexes[vertexes.Count - 1], mousePosition, Color.OrangeRed, 3);
             }
         }
     }
