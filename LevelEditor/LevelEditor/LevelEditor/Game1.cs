@@ -130,6 +130,8 @@ namespace LevelEditor
                 spriteList.Clear();
             }
 
+            Triangulator2D.Triangulate(vertexes.ToArray());
+
             base.Update(gameTime);
         }
 
@@ -142,6 +144,7 @@ namespace LevelEditor
             GraphicsDevice.Clear(Color.White);
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
             spriteBatch.Draw(bgTexture, new Rectangle(0, 0, Window.ClientBounds.Width, Window.ClientBounds.Height), Color.White);
+
             DrawLines();
             spriteBatch.End();
             base.Draw(gameTime);
