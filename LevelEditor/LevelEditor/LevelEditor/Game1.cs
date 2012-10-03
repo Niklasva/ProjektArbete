@@ -17,19 +17,24 @@ namespace LevelEditor
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-
         Form1 form;
+        Stream bgStream;
+
         List<Sprite> spriteList = new List<Sprite>();
+
+        Texture2D bgTexture;
         Texture2D texture;
+
         MouseState currentMouseState;
         MouseState lastMouseState;
         Vector2 mousePositionPoint;
         Vector2 mousePosition;
-        Texture2D bgTexture;
-        Stream bgStream;
+        
+        
 
         private List<Vector2> vertexes;
         const int maxLines = 32;
@@ -85,7 +90,7 @@ namespace LevelEditor
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-
+            KeyboardState keyboardState = Keyboard.GetState();
             lastMouseState = currentMouseState;
             currentMouseState = Mouse.GetState();
             mousePositionPoint.X = currentMouseState.X - texture.Width / 2;
@@ -98,10 +103,11 @@ namespace LevelEditor
             // Läser in bakgrund från en stream i formobjektet
             bgStream = form.bgStream;
 
-            // Skapar en punkt när man klickar om fönstret är aktivt
+            // Skapar en punkt när man klickar om fönstret är aktivt och mode är draw
             if (currentMouseState.LeftButton == ButtonState.Released && 
                 lastMouseState.LeftButton == ButtonState.Pressed && 
-                System.Windows.Forms.Form.ActiveForm == (System.Windows.Forms.Control.FromHandle(Window.Handle) as System.Windows.Forms.Control))
+                System.Windows.Forms.Form.ActiveForm == (System.Windows.Forms.Control.FromHandle(Window.Handle) as System.Windows.Forms.Control) &&
+                Form1.mode == Form1.Mode.Drawing)
             {
                 vertexes.Add(mousePosition);
                 spriteList.Add(new Sprite(texture, mousePositionPoint));
@@ -112,8 +118,16 @@ namespace LevelEditor
             // NOTERA: Dum lösning, programmet kraschar ibland när man högerklickar och jag vill nog hellre ha en refreshknapp i Form1.
             if (currentMouseState.RightButton == ButtonState.Released && lastMouseState.RightButton == ButtonState.Pressed)
             {
-                //Konverterar bgStream till Texture2D
+                // Konverterar bgStream till Texture2D
                 bgTexture = Texture2D.FromStream(GraphicsDevice, bgStream);
+            }
+            
+
+            // Tar bort punkter och linjer med deletetangenten
+            if (keyboardState.IsKeyDown(Keys.Delete))
+            {
+                vertexes.Clear();
+                spriteList.Clear();
             }
 
             base.Update(gameTime);
@@ -126,15 +140,7 @@ namespace LevelEditor
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.White);
-
-            // TODO: Add your drawing code here
-
-            
-
-            
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
-
-            
             spriteBatch.Draw(bgTexture, new Rectangle(0, 0, Window.ClientBounds.Width, Window.ClientBounds.Height), Color.White);
             DrawLines();
             spriteBatch.End();
@@ -152,13 +158,6 @@ namespace LevelEditor
             for (int i = 0; i < vertexes.Count - 1; i++)
             {
                 spriteBatch.DrawLineSegment(vertexes[i], vertexes[i + 1], Color.Orange, 3);
-            }
-
-            if (vertexes.Count > 0 &&
-                System.Windows.Forms.Form.ActiveForm == (System.Windows.Forms.Control.FromHandle(Window.Handle) as System.Windows.Forms.Control))
-            {
-                Vector2 mousePosition = new Vector2(currentMouseState.X, currentMouseState.Y);
-                spriteBatch.DrawLineSegment(vertexes[vertexes.Count - 1], mousePosition, Color.OrangeRed, 3);
             }
         }
     }

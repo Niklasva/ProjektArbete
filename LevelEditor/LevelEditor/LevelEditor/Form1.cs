@@ -12,10 +12,17 @@ namespace LevelEditor
 {
     public partial class Form1 : Form
     {
+        public enum Mode
+        {
+            Drawing,
+            NotDrawing,
+        }
+        public static Mode mode;
         public Stream bgStream = new FileStream("../../../../LevelEditorContent/images/null.png", FileMode.Open, FileAccess.Read, FileShare.Read);
         public Form1()
         {
             InitializeComponent();
+            mode = Mode.NotDrawing;
         }
 
 
@@ -33,6 +40,16 @@ namespace LevelEditor
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mode = Mode.Drawing;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mode = Mode.NotDrawing;
         }
     }
 }
