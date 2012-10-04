@@ -43,6 +43,9 @@ namespace LevelEditor
         {
             vertexes = new List<Vector2>();
             graphics = new GraphicsDeviceManager(this);
+            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferWidth = 320;
+            graphics.PreferredBackBufferHeight = 180;
             Content.RootDirectory = "Content";
         }
 
@@ -130,7 +133,7 @@ namespace LevelEditor
                 spriteList.Clear();
             }
 
-            Triangulator2D.Triangulate(vertexes.ToArray());
+            //Triangulator2D.Triangulate(vertexes.ToArray());
 
             base.Update(gameTime);
         }
