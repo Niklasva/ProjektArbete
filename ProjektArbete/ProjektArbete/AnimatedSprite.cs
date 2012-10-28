@@ -14,24 +14,21 @@ namespace ProjektArbete
 {
     class AnimatedSprite : Sprite
     {
-        private Point frameSize { get; set; }
-        private Point currentFrame { get; set; }
-        private Point sheetSize { get; set; }
-        private int timeSinceLastFrame { get; set; }
-        private int millisecondsPerFrame { get; set; }
-        private int collisionRectOffset { get; set; }
+        private Point frameSize;
+        private Point currentFrame;
+        private Point sheetSize;
+        private int timeSinceLastFrame = 0;
+        private int millisecondsPerFrame;
 
         //Konstruktor
-        public AnimatedSprite(Texture2D texture, Vector2 position, Point frameSize, Point currentFrame, Point sheetSize,
-                         int timeSinceLastFame, int millisecondsPerFrame, int collisionRectOffset)
-            : base(texture, position)
+        public AnimatedSprite(Texture2D texture, Vector2 position, int collisionOffset, Point frameSize, Point currentFrame, Point sheetSize,
+                         int millisecondsPerFrame)
+            : base(texture, position, collisionOffset)
         {
             this.frameSize = frameSize;
             this.currentFrame = currentFrame;
             this.sheetSize = sheetSize;
-            this.timeSinceLastFrame = timeSinceLastFame;
             this.millisecondsPerFrame = millisecondsPerFrame;
-            this.collisionRectOffset = collisionRectOffset;
         }
 
         //Ritar ut den animerade figuren
@@ -49,6 +46,24 @@ namespace ProjektArbete
                 1,
                 SpriteEffects.None,
                 0);
+        }
+
+        public void Update(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
+            if (timeSinceLastFrame > millisecondsPerFrame)
+            {
+                timeSinceLastFrame = 0;
+                ++currentFrame.X;
+                if (currentFrame.X >= sheetSize.X)
+                {
+                    currentFrame.X = 0;
+                    ++currentFrame.Y;
+                    if (currentFrame.Y >= sheetSize.Y)
+                        currentFrame.Y = 0;
+                }
+
+            }
         }
     }
 }

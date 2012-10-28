@@ -19,12 +19,14 @@ namespace ProjektArbete
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Sprite item;
+        AnimatedSprite animatedItem;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferWidth = 320;
-            graphics.PreferredBackBufferHeight = 180;
+            graphics.PreferredBackBufferWidth = 320 * 2;
+            graphics.PreferredBackBufferHeight = 180 * 2;
             Content.RootDirectory = "Content";
         }
 
@@ -50,6 +52,9 @@ namespace ProjektArbete
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            item = new Sprite(Content.Load<Texture2D>(@"Images/Sprites/object"), new Vector2(40, 60), 10);
+            animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
+                new Point(0, 0), new Point(6, 8), 16);
             // TODO: use this.Content to load your game content here
         }
 
@@ -72,6 +77,7 @@ namespace ProjektArbete
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            animatedItem.Update(gameTime, spriteBatch);
 
             // TODO: Add your update logic here
 
@@ -85,7 +91,10 @@ namespace ProjektArbete
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.AntiqueWhite);
-
+            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
+            item.Draw(gameTime, spriteBatch);
+            animatedItem.Draw(gameTime, spriteBatch);
+            spriteBatch.End();
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);

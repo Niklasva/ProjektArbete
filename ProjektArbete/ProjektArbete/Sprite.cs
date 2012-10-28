@@ -16,20 +16,20 @@ namespace ProjektArbete
     {
         private Texture2D texture;
         private Vector2 position;
+        private int collisionOffset;
 
-        //Konstruktor
-        public Sprite(Texture2D texture, Vector2 position)
+        //Konstruktorer
+        public Sprite(Texture2D texture, Vector2 position, int collisionOffset)
         {
             this.texture = texture;
             this.position = position;
+            this.collisionOffset = collisionOffset;
         }
 
         //Ritar ut sprite
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
             spriteBatch.Draw(texture, position, Color.White);
-            spriteBatch.End();
         }
 
         //get och set
