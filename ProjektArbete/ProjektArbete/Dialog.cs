@@ -21,9 +21,9 @@ namespace ProjektArbete
             this.dialogID = dialogID;
             this.playerPosition = playerPosition;
         }
-        public override void LoadContent()
+        public void LoadContent()
         {
-            using (StreamReader reader = new StreamReader(@"dialog.txt"))
+            using (StreamReader reader = new StreamReader(@"Data/dialog"))
             {
                 string line = reader.ReadLine();
                 while (line != null)

@@ -56,9 +56,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dialog.txt">
+    <None Include="Data\dialog.fil">
       <Name>dialog</Name>
-    </Compile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\npc.fil">
+      <Name>npc</Name>
+    </None>
+    <None Include="Data\objekt.fil">
+      <Name>objekt</Name>
+    </None>
+    <None Include="Data\rum.fil">
+      <Name>rum</Name>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
