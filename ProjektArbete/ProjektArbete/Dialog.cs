@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ProjektArbete
 {
     class Dialog
     {
-        NPC npc;
+        Vector2 npcPosition;
+        Vector2 playerPosition;
         String dialogID;
-        Player player;
         List<string> lines = new List<string>();
         //Konstruktor
-        public Dialog(Player player, NPC npc, String dialogID)
+        public Dialog(Vector2 playerPosition, Vector2 npcPosition, String dialogID)
         {
-            this.npc = npc;
+            this.npcPosition = npcPosition;
             this.dialogID = dialogID;
-            this.player = player;
+            this.playerPosition = playerPosition;
         }
         public override void LoadContent()
         {
@@ -34,6 +36,10 @@ namespace ProjektArbete
                     }
                 }
             }
+        }
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            
         }
     }
 }
