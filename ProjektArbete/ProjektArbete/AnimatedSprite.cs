@@ -48,6 +48,7 @@ namespace ProjektArbete
                 0);
         }
 
+        //Updaterar figuren
         public void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;

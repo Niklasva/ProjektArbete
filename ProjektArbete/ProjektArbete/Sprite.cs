@@ -32,7 +32,7 @@ namespace ProjektArbete
             spriteBatch.Draw(texture, position, Color.White);
         }
 
-        //get och set
+        //get och set för texturer
         public Texture2D Texture
         {
             set
@@ -45,7 +45,7 @@ namespace ProjektArbete
             }
         }
 
-        //Get och set
+        //Get och set fär position
         public Vector2 Position
         {
             set
