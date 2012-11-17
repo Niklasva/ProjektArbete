@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Library;
 
 namespace ProjektArbete
 {
@@ -18,10 +19,11 @@ namespace ProjektArbete
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Dialog testDialog;
+        //Dialog testDialog;
 
         Sprite item;
         AnimatedSprite animatedItem;
+        NPC npc1;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -57,8 +59,10 @@ namespace ProjektArbete
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
             
-            testDialog = new Dialog(new Vector2(20, 20), new Vector2(10, 120), "1", Content.Load<SpriteFont>(@"font"));
-            testDialog.LoadDialog();
+            //testDialog = new Dialog(new Vector2(20, 20), new Vector2(10, 120), "1", Content.Load<SpriteFont>(@"font"));
+            //testDialog.LoadDialog();
+            npc1 = Content.Load<NPC>("NPC1");
+            System.Console.WriteLine(npc1.name);
         }
 
         /// <summary>
@@ -97,7 +101,7 @@ namespace ProjektArbete
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
             item.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
-            testDialog.Draw(gameTime, spriteBatch);
+            //testDialog.Draw(gameTime, spriteBatch);
             spriteBatch.End();
             // TODO: Add your drawing code here
             

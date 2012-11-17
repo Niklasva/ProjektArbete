@@ -78,6 +78,19 @@
       <Name>rum</Name>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NPC1.xml">
+      <Name>NPC1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Library\Library.csproj">
+      <Project>{A23291EB-5713-4D94-9EDC-D3E6CAA26E8E}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
