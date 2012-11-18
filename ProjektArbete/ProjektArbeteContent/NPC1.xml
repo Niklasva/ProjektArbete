@@ -2,6 +2,7 @@
 <XnaContent>
   <Asset Type="Library.NPC">
   <name>"Niklas"</name>
-  <position>50 20</position>
+    <position>15 50</position>
+    <dialogID>0</dialogID>
   </Asset>
 </XnaContent>

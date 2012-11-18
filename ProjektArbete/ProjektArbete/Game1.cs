@@ -24,6 +24,7 @@ namespace ProjektArbete
         Sprite item;
         AnimatedSprite animatedItem;
         NPC npc1;
+        Player player = new Player();
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -31,6 +32,8 @@ namespace ProjektArbete
             graphics.PreferredBackBufferWidth = 320 * 2;
             graphics.PreferredBackBufferHeight = 180 * 2;
             Content.RootDirectory = "Content";
+            Registry.playerPosition = player.position;
+            
         }
 
         /// <summary>
@@ -62,7 +65,12 @@ namespace ProjektArbete
             //testDialog = new Dialog(new Vector2(20, 20), new Vector2(10, 120), "1", Content.Load<SpriteFont>(@"font"));
             //testDialog.LoadDialog();
             npc1 = Content.Load<NPC>("NPC1");
+            npc1.setDialog(Content.Load<Dialog>("Dialog1"));
+
+            //test
             System.Console.WriteLine(npc1.name);
+            System.Console.WriteLine(npc1.position.ToString());
+            System.Console.WriteLine(npc1.getDialog());
         }
 
         /// <summary>

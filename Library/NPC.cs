@@ -17,5 +17,18 @@ namespace Library
     {
         public String name;
         public Vector2 position;
+        public int dialogID;
+        private Dialog dialog;
+
+        public void setDialog(Dialog dialog)
+        {
+            this.dialog = dialog;
+        }
+
+        public String getDialog()
+        {
+           return dialog.lines[0];
+        }
     }
+
 }
