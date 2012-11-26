@@ -13,5 +13,6 @@ namespace Library
     public static class Registry
     {
         public static Vector2 playerPosition;
+        public static Room currentRoom;
     }
 }

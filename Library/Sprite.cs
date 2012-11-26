@@ -10,9 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace ProjektArbete
+namespace Library
 {
-    class Sprite
+    public class Sprite
     {
         private Texture2D texture;
         private Vector2 position;

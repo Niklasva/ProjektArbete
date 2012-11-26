@@ -19,6 +19,7 @@ namespace ProjektArbete
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
         //Dialog testDialog;
 
         Sprite item;
@@ -65,6 +66,7 @@ namespace ProjektArbete
             //testDialog = new Dialog(new Vector2(20, 20), new Vector2(10, 120), "1", Content.Load<SpriteFont>(@"font"));
             //testDialog.LoadDialog();
             npc1 = Content.Load<NPC>("NPC1");
+            npc1.setTexture(Content.Load<Texture2D>(@"Images/Sprites/object"));
             npc1.setDialog(Content.Load<Dialog>("Dialog1"));
 
             //test
@@ -109,6 +111,7 @@ namespace ProjektArbete
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
             item.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
+            //npc1.Draw(gameTime, spriteBatch);
             //testDialog.Draw(gameTime, spriteBatch);
             spriteBatch.End();
             // TODO: Add your drawing code here
