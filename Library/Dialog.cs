@@ -11,25 +11,44 @@ namespace Library
 {
     public class Dialog
     {
-        public Vector2 playerPosition
+        public List<Line> lines;
+    }
+
+    public class Line
+    {
+        public string speaker;
+        public Vector2 position;
+        public String line;
+        private Color color
         {
             get
             {
-                return Registry.playerPosition;
+                if (speaker == "Player")
+                {
+                    return Color.Red;
+                }
+
+                else if (speaker == "NPC")
+                {
+                    return Color.Blue;
+                }
+
+                else if (speaker == "Narrator")
+                {
+                    //smoke
+                    return Color.Wheat;
+                }
+
+                else
+                {
+                    return Color.Black;
+                }
             }
         }
-        public List<String> lines;
 
-        //Vector2 npcPosition;
-        
-        //String dialogID;
-        //List<string> lines = new List<string>();
-
-        //public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        //{
-        //    spriteBatch.DrawString(font, 
-        //        lines[0]
-        //        , new Vector2(5, 5), Color.Red);
-        //}
+        public Color getColor()
+        {
+            return color;
+        }
     }
 }

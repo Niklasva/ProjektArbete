@@ -67,12 +67,9 @@ namespace ProjektArbete
             //testDialog.LoadDialog();
             npc1 = Content.Load<NPC>("NPC1");
             npc1.setTexture(Content.Load<Texture2D>(@"Images/Sprites/object"));
-            npc1.setDialog(Content.Load<Dialog>("Dialog1"));
 
             //test
-            System.Console.WriteLine(npc1.name);
-            System.Console.WriteLine(npc1.position.ToString());
-            System.Console.WriteLine(npc1.getDialog());
+            npc1.testDialog();
         }
 
         /// <summary>

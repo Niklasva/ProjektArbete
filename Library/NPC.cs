@@ -20,8 +20,7 @@ namespace Library
     {
         public String name;
         public Vector2 position;
-        public int dialogID;
-        private Dialog dialog;
+        public Dialog dialog;
         private Texture2D texture;
         int collisionOffset = 10;
         Point frameSize = new Point(10, 10);
@@ -35,19 +34,20 @@ namespace Library
         //{
         //}
 
-        public void setDialog(Dialog dialog)
-        {
-            this.dialog = dialog;
-        }
-
         public void setTexture(Texture2D texture)
         {
             this.texture = texture;
         }
 
-        public String getDialog()
+        public void testDialog()
         {
-           return dialog.lines[0];
+            foreach (Line s in dialog.lines)
+            {
+                System.Console.Write(s.position);
+                System.Console.Write(s.getColor().ToString());
+                System.Console.WriteLine(s.line);
+            }
+            
         }
     }
 

@@ -87,14 +87,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dialog1.xml">
-      <Name>Dialog1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <SubType>Designer</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Library\Library.csproj">
       <Project>{A23291EB-5713-4D94-9EDC-D3E6CAA26E8E}</Project>
       <Name>Library</Name>

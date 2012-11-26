@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<XnaContent>
-  <Asset Type="Library.Dialog">
-      <lines>
-        <Item>Hello World!</Item>
-        <Item>Goodbye World!</Item>
-      </lines>
-  </Asset>
-</XnaContent>

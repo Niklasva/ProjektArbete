@@ -3,6 +3,29 @@
   <Asset Type="Library.NPC">
   <name>"Niklas"</name>
     <position>15 50</position>
-    <dialogID>0</dialogID>
+    <dialog>
+      
+      <lines>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>1 1</position>
+          <line>Hello</line>
+        </Item>
+
+        <Item>
+          <speaker>Player</speaker>
+          <position>-1 -1</position>
+          <line>HELLO</line>
+        </Item>
+
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>2 1</position>
+          <line>HELLOOOO</line>
+        </Item>
+        
+      </lines>
+      
+    </dialog>
   </Asset>
 </XnaContent>
