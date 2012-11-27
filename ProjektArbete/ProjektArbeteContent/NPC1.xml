@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <Asset Type="Library.NPC">
-  <name>"Niklas"</name>
+  <name>Niklas</name>
     <position>15 50</position>
     <dialog>
       

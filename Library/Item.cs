@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace ProjektArbete
+namespace Library
 {
-    class Object
+    class Item
     {
         private string searchName;
         private bool isPickable;
-        private string name;
+        public string name;
         private string description;
         List<string> information = new List<string>();
         
         //Konstruktor
-        public Object(String searchName)
+        public Item(String searchName)
         {
             this.searchName = searchName;
             getInformation();
