@@ -21,11 +21,12 @@ namespace ProjektArbete
         SpriteBatch spriteBatch;
 
         //Dialog testDialog;
-
+        
         Sprite item;
         AnimatedSprite animatedItem;
         NPC npc1;
         Player player = new Player();
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -62,7 +63,7 @@ namespace ProjektArbete
             item = new Sprite(Content.Load<Texture2D>(@"Images/Sprites/object"), new Vector2(40, 60), 10);
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
-            
+            Content.Load<SpriteFont>(@"font");
             //testDialog = new Dialog(new Vector2(20, 20), new Vector2(10, 120), "1", Content.Load<SpriteFont>(@"font"));
             //testDialog.LoadDialog();
             npc1 = Content.Load<NPC>("NPC1");
@@ -108,6 +109,7 @@ namespace ProjektArbete
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
             item.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
+   //         spriteBatch.DrawString(Content.Load<SpriteFont>(@"font"), );
             //npc1.Draw(gameTime, spriteBatch);
             //testDialog.Draw(gameTime, spriteBatch);
             spriteBatch.End();

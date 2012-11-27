@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <!-- TODO: replace this Asset with your own XML asset data. -->
+  <Asset Type="Library.Item[]">
+    <Item>
+      <name>Stone</name>
+      <isPickable>true</isPickable>
+      <description>A light stone.</description>
+    </Item>
+
+    <Item>
+      <name>Chair</name>
+      <isPickable>false</isPickable>
+      <description>A sturdy chair. It is quite nice looking</description>
+    </Item>
+    
+  </Asset>
+</XnaContent>
