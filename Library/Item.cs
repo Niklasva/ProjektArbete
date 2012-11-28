@@ -7,11 +7,19 @@ using Microsoft.Xna.Framework;
 
 namespace Library
 {
-    class Item
+    /// <summary>
+    /// Ett föremål i spelet
+    /// Ex. En sten
+    /// </summary>
+    public class Item
     {
         public string name;
         public bool isPickable;
         public string description;
+        public bool isCombinable;
+        //Nummret i arrayen som föremålet som kombineras till har.
+        public int combinedItemInt;
+        
 
 
         public void pick()

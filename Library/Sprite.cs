@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Library
 {
+    /// <summary>
+    /// En vanlig sprite i spelet
+    /// </summary>
     public class Sprite
     {
         private Texture2D texture;

@@ -21,11 +21,11 @@ namespace ProjektArbete
         SpriteBatch spriteBatch;
 
         //Dialog testDialog;
-        
         Sprite item;
         AnimatedSprite animatedItem;
         NPC npc1;
-        Player player = new Player();
+        Player player;
+        Item[] items;
         
         public Game1()
         {
@@ -33,6 +33,7 @@ namespace ProjektArbete
             graphics.IsFullScreen = false;
             graphics.PreferredBackBufferWidth = 320 * 2;
             graphics.PreferredBackBufferHeight = 180 * 2;
+            this.IsMouseVisible = true;
             Content.RootDirectory = "Content";
             Registry.playerPosition = player.position;
             
@@ -46,6 +47,7 @@ namespace ProjektArbete
         /// </summary>
         protected override void Initialize()
         {
+            
             // TODO: Add your initialization logic here
 
             base.Initialize();
@@ -59,7 +61,9 @@ namespace ProjektArbete
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            items = Content.Load<Library.Item[]>(@"ItemXML");
+            player = new Player(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), items);
+            
             item = new Sprite(Content.Load<Texture2D>(@"Images/Sprites/object"), new Vector2(40, 60), 10);
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
@@ -93,7 +97,7 @@ namespace ProjektArbete
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             animatedItem.Update(gameTime, spriteBatch);
-
+            player.Update(gameTime, spriteBatch);
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -107,6 +111,7 @@ namespace ProjektArbete
         {
             GraphicsDevice.Clear(Color.AntiqueWhite);
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
+            player.Draw(gameTime, spriteBatch);
             item.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
    //         spriteBatch.DrawString(Content.Load<SpriteFont>(@"font"), );

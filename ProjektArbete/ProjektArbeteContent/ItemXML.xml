@@ -6,13 +6,32 @@
       <name>Stone</name>
       <isPickable>true</isPickable>
       <description>A light stone.</description>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
     </Item>
 
     <Item>
       <name>Chair</name>
       <isPickable>false</isPickable>
       <description>A sturdy chair. It is quite nice looking</description>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
     </Item>
-    
+
+    <Item>
+      <name>Rope</name>
+      <isPickable>true</isPickable>
+      <description>Some nice looking rope.</description>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>23</combinedItemInt>
+    </Item>
+
+    <Item>
+      <name>Hook</name>
+      <isPickable>true</isPickable>
+      <description>A steel hook</description>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>23</combinedItemInt>
+    </Item>
   </Asset>
 </XnaContent>

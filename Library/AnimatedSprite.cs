@@ -12,6 +12,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Library
 {
+    /// <summary>
+    /// Den sprite som animeras
+    /// </summary>
     public class AnimatedSprite : Sprite
     {
         private Point frameSize;
