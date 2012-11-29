@@ -24,6 +24,12 @@ namespace Library
         private List<Item> Inventory = new List<Item>();
         Item[] items;
 
+        //kontroller
+        private MouseState mouseState;
+        private Vector2 target = new Vector2(200,150);
+        private Vector2 direction;
+        private int speed = 3;
+
         //Konstruktor
         public Player(Texture2D texture, Item[] items)
         {
@@ -34,7 +40,21 @@ namespace Library
 
         public void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            //Lägg till styrningen av spelaren här.
+            //styrning av spelare
+            mouseState = Mouse.GetState();
+            if (mouseState.LeftButton == ButtonState.Pressed)
+            {
+                target.X = mouseState.X;
+                target.Y = mouseState.Y;
+            }
+            direction = target - position;
+            direction.Normalize();
+            if (position.X != target.X && position.Y != target.Y)
+            {
+                position.X += direction.X * speed;
+                position.Y += direction.Y * speed;
+            }
+            sprite.Position = position;
             sprite.Update(gameTime, spriteBatch);
         }
 

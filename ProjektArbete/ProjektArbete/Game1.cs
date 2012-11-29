@@ -35,7 +35,6 @@ namespace ProjektArbete
             graphics.PreferredBackBufferHeight = 180 * 2;
             this.IsMouseVisible = true;
             Content.RootDirectory = "Content";
-            Registry.playerPosition = player.position;
             
         }
 
