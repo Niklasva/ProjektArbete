@@ -21,8 +21,8 @@ namespace Library
         public Vector2 position = new Vector2(10, 10);
         private Texture2D texture;
         private AnimatedSprite sprite;
-        private List<Item> Inventory = new List<Item>();
-        Item[] items;
+        Inventory inventory;
+        
 
         //kontroller
         private MouseState mouseState;
@@ -35,7 +35,6 @@ namespace Library
         {
             this.texture = texture;
             this.sprite = new AnimatedSprite(texture, position, 10, new Point(75, 75), new Point(0, 0), new Point(6, 8), 16);
-            this.items = items;
         }
 
         public void Update(GameTime gameTime, SpriteBatch spriteBatch)
@@ -44,8 +43,8 @@ namespace Library
             mouseState = Mouse.GetState();
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
-                target.X = mouseState.X;
-                target.Y = mouseState.Y;
+                target.X = mouseState.X - 32.5f;
+                target.Y = mouseState.Y - 32.5f;
             }
             direction = target - position;
             direction.Normalize();
@@ -54,6 +53,7 @@ namespace Library
                 position.X += direction.X * speed;
                 position.Y += direction.Y * speed;
             }
+
             sprite.Position = position;
             sprite.Update(gameTime, spriteBatch);
         }
@@ -63,34 +63,19 @@ namespace Library
             sprite.Draw(gameTime, spriteBatch);
         }
 
-        //Lägger till föremål i inventory
         public void addItem(Item item)
         {
-            if (item.isPickable)
-                Inventory.Add(item);
+            inventory.addItem(item);
         }
-
-        //Tar bort föremål från inventory
         public void removeItem(Item item)
         {
-            Inventory.Remove(item);
+            inventory.removeItem(item);
         }
-
-        //Kombinerar föremål i inventoryn
         public void combineItem(Item item1, Item item2)
         {
-            //Kan båda kombineras?
-            if (item1.isCombinable && item2.isCombinable)
-            {
-                //Har de samma komineringsnummer?
-                if (item1.combinedItemInt == item2.combinedItemInt)
-                {
-                    //Tar bort de föremål som man kombinerar och lägger till det nya förempålet
-                    removeItem(item1);
-                    removeItem(item2);
-                    addItem(items[item1.combinedItemInt]);
-                }
-            }
+            inventory.combineItem(item1, item2);
         }
+
+
     }
 }

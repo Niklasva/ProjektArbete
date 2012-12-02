@@ -14,6 +14,7 @@ namespace Library
         public List<Door> doors;
         public List<Object> objects;
         public List<NPC> npcs;
+        public List<Item> items;
         Texture2D background;
         Texture2D foreground;
     }

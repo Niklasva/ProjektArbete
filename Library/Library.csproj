@@ -95,6 +95,7 @@
     <Compile Include="AnimatedSprite.cs" />
     <Compile Include="Dialog.cs" />
     <Compile Include="Door.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="NPC.cs" />
     <Compile Include="Player.cs" />
