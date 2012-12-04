@@ -31,8 +31,8 @@ namespace ProjektArbete
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferWidth = 320 * 2;
-            graphics.PreferredBackBufferHeight = 180 * 2;
+            graphics.PreferredBackBufferWidth = 320 * 3;
+            graphics.PreferredBackBufferHeight = 180 * 3;
             this.IsMouseVisible = true;
             Content.RootDirectory = "Content";
             
@@ -62,18 +62,12 @@ namespace ProjektArbete
             spriteBatch = new SpriteBatch(GraphicsDevice);
             items = Content.Load<Library.Item[]>(@"ItemXML");
             player = new Player(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), items);
-            
-            item = new Sprite(Content.Load<Texture2D>(@"Images/Sprites/object"), new Vector2(40, 60), 10);
+            item = new Sprite(Content.Load<Texture2D>(@"Images/Sprites/object"), new Vector2(0, 0), 10);
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
-            Content.Load<SpriteFont>(@"font");
-            //testDialog = new Dialog(new Vector2(20, 20), new Vector2(10, 120), "1", Content.Load<SpriteFont>(@"font"));
-            //testDialog.LoadDialog();
             npc1 = Content.Load<NPC>("NPC1");
             npc1.setTexture(Content.Load<Texture2D>(@"Images/Sprites/object"));
-
-            //test
-            npc1.testDialog();
+            npc1.dialog.setFont(Content.Load<SpriteFont>(@"textfont"));
         }
 
         /// <summary>
@@ -108,14 +102,14 @@ namespace ProjektArbete
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+
             GraphicsDevice.Clear(Color.AntiqueWhite);
-            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
-            player.Draw(gameTime, spriteBatch);
+            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
+
             item.Draw(gameTime, spriteBatch);
+            player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
-   //         spriteBatch.DrawString(Content.Load<SpriteFont>(@"font"), );
-            //npc1.Draw(gameTime, spriteBatch);
-            //testDialog.Draw(gameTime, spriteBatch);
+            npc1.dialog.Speak(gameTime, spriteBatch);
             spriteBatch.End();
             // TODO: Add your drawing code here
             

@@ -26,6 +26,7 @@ namespace Library
 
         //kontroller
         private MouseState mouseState;
+        private Vector2 mousePosition;
         private Vector2 target = new Vector2(200,150);
         private Vector2 direction;
         private int speed = 3;
@@ -41,10 +42,14 @@ namespace Library
         {
             //styrning av spelare
             mouseState = Mouse.GetState();
+
+            //mousePosition = mouseState/3 för att mouseState inte har något med upplösningen (som tredubblas) att göra
+            mousePosition.X = (mouseState.X / 3);
+            mousePosition.Y = (mouseState.Y / 3);
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
-                target.X = mouseState.X - 32.5f;
-                target.Y = mouseState.Y - 32.5f;
+                target.X = mousePosition.X - 32.5f;
+                target.Y = mousePosition.Y - 32.5f;
             }
             direction = target - position;
             direction.Normalize();

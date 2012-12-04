@@ -17,8 +17,8 @@ namespace Library
         public string name;
         public bool isPickable;
         public string description;
-        public Texture2D texture;
-        public Sprite sprite;
+        //public Texture2D texture;
+        //public Sprite sprite;
         public bool isCombinable;
         //Nummret i arrayen som föremålet som kombineras till har.
         public int combinedItemInt;
@@ -28,7 +28,7 @@ namespace Library
       
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            sprite.Draw(gameTime, spriteBatch);
+            //sprite.Draw(gameTime, spriteBatch);
         }
 
     }

@@ -13,7 +13,6 @@ namespace Library
     {
         public List<Line> lines;
         SpriteFont font;
-        SpriteFont outline;
         float timer = 2;
         int i = 0;
 
@@ -43,9 +42,7 @@ namespace Library
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, String output, Vector2 position, Color color)
         {
-            spriteBatch.DrawString(font, output, new Vector2(position.X + 1, position.Y + 1), Color.Black);
             spriteBatch.DrawString(font, output, position, color);
-
         }
     }
 
@@ -61,12 +58,12 @@ namespace Library
             {
                 if (speaker == "Player")
                 {
-                    return Color.Red;
+                    return Color.NavajoWhite;
                 }
 
                 else if (speaker == "NPC")
                 {
-                    return Color.Blue;
+                    return Color.LightBlue;
                 }
 
                 else if (speaker == "Narrator")

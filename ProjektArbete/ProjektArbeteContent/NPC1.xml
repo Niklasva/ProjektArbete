@@ -8,20 +8,23 @@
       <lines>
         <Item>
           <speaker>NPC</speaker>
-          <position>1 1</position>
-          <line>Hello</line>
+          <position>80 80</position>
+          <line>Tja</line>
+          <time>3</time>
         </Item>
 
         <Item>
           <speaker>Player</speaker>
-          <position>-1 -1</position>
-          <line>HELLO</line>
+          <position>110 80</position>
+          <line>TJAA</line>
+          <time>2</time>
         </Item>
 
         <Item>
           <speaker>Narrator</speaker>
-          <position>2 1</position>
-          <line>HELLOOOO</line>
+          <position>100 100</position>
+          <line>JAG TESTAR DIALoger !!!!</line>
+          <time>6</time>
         </Item>
         
       </lines>
