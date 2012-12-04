@@ -74,7 +74,7 @@ namespace Library
 
                 else
                 {
-                    return Color.Black;
+                    return Color.Brown;
                 }
             }
         }

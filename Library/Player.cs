@@ -29,7 +29,7 @@ namespace Library
         private Vector2 mousePosition;
         private Vector2 target = new Vector2(200,150);
         private Vector2 direction;
-        private int speed = 3;
+        private int speed = 2;
 
         //Konstruktor
         public Player(Texture2D texture, Item[] items)
@@ -58,6 +58,11 @@ namespace Library
                 position.X += direction.X * speed;
                 position.Y += direction.Y * speed;
             }
+            if (position.X < target.X + 1 && position.X > target.X - 1)
+            {
+                speed = 0;
+            }
+            else speed = 2;
 
             sprite.Position = position;
             sprite.Update(gameTime, spriteBatch);
