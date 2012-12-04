@@ -8,7 +8,7 @@
       <lines>
         <Item>
           <speaker>NPC</speaker>
-          <position>80 80</position>
+          <position>80 40</position>
           <line>Tja</line>
           <time>3</time>
         </Item>
@@ -25,6 +25,26 @@
           <position>100 100</position>
           <line>JAG TESTAR DIALoger !!!!</line>
           <time>6</time>
+        </Item>
+        <Item>
+          <speaker>othr</speaker>
+          <position>100 40</position>
+          <line>De kan ha olika farger</line>
+          <time>3</time>
+        </Item>
+
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 40</position>
+          <line>och positioner</line>
+          <time>3</time>
+        </Item>
+
+        <Item>
+          <speaker>Player</speaker>
+          <position>100 40</position>
+          <line>HEJSAN</line>
+          <time>500</time>
         </Item>
         
       </lines>

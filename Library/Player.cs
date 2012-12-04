@@ -35,7 +35,8 @@ namespace Library
         public Player(Texture2D texture, Item[] items)
         {
             this.texture = texture;
-            this.sprite = new AnimatedSprite(texture, position, 10, new Point(75, 75), new Point(0, 0), new Point(6, 8), 16);
+            //this.sprite = new AnimatedSprite(texture, position, 10, new Point(75, 75), new Point(0, 0), new Point(6, 8), 16);
+            this.sprite = new AnimatedSprite(texture, position, 10, new Point(21, 48), new Point(0, 0), new Point(8, 1), 100);
         }
 
         public void Update(GameTime gameTime, SpriteBatch spriteBatch)
@@ -48,8 +49,8 @@ namespace Library
             mousePosition.Y = (mouseState.Y / 3);
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
-                target.X = mousePosition.X - 32.5f;
-                target.Y = mousePosition.Y - 32.5f;
+                target.X = mousePosition.X;
+                target.Y = mousePosition.Y - 48;
             }
             direction = target - position;
             direction.Normalize();

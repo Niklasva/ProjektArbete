@@ -42,13 +42,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Images\AnimatedSprites\player.png">
+      <Name>player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Compile Include="Images\AnimatedSprites\threerings.png">
       <Name>threerings</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Images\Sprites\object.png">
       <Name>object</Name>
       <Importer>TextureImporter</Importer>

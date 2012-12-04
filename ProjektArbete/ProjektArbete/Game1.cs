@@ -61,7 +61,7 @@ namespace ProjektArbete
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             items = Content.Load<Library.Item[]>(@"ItemXML");
-            player = new Player(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), items);
+            player = new Player(Content.Load<Texture2D>(@"Images/AnimatedSprites/player"), items);
             item = new Sprite(Content.Load<Texture2D>(@"Images/Sprites/object"), new Vector2(0, 0), 10);
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);

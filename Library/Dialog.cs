@@ -58,12 +58,12 @@ namespace Library
             {
                 if (speaker == "Player")
                 {
-                    return Color.NavajoWhite;
+                    return Color.AliceBlue;
                 }
 
                 else if (speaker == "NPC")
                 {
-                    return Color.LightBlue;
+                    return Color.PaleVioletRed;
                 }
 
                 else if (speaker == "Narrator")
