@@ -104,8 +104,7 @@ namespace ProjektArbete
         {
 
             GraphicsDevice.Clear(Color.AntiqueWhite);
-            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
-
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
             item.Draw(gameTime, spriteBatch);
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
