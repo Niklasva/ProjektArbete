@@ -2,6 +2,13 @@ Content\Images\AnimatedSprites\player.xnb
 Content\Images\AnimatedSprites\threerings.xnb
 Content\Images\Sprites\object.xnb
 Content\textfont.xnb
+Content\Images\AnimatedSprites\downTexture.xnb
+Content\Images\AnimatedSprites\leftTexture.xnb
+Content\Images\AnimatedSprites\rightTexture.xnb
+Content\Images\AnimatedSprites\upTexture.xnb
+Content\Images\AnimatedSprites\stillTexture.xnb
+Content\Images\Sprites\item.xnb
+Content\Images\Sprites\invBackground.xnb
 Content\NPC1.xnb
 Content\ItemXML.xnb
 Content\Data\dialog.fil

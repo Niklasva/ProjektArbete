@@ -26,7 +26,7 @@ namespace Library
         //Konstruktor
         public AnimatedSprite(Texture2D texture, Vector2 position, int collisionOffset, Point frameSize, Point currentFrame, Point sheetSize,
                          int millisecondsPerFrame)
-            : base(texture, position, collisionOffset)
+            : base(texture, position, collisionOffset, frameSize)
         {
             this.frameSize = frameSize;
             this.currentFrame = currentFrame;
@@ -52,7 +52,7 @@ namespace Library
         }
 
         //Updaterar figuren
-        public void Update(GameTime gameTime, SpriteBatch spriteBatch)
+        public void Update(GameTime gameTime, Rectangle clientBounds)
         {
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
             if (timeSinceLastFrame > millisecondsPerFrame)

@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-  <!-- TODO: replace this Asset with your own XML asset data. -->
   <Asset Type="Library.Item[]">
     <Item>
       <name>Stone</name>
       <isPickable>true</isPickable>
       <description>A light stone.</description>
+      <textureString>Images/Sprites/item</textureString>
+      <frameSizeX>77</frameSizeX>
+      <frameSizeY>29</frameSizeY>
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>
     </Item>
@@ -14,6 +16,9 @@
       <name>Chair</name>
       <isPickable>false</isPickable>
       <description>A sturdy chair. It is quite nice looking</description>
+      <textureString>Images/AnimatedSprites/downTexture</textureString>
+      <frameSizeX>77</frameSizeX>
+      <frameSizeY>29</frameSizeY>
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>
     </Item>
@@ -22,6 +27,9 @@
       <name>Rope</name>
       <isPickable>true</isPickable>
       <description>Some nice looking rope.</description>
+      <textureString>Images/Sprites/object</textureString>
+      <frameSizeX>77</frameSizeX>
+      <frameSizeY>29</frameSizeY>
       <isCombinable>true</isCombinable>
       <combinedItemInt>23</combinedItemInt>
     </Item>
@@ -30,6 +38,9 @@
       <name>Hook</name>
       <isPickable>true</isPickable>
       <description>A steel hook</description>
+      <textureString>Images/Sprites/item</textureString>
+      <frameSizeX>77</frameSizeX>
+      <frameSizeY>29</frameSizeY>
       <isCombinable>true</isCombinable>
       <combinedItemInt>23</combinedItemInt>
     </Item>

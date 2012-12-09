@@ -14,8 +14,8 @@ namespace Library
         Vector2 position;
         Room nextRoom;
         Vector2 door2Position;
-        Boolean isLocked;
-        String key;
+        bool isLocked;
+        string key;
 
         //Konstruktor
         public Door(Vector2 position, Room nextRoom, Vector2 door2Position, Boolean isLocked, String key)

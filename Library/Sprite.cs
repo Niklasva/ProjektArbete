@@ -20,13 +20,15 @@ namespace Library
         private Texture2D texture;
         private Vector2 position;
         private int collisionOffset;
+        private Point frameSize;
 
         //Konstruktorer
-        public Sprite(Texture2D texture, Vector2 position, int collisionOffset)
+        public Sprite(Texture2D texture, Vector2 position, int collisionOffset, Point frameSize)
         {
             this.texture = texture;
             this.position = position;
             this.collisionOffset = collisionOffset;
+            this.frameSize = frameSize;
         }
 
         //Ritar ut sprite
@@ -58,6 +60,17 @@ namespace Library
             get
             {
                 return this.position;
+            }
+        }
+
+        public virtual Rectangle collisonRect
+        {
+            get
+            {
+                return new Rectangle((int)position.X + collisionOffset,
+                    (int)position.Y + collisionOffset,
+                    frameSize.X - (collisionOffset * 2),
+                    frameSize.Y - (collisionOffset * 2));
             }
         }
     }

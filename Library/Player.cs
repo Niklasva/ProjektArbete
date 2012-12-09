@@ -18,12 +18,30 @@ namespace Library
     /// </summary>
     public class Player
     {
+        //Texturer och animation av spelaren
         public Vector2 position = new Vector2(10, 10);
-        private Texture2D texture;
-        private AnimatedSprite sprite;
+        private Texture2D leftTexture;
+        private Texture2D rightTexture;
+        private Texture2D downTexture;
+        private Texture2D upTexture;
+        private Texture2D stillTexture;
+        private AnimatedSprite leftSprite;
+        private AnimatedSprite rightSprite;
+        private AnimatedSprite downSprite;
+        private AnimatedSprite upSprite;
+        private AnimatedSprite currentSprite;
+        private AnimatedSprite stillSprite;
+        private Point leftCurrentFrame = new Point(0, 0);
+        private Point rightCurrentFrame = new Point(0, 0);
+        private Point downCurrentFrame = new Point(0, 0);
+        private Point upCurrentFrame = new Point(0, 0);
+        private double deltaX;
+        private double deltaY;
+        private bool isMoving;
+
+        //Inventory
         Inventory inventory;
         
-
         //kontroller
         private MouseState mouseState;
         private Vector2 mousePosition;
@@ -32,25 +50,35 @@ namespace Library
         private int speed = 2;
 
         //Konstruktor
-        public Player(Texture2D texture, Item[] items)
+        public Player(Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Item[] items, Texture2D invBackGround, Rectangle clientBounds)
         {
-            this.texture = texture;
-            //this.sprite = new AnimatedSprite(texture, position, 10, new Point(75, 75), new Point(0, 0), new Point(6, 8), 16);
-            this.sprite = new AnimatedSprite(texture, position, 10, new Point(21, 48), new Point(0, 0), new Point(8, 1), 100);
+            this.leftTexture = leftTexture;
+            this.leftSprite = new AnimatedSprite(leftTexture, position, 10, new Point(10, 20), leftCurrentFrame, new Point(3, 1), 100);
+            this.rightTexture = rightTexture;
+            this.rightSprite = new AnimatedSprite(rightTexture, position, 10, new Point(10, 20), rightCurrentFrame, new Point(3, 1), 100);
+            this.downTexture = downTexture;
+            this.downSprite = new AnimatedSprite(downTexture, position, 10, new Point(10, 20), downCurrentFrame, new Point(3, 1), 100);
+            this.upTexture = upTexture;
+            this.upSprite = new AnimatedSprite(upTexture, position, 10, new Point(10, 20), upCurrentFrame, new Point(3, 1), 100);
+
+            this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(10, 20), new Point(0, 0), new Point(1, 1), 100);
+            this.inventory = new Inventory(items, invBackGround, clientBounds);
         }
 
-        public void Update(GameTime gameTime, SpriteBatch spriteBatch)
+        public void Update(GameTime gameTime, Rectangle clientBounds)
         {
+            //Rör spelaren på sig?
+            isMoving = true;
             //styrning av spelare
             mouseState = Mouse.GetState();
-
+            
             //mousePosition = mouseState/3 för att mouseState inte har något med upplösningen (som tredubblas) att göra
             mousePosition.X = (mouseState.X / 3);
             mousePosition.Y = (mouseState.Y / 3);
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
                 target.X = mousePosition.X;
-                target.Y = mousePosition.Y - 48;
+                target.Y = mousePosition.Y - 3;
             }
             direction = target - position;
             direction.Normalize();
@@ -62,16 +90,75 @@ namespace Library
             if (position.X < target.X + 1 && position.X > target.X - 1)
             {
                 speed = 0;
+                //Spelaren rör inte på sig
+                isMoving = false;
             }
             else speed = 2;
 
-            sprite.Position = position;
-            sprite.Update(gameTime, spriteBatch);
+            //Rör spelaren på sig ska den animeras som vanilgt
+            if (isMoving)
+            {
+                //Skillnad i X-led och skillnad i Y-led
+                if (position.Y <= target.Y)
+                    deltaY = target.Y - position.Y;
+                else
+                    deltaY = position.Y - target.Y;
+
+                if (position.X < target.X)
+                    deltaX = target.X - position.X;
+                else
+                    deltaX = position.X - target.X;
+                //Bestämmning av vilken animation som ska användas av spelaren
+                //Är man påväg åt höger, vänster, up eller ner?
+                //Går man mest vertikalt eller horisontellt?
+                if (position.X <= target.X && deltaX > deltaY)
+                {
+                    currentSprite = rightSprite;
+                    leftCurrentFrame = new Point(0, 0);
+                    downCurrentFrame = new Point(0, 0);
+                    upCurrentFrame = new Point(0, 0);
+                }
+                else if (position.X >= target.X && deltaX > deltaY)
+                {
+                    currentSprite = leftSprite;
+                    rightCurrentFrame = new Point(0, 0);
+                    downCurrentFrame = new Point(0, 0);
+                    upCurrentFrame = new Point(0, 0);
+                }
+                else if (position.Y >= target.Y && deltaX < deltaY)
+                {
+                    currentSprite = upSprite;
+                    leftCurrentFrame = new Point(0, 0);
+                    downCurrentFrame = new Point(0, 0);
+                    rightCurrentFrame = new Point(0, 0);
+                }
+                else
+                {
+                    currentSprite = downSprite;
+                    leftCurrentFrame = new Point(0, 0);
+                    rightCurrentFrame = new Point(0, 0);
+                    upCurrentFrame = new Point(0, 0);
+                }
+
+                currentSprite.Position = position;
+                currentSprite.Update(gameTime, clientBounds);
+            }
+            //Rör spelaren inte på sig så ska han ha en stillastående sprite
+            else
+            {
+                currentSprite = stillSprite;
+                leftCurrentFrame = new Point(0, 0);
+                rightCurrentFrame = new Point(0, 0);
+                downCurrentFrame = new Point(0, 0);
+                upCurrentFrame = new Point(0, 0);
+            }
+            currentSprite.Position = position;
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            sprite.Draw(gameTime, spriteBatch);
+            inventory.Draw(gameTime, spriteBatch);
+            currentSprite.Draw(gameTime, spriteBatch);
         }
 
         public void addItem(Item item)
@@ -86,7 +173,6 @@ namespace Library
         {
             inventory.combineItem(item1, item2);
         }
-
 
     }
 }

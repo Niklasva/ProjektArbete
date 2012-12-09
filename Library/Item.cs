@@ -17,19 +17,40 @@ namespace Library
         public string name;
         public bool isPickable;
         public string description;
-        //public Texture2D texture;
-        //public Sprite sprite;
+        public string textureString;
+        public int frameSizeX;
+        public int frameSizeY;
         public bool isCombinable;
         //Nummret i arrayen som föremålet som kombineras till har.
         public int combinedItemInt;
-        
 
+        private Texture2D texture;
+        private Sprite sprite;
+        private Vector2 position;
 
-      
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public string TextureString
         {
-            //sprite.Draw(gameTime, spriteBatch);
+            get
+            {
+                return textureString;
+            }
         }
 
+        public void Initialize(Texture2D textureForItem, Vector2 position)
+        {
+            this.position = position;
+            texture = textureForItem;
+            sprite = new Sprite(texture, position, 10, new Point(frameSizeX, frameSizeY));
+        }
+
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            sprite.Draw(gameTime, spriteBatch);
+        }
+
+        public void setPosition(Vector2 x)
+        {
+            position = x;
+        }
     }
 }
