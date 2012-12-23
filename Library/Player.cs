@@ -38,7 +38,6 @@ namespace Library
         private double deltaX;
         private double deltaY;
         private bool isMoving;
-
         //Inventory
         Inventory inventory;
         

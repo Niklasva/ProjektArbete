@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace Library
 {
@@ -11,11 +12,26 @@ namespace Library
         /// <summary>
         /// Rum
         /// </summary>
-        public List<Door> doors;
-        public List<Object> objects;
-        public List<NPC> npcs;
-        public List<Item> items;
+        /// 
+        public string backgroundID;
+        public string foregroundID;
+        /*
+         * List<Door> doors;
+        List<Object> objects;
+        List<NPC> npcs;
+        List<Item> items;
+         */
         Texture2D background;
         Texture2D foreground;
+
+        public void LoadContent(Game game)
+        {
+            this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
+        }
+
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(background, Vector2.Zero, Color.White);
+        }
     }
 }

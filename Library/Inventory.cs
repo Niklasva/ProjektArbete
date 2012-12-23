@@ -20,7 +20,6 @@ namespace Library
         private Sprite backgroundSprite;
         private bool iPressed;
         private int wait = 0;
-
         //Konstruktor
         public Inventory(Item[] items, Texture2D background, Rectangle clientBounds)
         {

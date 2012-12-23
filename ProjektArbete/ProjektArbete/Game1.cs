@@ -25,7 +25,7 @@ namespace ProjektArbete
         NPC npc1;
         Player player;
         Item[] items;
-        
+        Room room;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -74,6 +74,8 @@ namespace ProjektArbete
             npc1 = Content.Load<NPC>("NPC1");
             npc1.setTexture(Content.Load<Texture2D>(@"Images/Sprites/object"));
             npc1.dialog.setFont(Content.Load<SpriteFont>(@"textfont"));
+             room = Content.Load<Room>(@"Data/rooms");
+            room.LoadContent(this);
         }
 
         /// <summary>
@@ -111,6 +113,7 @@ namespace ProjektArbete
 
             GraphicsDevice.Clear(Color.AntiqueWhite);
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
+            room.Draw(gameTime, spriteBatch);
             foreach (Item item in items)
             {
                 item.Draw(gameTime, spriteBatch);
@@ -118,8 +121,9 @@ namespace ProjektArbete
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
             npc1.dialog.Speak(gameTime, spriteBatch);
-            spriteBatch.End();
 
+            
+            spriteBatch.End();
             // TODO: Add your drawing code here
             
             base.Draw(gameTime);
