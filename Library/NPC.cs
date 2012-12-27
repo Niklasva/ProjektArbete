@@ -21,33 +21,51 @@ namespace Library
         public String name;
         public Vector2 position;
         public Dialog dialog;
-        private Texture2D texture;
-        int collisionOffset = 10;
-        Point frameSize = new Point(10, 10);
-        Point currentFrame = new Point(10, 10);
-        Point sheetSize = new Point(10, 10);
-        int millisecondsPerFrame = 10;
+        private Texture2D stillTexture;
+        private Texture2D talkTexture;
+        private AnimatedSprite stillSprite;
+        private AnimatedSprite talkSprite;
+        private AnimatedSprite activeSprite;
+        private Boolean isTalking = true;
 
-        //public NPC(Texture2D texture, Vector2 position, int collisionOffset, Point frameSize, Point currentFrame, Point sheetSize,
-        //    int millisecondsPerFrame)
-        //    : base(texture, position, collisionOffset, frameSize, currentFrame, sheetSize, millisecondsPerFrame)
-        //{
-        //}
-
-        public void setTexture(Texture2D texture)
+        public void loadContent(Game game)
         {
-            this.texture = texture;
+            this.talkTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name + "talk");
+            this.stillTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name);
+            stillSprite = new AnimatedSprite(stillTexture, position, 10, new Point(20, 40), new Point(0, 0), new Point(3, 1), 200);
+            talkSprite = new AnimatedSprite(talkTexture, position, 10, new Point(20, 40), new Point(0, 0), new Point(3, 1), 200);
+            dialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
+        }
+        public void Update(GameTime gameTime, Rectangle clientBounds)
+        {
+            if (dialog.getActiveLine() == "0")
+            {
+                isTalking = false;
+            }
+
+            if (dialog.getSpeaker() == "NPC")
+            {
+                activeSprite = talkSprite;
+            }
+            else
+            {
+                activeSprite = stillSprite;
+            }
+            activeSprite.Update(gameTime, clientBounds);
         }
 
-        public void testDialog()
+        public void Talk()
         {
-            foreach (Line s in dialog.lines)
+            isTalking = true;
+        }
+
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
+        {
+            activeSprite.Draw(gameTime, spriteBatch);
+            if (isTalking == true)
             {
-                System.Console.Write(s.position);
-                System.Console.Write(s.getColor().ToString());
-                System.Console.WriteLine(s.line);
+                dialog.Speak(gameTime, spriteBatch, playerPosition, position);
             }
-            
         }
     }
 

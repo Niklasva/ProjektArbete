@@ -52,15 +52,15 @@ namespace Library
         public Player(Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Item[] items, Texture2D invBackGround, Rectangle clientBounds)
         {
             this.leftTexture = leftTexture;
-            this.leftSprite = new AnimatedSprite(leftTexture, position, 10, new Point(10, 20), leftCurrentFrame, new Point(3, 1), 100);
+            this.leftSprite = new AnimatedSprite(leftTexture, position, 10, new Point(20, 40), leftCurrentFrame, new Point(2, 1), 100);
             this.rightTexture = rightTexture;
-            this.rightSprite = new AnimatedSprite(rightTexture, position, 10, new Point(10, 20), rightCurrentFrame, new Point(3, 1), 100);
+            this.rightSprite = new AnimatedSprite(rightTexture, position, 10, new Point(20, 40), rightCurrentFrame, new Point(2, 1), 100);
             this.downTexture = downTexture;
-            this.downSprite = new AnimatedSprite(downTexture, position, 10, new Point(10, 20), downCurrentFrame, new Point(3, 1), 100);
+            this.downSprite = new AnimatedSprite(downTexture, position, 10, new Point(20, 40), downCurrentFrame, new Point(2, 1), 100);
             this.upTexture = upTexture;
-            this.upSprite = new AnimatedSprite(upTexture, position, 10, new Point(10, 20), upCurrentFrame, new Point(3, 1), 100);
+            this.upSprite = new AnimatedSprite(upTexture, position, 10, new Point(20, 40), upCurrentFrame, new Point(2, 1), 100);
 
-            this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(10, 20), new Point(0, 0), new Point(1, 1), 100);
+            this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(20, 40), new Point(0, 0), new Point(1, 1), 100);
             this.inventory = new Inventory(items, invBackGround, clientBounds);
         }
 
@@ -76,8 +76,8 @@ namespace Library
             mousePosition.Y = (mouseState.Y / 3);
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
-                target.X = mousePosition.X;
-                target.Y = mousePosition.Y - 3;
+                target.X = mousePosition.X - 10;
+                target.Y = mousePosition.Y - 40;
             }
             direction = target - position;
             direction.Normalize();

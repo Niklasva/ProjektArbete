@@ -59,25 +59,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\dialog.fil">
-      <Name>dialog</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Data\npc.fil">
-      <Name>npc</Name>
-    </None>
-    <None Include="Data\objekt.fil">
-      <Name>objekt</Name>
-    </None>
-    <None Include="Data\rum.fil">
-      <Name>rum</Name>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="NPC1.xml">
-      <Name>NPC1</Name>
+    <Compile Include="Data\NPC\test.xml">
+      <Name>test</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <SubType>Designer</SubType>
@@ -152,11 +135,26 @@
       <Name>rooms</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
+      <SubType>Designer</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Images\Backgrounds\room1.png">
       <Name>room1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\Characters\testtalk.bmp">
+      <Name>testtalk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\Characters\test.bmp">
+      <Name>test</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -15,19 +15,44 @@ namespace Library
         SpriteFont font;
         float timer = 2;
         int i = 0;
+        private String activeLine = "";
+        private String speaker = "";
 
         public void setFont(SpriteFont spriteFont)
         {
             font = spriteFont;
         }
 
-        public void Speak(GameTime gameTime, SpriteBatch spriteBatch)
+        public String getActiveLine()
         {
+            return activeLine;
+        }
+
+        public String getSpeaker()
+        {
+            return speaker;
+        }
+
+        public void Speak(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition, Vector2 npcPosition)
+        {
+
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             timer -= elapsed;
+            speaker = lines[i].speaker;
             if (timer > 0)
             {
-                Draw(gameTime, spriteBatch, lines[i].line, lines[i].position, lines[i].getColor());
+                if (speaker == "Player")
+                {
+                    Draw(gameTime, spriteBatch, lines[i].line, new Vector2(playerPosition.X - ((lines[i].line.Count() * 6)/2), playerPosition.Y - 15), lines[i].getColor());
+                }
+                else if (speaker == "NPC")
+                {
+                    Draw(gameTime, spriteBatch, lines[i].line, new Vector2(npcPosition.X - ((lines[i].line.Count() * 6) / 2), npcPosition.Y - 15), lines[i].getColor());
+                }
+                else
+                {
+                    Draw(gameTime, spriteBatch, lines[i].line, lines[i].position, lines[i].getColor());
+                }
             }
             if (timer <= 0)
             {
@@ -38,11 +63,13 @@ namespace Library
                 }
                 else
                     timer = -10;
+                activeLine = lines[i].line;
+                
             }
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, String output, Vector2 position, Color color)
         {
-            spriteBatch.DrawString(font, output, position, color);
+            spriteBatch.DrawString(font, output, position, color, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
         }
     }
 

@@ -22,7 +22,6 @@ namespace ProjektArbete
 
         //Dialog testDialog;
         AnimatedSprite animatedItem;
-        NPC npc1;
         Player player;
         Item[] items;
         Room room;
@@ -71,10 +70,7 @@ namespace ProjektArbete
 
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
-            npc1 = Content.Load<NPC>("NPC1");
-            npc1.setTexture(Content.Load<Texture2D>(@"Images/Sprites/object"));
-            npc1.dialog.setFont(Content.Load<SpriteFont>(@"textfont"));
-             room = Content.Load<Room>(@"Data/rooms");
+            room = Content.Load<Room>(@"Data/rooms");
             room.LoadContent(this);
         }
 
@@ -99,6 +95,7 @@ namespace ProjektArbete
                 this.Exit();
             animatedItem.Update(gameTime, Window.ClientBounds);
             player.Update(gameTime, Window.ClientBounds);
+            room.Update(gameTime, Window.ClientBounds);
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -113,14 +110,13 @@ namespace ProjektArbete
 
             GraphicsDevice.Clear(Color.AntiqueWhite);
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
-            room.Draw(gameTime, spriteBatch);
+            room.Draw(gameTime, spriteBatch, player.position);
             foreach (Item item in items)
             {
-                item.Draw(gameTime, spriteBatch);
+                //item.Draw(gameTime, spriteBatch);
             }
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
-            npc1.dialog.Speak(gameTime, spriteBatch);
 
             
             spriteBatch.End();

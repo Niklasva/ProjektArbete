@@ -4,5 +4,8 @@
   <Asset Type="Library.Room">
       <backgroundID>room1</backgroundID>
       <foregroundID>room1</foregroundID>
+    <npc>
+      <Item>test</Item>
+      </npc>
   </Asset>
 </XnaContent>
