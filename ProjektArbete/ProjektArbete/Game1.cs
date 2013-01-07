@@ -25,6 +25,10 @@ namespace ProjektArbete
         Player player;
         Item[] items;
         Room room;
+
+        //Muskontrol
+        Mousecontrol mousecontrol = new Mousecontrol();
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -72,6 +76,9 @@ namespace ProjektArbete
                 new Point(0, 0), new Point(6, 8), 16);
             room = Content.Load<Room>(@"Data/rooms");
             room.LoadContent(this);
+
+            player.addItem(items[0]);
+            player.addItem(items[1]);
         }
 
         /// <summary>
@@ -96,7 +103,22 @@ namespace ProjektArbete
             animatedItem.Update(gameTime, Window.ClientBounds);
             player.Update(gameTime, Window.ClientBounds);
             room.Update(gameTime, Window.ClientBounds);
-            // TODO: Add your update logic here
+            
+            //Kontroll för musen
+            mousecontrol.update();
+
+            //Om man klickar ner musen
+            //Om man klickar på ett föremål i rummet
+            if (mousecontrol.clickedOnItem(room.getItems(), mousecontrol.clicked()))
+            {
+                //Kan man plocka upp föremålet?
+                if (mousecontrol.getClickedItem().isPickable)
+                {
+                    //Lägg då till föremålet i spelarens inventory
+                    player.addItem(mousecontrol.getClickedItem());
+                }
+            }
+            
 
             base.Update(gameTime);
         }

@@ -8,19 +8,19 @@
       <textureString>Images/Sprites/item</textureString>
       <frameSizeX>77</frameSizeX>
       <frameSizeY>29</frameSizeY>
-      <isCombinable>false</isCombinable>
-      <combinedItemInt>0</combinedItemInt>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>2</combinedItemInt>
     </Item>
 
     <Item>
       <name>Chair</name>
-      <isPickable>false</isPickable>
+      <isPickable>true</isPickable>
       <description>A sturdy chair. It is quite nice looking</description>
       <textureString>Images/AnimatedSprites/downTexture</textureString>
-      <frameSizeX>77</frameSizeX>
-      <frameSizeY>29</frameSizeY>
-      <isCombinable>false</isCombinable>
-      <combinedItemInt>0</combinedItemInt>
+      <frameSizeX>40</frameSizeX>
+      <frameSizeY>40</frameSizeY>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>2</combinedItemInt>
     </Item>
 
     <Item>
@@ -31,7 +31,7 @@
       <frameSizeX>77</frameSizeX>
       <frameSizeY>29</frameSizeY>
       <isCombinable>true</isCombinable>
-      <combinedItemInt>23</combinedItemInt>
+      <combinedItemInt>3</combinedItemInt>
     </Item>
 
     <Item>
@@ -42,7 +42,7 @@
       <frameSizeX>77</frameSizeX>
       <frameSizeY>29</frameSizeY>
       <isCombinable>true</isCombinable>
-      <combinedItemInt>23</combinedItemInt>
+      <combinedItemInt>3</combinedItemInt>
     </Item>
   </Asset>
 </XnaContent>

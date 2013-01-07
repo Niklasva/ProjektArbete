@@ -59,41 +59,45 @@ namespace Library
             this.downSprite = new AnimatedSprite(downTexture, position, 10, new Point(20, 40), downCurrentFrame, new Point(2, 1), 100);
             this.upTexture = upTexture;
             this.upSprite = new AnimatedSprite(upTexture, position, 10, new Point(20, 40), upCurrentFrame, new Point(2, 1), 100);
-
+            this.stillTexture = stillTexture;
             this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(20, 40), new Point(0, 0), new Point(1, 1), 100);
+
             this.inventory = new Inventory(items, invBackGround, clientBounds);
         }
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
-            //Rör spelaren på sig?
-            isMoving = true;
-            //styrning av spelare
-            mouseState = Mouse.GetState();
-            
-            //mousePosition = mouseState/3 för att mouseState inte har något med upplösningen (som tredubblas) att göra
-            mousePosition.X = (mouseState.X / 3);
-            mousePosition.Y = (mouseState.Y / 3);
-            if (mouseState.LeftButton == ButtonState.Pressed)
+            //Är inventoryn öppen ska spelaren inte röra på sig
+            if (!inventory.IPressed)
             {
-                target.X = mousePosition.X - 10;
-                target.Y = mousePosition.Y - 40;
-            }
-            direction = target - position;
-            direction.Normalize();
-            if (position.X != target.X && position.Y != target.Y)
-            {
-                position.X += direction.X * speed;
-                position.Y += direction.Y * speed;
-            }
-            if (position.X < target.X + 1 && position.X > target.X - 1)
-            {
-                speed = 0;
-                //Spelaren rör inte på sig
-                isMoving = false;
-            }
-            else speed = 2;
+                //Rör spelaren på sig?
+                isMoving = true;
+                //styrning av spelare
+                mouseState = Mouse.GetState();
 
+                //mousePosition = mouseState/3 för att mouseState inte har något med upplösningen (som tredubblas) att göra
+                mousePosition.X = (mouseState.X / 3);
+                mousePosition.Y = (mouseState.Y / 3);
+                if (mouseState.LeftButton == ButtonState.Pressed)
+                {
+                    target.X = mousePosition.X - 10;
+                    target.Y = mousePosition.Y - 40;
+                }
+                direction = target - position;
+                direction.Normalize();
+                if (position.X != target.X && position.Y != target.Y)
+                {
+                    position.X += direction.X * speed;
+                    position.Y += direction.Y * speed;
+                }
+                if (position.X < target.X + 1 && position.X > target.X - 1)
+                {
+                    speed = 0;
+                    //Spelaren rör inte på sig
+                    isMoving = false;
+                }
+                else speed = 2;
+            }
             //Rör spelaren på sig ska den animeras som vanilgt
             if (isMoving)
             {
@@ -139,6 +143,8 @@ namespace Library
                     upCurrentFrame = new Point(0, 0);
                 }
 
+                inventory.Update();
+
                 currentSprite.Position = position;
                 currentSprite.Update(gameTime, clientBounds);
             }
@@ -151,13 +157,15 @@ namespace Library
                 downCurrentFrame = new Point(0, 0);
                 upCurrentFrame = new Point(0, 0);
             }
+
             currentSprite.Position = position;
+
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            inventory.Draw(gameTime, spriteBatch);
             currentSprite.Draw(gameTime, spriteBatch);
+            inventory.Draw(gameTime, spriteBatch);    
         }
 
         public void addItem(Item item)

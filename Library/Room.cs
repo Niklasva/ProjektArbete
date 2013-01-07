@@ -15,11 +15,11 @@ namespace Library
         /// 
         public string backgroundID;
         public string foregroundID;
-        public List<String> npc;
-        private List<Door> doors;
-        private List<Object> objects;
-        private List<NPC> npcs;
-        private List<Item> items;
+        public List<string> npc = new List<string>();
+        private List<Door> doors = new List<Door>();
+        private List<Object> objects = new List<Object>();
+        private List<NPC> npcs = new List<NPC>();
+        private List<Item> items = new List<Item>();
         private NPC npc1;
 
         Texture2D background;
@@ -41,6 +41,11 @@ namespace Library
         {
             spriteBatch.Draw(background, Vector2.Zero, Color.White);
             npc1.Draw(gameTime, spriteBatch, playerPosition);
+        }
+
+        public List<Item> getItems()
+        {
+            return items;
         }
     }
 }

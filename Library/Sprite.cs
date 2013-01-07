@@ -50,7 +50,7 @@ namespace Library
             }
         }
 
-        //Get och set fär position
+        //Get och set för position
         public Vector2 Position
         {
             set
@@ -71,6 +71,14 @@ namespace Library
                     (int)position.Y + collisionOffset,
                     frameSize.X - (collisionOffset * 2),
                     frameSize.Y - (collisionOffset * 2));
+            }
+        }
+
+        public Point FrameSize
+        {
+            get
+            {
+                return frameSize;
             }
         }
     }
