@@ -11,20 +11,14 @@ namespace Library
     /// </summary>
     public class Door
     {
-        Vector2 position;
-        Room nextRoom;
-        Vector2 door2Position;
-        bool isLocked;
-        string key;
+        public Vector2 position;
+        public string nextRoomID;
+        public Vector2 door2Position;
+        public bool isLocked;
+        public string key;
 
-        //Konstruktor
-        public Door(Vector2 position, Room nextRoom, Vector2 door2Position, Boolean isLocked, String key)
-        {
-            this.position = position;
-            this.nextRoom = nextRoom;
-            this.door2Position = door2Position;
-            this.isLocked = isLocked;
-        }
+        private Room nextRoom;
+
 
         //Ändrar aktivt rum och förflyttar spelaren till dörren på nästa sida
         public void Teleport()

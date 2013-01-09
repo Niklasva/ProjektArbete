@@ -24,7 +24,6 @@ namespace ProjektArbete
         AnimatedSprite animatedItem;
         Player player;
         Item[] items;
-        Room room;
 
         public Game1()
         {
@@ -72,11 +71,12 @@ namespace ProjektArbete
 
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
-            room = Content.Load<Room>(@"Data/rooms");
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");
+            Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");
+            Registry.currentRoom = Registry.rooms[0];
 
-            room.LoadContent(this);
+            Registry.currentRoom.LoadContent(this);
         }
 
         /// <summary>
@@ -95,18 +95,22 @@ namespace ProjektArbete
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
+            //Test av rumbyte. Kod som ska användas till dörrar
+            KeyboardState keyState = Keyboard.GetState();
+            if (keyState.IsKeyDown(Keys.Delete))
+            {
+                Registry.currentRoom = Registry.rooms[1];
+                Registry.currentRoom.LoadContent(this);
+            }
             animatedItem.Update(gameTime, Window.ClientBounds);
             player.Update(gameTime, Window.ClientBounds);
 
-            room.Update(gameTime, Window.ClientBounds);
-            if (room.isItemClickedInRoom() && inProximityToItem(room.getClickedItem()))
+            Registry.currentRoom.Update(gameTime, Window.ClientBounds);
+            if (Registry.currentRoom.isItemClickedInRoom() && inProximityToItem(Registry.currentRoom.getClickedItem()))
             {
-                player.addItem(room.getClickedItem());
-                room.removeItem();
-                room.itemWasClicked();
+                player.addItem(Registry.currentRoom.getClickedItem());
+                Registry.currentRoom.removeItem();
+                Registry.currentRoom.itemWasClicked();
             }
 
             base.Update(gameTime);
@@ -121,7 +125,7 @@ namespace ProjektArbete
 
             GraphicsDevice.Clear(Color.AntiqueWhite);
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
-            room.Draw(gameTime, spriteBatch, player.position);
+            Registry.currentRoom.Draw(gameTime, spriteBatch, player.position);
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
 

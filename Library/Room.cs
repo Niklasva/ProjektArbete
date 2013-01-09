@@ -16,8 +16,7 @@ namespace Library
         public string backgroundID;
         public string foregroundID;
         public string[] npcID;
-        private List<Door> doors = new List<Door>();
-        private List<Object> objects = new List<Object>();
+        public List<Door> doors = new List<Door>();
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
 

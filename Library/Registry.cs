@@ -17,5 +17,6 @@ namespace Library
         public static Item[] items;
         public static Dialog[] dialogs;
         public static NPC[] npcs;
+        public static Room[] rooms;
     }
 }

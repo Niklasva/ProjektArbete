@@ -1,11 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <!-- TODO: replace this Asset with your own XML asset data. -->
-  <Asset Type="Library.Room">
+  <Asset Type="Library.Room[]">
+    <Item>
       <backgroundID>room1</backgroundID>
       <foregroundID>room1</foregroundID>
-    <npcID>
-      <Item>0</Item>
+      <npcID>
+        <Item>0</Item>
       </npcID>
+      <doors>
+        <Item>
+          <position>100 100</position>
+          <nextRoomID>1</nextRoomID>
+          <door2Position>0 100</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+        </Item>
+      </doors>
+    </Item>
+
+    <Item>
+      <backgroundID>room2</backgroundID>
+      <foregroundID>room1</foregroundID>
+      <npcID>
+      </npcID>
+      <doors>
+        <Item>
+          <position>100 100</position>
+          <nextRoomID>1</nextRoomID>
+          <door2Position>0 100</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+        </Item>
+      </doors>
+    </Item>
+
   </Asset>
 </XnaContent>
