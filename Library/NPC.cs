@@ -20,7 +20,8 @@ namespace Library
     {
         public String name;
         public Vector2 position;
-        public Dialog dialog;
+        private Dialog dialog;
+        public int dialogID;
         private Texture2D stillTexture;
         private Texture2D talkTexture;
         private AnimatedSprite stillSprite;
@@ -34,6 +35,7 @@ namespace Library
             this.stillTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name);
             stillSprite = new AnimatedSprite(stillTexture, position, 10, new Point(20, 40), new Point(0, 0), new Point(3, 1), 200);
             talkSprite = new AnimatedSprite(talkTexture, position, 10, new Point(20, 40), new Point(0, 0), new Point(3, 1), 200);
+            dialog = Registry.dialogs[dialogID];
             dialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
         }
         public void Update(GameTime gameTime, Rectangle clientBounds)

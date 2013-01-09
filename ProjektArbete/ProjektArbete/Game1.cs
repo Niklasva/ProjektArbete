@@ -73,6 +73,8 @@ namespace ProjektArbete
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
             room = Content.Load<Room>(@"Data/rooms");
+            Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");
+            Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");
 
             room.LoadContent(this);
         }

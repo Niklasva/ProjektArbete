@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <!-- TODO: replace this Asset with your own XML asset data. -->
+  <Asset Type="Library.Dialog[]">
+    <!-- Dialog 1 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Hello</line>
+          <time>1</time>
+        </Item>
+
+        <Item>
+          <speaker>NPC</speaker>
+          <position>20 100</position>
+          <line>I am a talking character</line>
+          <time>2</time>
+        </Item>
+
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Cool</line>
+          <time>1</time>
+        </Item>
+
+        <Item>
+          <speaker>NPC</speaker>
+          <position>97 100</position>
+          <line>Bye</line>
+          <time>1</time>
+        </Item>
+
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Goodbye</line>
+          <time>1</time>
+        </Item>
+
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>3</time>
+        </Item>
+
+      </lines>
+    </Item>
+  </Asset>
+</XnaContent>

@@ -15,5 +15,7 @@ namespace Library
         public static Vector2 playerPosition;
         public static Room currentRoom;
         public static Item[] items;
+        public static Dialog[] dialogs;
+        public static NPC[] npcs;
     }
 }

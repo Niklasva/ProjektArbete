@@ -15,12 +15,11 @@ namespace Library
         /// 
         public string backgroundID;
         public string foregroundID;
-        public List<string> npc = new List<string>();
+        public string[] npcID;
         private List<Door> doors = new List<Door>();
         private List<Object> objects = new List<Object>();
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
-        private NPC npc1;
 
         private Texture2D background;
         private Texture2D foreground;
@@ -36,24 +35,37 @@ namespace Library
         {
 
             this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
-            npc1 = game.Content.Load<NPC>(@"Data/NPC/" + npc[0]);
-            npc1.loadContent(game);
             isItemClicked = false;
             //LÄGG TILL VILKA FÖREMÅL SOM SKA VISAS HÄR
             items.Add(Registry.items[1]);
             items.Add(Registry.items[0]);
+
+            foreach (string id in npcID)
+            {
+                npcs.Add(Registry.npcs[int.Parse(id)]);
+            }
+            foreach (NPC item in npcs)
+            {
+                item.loadContent(game);
+            }
         }
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
-            npc1.Update(gameTime, clientBounds);
+            foreach (NPC item in npcs)
+            {
+                item.Update(gameTime, clientBounds);
+            }
             mousecontrolUpdate();
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
         {
             spriteBatch.Draw(background, Vector2.Zero, Color.White);
-            npc1.Draw(gameTime, spriteBatch, playerPosition);
+            foreach (NPC npc in npcs)
+            {
+                npc.Draw(gameTime, spriteBatch, playerPosition);
+            }
             foreach (Item item in items)
             {
                 item.Draw(gameTime, spriteBatch);
