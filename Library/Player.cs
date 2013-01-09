@@ -49,7 +49,7 @@ namespace Library
         private int speed = 2;
 
         //Konstruktor
-        public Player(Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Item[] items, Texture2D invBackGround, Rectangle clientBounds)
+        public Player(Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Texture2D invBackGround, Rectangle clientBounds)
         {
             this.leftTexture = leftTexture;
             this.leftSprite = new AnimatedSprite(leftTexture, position, 10, new Point(20, 40), leftCurrentFrame, new Point(2, 1), 100);
@@ -62,7 +62,7 @@ namespace Library
             this.stillTexture = stillTexture;
             this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(20, 40), new Point(0, 0), new Point(1, 1), 100);
 
-            this.inventory = new Inventory(items, invBackGround, clientBounds);
+            this.inventory = new Inventory(invBackGround, clientBounds);
         }
 
         public void Update(GameTime gameTime, Rectangle clientBounds)

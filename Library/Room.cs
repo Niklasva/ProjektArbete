@@ -32,13 +32,16 @@ namespace Library
         //Och föremålet i fråga
         private Item itemClicked = new Item();
 
-        public void LoadContent(Game game, List<Item> items)
+        public void LoadContent(Game game)
         {
+
             this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
             npc1 = game.Content.Load<NPC>(@"Data/NPC/" + npc[0]);
             npc1.loadContent(game);
-            this.items = items;
             isItemClicked = false;
+            //LÄGG TILL VILKA FÖREMÅL SOM SKA VISAS HÄR
+            items.Add(Registry.items[1]);
+            items.Add(Registry.items[0]);
         }
 
         public void Update(GameTime gameTime, Rectangle clientBounds)

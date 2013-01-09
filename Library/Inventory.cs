@@ -20,9 +20,6 @@ namespace Library
         private bool iPressed;
         private int wait = 0;
 
-        //Alla föremål som finns i spelet
-        private Item[] items;
-
         //Muskontroll
         private Mousecontrol mousecontrol = new Mousecontrol();
         private Item itemClickedOn = new Item();
@@ -30,14 +27,14 @@ namespace Library
 
 
         //Konstruktor
-        public Inventory(Item[] items, Texture2D background, Rectangle clientBounds)
+        public Inventory(Texture2D background, Rectangle clientBounds)
         {
-            this.items = items;
             this.background = background;
             this.inventoryPosition = clientBounds.Height / 6;
             backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - 24), 0, new Point(0, 0));
             
         }
+
 
         public void Update()
         {
@@ -47,10 +44,12 @@ namespace Library
             {
                 if (isInteractingWithItem)
                 {
+                    //Om man klickar med vänstra musknappen
                     if (mousecontrol.clicked())
                     {
-                        if (inventory.Count != 0 && itemClickedOn.isCombinable && mousecontrol.clickedOnItem(inventory, true) &&
-                            itemClickedOn.isCombinable && mousecontrol.getClickedItem().isCombinable && itemClickedOn != mousecontrol.getClickedItem())
+                        //Om föremålet går att kombinera och man klickar på ett föremål som går att kombinera
+                        if (itemClickedOn.isCombinable && mousecontrol.clickedOnItem(inventory, true) &&
+                            itemClickedOn.isCombinable)
                         {
                             combineItem(itemClickedOn, mousecontrol.getClickedItem());
                             isInteractingWithItem = false;
@@ -121,7 +120,7 @@ namespace Library
                 if (item1.combinedItemInt == item2.combinedItemInt)
                 {
                     //Tar bort de föremål som man kombinerar och lägger till det nya föremålet
-                    addItem(items[item1.combinedItemInt]);
+                    addItem(Registry.items[item1.combinedItemInt]);
                     removeItem(item1);
                     removeItem(item2);
                     sortInventory();

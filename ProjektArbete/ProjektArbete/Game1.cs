@@ -64,18 +64,17 @@ namespace ProjektArbete
             {
                 item.Initialize(Content.Load<Texture2D>(@item.TextureString), new Vector2(20, 10));
             }
+            Registry.items = items;
 
             player = new Player(Content.Load<Texture2D>(@"Images/AnimatedSprites/leftTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/rightTexture"), 
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/downTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/upTexture"), 
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), items, Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
             room = Content.Load<Room>(@"Data/rooms");
-            List<Item> toBeAddedToRoom = new List<Item>() { items[0], items[1] };
-            toBeAddedToRoom[1].setPosition(new Vector2(25, 10));
-            toBeAddedToRoom[0].setPosition(new Vector2(25, 25));
-            room.LoadContent(this, toBeAddedToRoom);
+
+            room.LoadContent(this);
         }
 
         /// <summary>
@@ -101,17 +100,12 @@ namespace ProjektArbete
             player.Update(gameTime, Window.ClientBounds);
 
             room.Update(gameTime, Window.ClientBounds);
-            if (room.isItemClickedInRoom())
+            if (room.isItemClickedInRoom() && inProximityToItem(room.getClickedItem()))
             {
-                if (inProximityToItem(room.getClickedItem()))
-                {
-                    player.addItem(room.getClickedItem());
-                    room.removeItem();
-                    room.itemWasClicked();
-                }
+                player.addItem(room.getClickedItem());
+                room.removeItem();
+                room.itemWasClicked();
             }
-
-            
 
             base.Update(gameTime);
         }
@@ -129,7 +123,6 @@ namespace ProjektArbete
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
 
-            
             spriteBatch.End();
             // TODO: Add your drawing code here
             

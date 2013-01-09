@@ -21,11 +21,6 @@ namespace Library
         private MouseState currMouseState;
         private Item itemClickedOn;
 
-        //Konstruktor
-        public Mousecontrol()
-        {
-        }
-
         public void update()
         {
             prevMouseState = currMouseState;
@@ -39,8 +34,7 @@ namespace Library
             //Klickar man? (var musen nedtryckt förra rutan och släppt denna?)
             if (prevMouseState.LeftButton == ButtonState.Pressed && currMouseState.LeftButton == ButtonState.Released)
             {
-                if (!leftMouseButtonClicked)
-                    leftMouseButtonClicked = true;
+                leftMouseButtonClicked = true;
             }
 
             return leftMouseButtonClicked;
@@ -84,6 +78,19 @@ namespace Library
             }
 
             return isMouseOverItem;
+        }
+
+        public bool rightClicked()
+        {
+
+            bool rightMouseButtonClicked = false;
+            //Klickar man? (var musen nedtryckt förra rutan och släppt denna?)
+            if (prevMouseState.RightButton == ButtonState.Pressed && currMouseState.RightButton == ButtonState.Released)
+            {
+                rightMouseButtonClicked = true;
+            }
+
+            return rightMouseButtonClicked;
         }
 
 

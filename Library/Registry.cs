@@ -14,5 +14,6 @@ namespace Library
     {
         public static Vector2 playerPosition;
         public static Room currentRoom;
+        public static Item[] items;
     }
 }
