@@ -16,6 +16,7 @@ namespace Library
         public string backgroundID;
         public string foregroundID;
         public string[] npcID;
+        public string[] itemID;
         public List<Door> doors = new List<Door>();
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
@@ -34,9 +35,10 @@ namespace Library
             this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
             isItemClicked = false;
             //LÄGG TILL VILKA FÖREMÅL SOM SKA VISAS HÄR
-            items.Add(Registry.items[1]);
-            items.Add(Registry.items[0]);
-
+            foreach (string id in itemID)
+            {
+                items.Add(Registry.items[int.Parse(id)]);
+            }
             foreach (string id in npcID)
             {
                 npcs.Add(Registry.npcs[int.Parse(id)]);

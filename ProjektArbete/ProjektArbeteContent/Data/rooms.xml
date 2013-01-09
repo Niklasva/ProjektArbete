@@ -8,6 +8,11 @@
       <npcID>
         <Item>0</Item>
       </npcID>
+      <itemID>
+        <Item>0</Item>
+        <Item>1</Item>
+        <Item>2</Item>
+      </itemID>
       <doors>
         <Item>
           <position>100 100</position>
@@ -24,6 +29,10 @@
       <foregroundID>room1</foregroundID>
       <npcID>
       </npcID>
+      <itemID>
+        <Item>1</Item>
+        <Item>3</Item>
+      </itemID>
       <doors>
         <Item>
           <position>100 100</position>

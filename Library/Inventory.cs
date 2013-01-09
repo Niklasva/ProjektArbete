@@ -30,7 +30,6 @@ namespace Library
             this.background = background;
             this.inventoryPosition = clientBounds.Height / 6;
             backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - 24), 0, new Point(0, 0));
-            
         }
 
 
@@ -48,13 +47,14 @@ namespace Library
                         if (itemClickedOn.isCombinable && Mousecontrol.clickedOnItem(inventory, true) &&
                             itemClickedOn.isCombinable)
                         {
-                            combineItem(itemClickedOn, Mousecontrol.getClickedItem());
+                            if(!combineItem(itemClickedOn, Mousecontrol.getClickedItem()))
+                                 addItem(itemClickedOn);
                             isInteractingWithItem = false;
                         }
                         else
                         {
-                            isInteractingWithItem = false;
                             addItem(itemClickedOn);
+                            isInteractingWithItem = false;
                         }
                     }
                 }
@@ -108,12 +108,12 @@ namespace Library
                 if (isInteractingWithItem)
                     itemClickedOn.Draw(gameTime, spriteBatch);
             }
-         
         }
 
         //Kombinerar föremål i inventoryn
-        public void combineItem(Item item1, Item item2)
+        public bool combineItem(Item item1, Item item2)
         {
+            bool successfullCombination = false;
             //Kan båda kombineras?
             if (item1.isCombinable && item2.isCombinable)
             {
@@ -124,12 +124,15 @@ namespace Library
                     removeItem(item1);
                     removeItem(item2);
                     addItem(Registry.items[item1.combinedItemInt]);
+                    successfullCombination = true;
                 }
             }
             else
             {
                 //TODO: berättaren säger något om att man inte kan använda föremålet på det sättet
             }
+
+            return successfullCombination;
         }
 
         //Lägger till föremål i inventory
@@ -156,7 +159,7 @@ namespace Library
                 if (i != 0)
                     inventory[i].setPosition(new Vector2(inventory[i - 1].frameSizeX * i, inventoryPosition - inventory[i].frameSizeY / 3));
                 else
-                    inventory[i].setPosition(new Vector2(inventory[i].frameSizeX * i, inventoryPosition - inventory[i].frameSizeY / 3));
+                    inventory[i].setPosition(new Vector2(0, inventoryPosition - inventory[i].frameSizeY / 3));
             }
         }
     }
