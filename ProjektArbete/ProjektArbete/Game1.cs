@@ -65,7 +65,7 @@ namespace ProjektArbete
             }
             Registry.items = items;
 
-            player = new Player(Content.Load<Texture2D>(@"Images/AnimatedSprites/leftTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/rightTexture"), 
+            player = new Player(this, Content.Load<Texture2D>(@"Images/AnimatedSprites/leftTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/rightTexture"), 
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/downTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/upTexture"), 
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
@@ -104,16 +104,18 @@ namespace ProjektArbete
                 Registry.currentRoom.LoadContent(this);
             }
             animatedItem.Update(gameTime, Window.ClientBounds);
-            player.Update(gameTime, Window.ClientBounds);
+            player.Update(this, gameTime, Window.ClientBounds);
 
             Registry.currentRoom.Update(gameTime, Window.ClientBounds);
             //Muskontroll
-            if (!Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom() && inProximityToItem(Registry.currentRoom.getClickedItem()))
+            
+            if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom() && inProximityToItem(Registry.currentRoom.getClickedItem()))
             {
                 player.addItem(Registry.currentRoom.getClickedItem());
                 Registry.currentRoom.removeItem();
                 Registry.currentRoom.itemWasClicked();
             }
+
 
             base.Update(gameTime);
         }
@@ -144,8 +146,8 @@ namespace ProjektArbete
             float framesizeX = item.getSprite().FrameSize.X;
             float framesizeY = item.getSprite().FrameSize.Y;
             //Befinner sig spelare inom en visst område runt föremålet?
-            if (player.position.X >= (positionX - 10) && player.position.X <= (positionX + framesizeX + 10) &&
-                player.position.Y >= (positionY - 10) && player.position.Y <= (positionY + framesizeY + 10))
+            if (Registry.playerPosition.X >= (positionX - 40) && Registry.playerPosition.X <= (positionX + framesizeX + 40) &&
+                Registry.playerPosition.Y >= (positionY - 40) && Registry.playerPosition.Y <= (positionY + framesizeY + 40))
             {
                 isInProximity = true;
             }

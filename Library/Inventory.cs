@@ -23,13 +23,16 @@ namespace Library
         private Item itemClickedOn = new Item();
         private bool isInteractingWithItem = false;
 
+        //game
+        Game game;
 
         //Konstruktor
-        public Inventory(Texture2D background, Rectangle clientBounds)
+        public Inventory(Texture2D background, Rectangle clientBounds, Game game)
         {
             this.background = background;
             this.inventoryPosition = clientBounds.Height / 6;
             backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - 24), 0, new Point(0, 0));
+            this.game = game;
         }
 
 
@@ -138,6 +141,17 @@ namespace Library
         //Lägger till föremål i inventory
         public void addItem(Item item)
         {
+            //Item itemToBeAdded = new Item();
+            //Item[] items = game.Content.Load<Item[]>(@"Data/ItemXML");
+            //for (int i = 0; i < items.Length ; i++)
+            //{
+            //    if (item == items[i])
+            //    {
+            //        itemToBeAdded = items[i];
+            //    }
+            //}
+            //itemToBeAdded.Initialize(game.Content.Load<Texture2D>(@item.TextureString), new Vector2(20, 10));
+
             if (item.isPickable)
             {
                 inventory.Add(item);

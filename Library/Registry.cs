@@ -19,5 +19,6 @@ namespace Library
         public static NPC[] npcs;
         public static Room[] rooms;
         public static bool inventoryInUse = false;
-    }
+        public static bool playerIsMoving = false;
+     }
 }

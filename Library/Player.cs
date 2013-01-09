@@ -49,7 +49,7 @@ namespace Library
         private int speed = 2;
 
         //Konstruktor
-        public Player(Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Texture2D invBackGround, Rectangle clientBounds)
+        public Player(Game game, Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Texture2D invBackGround, Rectangle clientBounds)
         {
             this.leftTexture = leftTexture;
             this.leftSprite = new AnimatedSprite(leftTexture, position, 10, new Point(20, 40), leftCurrentFrame, new Point(2, 1), 100);
@@ -62,12 +62,11 @@ namespace Library
             this.stillTexture = stillTexture;
             this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(20, 40), new Point(0, 0), new Point(1, 1), 100);
 
-            this.inventory = new Inventory(invBackGround, clientBounds);
+            this.inventory = new Inventory(invBackGround, clientBounds, game);
         }
 
-        public void Update(GameTime gameTime, Rectangle clientBounds)
+        public void Update(Game game, GameTime gameTime, Rectangle clientBounds)
         {
-            
             //Är inventoryn öppen ska spelaren inte röra på sig
             if (!Registry.inventoryInUse)
             {
@@ -154,9 +153,11 @@ namespace Library
                 downCurrentFrame = new Point(0, 0);
                 upCurrentFrame = new Point(0, 0);
             }
+            Registry.playerIsMoving = isMoving;
 
             inventory.Update();
             currentSprite.Position = position;
+            Registry.playerPosition = position;
             currentSprite.Update(gameTime, clientBounds);
         }
 
