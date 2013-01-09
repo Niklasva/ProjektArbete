@@ -17,7 +17,6 @@ namespace Library
         private int inventoryPosition;
         private Texture2D background;
         private Sprite backgroundSprite;
-        private bool iPressed;
         private int wait = 0;
 
         //Muskontroll
@@ -38,8 +37,7 @@ namespace Library
         public void Update()
         {
             //Uppdatering av muskontroll
-           // Mousecontrol.update();
-            if (iPressed)
+            if (Registry.inventoryInUse)
             {
                 if (isInteractingWithItem)
                 {
@@ -57,7 +55,6 @@ namespace Library
                         {
                             isInteractingWithItem = false;
                             addItem(itemClickedOn);
-                            sortInventory();
                         }
                     }
                 }
@@ -87,14 +84,19 @@ namespace Library
             wait++;
             if (Keyboard.GetState().IsKeyDown(Keys.I))
             {
-                if (!iPressed && wait > 5)
-                    iPressed = true;
+                if (!Registry.inventoryInUse && wait > 5)
+                {
+                    Registry.inventoryInUse = true;
+                    wait = 0;
+                }
                 else if (wait > 5)
-                    iPressed = false;
-                wait = 0;
+                {
+                    Registry.inventoryInUse = false;
+                    wait = 0;
+                }
             }
 
-            if (iPressed)
+            if (Registry.inventoryInUse)
             {
                 backgroundSprite.Draw(gameTime, spriteBatch);
 
@@ -119,10 +121,9 @@ namespace Library
                 if (item1.combinedItemInt == item2.combinedItemInt)
                 {
                     //Tar bort de föremål som man kombinerar och lägger till det nya föremålet
-                    addItem(Registry.items[item1.combinedItemInt]);
                     removeItem(item1);
                     removeItem(item2);
-                    sortInventory();
+                    addItem(Registry.items[item1.combinedItemInt]);
                 }
             }
             else
@@ -156,14 +157,6 @@ namespace Library
                     inventory[i].setPosition(new Vector2(inventory[i - 1].frameSizeX * i, inventoryPosition - inventory[i].frameSizeY / 3));
                 else
                     inventory[i].setPosition(new Vector2(inventory[i].frameSizeX * i, inventoryPosition - inventory[i].frameSizeY / 3));
-            }
-        }
-
-        public bool IPressed
-        {
-            get
-            {
-                return iPressed;
             }
         }
     }

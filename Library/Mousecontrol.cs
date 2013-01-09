@@ -29,7 +29,6 @@ namespace Library
 
         public static bool clicked()
         {
-
             bool leftMouseButtonClicked = false;
             //Klickar man? (var musen nedtryckt förra rutan och släppt denna?)
             if (prevMouseState.LeftButton == ButtonState.Pressed && currMouseState.LeftButton == ButtonState.Released)
@@ -82,7 +81,6 @@ namespace Library
 
         public static bool rightClicked()
         {
-
             bool rightMouseButtonClicked = false;
             //Klickar man? (var musen nedtryckt förra rutan och släppt denna?)
             if (prevMouseState.RightButton == ButtonState.Pressed && currMouseState.RightButton == ButtonState.Released)

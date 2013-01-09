@@ -31,7 +31,6 @@ namespace Library
 
         public void LoadContent(Game game)
         {
-
             this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
             isItemClicked = false;
             //LÄGG TILL VILKA FÖREMÅL SOM SKA VISAS HÄR
@@ -73,8 +72,6 @@ namespace Library
 
         public void mousecontrolUpdate()
         {
-            //Mousecontrol.update();
-
             //Om man klickar ner musen
             //Om man klickar på ett föremål i rummet
             if (Mousecontrol.clickedOnItem(items, Mousecontrol.clicked()))

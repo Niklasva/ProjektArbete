@@ -58,7 +58,7 @@ namespace ProjektArbete
         {
             //Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            items = Content.Load<Library.Item[]>(@"ItemXML");
+            items = Content.Load<Library.Item[]>(@"Data/ItemXML");
             foreach (Item item in items)
             {
                 item.Initialize(Content.Load<Texture2D>(@item.TextureString), new Vector2(20, 10));
@@ -107,7 +107,8 @@ namespace ProjektArbete
             player.Update(gameTime, Window.ClientBounds);
 
             Registry.currentRoom.Update(gameTime, Window.ClientBounds);
-            if (Registry.currentRoom.isItemClickedInRoom() && inProximityToItem(Registry.currentRoom.getClickedItem()))
+            //Muskontroll
+            if (!Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom() && inProximityToItem(Registry.currentRoom.getClickedItem()))
             {
                 player.addItem(Registry.currentRoom.getClickedItem());
                 Registry.currentRoom.removeItem();

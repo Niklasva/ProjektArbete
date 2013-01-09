@@ -16,7 +16,7 @@ Content\Images\Sprites\chair.xnb
 Content\Images\Sprites\hook.xnb
 Content\Images\Sprites\stone.xnb
 Content\Images\Backgrounds\room2.xnb
-Content\ItemXML.xnb
+Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
 Content\Data\npcs.xnb

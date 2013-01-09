@@ -18,5 +18,6 @@ namespace Library
         public static Dialog[] dialogs;
         public static NPC[] npcs;
         public static Room[] rooms;
+        public static bool inventoryInUse = false;
     }
 }

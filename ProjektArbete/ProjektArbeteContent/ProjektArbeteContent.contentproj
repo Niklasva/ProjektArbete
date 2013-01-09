@@ -65,7 +65,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemXML.xml">
+    <Compile Include="Data\ItemXML.xml">
       <Name>ItemXML</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>

@@ -19,7 +19,7 @@ namespace Library
     public class Player
     {
         //Texturer och animation av spelaren
-        public Vector2 position = new Vector2(10, 10);
+        public Vector2 position = new Vector2(150, 100);
         private Texture2D leftTexture;
         private Texture2D rightTexture;
         private Texture2D downTexture;
@@ -44,7 +44,7 @@ namespace Library
         //Kontroller
         private MouseState mouseState;
         private Vector2 mousePosition;
-        private Vector2 target = new Vector2(200,150);
+        private Vector2 target = new Vector2(150, 100);
         private Vector2 direction;
         private int speed = 2;
 
@@ -67,8 +67,9 @@ namespace Library
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
+            
             //Är inventoryn öppen ska spelaren inte röra på sig
-            if (!inventory.IPressed)
+            if (!Registry.inventoryInUse)
             {
                 //Rör spelaren på sig?
                 isMoving = true;
@@ -111,6 +112,7 @@ namespace Library
                     deltaX = target.X - position.X;
                 else
                     deltaX = position.X - target.X;
+
                 //Bestämmning av vilken animation som ska användas av spelaren
                 //Är man påväg åt höger, vänster, up eller ner?
                 //Går man mest vertikalt eller horisontellt?
@@ -142,9 +144,6 @@ namespace Library
                     rightCurrentFrame = new Point(0, 0);
                     upCurrentFrame = new Point(0, 0);
                 }
-
-                //currentSprite.Position = position;
-                currentSprite.Update(gameTime, clientBounds);
             }
             //Rör spelaren inte på sig så ska han ha en stillastående sprite
             else
@@ -158,6 +157,7 @@ namespace Library
 
             inventory.Update();
             currentSprite.Position = position;
+            currentSprite.Update(gameTime, clientBounds);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -174,10 +174,5 @@ namespace Library
         {
             inventory.removeItem(item);
         }
-        public void combineItem(Item item1, Item item2)
-        {
-            inventory.combineItem(item1, item2);
-        }
-
     }
 }
