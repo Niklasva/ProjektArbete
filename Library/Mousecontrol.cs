@@ -12,22 +12,22 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Library
 {
-    public class Mousecontrol
+    public static class Mousecontrol
     {
         /// <summary>
         /// Sköter allt som har med att man klickar att göra
         /// </summary>
-        private MouseState prevMouseState;
-        private MouseState currMouseState;
-        private Item itemClickedOn;
+        private static MouseState prevMouseState;
+        private static  MouseState currMouseState;
+        private static Item itemClickedOn;
 
-        public void update()
+        public static void update()
         {
             prevMouseState = currMouseState;
             currMouseState = Mouse.GetState();
         }
 
-        public bool clicked()
+        public static bool clicked()
         {
 
             bool leftMouseButtonClicked = false;
@@ -40,7 +40,7 @@ namespace Library
             return leftMouseButtonClicked;
         }
 
-        public bool clickedOnItem(List<Item> items, bool leftMouseButtonClicked)
+        public static bool clickedOnItem(List<Item> items, bool leftMouseButtonClicked)
         {
             bool clickedOnItemInRoom = false;
             //Har man klickat ned musen
@@ -61,12 +61,12 @@ namespace Library
             return clickedOnItemInRoom;
         }
 
-        public Item getClickedItem()
+        public static Item getClickedItem()
         {
             return itemClickedOn;
         }
 
-        private bool mouseOverItem(Item item)
+        private static bool mouseOverItem(Item item)
         {
             bool isMouseOverItem = false;
             //Beffinner sig musen inom området för spriten?
@@ -80,7 +80,7 @@ namespace Library
             return isMouseOverItem;
         }
 
-        public bool rightClicked()
+        public static bool rightClicked()
         {
 
             bool rightMouseButtonClicked = false;

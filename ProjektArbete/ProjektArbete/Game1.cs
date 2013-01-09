@@ -95,6 +95,7 @@ namespace ProjektArbete
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            Mousecontrol.update();
             //Test av rumbyte. Kod som ska användas till dörrar
             KeyboardState keyState = Keyboard.GetState();
             if (keyState.IsKeyDown(Keys.Delete))

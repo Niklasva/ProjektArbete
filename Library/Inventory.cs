@@ -21,7 +21,6 @@ namespace Library
         private int wait = 0;
 
         //Muskontroll
-        private Mousecontrol mousecontrol = new Mousecontrol();
         private Item itemClickedOn = new Item();
         private bool isInteractingWithItem = false;
 
@@ -39,19 +38,19 @@ namespace Library
         public void Update()
         {
             //Uppdatering av muskontroll
-            mousecontrol.update();
+           // Mousecontrol.update();
             if (iPressed)
             {
                 if (isInteractingWithItem)
                 {
                     //Om man klickar med vänstra musknappen
-                    if (mousecontrol.clicked())
+                    if (Mousecontrol.clicked())
                     {
                         //Om föremålet går att kombinera och man klickar på ett föremål som går att kombinera
-                        if (itemClickedOn.isCombinable && mousecontrol.clickedOnItem(inventory, true) &&
+                        if (itemClickedOn.isCombinable && Mousecontrol.clickedOnItem(inventory, true) &&
                             itemClickedOn.isCombinable)
                         {
-                            combineItem(itemClickedOn, mousecontrol.getClickedItem());
+                            combineItem(itemClickedOn, Mousecontrol.getClickedItem());
                             isInteractingWithItem = false;
                         }
                         else
@@ -65,14 +64,14 @@ namespace Library
                 else
                 {
                     //Om man klickar ner musen
-                    if (mousecontrol.clicked())
+                    if (Mousecontrol.clicked())
                     {
                         //Om man klickar på ett föremål i sin inventory
-                        if (mousecontrol.clickedOnItem(inventory, true))
+                        if (Mousecontrol.clickedOnItem(inventory, true))
                         {
-                            itemClickedOn = mousecontrol.getClickedItem();
+                            itemClickedOn = Mousecontrol.getClickedItem();
                             isInteractingWithItem = true;
-                            removeItem(mousecontrol.getClickedItem());
+                            removeItem(Mousecontrol.getClickedItem());
                         }
                     }
                 }

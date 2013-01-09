@@ -23,8 +23,7 @@ namespace Library
         private Texture2D background;
         private Texture2D foreground;
         
-        //Muskontroll
-        private Mousecontrol mousecontrol = new Mousecontrol();
+        //Muskontroll 
         //Bool för att lägga till föremål i spelaren och ta bort från rummet
         private bool isItemClicked;
         //Och föremålet i fråga
@@ -74,19 +73,19 @@ namespace Library
 
         public void mousecontrolUpdate()
         {
-            mousecontrol.update();
+            //Mousecontrol.update();
 
             //Om man klickar ner musen
             //Om man klickar på ett föremål i rummet
-            if (mousecontrol.clickedOnItem(items, mousecontrol.clicked()))
+            if (Mousecontrol.clickedOnItem(items, Mousecontrol.clicked()))
             {
                 //Kan man plocka upp föremålet?
-                if (mousecontrol.getClickedItem().isPickable)
+                if (Mousecontrol.getClickedItem().isPickable)
                 {
                     //Ändra en bool som anger om ett föremål har blivit klickat på
                     isItemClicked = true;
                     //Föremålet som klickades på tilldelas till en variabel i rummet
-                    itemClicked = mousecontrol.getClickedItem();
+                    itemClicked = Mousecontrol.getClickedItem();
                 }
             }
         }
