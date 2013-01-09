@@ -26,9 +26,6 @@ namespace ProjektArbete
         Item[] items;
         Room room;
 
-        //Muskontrol
-        Mousecontrol mousecontrol = new Mousecontrol();
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -75,10 +72,10 @@ namespace ProjektArbete
             animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
                 new Point(0, 0), new Point(6, 8), 16);
             room = Content.Load<Room>(@"Data/rooms");
-            room.LoadContent(this);
-
-            player.addItem(items[0]);
-            player.addItem(items[1]);
+            List<Item> toBeAddedToRoom = new List<Item>() { items[0], items[1] };
+            toBeAddedToRoom[1].setPosition(new Vector2(25, 10));
+            toBeAddedToRoom[0].setPosition(new Vector2(25, 25));
+            room.LoadContent(this, toBeAddedToRoom);
         }
 
         /// <summary>
@@ -102,22 +99,18 @@ namespace ProjektArbete
                 this.Exit();
             animatedItem.Update(gameTime, Window.ClientBounds);
             player.Update(gameTime, Window.ClientBounds);
-            room.Update(gameTime, Window.ClientBounds);
-            
-            //Kontroll för musen
-            mousecontrol.update();
 
-            //Om man klickar ner musen
-            //Om man klickar på ett föremål i rummet
-            if (mousecontrol.clickedOnItem(room.getItems(), mousecontrol.clicked()))
+            room.Update(gameTime, Window.ClientBounds);
+            if (room.isItemClickedInRoom())
             {
-                //Kan man plocka upp föremålet?
-                if (mousecontrol.getClickedItem().isPickable)
+                if (inProximityToItem(room.getClickedItem()))
                 {
-                    //Lägg då till föremålet i spelarens inventory
-                    player.addItem(mousecontrol.getClickedItem());
+                    player.addItem(room.getClickedItem());
+                    room.removeItem();
+                    room.itemWasClicked();
                 }
             }
+
             
 
             base.Update(gameTime);
@@ -133,10 +126,6 @@ namespace ProjektArbete
             GraphicsDevice.Clear(Color.AntiqueWhite);
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
             room.Draw(gameTime, spriteBatch, player.position);
-            foreach (Item item in items)
-            {
-                //item.Draw(gameTime, spriteBatch);
-            }
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
 
@@ -145,6 +134,23 @@ namespace ProjektArbete
             // TODO: Add your drawing code here
             
             base.Draw(gameTime);
+        }
+
+        public bool inProximityToItem(Item item)
+        {
+            bool isInProximity = false;
+            float positionX = item.getSprite().Position.X;
+            float positionY = item.getSprite().Position.Y;
+            float framesizeX = item.getSprite().FrameSize.X;
+            float framesizeY = item.getSprite().FrameSize.Y;
+            //Befinner sig spelare inom en visst område runt föremålet?
+            if (player.position.X >= (positionX - 10) && player.position.X <= (positionX + framesizeX + 10) &&
+                player.position.Y >= (positionY - 10) && player.position.Y <= (positionY + framesizeY + 10))
+            {
+                isInProximity = true;
+            }
+
+            return isInProximity;
         }
     }
 }

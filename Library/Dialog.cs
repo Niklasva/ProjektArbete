@@ -11,6 +11,9 @@ namespace Library
 {
     public class Dialog
     {
+        /// <summary>
+        /// Sköter all dialog i spelet
+        /// </summary>
         public List<Line> lines;
         SpriteFont font;
         float timer = 2;

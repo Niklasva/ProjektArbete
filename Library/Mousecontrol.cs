@@ -14,6 +14,9 @@ namespace Library
 {
     public class Mousecontrol
     {
+        /// <summary>
+        /// Sköter allt som har med att man klickar att göra
+        /// </summary>
         private MouseState prevMouseState;
         private MouseState currMouseState;
         private Item itemClickedOn;
@@ -73,9 +76,10 @@ namespace Library
         {
             bool isMouseOverItem = false;
             //Beffinner sig musen inom området för spriten?
-            if (currMouseState.X / 3 >= item.getSprite().Position.X && currMouseState.X / 3 <= item.getSprite().Position.X + item.getSprite().FrameSize.X)
+            //Delar positionen med 3 för spelets grafik dras ut
+            if (currMouseState.X / 3 >= item.getSprite().Position.X && currMouseState.X / 3 <= item.getSprite().Position.X + (item.getSprite().FrameSize.X))
             {
-                if (currMouseState.Y / 3 >= item.getSprite().Position.Y && currMouseState.Y / 3 <= item.getSprite().Position.Y + item.getSprite().FrameSize.Y)
+                if (currMouseState.Y / 3 >= item.getSprite().Position.Y && currMouseState.Y / 3 <= item.getSprite().Position.Y + (item.getSprite().FrameSize.Y))
                     isMouseOverItem = true;
             }
 

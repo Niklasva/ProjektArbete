@@ -41,7 +41,7 @@ namespace Library
         //Inventory
         Inventory inventory;
         
-        //kontroller
+        //Kontroller
         private MouseState mouseState;
         private Vector2 mousePosition;
         private Vector2 target = new Vector2(200,150);
@@ -143,9 +143,7 @@ namespace Library
                     upCurrentFrame = new Point(0, 0);
                 }
 
-                inventory.Update();
-
-                currentSprite.Position = position;
+                //currentSprite.Position = position;
                 currentSprite.Update(gameTime, clientBounds);
             }
             //Rör spelaren inte på sig så ska han ha en stillastående sprite
@@ -158,8 +156,8 @@ namespace Library
                 upCurrentFrame = new Point(0, 0);
             }
 
+            inventory.Update();
             currentSprite.Position = position;
-
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)

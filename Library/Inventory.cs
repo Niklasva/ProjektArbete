@@ -43,43 +43,45 @@ namespace Library
         {
             //Uppdatering av muskontroll
             mousecontrol.update();
-
-            if (isInteractingWithItem)
+            if (iPressed)
             {
-                if (mousecontrol.clicked())
+                if (isInteractingWithItem)
                 {
-                    if (inventory.Count != 0 && itemClickedOn.isCombinable && mousecontrol.clickedOnItem(inventory, true) &&
-                        itemClickedOn.isCombinable && mousecontrol.getClickedItem().isCombinable && itemClickedOn != mousecontrol.getClickedItem())
+                    if (mousecontrol.clicked())
                     {
-                        combineItem(itemClickedOn, mousecontrol.getClickedItem());
-                        isInteractingWithItem = false;
-                    }
-                    else
-                    {
-                        isInteractingWithItem = false;
-                        addItem(itemClickedOn);
-                        sortInventory();
+                        if (inventory.Count != 0 && itemClickedOn.isCombinable && mousecontrol.clickedOnItem(inventory, true) &&
+                            itemClickedOn.isCombinable && mousecontrol.getClickedItem().isCombinable && itemClickedOn != mousecontrol.getClickedItem())
+                        {
+                            combineItem(itemClickedOn, mousecontrol.getClickedItem());
+                            isInteractingWithItem = false;
+                        }
+                        else
+                        {
+                            isInteractingWithItem = false;
+                            addItem(itemClickedOn);
+                            sortInventory();
+                        }
                     }
                 }
-            }
-            else
-            {
-                //Om man klickar ner musen
-                if (mousecontrol.clicked())
+                else
                 {
-                    //Om man klickar på ett föremål i sin inventory
-                    if (mousecontrol.clickedOnItem(inventory, true))
+                    //Om man klickar ner musen
+                    if (mousecontrol.clicked())
                     {
-                        itemClickedOn = mousecontrol.getClickedItem();
-                        isInteractingWithItem = true;
-                        removeItem(mousecontrol.getClickedItem());
+                        //Om man klickar på ett föremål i sin inventory
+                        if (mousecontrol.clickedOnItem(inventory, true))
+                        {
+                            itemClickedOn = mousecontrol.getClickedItem();
+                            isInteractingWithItem = true;
+                            removeItem(mousecontrol.getClickedItem());
+                        }
                     }
                 }
-            }
 
-            if (isInteractingWithItem)
-                itemClickedOn.setPosition(new Vector2(Mouse.GetState().X / 3 - itemClickedOn.frameSizeX / 2,
-                    Mouse.GetState().Y / 3 - itemClickedOn.frameSizeY / 2));            
+                if (isInteractingWithItem)
+                    itemClickedOn.setPosition(new Vector2(Mouse.GetState().X / 3 - itemClickedOn.frameSizeX / 2,
+                        Mouse.GetState().Y / 3 - itemClickedOn.frameSizeY / 2));
+            }
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
