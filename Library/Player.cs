@@ -158,7 +158,8 @@ namespace Library
             inventory.Update();
             currentSprite.Position = position;
             Registry.playerPosition = position;
-            currentSprite.Update(gameTime, clientBounds);
+            if(!Registry.inventoryInUse)
+                 currentSprite.Update(gameTime, clientBounds);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)

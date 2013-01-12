@@ -21,6 +21,9 @@ namespace Library
         private static  MouseState currMouseState;
         private static Item itemClickedOn;
 
+        private static string description;
+        private static string name;
+
         public static void update()
         {
             prevMouseState = currMouseState;
@@ -41,23 +44,23 @@ namespace Library
 
         public static bool clickedOnItem(List<Item> items, bool leftMouseButtonClicked)
         {
-            bool clickedOnItemInRoom = false;
+            bool clickedOnItem = false;
             //Har man klickat ned musen
             if (leftMouseButtonClicked)
             {
                 //Om musen befinner sig inom föremålets gränser...
-                for (int i = 0; i < items.Count && !clickedOnItemInRoom; i++)
+                for (int i = 0; i < items.Count && !clickedOnItem; i++)
                 {
                     if (mouseOverItem(items[i]))
                     {
                         //...blir en bool sann.
-                        clickedOnItemInRoom = true;
+                        clickedOnItem = true;
                         itemClickedOn = items[i];
                     }
                 }
             }
 
-            return clickedOnItemInRoom;
+            return clickedOnItem;
         }
 
         public static Item getClickedItem()
@@ -89,6 +92,30 @@ namespace Library
             }
 
             return rightMouseButtonClicked;
+        }
+
+        public static bool rightClickedOnItem(List<Item> items)
+        {
+            bool rightClickedOnItem = false;
+
+            if (clickedOnItem(items, true))
+            {
+                rightClickedOnItem = true;
+                description = getClickedItem().description;
+                name = getClickedItem().name;
+            }
+
+            return rightClickedOnItem;
+        }
+
+        public static string getDescription()
+        {
+            return description;
+        }
+
+        public static string getName()
+        {
+            return name;
         }
 
 

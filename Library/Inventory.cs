@@ -20,7 +20,7 @@ namespace Library
         private int wait = 0;
 
         //Muskontroll
-        private Item itemClickedOn = new Item();
+        private Item itemClickedOn;
         private bool isInteractingWithItem = false;
 
         //game
@@ -87,16 +87,17 @@ namespace Library
             wait++;
             if (Keyboard.GetState().IsKeyDown(Keys.I))
             {
-                if (!Registry.inventoryInUse && wait > 5)
+                if (!Registry.inventoryInUse && wait > 1)
                 {
                     Registry.inventoryInUse = true;
-                    wait = 0;
+                    
                 }
-                else if (wait > 5)
+                else if (wait > 1)
                 {
                     Registry.inventoryInUse = false;
-                    wait = 0;
+                    
                 }
+                wait = 0;
             }
 
             if (Registry.inventoryInUse)

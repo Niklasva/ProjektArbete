@@ -25,6 +25,10 @@ namespace ProjektArbete
         Player player;
         Item[] items;
 
+        //Muskontroll
+        bool rightClickedOnItem = false;
+        
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -58,7 +62,7 @@ namespace ProjektArbete
             items = Content.Load<Library.Item[]>(@"Data/ItemXML");
             foreach (Item item in items)
             {
-                item.Initialize(Content.Load<Texture2D>(@item.TextureString), new Vector2(20, 10));
+                item.Initialize(Content.Load<Texture2D>(@item.TextureString));
             }
             Registry.items = items;
 
@@ -114,6 +118,7 @@ namespace ProjektArbete
             }
 
 
+
             base.Update(gameTime);
         }
 
@@ -128,6 +133,19 @@ namespace ProjektArbete
             Registry.currentRoom.Draw(gameTime, spriteBatch, player.position);
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
+
+            if ((Mouse.GetState().RightButton == ButtonState.Pressed && Mousecontrol.rightClickedOnItem(Registry.currentRoom.getItems())))
+            {
+                spriteBatch.DrawString(Content.Load<SpriteFont>(@"textfont"), Mousecontrol.getDescription(),
+                    new Vector2(Mousecontrol.getClickedItem().getSprite().Position.X - (Mousecontrol.getDescription().Count() / 8),
+                          Mousecontrol.getClickedItem().getSprite().Position.Y), Color.White);
+            }
+            else if (Mousecontrol.rightClickedOnItem(Registry.currentRoom.getItems()))
+            {
+                spriteBatch.DrawString(Content.Load<SpriteFont>(@"textfont"), Mousecontrol.getName(),
+                    new Vector2(Mousecontrol.getClickedItem().getSprite().Position.X - (Mousecontrol.getName().Count() / 8),
+                        Mousecontrol.getClickedItem().getSprite().Position.Y), Color.White);
+            }
 
             spriteBatch.End();
             // TODO: Add your drawing code here

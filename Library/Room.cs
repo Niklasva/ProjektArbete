@@ -29,7 +29,7 @@ namespace Library
         //Bool för att lägga till föremål i spelaren och ta bort från rummet
         private bool isItemClicked;
         //Och föremålet i fråga
-        private Item itemClicked = new Item();
+        private Item itemClicked;
 
         public void LoadContent(Game game)
         {
@@ -113,6 +113,10 @@ namespace Library
         public void removeItem()
         {
             items.Remove(itemClicked);
+        }
+        public List<Item> getItems()
+        {
+            return items;
         }
 
         

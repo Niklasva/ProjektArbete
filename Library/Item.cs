@@ -36,9 +36,8 @@ namespace Library
             }
         }
 
-        public void Initialize(Texture2D textureForItem, Vector2 position)
+        public void Initialize(Texture2D textureForItem)
         {
-            this.position = position;
             texture = textureForItem;
             sprite = new Sprite(texture, position, 10, new Point(frameSizeX, frameSizeY));
         }

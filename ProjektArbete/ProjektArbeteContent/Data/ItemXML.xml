@@ -41,7 +41,7 @@
       <textureString>Images/Sprites/hook</textureString>
       <frameSizeX>24</frameSizeX>
       <frameSizeY>24</frameSizeY>
-      <isCombinable>true</isCombinable>
+      <isCombinable>false</isCombinable>
       <combinedItemInt>3</combinedItemInt>
     </Item>
   </Asset>
