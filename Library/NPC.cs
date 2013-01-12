@@ -27,7 +27,7 @@ namespace Library
         private AnimatedSprite stillSprite;
         private AnimatedSprite talkSprite;
         private AnimatedSprite activeSprite;
-        private Boolean isTalking = true;
+        private Boolean isTalking = false;
 
         public void loadContent(Game game)
         {
@@ -66,7 +66,7 @@ namespace Library
             activeSprite.Draw(gameTime, spriteBatch);
             if (isTalking == true)
             {
-                dialog.Speak(gameTime, spriteBatch, playerPosition, position);
+                dialog.Speak(gameTime, spriteBatch, position);
             }
         }
     }

@@ -2,7 +2,7 @@
 <XnaContent>
   <!-- TODO: replace this Asset with your own XML asset data. -->
   <Asset Type="Library.Dialog[]">
-    <!-- Dialog 1 -->
+    <!-- Dialog 0 - testdialog-->
     <Item>
       <lines>
         <Item>
@@ -46,7 +46,24 @@
           <line>0</line>
           <time>3</time>
         </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[1] - Kan inte öppna-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>I can't open it</line>
+          <time>2</time>
+        </Item>
 
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>3</time>
+        </Item>
       </lines>
     </Item>
   </Asset>

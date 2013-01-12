@@ -17,6 +17,7 @@ namespace Library
         public string foregroundID;
         public string[] npcID;
         public string[] itemID;
+        public string[] itemPosition;
         public List<Door> doors = new List<Door>();
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
@@ -46,6 +47,15 @@ namespace Library
             foreach (NPC item in npcs)
             {
                 item.loadContent(game);
+            }
+            
+            int i = 0;
+            foreach (Item item in items)
+            {
+
+                string[] temp = itemPosition[i].Split(new char[] { ',' }, 2);
+                item.setPosition(new Vector2(float.Parse(temp[0]), float.Parse(temp[1])));
+                i++;
             }
         }
 

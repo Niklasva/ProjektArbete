@@ -36,7 +36,7 @@ namespace Library
             return speaker;
         }
 
-        public void Speak(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition, Vector2 npcPosition)
+        public void Speak(GameTime gameTime, SpriteBatch spriteBatch, Vector2 npcPosition)
         {
 
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -46,7 +46,7 @@ namespace Library
             {
                 if (speaker == "Player")
                 {
-                    Draw(gameTime, spriteBatch, lines[i].line, new Vector2(playerPosition.X - ((lines[i].line.Count() * 6)/2), playerPosition.Y - 15), lines[i].getColor());
+                    Draw(gameTime, spriteBatch, lines[i].line, new Vector2(Registry.playerPosition.X - ((lines[i].line.Count() * 6) / 2), Registry.playerPosition.Y - 15), lines[i].getColor());
                 }
                 else if (speaker == "NPC")
                 {

@@ -16,10 +16,15 @@ namespace Library
         public Vector2 door2Position;
         public bool isLocked;
         public string key;
-
+        private Dialog cantOpenDialog;
         private Room nextRoom;
 
-
+        public void LoadContent(Game game)
+        {
+            nextRoom = Registry.rooms[int.Parse(nextRoomID)];
+            nextRoom.LoadContent(game);
+            cantOpenDialog = Registry.dialogs[1];
+        }
         //Ändrar aktivt rum och förflyttar spelaren till dörren på nästa sida
         public void Teleport()
         {
@@ -30,7 +35,6 @@ namespace Library
             }
             else
             {
-                //TODO: Berättaren säger något om att dörren inte kan öppnas.
             }
         }
 
