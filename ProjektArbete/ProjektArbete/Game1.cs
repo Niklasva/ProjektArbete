@@ -122,7 +122,7 @@ namespace ProjektArbete
                 Registry.currentRoom.itemWasClicked();
             }
 
-            if (!IntersectMask(maskData))
+            if (IntersectMask(maskData))
             {
                 player.Stop();
             }
@@ -181,18 +181,17 @@ namespace ProjektArbete
         static bool IntersectMask(Color[,] data)
         {
             // Konverterar spelarpositionen (Vector2/float) till int för att kunna använda den som arrayposition
-            int x = (int)Math.Round(Registry.playerPosition.X + 10);
+            int x = (int)Math.Round(Registry.playerPosition.X);
             int y = (int)Math.Round(Registry.playerPosition.Y + 39);
             if (x < 1) x = 1;
+            if (x > 299) x = 299;
             if (y < 1) y = 1;
 
-            //letar efter färgen blå
-            if (data[x,y - 1] == Color.Blue)
+            //letar efter !färg
+            if (data[x, y].A == 0 || data[x + 20, y].A == 0)
             {
                 return true;
             }
-
-            System.Console.WriteLine("");
             return false;
         }
 
