@@ -27,7 +27,9 @@ namespace ProjektArbete
 
         //Muskontroll
         bool rightClickedOnItem = false;
-        
+
+        Texture2D mask;
+        Color[,] maskData;
 
         public Game1()
         {
@@ -78,6 +80,9 @@ namespace ProjektArbete
             Registry.currentRoom = Registry.rooms[0];
 
             Registry.currentRoom.LoadContent(this);
+
+            mask = Content.Load<Texture2D>(@"Images/Backgrounds/backgroundmask");
+            maskData = TextureTo2DArray(mask);
         }
 
         /// <summary>
@@ -117,7 +122,10 @@ namespace ProjektArbete
                 Registry.currentRoom.itemWasClicked();
             }
 
-
+            if (!IntersectMask(maskData))
+            {
+                player.Stop();
+            }
 
             base.Update(gameTime);
         }
@@ -168,6 +176,39 @@ namespace ProjektArbete
             }
 
             return isInProximity;
+        }
+
+        static bool IntersectMask(Color[,] data)
+        {
+            // Konverterar spelarpositionen (Vector2/float) till int för att kunna använda den som arrayposition
+            int x = (int)Math.Round(Registry.playerPosition.X + 10);
+            int y = (int)Math.Round(Registry.playerPosition.Y + 39);
+            if (x < 1) x = 1;
+            if (y < 1) y = 1;
+
+            //letar efter färgen blå
+            if (data[x,y - 1] == Color.Blue)
+            {
+                return true;
+            }
+
+            System.Console.WriteLine("");
+            return false;
+        }
+
+        Color[,] TextureTo2DArray(Texture2D texture)
+        {
+            // GetData skapar av någon dum anledning enbart endimensionella arrayer
+            // Den här funktionen konverterar en endimensionell array till en tvådimensionell.
+            Color[] colors1 = new Color[texture.Width * texture.Height];
+            texture.GetData(colors1); 
+
+            Color[,] colors2 = new Color[texture.Width, texture.Height];
+            for (int x = 0; x < texture.Width; x++)
+                for (int y = 0; y < texture.Height; y++)
+                    colors2[x, y] = colors1[x + y * texture.Width];
+
+            return colors2;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Library
     public class Player
     {
         //Texturer och animation av spelaren
-        public Vector2 position = new Vector2(150, 100);
+        public Vector2 position = new Vector2(36, 39);
         private Texture2D leftTexture;
         private Texture2D rightTexture;
         private Texture2D downTexture;
@@ -44,7 +44,7 @@ namespace Library
         //Kontroller
         private MouseState mouseState;
         private Vector2 mousePosition;
-        private Vector2 target = new Vector2(150, 100);
+        private Vector2 target = new Vector2(36, 39);
         private Vector2 direction;
         private int speed = 2;
 
@@ -175,6 +175,11 @@ namespace Library
         public void removeItem(Item item)
         {
             inventory.removeItem(item);
+        }
+
+        public void Stop()
+        {
+            target = position;
         }
     }
 }

@@ -4,7 +4,7 @@
   <Asset Type="Library.Room[]">
     <!-- Rum 0 - test 1 -->
     <Item>
-      <backgroundID>room1</backgroundID>
+      <backgroundID>background</backgroundID>
       <foregroundID>room1</foregroundID>
       <npcID>
         <Item>0</Item>
@@ -15,9 +15,9 @@
         <Item>2</Item>
       </itemID>
       <itemPosition>
-        <Item>100,50</Item>
-        <Item>50,110</Item>
-        <Item>150,100</Item>
+        <Item>211,74</Item>
+        <Item>278,89</Item>
+        <Item>38,104</Item>
       </itemPosition>
       <doors>
         <Item>

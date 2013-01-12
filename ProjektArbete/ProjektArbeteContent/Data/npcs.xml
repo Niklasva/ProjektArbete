@@ -3,7 +3,7 @@
   <Asset Type="Library.NPC[]">
     <Item>
       <name>test</name>
-      <position>100 50</position>
+      <position>100 62</position>
       <dialogID>0</dialogID>
     </Item>
   </Asset>

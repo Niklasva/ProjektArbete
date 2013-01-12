@@ -16,6 +16,9 @@ Content\Images\Sprites\chair.xnb
 Content\Images\Sprites\hook.xnb
 Content\Images\Sprites\stone.xnb
 Content\Images\Backgrounds\room2.xnb
+Content\Images\Backgrounds\background.xnb
+Content\Images\Backgrounds\backgroundmask.xnb
+Content\Images\Backgrounds\test.xnb
 Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
