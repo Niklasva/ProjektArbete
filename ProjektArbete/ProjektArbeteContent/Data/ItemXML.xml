@@ -4,7 +4,7 @@
     <Item>
       <name>Stone</name>
       <isPickable>true</isPickable>
-      <description>A light stone.</description>
+      <description>A light stone</description>
       <textureString>Images/Sprites/stone</textureString>
       <frameSizeX>24</frameSizeX>
       <frameSizeY>24</frameSizeY>
@@ -15,7 +15,7 @@
     <Item>
       <name>Chair</name>
       <isPickable>true</isPickable>
-      <description>A sturdy chair. It is quite nice looking</description>
+      <description>A sturdy chair</description>
       <textureString>Images/Sprites/chair</textureString>
       <frameSizeX>24</frameSizeX>
       <frameSizeY>24</frameSizeY>
@@ -26,7 +26,7 @@
     <Item>
       <name>Rope</name>
       <isPickable>true</isPickable>
-      <description>Some nice looking rope.</description>
+      <description>Some nice looking rope</description>
       <textureString>Images/Sprites/rope</textureString>
       <frameSizeX>24</frameSizeX>
       <frameSizeY>24</frameSizeY>

@@ -43,13 +43,14 @@ namespace Library
             {
                 if (isInteractingWithItem)
                 {
-                    //Om man klickar med vänstra musknappen
+                    //Om man klickar med vänstra musknappen...
                     if (Mousecontrol.clicked())
                     {
-                        //Om föremålet går att kombinera och man klickar på ett föremål som går att kombinera
+                        //...och om föremålet går att kombinera och man klickar på ett föremål som går att kombinera
                         if (itemClickedOn.isCombinable && Mousecontrol.clickedOnItem(inventory, true) &&
                             itemClickedOn.isCombinable)
                         {
+                            //...går det att kombinera föremålen så kombineras de och annars läggs det föremålet som man klickat på tillagt i inventoryn
                             if(!combineItem(itemClickedOn, Mousecontrol.getClickedItem()))
                                  addItem(itemClickedOn);
                             isInteractingWithItem = false;
@@ -63,12 +64,13 @@ namespace Library
                 }
                 else
                 {
-                    //Om man klickar ner musen
+                    //Om man klickar ner musen...
                     if (Mousecontrol.clicked())
                     {
-                        //Om man klickar på ett föremål i sin inventory
+                        //... och om man klickar på ett föremål i sin inventory...
                         if (Mousecontrol.clickedOnItem(inventory, true))
                         {
+                            //Blir föremålet ett föremål som följer musen och den tas bort från själva inventoryn
                             itemClickedOn = Mousecontrol.getClickedItem();
                             isInteractingWithItem = true;
                             removeItem(Mousecontrol.getClickedItem());
@@ -84,6 +86,7 @@ namespace Library
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            //Klickar man ned i det har gått mer än 1 ruta sedan förra gången man gjorde det öppnas inventoryn
             wait++;
             if (Keyboard.GetState().IsKeyDown(Keys.I))
             {
@@ -99,7 +102,7 @@ namespace Library
                 }
                 wait = 0;
             }
-
+            
             if (Registry.inventoryInUse)
             {
                 backgroundSprite.Draw(gameTime, spriteBatch);
@@ -111,6 +114,31 @@ namespace Library
 
                 if (isInteractingWithItem)
                     itemClickedOn.Draw(gameTime, spriteBatch);
+
+                string textToDraw = null;
+                bool drawText = false;
+                //Om man håller inne musknappen över ett föremål...
+                if ((Mouse.GetState().RightButton == ButtonState.Pressed && Mousecontrol.rightClickedOnItem(inventory)))
+                {
+                    //...blir texten som ska skrivas ut beskrivningen för föremålet
+                    textToDraw = Mousecontrol.getDescription();
+                    drawText = true;
+                }
+                //Om man håller musen över ett föremål...
+                else if (Mousecontrol.rightClickedOnItem(inventory))
+                {
+                    //...blir texten som ska skrivas ut namnet på föremålet
+                    textToDraw = Mousecontrol.getName();
+                    drawText = true;
+                }
+                //Om man ska skriva ut text
+                if (drawText)
+                {
+                    //Texten placeras längst ned i inventoryn. 
+                    spriteBatch.DrawString(game.Content.Load<SpriteFont>(@"textfont"), textToDraw,
+                        new Vector2(game.Window.ClientBounds.Width / 6 - textToDraw.Count() * 4f,
+                            inventoryPosition + 24), Color.White);
+                }
             }
         }
 
@@ -142,17 +170,6 @@ namespace Library
         //Lägger till föremål i inventory
         public void addItem(Item item)
         {
-            //Item itemToBeAdded = new Item();
-            //Item[] items = game.Content.Load<Item[]>(@"Data/ItemXML");
-            //for (int i = 0; i < items.Length ; i++)
-            //{
-            //    if (item == items[i])
-            //    {
-            //        itemToBeAdded = items[i];
-            //    }
-            //}
-            //itemToBeAdded.Initialize(game.Content.Load<Texture2D>(@item.TextureString), new Vector2(20, 10));
-
             if (item.isPickable)
             {
                 inventory.Add(item);
@@ -171,10 +188,11 @@ namespace Library
         {
             for (int i = 0; i < inventory.Count; i++)
             {
+                //Om föremålet ligger längre fram i listan än på första platsen så ska den hamna bakom den förra föremålets rutstorlek
                 if (i != 0)
-                    inventory[i].setPosition(new Vector2(inventory[i - 1].frameSizeX * i, inventoryPosition - inventory[i].frameSizeY / 3));
+                    inventory[i].setPosition(new Vector2(inventory[i - 1].frameSizeX * i, inventoryPosition - inventory[i].frameSizeY / 6));
                 else
-                    inventory[i].setPosition(new Vector2(0, inventoryPosition - inventory[i].frameSizeY / 3));
+                    inventory[i].setPosition(new Vector2(0, inventoryPosition - inventory[i].frameSizeY / 6));
             }
         }
     }

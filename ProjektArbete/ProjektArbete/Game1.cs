@@ -113,9 +113,10 @@ namespace ProjektArbete
             player.Update(this, gameTime, Window.ClientBounds);
 
             Registry.currentRoom.Update(gameTime, Window.ClientBounds);
-            //Muskontroll
             
-            if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom() && inProximityToItem(Registry.currentRoom.getClickedItem()))
+            //Muskontroll
+            if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom() 
+                && inProximityToItem(Registry.currentRoom.getClickedItem()))
             {
                 player.addItem(Registry.currentRoom.getClickedItem());
                 Registry.currentRoom.removeItem();
@@ -141,19 +142,6 @@ namespace ProjektArbete
             Registry.currentRoom.Draw(gameTime, spriteBatch, player.position);
             player.Draw(gameTime, spriteBatch);
             animatedItem.Draw(gameTime, spriteBatch);
-
-            if ((Mouse.GetState().RightButton == ButtonState.Pressed && Mousecontrol.rightClickedOnItem(Registry.currentRoom.getItems())))
-            {
-                spriteBatch.DrawString(Content.Load<SpriteFont>(@"textfont"), Mousecontrol.getDescription(),
-                    new Vector2(Mousecontrol.getClickedItem().getSprite().Position.X - (Mousecontrol.getDescription().Count() / 8),
-                          Mousecontrol.getClickedItem().getSprite().Position.Y), Color.White);
-            }
-            else if (Mousecontrol.rightClickedOnItem(Registry.currentRoom.getItems()))
-            {
-                spriteBatch.DrawString(Content.Load<SpriteFont>(@"textfont"), Mousecontrol.getName(),
-                    new Vector2(Mousecontrol.getClickedItem().getSprite().Position.X - (Mousecontrol.getName().Count() / 8),
-                        Mousecontrol.getClickedItem().getSprite().Position.Y), Color.White);
-            }
 
             spriteBatch.End();
             // TODO: Add your drawing code here

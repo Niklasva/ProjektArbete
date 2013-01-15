@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace Library
 {
@@ -21,6 +22,7 @@ namespace Library
         public List<Door> doors = new List<Door>();
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
+        private Game game;
 
         private Texture2D background;
         private Texture2D foreground;
@@ -34,8 +36,8 @@ namespace Library
         public void LoadContent(Game game)
         {
             this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
+            this.game = game;
             isItemClicked = false;
-            //LÄGG TILL VILKA FÖREMÅL SOM SKA VISAS HÄR
             foreach (string id in itemID)
             {
                 items.Add(Registry.items[int.Parse(id)]);
@@ -52,7 +54,6 @@ namespace Library
             int i = 0;
             foreach (Item item in items)
             {
-
                 string[] temp = itemPosition[i].Split(new char[] { ',' }, 2);
                 item.setPosition(new Vector2(float.Parse(temp[0]), float.Parse(temp[1])));
                 i++;
@@ -78,6 +79,28 @@ namespace Library
             foreach (Item item in items)
             {
                 item.Draw(gameTime, spriteBatch);
+            }
+
+            if (!Registry.inventoryInUse)
+            {
+                string textToDraw = null;
+                bool drawText = false;
+                if ((Mouse.GetState().RightButton == ButtonState.Pressed && Mousecontrol.rightClickedOnItem(items)))
+                {
+                    textToDraw = Mousecontrol.getDescription();
+                    drawText = true;
+                }
+                else if (Mousecontrol.rightClickedOnItem(items))
+                {
+                    textToDraw = Mousecontrol.getName();
+                    drawText = true;
+                }
+                if (drawText)
+                {
+                    spriteBatch.DrawString(game.Content.Load<SpriteFont>(@"textfont"), textToDraw,
+                            new Vector2(game.Window.ClientBounds.Width / 6 - 4f * (textToDraw.Count()),
+                                0), Color.White);
+                }
             }
         }
 
