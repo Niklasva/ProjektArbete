@@ -67,6 +67,7 @@ namespace Library
                 item.Update(gameTime, clientBounds);
             }
             mousecontrolUpdate();
+            doorUpdate();
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
@@ -141,6 +142,27 @@ namespace Library
         {
             return items;
         }
+
+        public void doorUpdate()
+        {
+            bool changeRoom = false;
+            int nextRoomId = 0;
+            foreach (Door item in doors)
+            {
+                if (Mousecontrol.inProximityToItem(item.position, new Point(10, 10)))
+                {
+                    changeRoom = true;
+                    nextRoomId = int.Parse(item.nextRoomID);
+                }
+            }
+            if (changeRoom)
+            {
+                Registry.currentRoom = Registry.rooms[nextRoomId];
+                Registry.currentRoom.LoadContent(game);
+            }
+
+        }
+
 
         
     }

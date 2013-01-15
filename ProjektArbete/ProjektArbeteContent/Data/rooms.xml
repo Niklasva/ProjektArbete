@@ -35,19 +35,19 @@
       <backgroundID>room2</backgroundID>
       <foregroundID>room1</foregroundID>
       <npcID>
+        <Item>0</Item>
       </npcID>
       <itemID>
         <Item>1</Item>
         <Item>3</Item>
       </itemID>
-
       <itemPosition>
         <Item>10,50</Item>
         <Item>10,100</Item>
       </itemPosition>
       <doors>
         <Item>
-          <position>100 100</position>
+          <position>100 300</position>
           <nextRoomID>1</nextRoomID>
           <door2Position>0 100</door2Position>
           <isLocked>false</isLocked>

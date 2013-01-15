@@ -115,12 +115,15 @@ namespace ProjektArbete
             Registry.currentRoom.Update(gameTime, Window.ClientBounds);
             
             //Muskontroll
-            if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom() 
-                && inProximityToItem(Registry.currentRoom.getClickedItem()))
+            if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom())
             {
-                player.addItem(Registry.currentRoom.getClickedItem());
-                Registry.currentRoom.removeItem();
-                Registry.currentRoom.itemWasClicked();
+                Sprite item = Registry.currentRoom.getClickedItem().getSprite();
+                if (Mousecontrol.inProximityToItem(item.Position, item.FrameSize))
+                {
+                    player.addItem(Registry.currentRoom.getClickedItem());
+                    Registry.currentRoom.removeItem();
+                    Registry.currentRoom.itemWasClicked();
+                }
             }
 
             if (IntersectMask(maskData))
@@ -149,23 +152,6 @@ namespace ProjektArbete
             base.Draw(gameTime);
         }
 
-        public bool inProximityToItem(Item item)
-        {
-            bool isInProximity = false;
-            float positionX = item.getSprite().Position.X;
-            float positionY = item.getSprite().Position.Y;
-            float framesizeX = item.getSprite().FrameSize.X;
-            float framesizeY = item.getSprite().FrameSize.Y;
-            //Befinner sig spelare inom en visst område runt föremålet?
-            if (Registry.playerPosition.X >= (positionX - 40) && Registry.playerPosition.X <= (positionX + framesizeX + 40) &&
-                Registry.playerPosition.Y >= (positionY - 40) && Registry.playerPosition.Y <= (positionY + framesizeY + 40))
-            {
-                isInProximity = true;
-            }
-
-            return isInProximity;
-        }
-
         static bool IntersectMask(Color[,] data)
         {
             // Konverterar spelarpositionen (Vector2/float) till int för att kunna använda den som arrayposition
@@ -183,7 +169,7 @@ namespace ProjektArbete
             return false;
         }
 
-        Color[,] TextureTo2DArray(Texture2D texture)
+        private Color[,] TextureTo2DArray(Texture2D texture)
         {
             // GetData skapar av någon dum anledning enbart endimensionella arrayer
             // Den här funktionen konverterar en endimensionell array till en tvådimensionell.
@@ -197,5 +183,7 @@ namespace ProjektArbete
 
             return colors2;
         }
+
+
     }
 }
