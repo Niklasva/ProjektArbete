@@ -45,7 +45,7 @@ namespace Library
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             sprite.Position = position;
-            sprite.Draw(gameTime, spriteBatch);
+            sprite.Draw(gameTime, spriteBatch, 1f);
         }
 
         public void setPosition(Vector2 x)

@@ -35,7 +35,7 @@ namespace Library
         }
 
         //Ritar ut den animerade figuren
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, float scale)
         {
             spriteBatch.Draw(Texture,
                 Position,
@@ -46,7 +46,7 @@ namespace Library
                 Color.White,
                 0,
                 Vector2.Zero,
-                1,
+                scale,
                 SpriteEffects.None,
                 0);
         }

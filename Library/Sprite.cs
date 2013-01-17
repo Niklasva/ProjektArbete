@@ -32,7 +32,7 @@ namespace Library
         }
 
         //Ritar ut sprite
-        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, float scale)
         {
             spriteBatch.Draw(texture, position, Color.White);
         }

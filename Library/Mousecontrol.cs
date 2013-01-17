@@ -121,13 +121,9 @@ namespace Library
         public static bool inProximityToItem(Vector2 position, Point frameSize)
         {
             bool isInProximity = false;
-            float positionX = position.X;
-            float positionY = position.Y;
-            float framesizeX = frameSize.X;
-            float framesizeY = frameSize.Y;
             //Befinner sig spelare inom en visst område runt föremålet?
-            if (Registry.playerPosition.X >= (positionX - 40) && Registry.playerPosition.X <= (positionX + framesizeX + 40) &&
-                Registry.playerPosition.Y >= (positionY - 40) && Registry.playerPosition.Y <= (positionY + framesizeY + 40))
+            if (Registry.playerPosition.X >= (position.X - 40) && Registry.playerPosition.X <= (position.X + frameSize.X + 40) &&
+                Registry.playerPosition.Y >= (position.Y - 40) && Registry.playerPosition.Y <= (position.Y + frameSize.Y + 40))
             {
                 isInProximity = true;
             }

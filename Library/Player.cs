@@ -38,6 +38,10 @@ namespace Library
         private double deltaX;
         private double deltaY;
         private bool isMoving;
+
+        //Skala spriten
+        double scale;
+
         //Inventory
         Inventory inventory;
         
@@ -61,12 +65,15 @@ namespace Library
             this.upSprite = new AnimatedSprite(upTexture, position, 10, new Point(20, 40), upCurrentFrame, new Point(2, 1), 100);
             this.stillTexture = stillTexture;
             this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(20, 40), new Point(0, 0), new Point(1, 1), 100);
-
+            
             this.inventory = new Inventory(invBackGround, clientBounds, game);
+            this.scale = 1f;
         }
 
         public void Update(Game game, GameTime gameTime, Rectangle clientBounds)
         {
+
+             scaleToPosition(clientBounds);
             //Är inventoryn öppen ska spelaren inte röra på sig
             if (!Registry.inventoryInUse)
             {
@@ -80,8 +87,8 @@ namespace Library
                 mousePosition.Y = (mouseState.Y / 3);
                 if (mouseState.LeftButton == ButtonState.Pressed)
                 {
-                    target.X = mousePosition.X - 10;
-                    target.Y = mousePosition.Y - 40;
+                    target.X = mousePosition.X - float.Parse((10 * scale).ToString());
+                    target.Y = mousePosition.Y - float.Parse((40 * scale).ToString());
                 }
                 direction = target - position;
                 direction.Normalize();
@@ -90,7 +97,7 @@ namespace Library
                     position.X += direction.X * speed;
                     position.Y += direction.Y * speed;
                 }
-                if (position.X < target.X + 1 && position.X > target.X - 1)
+                if (position.X < target.X + 1 && position.X > target.X - 1 && position.Y < target.Y + 1 && position.Y > target.Y - 1)
                 {
                     speed = 0;
                     //Spelaren rör inte på sig
@@ -143,6 +150,8 @@ namespace Library
                     rightCurrentFrame = new Point(0, 0);
                     upCurrentFrame = new Point(0, 0);
                 }
+                
+
             }
             //Rör spelaren inte på sig så ska han ha en stillastående sprite
             else
@@ -158,13 +167,15 @@ namespace Library
             inventory.Update();
             currentSprite.Position = position;
             Registry.playerPosition = position;
+
+
             if(!Registry.inventoryInUse)
                  currentSprite.Update(gameTime, clientBounds);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            currentSprite.Draw(gameTime, spriteBatch);
+            currentSprite.Draw(gameTime, spriteBatch, float.Parse(scale.ToString()));
             inventory.Draw(gameTime, spriteBatch);    
         }
 
@@ -180,6 +191,14 @@ namespace Library
         public void Stop()
         {
             target = position;
+        }
+
+        private void scaleToPosition(Rectangle clientBounds)
+        {
+            //Skalan blir 1 - skilladen mellan rutans storlek och positionen på karaktären.
+            //Gör att när man är närmast "kameran" blir karaktären som störst och när man rör sig därifrån blir karaktären mindre.
+            float temp = (clientBounds.Height / 3) - position.Y;
+            scale = 1 - (temp * 0.001);
         }
     }
 }

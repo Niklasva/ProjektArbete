@@ -105,7 +105,7 @@ namespace Library
             
             if (Registry.inventoryInUse)
             {
-                backgroundSprite.Draw(gameTime, spriteBatch);
+                backgroundSprite.Draw(gameTime, spriteBatch, 1f);
 
                 foreach (Item item in inventory)
                 {

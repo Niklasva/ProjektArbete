@@ -25,9 +25,6 @@ namespace ProjektArbete
         Player player;
         Item[] items;
 
-        //Muskontroll
-        bool rightClickedOnItem = false;
-
         Texture2D mask;
         Color[,] maskData;
 
@@ -144,7 +141,7 @@ namespace ProjektArbete
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
             Registry.currentRoom.Draw(gameTime, spriteBatch, player.position);
             player.Draw(gameTime, spriteBatch);
-            animatedItem.Draw(gameTime, spriteBatch);
+            animatedItem.Draw(gameTime, spriteBatch, 1f);
 
             spriteBatch.End();
             // TODO: Add your drawing code here
@@ -154,6 +151,7 @@ namespace ProjektArbete
 
         static bool IntersectMask(Color[,] data)
         {
+            bool intersects = false;
             // Konverterar spelarpositionen (Vector2/float) till int för att kunna använda den som arrayposition
             int x = (int)Math.Round(Registry.playerPosition.X);
             int y = (int)Math.Round(Registry.playerPosition.Y + 39);
@@ -164,9 +162,9 @@ namespace ProjektArbete
             //letar efter !färg
             if (data[x, y].A == 0 || data[x + 20, y].A == 0)
             {
-                return true;
+                intersects = true;
             }
-            return false;
+            return intersects;
         }
 
         private Color[,] TextureTo2DArray(Texture2D texture)

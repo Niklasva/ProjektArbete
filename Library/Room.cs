@@ -149,7 +149,7 @@ namespace Library
             int nextRoomId = 0;
             foreach (Door item in doors)
             {
-                if (Mousecontrol.inProximityToItem(item.position, new Point(10, 10)))
+                if (Mousecontrol.inProximityToItem(item.position, new Point(0, 0)))
                 {
                     changeRoom = true;
                     nextRoomId = int.Parse(item.nextRoomID);

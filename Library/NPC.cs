@@ -63,7 +63,7 @@ namespace Library
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
         {
-            activeSprite.Draw(gameTime, spriteBatch);
+            activeSprite.Draw(gameTime, spriteBatch, 1f);
             if (isTalking == true)
             {
                 dialog.Speak(gameTime, spriteBatch, position);
