@@ -40,7 +40,7 @@ namespace Library
         private bool isMoving;
 
         //Skala spriten
-        double scale;
+        float scale;
 
         //Inventory
         Inventory inventory;
@@ -87,8 +87,8 @@ namespace Library
                 mousePosition.Y = (mouseState.Y / 3);
                 if (mouseState.LeftButton == ButtonState.Pressed)
                 {
-                    target.X = mousePosition.X - float.Parse((10 * scale).ToString());
-                    target.Y = mousePosition.Y - float.Parse((40 * scale).ToString());
+                    target.X = mousePosition.X - 10;
+                    target.Y = mousePosition.Y - 40;
                 }
                 direction = target - position;
                 direction.Normalize();
@@ -168,15 +168,14 @@ namespace Library
             currentSprite.Position = position;
             Registry.playerPosition = position;
 
-
             if(!Registry.inventoryInUse)
                  currentSprite.Update(gameTime, clientBounds);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            currentSprite.Draw(gameTime, spriteBatch, float.Parse(scale.ToString()));
-            inventory.Draw(gameTime, spriteBatch);    
+            currentSprite.Draw(gameTime, spriteBatch, scale);
+            inventory.Draw(gameTime, spriteBatch);
         }
 
         public void addItem(Item item)
@@ -197,8 +196,9 @@ namespace Library
         {
             //Skalan blir 1 - skilladen mellan rutans storlek och positionen på karaktären.
             //Gör att när man är närmast "kameran" blir karaktären som störst och när man rör sig därifrån blir karaktären mindre.
-            float temp = (clientBounds.Height / 3) - position.Y;
-            scale = 1 - (temp * 0.001);
+            float temp = (clientBounds.Height / 3) - position.Y * 2f;
+            double doubleScale = 1 - (temp * 0.001);
+            scale = float.Parse(doubleScale.ToString());
         }
     }
 }
