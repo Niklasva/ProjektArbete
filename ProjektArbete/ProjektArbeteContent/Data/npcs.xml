@@ -2,9 +2,15 @@
 <XnaContent>
   <Asset Type="Library.NPC[]">
     <Item>
-      <name>test</name>
-      <position>100 62</position>
+      <name>null</name>
+      <position>0 0</position>
       <dialogID>0</dialogID>
     </Item>
+    <Item>
+      <name>test</name>
+      <position>100 62</position>
+      <dialogID>1</dialogID>
+    </Item>
+
   </Asset>
 </XnaContent>

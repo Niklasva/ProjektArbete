@@ -25,6 +25,8 @@ namespace Library
         private Game game;
 
         private Texture2D background;
+        private Texture2D mask;
+        private Color[,] maskData;
         private Texture2D foreground;
         
         //Muskontroll 
@@ -36,7 +38,10 @@ namespace Library
         public void LoadContent(Game game)
         {
             this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
+            this.mask = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "mask");
+            this.maskData = TextureTo2DArray(mask);
             this.game = game;
+
             isItemClicked = false;
             foreach (string id in itemID)
             {
@@ -62,21 +67,19 @@ namespace Library
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
+
+            doorUpdate();
             foreach (NPC item in npcs)
             {
                 item.Update(gameTime, clientBounds);
             }
             mousecontrolUpdate();
-            doorUpdate();
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
         {
             spriteBatch.Draw(background, Vector2.Zero, Color.White);
-            foreach (NPC npc in npcs)
-            {
-                npc.Draw(gameTime, spriteBatch, playerPosition);
-            }
+
             foreach (Item item in items)
             {
                 item.Draw(gameTime, spriteBatch);
@@ -102,6 +105,10 @@ namespace Library
                             new Vector2(game.Window.ClientBounds.Width / 6 - 4f * (textToDraw.Count()),
                                 0), Color.White);
                 }
+            }
+            foreach (NPC npc in npcs)
+            {
+                npc.Draw(gameTime, spriteBatch, playerPosition);
             }
         }
 
@@ -163,7 +170,25 @@ namespace Library
 
         }
 
+        private Color[,] TextureTo2DArray(Texture2D texture)
+        {
+            // GetData skapar av någon dum anledning enbart endimensionella arrayer
+            // Den här funktionen konverterar en endimensionell array till en tvådimensionell.
+            Color[] colors1 = new Color[texture.Width * texture.Height];
+            texture.GetData(colors1);
 
+            Color[,] colors2 = new Color[texture.Width, texture.Height];
+            for (int x = 0; x < texture.Width; x++)
+                for (int y = 0; y < texture.Height; y++)
+                    colors2[x, y] = colors1[x + y * texture.Width];
+
+            return colors2;
+        }
+
+        public Color[,] getMask()
+        {
+            return this.maskData;
+        }
         
     }
 }

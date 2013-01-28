@@ -4,10 +4,10 @@
   <Asset Type="Library.Room[]">
     <!-- Rum 0 - test 1 -->
     <Item>
-      <backgroundID>background</backgroundID>
+      <backgroundID>room1</backgroundID>
       <foregroundID>room1</foregroundID>
       <npcID>
-        <Item>0</Item>
+        <Item>1</Item>
       </npcID>
       <itemID>
         <Item>0</Item>
@@ -21,7 +21,7 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>300 300</position>
+          <position>219 64</position>
           <nextRoomID>1</nextRoomID>
           <door2Position>0 100</door2Position>
           <isLocked>false</isLocked>

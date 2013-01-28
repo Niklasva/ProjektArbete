@@ -25,9 +25,6 @@ namespace ProjektArbete
         Player player;
         Item[] items;
 
-        Texture2D mask;
-        Color[,] maskData;
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -75,11 +72,7 @@ namespace ProjektArbete
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");
             Registry.currentRoom = Registry.rooms[0];
-
             Registry.currentRoom.LoadContent(this);
-
-            mask = Content.Load<Texture2D>(@"Images/Backgrounds/backgroundmask");
-            maskData = TextureTo2DArray(mask);
         }
 
         /// <summary>
@@ -123,7 +116,7 @@ namespace ProjektArbete
                 }
             }
 
-            if (IntersectMask(maskData))
+            if (IntersectMask(Registry.currentRoom.getMask()))
             {
                 player.Stop();
             }
@@ -165,21 +158,6 @@ namespace ProjektArbete
                 intersects = true;
             }
             return intersects;
-        }
-
-        private Color[,] TextureTo2DArray(Texture2D texture)
-        {
-            // GetData skapar av någon dum anledning enbart endimensionella arrayer
-            // Den här funktionen konverterar en endimensionell array till en tvådimensionell.
-            Color[] colors1 = new Color[texture.Width * texture.Height];
-            texture.GetData(colors1); 
-
-            Color[,] colors2 = new Color[texture.Width, texture.Height];
-            for (int x = 0; x < texture.Width; x++)
-                for (int y = 0; y < texture.Height; y++)
-                    colors2[x, y] = colors1[x + y * texture.Width];
-
-            return colors2;
         }
 
 

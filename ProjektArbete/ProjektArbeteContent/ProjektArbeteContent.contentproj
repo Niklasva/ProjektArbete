@@ -131,13 +131,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\Backgrounds\room1.png">
-      <Name>room1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Images\Characters\testtalk.bmp">
       <Name>testtalk</Name>
       <Importer>TextureImporter</Importer>
@@ -186,29 +179,49 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Images\Backgrounds\test.PNG">
+      <Name>test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\Backgrounds\room1.PNG">
+      <Name>room1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\Backgrounds\room1mask.bmp">
+      <Name>room1mask</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Compile Include="Images\Backgrounds\room2.PNG">
       <Name>room2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Images\Backgrounds\background.PNG">
-      <Name>background</Name>
+    <Compile Include="Images\Backgrounds\room2mask.PNG">
+      <Name>room2mask</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\Backgrounds\room3.png">
+      <Name>room3</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\Backgrounds\backgroundmask.bmp">
-      <Name>backgroundmask</Name>
+    <Compile Include="Images\Characters\nulltalk.bmp">
+      <Name>nulltalk</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\Backgrounds\test.PNG">
-      <Name>test</Name>
+    <Compile Include="Images\Characters\null.bmp">
+      <Name>null</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

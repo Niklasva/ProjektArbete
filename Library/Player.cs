@@ -50,7 +50,7 @@ namespace Library
         private Vector2 mousePosition;
         private Vector2 target = new Vector2(36, 39);
         private Vector2 direction;
-        private int speed = 2;
+        private int speed = 1;
 
         //Konstruktor
         public Player(Game game, Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Texture2D invBackGround, Rectangle clientBounds)
