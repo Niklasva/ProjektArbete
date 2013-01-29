@@ -92,7 +92,7 @@ namespace ProjektArbete
         protected override void Update(GameTime gameTime)
         {
             Mousecontrol.update();
-            //Test av rumbyte. Kod som ska användas till dörrar
+          
             KeyboardState keyState = Keyboard.GetState();
             if (keyState.IsKeyDown(Keys.Delete))
             {
@@ -101,7 +101,7 @@ namespace ProjektArbete
             }
             animatedItem.Update(gameTime, Window.ClientBounds);
             player.Update(this, gameTime, Window.ClientBounds);
-
+            
             Registry.currentRoom.Update(gameTime, Window.ClientBounds);
             
             //Muskontroll
@@ -131,13 +131,12 @@ namespace ProjektArbete
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.AntiqueWhite);
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
-            Registry.currentRoom.Draw(gameTime, spriteBatch, player.position);
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
+            Registry.currentRoom.Draw(gameTime, spriteBatch);
             player.Draw(gameTime, spriteBatch);
-            animatedItem.Draw(gameTime, spriteBatch, 1f);
-
+           
             spriteBatch.End();
-            // TODO: Add your drawing code here
+         
             
             base.Draw(gameTime);
         }
@@ -159,6 +158,8 @@ namespace ProjektArbete
             }
             return intersects;
         }
+
+
 
 
     }

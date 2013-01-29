@@ -27,6 +27,8 @@ namespace Library
         private Texture2D texture;
         private Sprite sprite;
         private Vector2 position;
+        private float layerPosition = 0;
+
 
         public string TextureString
         {
@@ -45,7 +47,13 @@ namespace Library
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             sprite.Position = position;
-            sprite.Draw(gameTime, spriteBatch, 1f);
+            sprite.Draw(gameTime, spriteBatch, 1f, layerPosition);
+        }
+
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, float layerDepth)
+        {
+            sprite.Position = position;
+            sprite.Draw(gameTime, spriteBatch, 1f, layerDepth);
         }
 
         public void setPosition(Vector2 x)
@@ -56,6 +64,11 @@ namespace Library
         public Sprite getSprite()
         {
             return sprite;
+        }
+
+        public void setLayerPosition(float x)
+        {
+            layerPosition = x;
         }
     }
 }

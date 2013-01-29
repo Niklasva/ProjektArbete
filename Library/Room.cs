@@ -74,16 +74,29 @@ namespace Library
                 item.Update(gameTime, clientBounds);
             }
             mousecontrolUpdate();
+            
         }
 
-        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(background, Vector2.Zero, Color.White);
-
+            updateLayerPosition();
             foreach (Item item in items)
             {
                 item.Draw(gameTime, spriteBatch);
             }
+            spriteBatch.Draw(background,
+                 Vector2.Zero,
+                 new Rectangle(0, 0,
+                 game.Window.ClientBounds.Width,
+                 game.Window.ClientBounds.Height),
+                 Color.White,
+                 0,
+                 Vector2.Zero,
+                 1,
+                 SpriteEffects.None,
+                 0.333333333333f);
+
+            
 
             if (!Registry.inventoryInUse)
             {
@@ -108,7 +121,7 @@ namespace Library
             }
             foreach (NPC npc in npcs)
             {
-                npc.Draw(gameTime, spriteBatch, playerPosition);
+                npc.Draw(gameTime, spriteBatch, Registry.playerPosition);
             }
         }
 
@@ -188,6 +201,14 @@ namespace Library
         public Color[,] getMask()
         {
             return this.maskData;
+        }
+
+        private void updateLayerPosition()
+        {
+            foreach (Item item in items)
+            {
+                item.setLayerPosition((item.getSprite().Position.Y / 180) / 3);
+            }
         }
         
     }

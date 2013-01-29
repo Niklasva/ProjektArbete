@@ -32,9 +32,19 @@ namespace Library
         }
 
         //Ritar ut sprite
-        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, float scale)
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, float scale, float layerPosition)
         {
-            spriteBatch.Draw(texture, position, Color.White);
+            spriteBatch.Draw(texture,
+                 position,
+                 new Rectangle(0, 0,
+                 frameSize.X,
+                 frameSize.Y),
+                 Color.White,
+                 0,
+                 Vector2.Zero,
+                 scale,
+                 SpriteEffects.None,
+                 layerPosition);
         }
 
         //get och set för texturer

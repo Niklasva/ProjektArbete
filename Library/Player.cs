@@ -38,6 +38,7 @@ namespace Library
         private double deltaX;
         private double deltaY;
         private bool isMoving;
+        private float layerPosition = 0;
 
         //Skala spriten
         float scale;
@@ -72,8 +73,8 @@ namespace Library
 
         public void Update(Game game, GameTime gameTime, Rectangle clientBounds)
         {
-
-             scaleToPosition(clientBounds);
+            updateLayerDepth();
+            //scaleToPosition(clientBounds);
             //Är inventoryn öppen ska spelaren inte röra på sig
             if (!Registry.inventoryInUse)
             {
@@ -174,7 +175,8 @@ namespace Library
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            currentSprite.Draw(gameTime, spriteBatch, scale);
+            
+            currentSprite.Draw(gameTime, spriteBatch, scale, layerPosition);
             inventory.Draw(gameTime, spriteBatch);
         }
 
@@ -192,13 +194,18 @@ namespace Library
             target = position;
         }
 
-        private void scaleToPosition(Rectangle clientBounds)
+        private void updateLayerDepth()
         {
-            //Skalan blir 1 - skilladen mellan rutans storlek och positionen på karaktären.
-            //Gör att när man är närmast "kameran" blir karaktären som störst och när man rör sig därifrån blir karaktären mindre.
-            float temp = (clientBounds.Height / 3) - position.Y * 2f;
-            double doubleScale = 1 - (temp * 0.001);
-            scale = float.Parse(doubleScale.ToString());
+            layerPosition = (1 - position.Y / 180) / 3;
         }
+
+        //private void scaleToPosition(Rectangle clientBounds)
+        //{
+        //    //Skalan blir 1 - skilladen mellan rutans storlek och positionen på karaktären.
+        //    //Gör att när man är närmast "kameran" blir karaktären som störst och när man rör sig därifrån blir karaktären mindre.
+        //    float temp = (clientBounds.Height / 3) - position.Y * 2f;
+        //    double doubleScale = 1 - (temp * 0.001);
+        //    scale = float.Parse(doubleScale.ToString());
+        //}
     }
 }

@@ -31,7 +31,7 @@ namespace Library
         {
             this.background = background;
             this.inventoryPosition = clientBounds.Height / 6;
-            backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - 24), 0, new Point(0, 0));
+            backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - 24), 0, new Point(background.Width, background.Height));
             this.game = game;
         }
 
@@ -105,15 +105,15 @@ namespace Library
             
             if (Registry.inventoryInUse)
             {
-                backgroundSprite.Draw(gameTime, spriteBatch, 1f);
+                backgroundSprite.Draw(gameTime, spriteBatch, 1f, 0);
 
                 foreach (Item item in inventory)
                 {
-                    item.Draw(gameTime, spriteBatch);
+                    item.Draw(gameTime, spriteBatch, 0f);
                 }
 
                 if (isInteractingWithItem)
-                    itemClickedOn.Draw(gameTime, spriteBatch);
+                    itemClickedOn.Draw(gameTime, spriteBatch, 0);
 
                 string textToDraw = null;
                 bool drawText = false;
