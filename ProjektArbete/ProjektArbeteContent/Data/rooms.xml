@@ -5,7 +5,6 @@
     <!-- Rum 0 - test 1 -->
     <Item>
       <backgroundID>room1</backgroundID>
-      <foregroundID>room1</foregroundID>
       <npcID>
         <Item>1</Item>
       </npcID>
@@ -33,7 +32,6 @@
     <!-- Rum 1 - test 2 -->
     <Item>
       <backgroundID>room2</backgroundID>
-      <foregroundID>room1</foregroundID>
       <npcID>
         <Item>0</Item>
       </npcID>

@@ -27,13 +27,13 @@ namespace Library
         private AnimatedSprite stillSprite;
         private AnimatedSprite talkSprite;
         private AnimatedSprite activeSprite;
+        private float layerPosition;
         private Boolean isTalking = true;
 
         public void loadContent(Game game)
         {
             this.talkTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name + "talk");
             this.stillTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name);
-            //stillSprite = new AnimatedSprite(stillTexture, position, 10, new Point(20, 40), new Point(0, 0), new Point(3, 1), 200);
             stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(stillTexture.Width / 3, stillTexture.Height), new Point(0, 0), new Point(3, 1), 200);
             talkSprite = new AnimatedSprite(talkTexture, position, 0, new Point(talkTexture.Width / 3, talkTexture.Height), new Point(0, 0), new Point(3, 1), 200);
             dialog = Registry.dialogs[dialogID];
@@ -56,6 +56,7 @@ namespace Library
                 activeSprite = stillSprite;
             }
             activeSprite.Update(gameTime, clientBounds);
+            layerPosition = (1 - position.Y / 180) / 3;
         }
 
         public void Talk()
@@ -65,7 +66,7 @@ namespace Library
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
         {
-            activeSprite.Draw(gameTime, spriteBatch, 1f, 0);
+            activeSprite.Draw(gameTime, spriteBatch, 1f, layerPosition);
             if (isTalking == true)
             {
                 dialog.Speak(gameTime, spriteBatch, position);

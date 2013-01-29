@@ -15,7 +15,6 @@ namespace Library
         /// </summary>
         /// 
         public string backgroundID;
-        public string foregroundID;
         public string[] npcID;
         public string[] itemID;
         public string[] itemPosition;
@@ -39,6 +38,7 @@ namespace Library
         {
             this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
             this.mask = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "mask");
+            this.foreground = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "fg");
             this.maskData = TextureTo2DArray(mask);
             this.game = game;
 
@@ -95,6 +95,18 @@ namespace Library
                  1,
                  SpriteEffects.None,
                  0.333333333333f);
+
+                 spriteBatch.Draw(foreground,
+                 Vector2.Zero,
+                 new Rectangle(0, 0,
+                 game.Window.ClientBounds.Width,
+                 game.Window.ClientBounds.Height),
+                 Color.White,
+                 0,
+                 Vector2.Zero,
+                 1,
+                 SpriteEffects.None,
+                 0.003f);
 
             
 

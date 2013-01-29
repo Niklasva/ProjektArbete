@@ -72,7 +72,7 @@ namespace Library
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, String output, Vector2 position, Color color)
         {
-            spriteBatch.DrawString(font, output, position, color, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
+            spriteBatch.DrawString(font, output, position, color, 0f, Vector2.Zero, 1, SpriteEffects.None, 0.001f);
         }
     }
 
