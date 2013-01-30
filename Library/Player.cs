@@ -73,7 +73,7 @@ namespace Library
 
         public void Update(Game game, GameTime gameTime, Rectangle clientBounds)
         {
-            updateLayerDepth();
+            
             //scaleToPosition(clientBounds);
             //Är inventoryn öppen ska spelaren inte röra på sig
             if (!Registry.inventoryInUse)
@@ -168,7 +168,7 @@ namespace Library
             inventory.Update();
             currentSprite.Position = position;
             Registry.playerPosition = position;
-
+            updateLayerDepth();
             if(!Registry.inventoryInUse)
                  currentSprite.Update(gameTime, clientBounds);
         }
@@ -196,7 +196,7 @@ namespace Library
 
         private void updateLayerDepth()
         {
-            layerPosition = (1 - position.Y / 180) / 3;
+            layerPosition = (1 - (position.Y + currentSprite.Texture.Height) / 180) / 3;
         }
 
         //private void scaleToPosition(Rectangle clientBounds)

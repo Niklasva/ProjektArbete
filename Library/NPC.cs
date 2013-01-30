@@ -55,8 +55,9 @@ namespace Library
             {
                 activeSprite = stillSprite;
             }
+            layerPosition = (1 - (position.Y + activeSprite.Texture.Height) / 180) / 3;
+
             activeSprite.Update(gameTime, clientBounds);
-            layerPosition = (1 - position.Y / 180) / 3;
         }
 
         public void Talk()

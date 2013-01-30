@@ -18,8 +18,6 @@ namespace Library
         public bool isPickable;
         public string description;
         public string textureString;
-        public int frameSizeX;
-        public int frameSizeY;
         public bool isCombinable;
         //Nummret i arrayen som föremålet som kombineras till har.
         public int combinedItemInt;
@@ -41,7 +39,7 @@ namespace Library
         public void Initialize(Texture2D textureForItem)
         {
             texture = textureForItem;
-            sprite = new Sprite(texture, position, 10, new Point(frameSizeX, frameSizeY));
+            sprite = new Sprite(texture, position, 10, new Point(texture.Width, texture.Height));
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)

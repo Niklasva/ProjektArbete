@@ -6,19 +6,15 @@
       <isPickable>true</isPickable>
       <description>A light stone</description>
       <textureString>Images/Sprites/stone</textureString>
-      <frameSizeX>24</frameSizeX>
-      <frameSizeY>24</frameSizeY>
       <isCombinable>true</isCombinable>
       <combinedItemInt>2</combinedItemInt>
     </Item>
 
     <Item>
       <name>Chair</name>
-      <isPickable>true</isPickable>
+      <isPickable>false</isPickable>
       <description>A sturdy chair</description>
       <textureString>Images/Sprites/chair</textureString>
-      <frameSizeX>24</frameSizeX>
-      <frameSizeY>24</frameSizeY>
       <isCombinable>true</isCombinable>
       <combinedItemInt>3</combinedItemInt>
     </Item>
@@ -28,8 +24,6 @@
       <isPickable>true</isPickable>
       <description>Some nice looking rope</description>
       <textureString>Images/Sprites/rope</textureString>
-      <frameSizeX>24</frameSizeX>
-      <frameSizeY>24</frameSizeY>
       <isCombinable>true</isCombinable>
       <combinedItemInt>3</combinedItemInt>
     </Item>
@@ -39,8 +33,6 @@
       <isPickable>true</isPickable>
       <description>A steel hook</description>
       <textureString>Images/Sprites/hook</textureString>
-      <frameSizeX>24</frameSizeX>
-      <frameSizeY>24</frameSizeY>
       <isCombinable>false</isCombinable>
       <combinedItemInt>3</combinedItemInt>
     </Item>

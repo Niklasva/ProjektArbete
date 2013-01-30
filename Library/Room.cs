@@ -219,7 +219,7 @@ namespace Library
         {
             foreach (Item item in items)
             {
-                item.setLayerPosition((item.getSprite().Position.Y / 180) / 3);
+                item.setLayerPosition((1 - ((item.getSprite().Position.Y + item.getSprite().Texture.Height) / 180)) / 3);
             }
         }
         

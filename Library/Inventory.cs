@@ -31,7 +31,7 @@ namespace Library
         {
             this.background = background;
             this.inventoryPosition = clientBounds.Height / 6;
-            backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - 24), 0, new Point(background.Width, background.Height));
+            backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - (background.Height/2)), 0, new Point(background.Width, background.Height));
             this.game = game;
         }
 
@@ -79,8 +79,8 @@ namespace Library
                 }
 
                 if (isInteractingWithItem)
-                    itemClickedOn.setPosition(new Vector2(Mouse.GetState().X / 3 - itemClickedOn.frameSizeX / 2,
-                        Mouse.GetState().Y / 3 - itemClickedOn.frameSizeY / 2));
+                    itemClickedOn.setPosition(new Vector2(Mouse.GetState().X / 3 - itemClickedOn.getSprite().Texture.Width / 2,
+                        Mouse.GetState().Y / 3 - itemClickedOn.getSprite().Texture.Height / 2));
             }
         }
 
@@ -190,9 +190,9 @@ namespace Library
             {
                 //Om föremålet ligger längre fram i listan än på första platsen så ska den hamna bakom den förra föremålets rutstorlek
                 if (i != 0)
-                    inventory[i].setPosition(new Vector2(inventory[i - 1].frameSizeX * i, inventoryPosition - inventory[i].frameSizeY / 6));
+                    inventory[i].setPosition(new Vector2((3 + inventory[i - 1].getSprite().Texture.Width) * i, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
                 else
-                    inventory[i].setPosition(new Vector2(0, inventoryPosition - inventory[i].frameSizeY / 6));
+                    inventory[i].setPosition(new Vector2(3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
             }
         }
     }

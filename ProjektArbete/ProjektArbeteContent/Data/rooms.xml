@@ -20,7 +20,7 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>219 64</position>
+          <position>300 180</position>
           <nextRoomID>1</nextRoomID>
           <door2Position>0 100</door2Position>
           <isLocked>false</isLocked>
