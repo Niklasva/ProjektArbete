@@ -51,6 +51,7 @@ namespace Library
         
         //Kontroller
         private MouseState mouseState;
+        private MouseState oldState;
         private Vector2 mousePosition;
         private Vector2 target = new Vector2(36, 39);
         private Vector2 direction;
@@ -96,7 +97,8 @@ namespace Library
                 //mousePosition = mouseState/3 för att mouseState inte har något med upplösningen (som tredubblas) att göra
                 mousePosition.X = (mouseState.X / 3);
                 mousePosition.Y = (mouseState.Y / 3);
-                if (mouseState.LeftButton == ButtonState.Pressed)
+
+                if (mouseState.LeftButton == ButtonState.Pressed && oldState.LeftButton != ButtonState.Pressed)
                 {
                     target.X = mousePosition.X - 10;
                     target.Y = mousePosition.Y - 40;
@@ -115,6 +117,8 @@ namespace Library
                     isMoving = false;
                 }
                 else speed = 2;
+
+                oldState = mouseState;
             }
             //Rör spelaren på sig ska den animeras som vanilgt
             if (isMoving)
@@ -186,7 +190,6 @@ namespace Library
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            
             currentSprite.Draw(gameTime, spriteBatch, scale, layerPosition);
             inventory.Draw(gameTime, spriteBatch);
         }
@@ -200,8 +203,16 @@ namespace Library
             inventory.removeItem(item);
         }
 
-        public void Stop()
+        /// <summary>
+        /// Stannar spelaren
+        /// </summary>
+        /// <param name="move">Var närmsta vägg är</param>
+        public void Stop(Vector2 move)
         {
+            // Spelaren stannas....typ. Spelaren flyttas ett steg ifrån det som blockerar vägen så att hen inte fastnar
+            position = position - move;
+
+            // för att gånganimationen inte ska fortsätta efter spelaren stoppas
             target = position;
         }
 

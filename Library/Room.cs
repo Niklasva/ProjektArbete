@@ -35,8 +35,13 @@ namespace Library
         //Och föremålet i fråga
         private Item itemClicked;
 
+        /// <summary>
+        /// Laddar rummets och de saker i rummets innehåll
+        /// </summary>
         public void LoadContent(Game game)
         {
+            // Första gången man besöker ett rum, laddas det in
+            // Om man redan har besökt ett rum är allting där det var när man lämnade rummet
             if (visited == false)
             {
                 this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
@@ -85,18 +90,26 @@ namespace Library
             mousecontrolUpdate();
             
         }
-
+        /// <summary>
+        /// Ritar ut allt som ska ritas ut i rummet
+        /// </summary>
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             updateLayerPosition();
+
+            // ritar ut alla objekt i rummet
             foreach (Item item in items)
             {
                 item.Draw(gameTime, spriteBatch);
             }
+
+            // dörrar
             foreach (Door item in doors)
             {
                 item.Draw(gameTime, spriteBatch);
             }
+
+            // bakgrunden
             spriteBatch.Draw(background,
                  Vector2.Zero,
                  new Rectangle(0, 0,
@@ -109,7 +122,8 @@ namespace Library
                  SpriteEffects.None,
                  0.333333333333f);
 
-                 spriteBatch.Draw(foreground,
+            // förgrunden
+            spriteBatch.Draw(foreground,
                  Vector2.Zero,
                  new Rectangle(0, 0,
                  game.Window.ClientBounds.Width,
@@ -144,6 +158,8 @@ namespace Library
                                 0), Color.White);
                 }
             }
+
+            // npc:er
             foreach (NPC npc in npcs)
             {
                 npc.Draw(gameTime, spriteBatch, Registry.playerPosition);
@@ -212,6 +228,10 @@ namespace Library
 
         }
 
+        /// <summary>
+        /// GetData skapar av någon dum anledning enbart endimensionella arrayer
+        /// Den här funktionen konverterar en endimensionell array till en tvådimensionell.
+        /// </summary>
         private Color[,] TextureTo2DArray(Texture2D texture)
         {
             // GetData skapar av någon dum anledning enbart endimensionella arrayer
@@ -226,6 +246,7 @@ namespace Library
 
             return colors2;
         }
+
 
         public Color[,] getMask()
         {

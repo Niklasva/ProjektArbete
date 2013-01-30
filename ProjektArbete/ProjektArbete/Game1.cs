@@ -19,9 +19,6 @@ namespace ProjektArbete
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
-        //Dialog testDialog;
-        AnimatedSprite animatedItem;
         Player player;
         Item[] items;
 
@@ -66,8 +63,6 @@ namespace ProjektArbete
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/downTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/upTexture"), 
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
-            animatedItem = new AnimatedSprite(Content.Load<Texture2D>(@"Images/AnimatedSprites/threerings"), new Vector2(400, 20), 10, new Point(75, 75),
-                new Point(0, 0), new Point(6, 8), 16);
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");
@@ -92,16 +87,7 @@ namespace ProjektArbete
         protected override void Update(GameTime gameTime)
         {
             Mousecontrol.update();
-          
-            KeyboardState keyState = Keyboard.GetState();
-            if (keyState.IsKeyDown(Keys.Delete))
-            {
-                Registry.currentRoom = Registry.rooms[1];
-                Registry.currentRoom.LoadContent(this);
-            }
-            animatedItem.Update(gameTime, Window.ClientBounds);
             player.Update(this, gameTime, Window.ClientBounds);
-            
             Registry.currentRoom.Update(gameTime, Window.ClientBounds);
             
             //Muskontroll
@@ -116,9 +102,11 @@ namespace ProjektArbete
                 }
             }
 
-            if (IntersectMask(Registry.currentRoom.getMask()))
+            // Kollar om spelaren rör sig utanför spelområdet
+            if (IntersectMask(Registry.currentRoom.getMask()) != Vector2.Zero)
             {
-                player.Stop();
+                // Rättar till spelarens position så att man inte går utanför spelområdet (det icke-transparenta i masken)
+                player.Stop(IntersectMask(Registry.currentRoom.getMask()));
             }
 
             base.Update(gameTime);
@@ -131,32 +119,49 @@ namespace ProjektArbete
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.AntiqueWhite);
-            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
+
+                spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
             Registry.currentRoom.Draw(gameTime, spriteBatch);
             player.Draw(gameTime, spriteBatch);
-           
-            spriteBatch.End();
-         
-            
+                spriteBatch.End();
             base.Draw(gameTime);
         }
 
-        static bool IntersectMask(Color[,] data)
+        /// <summary>
+        /// Kolla om spelaren är där hen inte borde vara
+        /// </summary>
+        /// <param name="data">2D-färgarray</param>
+        /// <returns>Var "väggen" är jämfört med spelaren</returns>
+        static Vector2 IntersectMask(Color[,] data)
         {
-            bool intersects = false;
+            Vector2 where = Vector2.Zero;
             // Konverterar spelarpositionen (Vector2/float) till int för att kunna använda den som arrayposition
             int x = (int)Math.Round(Registry.playerPosition.X);
             int y = (int)Math.Round(Registry.playerPosition.Y + 39);
             if (x < 1) x = 1;
-            if (x > 299) x = 299;
+            if (x > 298) x = 298;
             if (y < 1) y = 1;
 
-            //letar efter !färg
-            if (data[x, y].A == 0 || data[x + 20, y].A == 0)
+            // Letar efter genomsynlighet i närheten av spelaren
+            if (data[x - 1, y].A == 0)
             {
-                intersects = true;
+                where.X = -1;
+            } 
+            if (data[x + 21, y].A == 0)
+            {
+                where.X = 1;
             }
-            return intersects;
+            if (data[x, y + 1].A == 0)
+            {
+                where.Y = 1;
+            }
+            if (data[x, y - 1].A == 0)
+            {
+                where.Y = -1;
+            }
+
+            // Returnerar var "väggen" är jämfört med spelaren
+            return where;
         }
 
 

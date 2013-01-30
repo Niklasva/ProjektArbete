@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace Library
 {
     /// <summary>
-    ///  Det här är en klass som håller reda på saker.
+    ///  Det här är en klass som håller reda på saker som alla klasser ska kunna komma åt
     /// </summary>
     public static class Registry
     {
