@@ -38,6 +38,9 @@ namespace Library
         private double deltaX;
         private double deltaY;
         private bool isMoving;
+        private Vector2 nextRoomDoorPosition;
+
+        //Lagerposition
         private float layerPosition = 0;
 
         //Skala spriten
@@ -76,7 +79,14 @@ namespace Library
             
             //scaleToPosition(clientBounds);
             //Är inventoryn öppen ska spelaren inte röra på sig
-            if (!Registry.inventoryInUse)
+            if (Registry.changingRoom)
+            {
+                position = nextRoomDoorPosition;
+                target = position;
+                Registry.changingRoom = false;
+
+            }
+            if (!Registry.inventoryInUse || Registry.changingRoom)
             {
                 //Rör spelaren på sig?
                 isMoving = true;
@@ -163,6 +173,7 @@ namespace Library
                 downCurrentFrame = new Point(0, 0);
                 upCurrentFrame = new Point(0, 0);
             }
+            
             Registry.playerIsMoving = isMoving;
 
             inventory.Update();
@@ -207,5 +218,10 @@ namespace Library
         //    double doubleScale = 1 - (temp * 0.001);
         //    scale = float.Parse(doubleScale.ToString());
         //}
+
+        public void changeNextDoorRoomPosition(Vector2 x)
+        {
+            nextRoomDoorPosition = x;
+        }
     }
 }

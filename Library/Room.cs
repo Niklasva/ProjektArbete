@@ -185,12 +185,16 @@ namespace Library
                 {
                     changeRoom = true;
                     nextRoomId = int.Parse(item.nextRoomID);
+                    Registry.nextRoomDoorPosition = item.door2Position;
+                    Registry.changingRoom = true;
                 }
             }
             if (changeRoom)
             {
+                
                 Registry.currentRoom = Registry.rooms[nextRoomId];
                 Registry.currentRoom.LoadContent(game);
+                
             }
 
         }
