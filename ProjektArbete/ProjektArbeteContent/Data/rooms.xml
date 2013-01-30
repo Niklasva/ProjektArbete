@@ -20,9 +20,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>100 50</position>
+          <position>320 90</position>
           <nextRoomID>1</nextRoomID>
-          <door2Position>0 100</door2Position>
+          <door2Position>0 200</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
         </Item>
@@ -45,9 +45,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>100 300</position>
-          <nextRoomID>1</nextRoomID>
-          <door2Position>0 100</door2Position>
+          <position>320 90</position>
+          <nextRoomID>0</nextRoomID>
+          <door2Position>0 200</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
         </Item>
