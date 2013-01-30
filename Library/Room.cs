@@ -58,6 +58,10 @@ namespace Library
                 {
                     item.loadContent(game);
                 }
+                foreach (Door item in doors)
+                {
+                    item.LoadContent(game);
+                }
 
                 int i = 0;
                 foreach (Item item in items)
@@ -86,6 +90,10 @@ namespace Library
         {
             updateLayerPosition();
             foreach (Item item in items)
+            {
+                item.Draw(gameTime, spriteBatch);
+            }
+            foreach (Door item in doors)
             {
                 item.Draw(gameTime, spriteBatch);
             }

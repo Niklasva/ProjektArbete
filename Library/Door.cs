@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Library
 {
@@ -16,26 +17,23 @@ namespace Library
         public Vector2 door2Position;
         public bool isLocked;
         public string key;
-        private Dialog cantOpenDialog;
-        private Room nextRoom;
+        public string textureID;
+        private AnimatedSprite sprite;
+        private Texture2D texture;
+        private Point currentframe;
 
         public void LoadContent(Game game)
         {
-            nextRoom = Registry.rooms[int.Parse(nextRoomID)];
-            nextRoom.LoadContent(game);
-            cantOpenDialog = Registry.dialogs[1];
-        }
-        //Ändrar aktivt rum och förflyttar spelaren till dörren på nästa sida
-        public void Teleport()
-        {
-            if (isLocked == false)
+            if (isLocked == true)
             {
-                Registry.currentRoom = nextRoom;
-                Registry.playerPosition = door2Position;
+                currentframe = new Point(0, 0);
             }
             else
             {
+                currentframe = new Point(1, 0);
             }
+            texture = game.Content.Load<Texture2D>(@"Images/Sprites/" + textureID);
+            sprite = new AnimatedSprite(texture, position, 0, new Point(texture.Width / 2, texture.Height), currentframe, new Point(1, 0), 1);
         }
 
         void Unlock(Item objct)
@@ -48,6 +46,11 @@ namespace Library
             {
                 //TODO: Berättaren säger något om att man inte kan använda objektet på det sättet
             }
+        }
+
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            sprite.Draw(gameTime, spriteBatch, 1f, 0.3332f);
         }
     }
 }

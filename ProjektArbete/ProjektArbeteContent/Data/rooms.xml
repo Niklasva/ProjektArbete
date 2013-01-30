@@ -20,11 +20,12 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>320 90</position>
+          <position>260 21</position>
           <nextRoomID>1</nextRoomID>
           <door2Position>0 200</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
+          <textureID>dorr</textureID>
         </Item>
       </doors>
     </Item>
@@ -50,6 +51,7 @@
           <door2Position>0 200</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
+          <textureID>dorr</textureID>
         </Item>
       </doors>
     </Item>
