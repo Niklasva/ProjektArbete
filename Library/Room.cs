@@ -27,6 +27,7 @@ namespace Library
         private Texture2D mask;
         private Color[,] maskData;
         private Texture2D foreground;
+        private bool visited = false;
         
         //Muskontroll 
         //Bool för att lägga till föremål i spelaren och ta bort från rummet
@@ -36,32 +37,36 @@ namespace Library
 
         public void LoadContent(Game game)
         {
-            this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
-            this.mask = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "mask");
-            this.foreground = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "fg");
-            this.maskData = TextureTo2DArray(mask);
-            this.game = game;
+            if (visited == false)
+            {
+                this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
+                this.mask = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "mask");
+                this.foreground = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "fg");
+                this.maskData = TextureTo2DArray(mask);
+                this.game = game;
 
-            isItemClicked = false;
-            foreach (string id in itemID)
-            {
-                items.Add(Registry.items[int.Parse(id)]);
-            }
-            foreach (string id in npcID)
-            {
-                npcs.Add(Registry.npcs[int.Parse(id)]);
-            }
-            foreach (NPC item in npcs)
-            {
-                item.loadContent(game);
-            }
-            
-            int i = 0;
-            foreach (Item item in items)
-            {
-                string[] temp = itemPosition[i].Split(new char[] { ',' }, 2);
-                item.setPosition(new Vector2(float.Parse(temp[0]), float.Parse(temp[1])));
-                i++;
+                isItemClicked = false;
+                foreach (string id in itemID)
+                {
+                    items.Add(Registry.items[int.Parse(id)]);
+                }
+                foreach (string id in npcID)
+                {
+                    npcs.Add(Registry.npcs[int.Parse(id)]);
+                }
+                foreach (NPC item in npcs)
+                {
+                    item.loadContent(game);
+                }
+
+                int i = 0;
+                foreach (Item item in items)
+                {
+                    string[] temp = itemPosition[i].Split(new char[] { ',' }, 2);
+                    item.setPosition(new Vector2(float.Parse(temp[0]), float.Parse(temp[1])));
+                    i++;
+                }
+                visited = true;
             }
         }
 
