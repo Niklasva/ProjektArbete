@@ -11,12 +11,23 @@
       <itemID>
         <Item>0</Item>
         <Item>1</Item>
-        <Item>2</Item>
+        <Item>1</Item>
+        <Item>0</Item>
+        <Item>0</Item>
+        <Item>0</Item>
+        <Item>0</Item>
+        <Item>0</Item>
       </itemID>
       <itemPosition>
         <Item>211,74</Item>
         <Item>278,89</Item>
         <Item>38,104</Item>
+        <Item>24,90</Item>
+        <Item>21,92</Item>
+        <Item>23,91</Item>
+        <Item>25,99</Item>
+        <Item>20,95</Item>
+
       </itemPosition>
       <doors>
         <Item>

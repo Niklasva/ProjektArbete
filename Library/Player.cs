@@ -85,7 +85,7 @@ namespace Library
                 Registry.changingRoom = false;
 
             }
-            if (!Registry.inventoryInUse || Registry.changingRoom)
+            if (!Registry.inventoryInUse || Registry.changingRoom || inventory.InteractingWithItem)
             {
                 //Rör spelaren på sig?
                 isMoving = true;

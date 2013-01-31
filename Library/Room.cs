@@ -53,7 +53,10 @@ namespace Library
                 isItemClicked = false;
                 foreach (string id in itemID)
                 {
-                    items.Add(Registry.items[int.Parse(id)]);
+                    Item itemToBeAdded = new Item();
+                    itemToBeAdded.loadNewItem(Registry.items[int.Parse(id)]);
+                    itemToBeAdded.Initialize(game.Content.Load<Texture2D>(@itemToBeAdded.TextureString));
+                    items.Add(itemToBeAdded);
                 }
                 foreach (string id in npcID)
                 {

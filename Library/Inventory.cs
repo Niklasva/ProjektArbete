@@ -157,7 +157,7 @@ namespace Library
         }
 
         //Kombinerar föremål i inventoryn
-        public bool combineItem(Item item1, Item item2)
+        private bool combineItem(Item item1, Item item2)
         {
             bool successfullCombination = false;
             //Kan båda kombineras?
@@ -167,9 +167,12 @@ namespace Library
                 if (item1.combinedItemInt == item2.combinedItemInt)
                 {
                     //Tar bort de föremål som man kombinerar och lägger till det nya föremålet
+                    Item itemToBeAdded = new Item();
+                    itemToBeAdded.loadNewItem(Registry.items[item1.combinedItemInt]);
+                    itemToBeAdded.Initialize(game.Content.Load<Texture2D>(@itemToBeAdded.TextureString));
                     removeItem(item1);
                     removeItem(item2);
-                    addItem(Registry.items[item1.combinedItemInt]);
+                    addItem(itemToBeAdded);
                     successfullCombination = true;
                 }
             }
@@ -198,15 +201,23 @@ namespace Library
             sortInventory();
         }
 
-        public void sortInventory()
+        private void sortInventory()
         {
             for (int i = 0; i < inventory.Count; i++)
             {
                 //Om föremålet ligger längre fram i listan än på första platsen så ska den hamna bakom den förra föremålets rutstorlek
                 if (i != 0)
-                    inventory[i].setPosition(new Vector2((3 + inventory[i - 1].getSprite().Texture.Width) * i, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
+                    inventory[i].setPosition(new Vector2((3 + inventory[i - 1].getSprite().Texture.Width) * i + 3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
                 else
                     inventory[i].setPosition(new Vector2(3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
+            }
+        }
+
+        public bool InteractingWithItem
+        {
+            get
+            {
+                return isInteractingWithItem;
             }
         }
     }

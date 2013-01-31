@@ -68,5 +68,15 @@ namespace Library
         {
             layerPosition = x;
         }
+
+        public void loadNewItem(Item item)
+        {
+            name = item.name;
+            isPickable = item.isPickable;
+            description = item.description;
+            textureString = item.textureString;
+            isCombinable = item.isCombinable;
+            combinedItemInt = item.combinedItemInt;
+        }
     }
 }
