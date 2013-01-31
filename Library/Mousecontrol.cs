@@ -19,7 +19,6 @@ namespace Library
         /// </summary>
         private static MouseState prevMouseState;
         private static  MouseState currMouseState;
-        private static Item itemClickedOn;
 
         private static string description;
         private static string name;
@@ -42,40 +41,31 @@ namespace Library
             return leftMouseButtonClicked;
         }
 
-        public static bool clickedOnItem(List<Item> items, bool leftMouseButtonClicked)
+        public static bool clickedOnItem(Vector2 position, Point frameSize, bool leftMouseButtonClicked)
         {
             bool clickedOnItem = false;
             //Har man klickat ned musen
             if (leftMouseButtonClicked)
             {
                 //Om musen befinner sig inom föremålets gränser...
-                for (int i = 0; i < items.Count && !clickedOnItem; i++)
+                if (mouseOverItem(position, frameSize))
                 {
-                    if (mouseOverItem(items[i]))
-                    {
-                        //...blir en bool sann.
-                        clickedOnItem = true;
-                        itemClickedOn = items[i];
-                    }
+                    //...blir en bool sann.
+                    clickedOnItem = true;
                 }
-            }
 
+            }
             return clickedOnItem;
         }
 
-        public static Item getClickedItem()
-        {
-            return itemClickedOn;
-        }
-
-        private static bool mouseOverItem(Item item)
+        private static bool mouseOverItem(Vector2 position, Point frameSize)
         {
             bool isMouseOverItem = false;
             //Beffinner sig musen inom området för spriten?
             //Delar positionen med 3 för spelets grafik dras ut
-            if (currMouseState.X / 3 >= item.getSprite().Position.X && currMouseState.X / 3 <= item.getSprite().Position.X + (item.getSprite().FrameSize.X))
+            if (currMouseState.X / 3 >= position.X && currMouseState.X / 3 <= position.X + frameSize.X)
             {
-                if (currMouseState.Y / 3 >= item.getSprite().Position.Y && currMouseState.Y / 3 <= item.getSprite().Position.Y + (item.getSprite().FrameSize.Y))
+                if (currMouseState.Y / 3 >= position.Y && currMouseState.Y / 3 <= position.Y + frameSize.Y)
                     isMouseOverItem = true;
             }
 
@@ -94,15 +84,15 @@ namespace Library
             return rightMouseButtonClicked;
         }
 
-        public static bool rightClickedOnItem(List<Item> items)
+        public static bool rightClickedOnItem(Item item)
         {
             bool rightClickedOnItem = false;
 
-            if (clickedOnItem(items, true))
+            if (clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, true))
             {
                 rightClickedOnItem = true;
-                description = getClickedItem().description;
-                name = getClickedItem().name;
+                description = item.description;
+                name = item.name;
             }
 
             return rightClickedOnItem;
@@ -120,17 +110,18 @@ namespace Library
 
         public static bool inProximityToItem(Vector2 position, Point frameSize)
         {
+            /// <summary>
+            /// Kollar spelar befinner sig i närheten av ett föremål. Skicka med föremålets position och storlek. 
+            /// </summary>
             bool isInProximity = false;
             //Befinner sig spelare inom en visst område runt föremålet?
-            if (Registry.playerPosition.X >= (position.X - 40) && Registry.playerPosition.X <= (position.X + frameSize.X + 40) &&
-                Registry.playerPosition.Y >= (position.Y - 40) && Registry.playerPosition.Y <= (position.Y + frameSize.Y + 40))
+            if ((Registry.playerPosition.X + 10) >= position.X && (Registry.playerPosition.X - 10) <= (position.X + frameSize.X) &&
+                (Registry.playerPosition.Y + 40) >= position.Y && (Registry.playerPosition.Y - 10) <= (position.Y + frameSize.Y))
             {
                 isInProximity = true;
             }
 
             return isInProximity;
         }
-
-
     }
 }

@@ -60,12 +60,22 @@ namespace Library
                     //Om man klickar med vänstra musknappen...
                     if (Mousecontrol.clicked())
                     {
+                        bool clickedOnItem = false;
+                        Item tempItem = new Item();
+                        foreach (Item item in inventory)
+                        {
+                            if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, true))
+                            {
+                                clickedOnItem = true;
+                                tempItem = item;
+                            }
+                        }
                         //...och om föremålet går att kombinera och man klickar på ett föremål som går att kombinera
-                        if (itemClickedOn.isCombinable && Mousecontrol.clickedOnItem(inventory, true) &&
+                        if (itemClickedOn.isCombinable && clickedOnItem &&
                             itemClickedOn.isCombinable)
                         {
                             //...går det att kombinera föremålen så kombineras de och annars läggs det föremålet som man klickat på tillagt i inventoryn
-                            if(!combineItem(itemClickedOn, Mousecontrol.getClickedItem()))
+                            if(!combineItem(itemClickedOn, tempItem))
                                  addItem(itemClickedOn);
                             isInteractingWithItem = false;
                         }
@@ -81,19 +91,27 @@ namespace Library
                     //Om man klickar ner musen...
                     if (Mousecontrol.clicked())
                     {
+                        bool clickedOnItem = false;
                         //... och om man klickar på ett föremål i sin inventory...
-                        if (Mousecontrol.clickedOnItem(inventory, true))
+                        foreach (Item item in  inventory)
+                        {
+                            if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, true))
+                            {
+                                itemClickedOn = item;
+                                clickedOnItem = true;
+                            }
+                        }
+                        
+                        if(clickedOnItem)
                         {
                             //Blir föremålet ett föremål som följer musen och den tas bort från själva inventoryn
-                            itemClickedOn = Mousecontrol.getClickedItem();
                             isInteractingWithItem = true;
-                            removeItem(Mousecontrol.getClickedItem());
+                            removeItem(itemClickedOn);
                         }
+                        
                     }
                 }
-            }
-
-            
+            }   
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -131,15 +149,23 @@ namespace Library
 
                 string textToDraw = null;
                 bool drawText = false;
+                bool clickedOnItem = false;
                 //Om man håller inne musknappen över ett föremål...
-                if ((Mouse.GetState().RightButton == ButtonState.Pressed && Mousecontrol.rightClickedOnItem(inventory)))
+                foreach (Item item in inventory)
+                {
+                    if (Mousecontrol.rightClickedOnItem(item))
+                    {
+                        clickedOnItem = true;
+                    }
+                }
+                if ((Mouse.GetState().RightButton == ButtonState.Pressed && clickedOnItem))
                 {
                     //...blir texten som ska skrivas ut beskrivningen för föremålet
                     textToDraw = Mousecontrol.getDescription();
                     drawText = true;
                 }
                 //Om man håller musen över ett föremål...
-                else if (Mousecontrol.rightClickedOnItem(inventory))
+                else if (clickedOnItem)
                 {
                     //...blir texten som ska skrivas ut namnet på föremålet
                     textToDraw = Mousecontrol.getName();

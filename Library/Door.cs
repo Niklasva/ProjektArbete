@@ -52,5 +52,10 @@ namespace Library
         {
             sprite.Draw(gameTime, spriteBatch, 1f, 0.3332f);
         }
+
+        public Sprite getSprite()
+        {
+            return sprite;
+        }
     }
 }

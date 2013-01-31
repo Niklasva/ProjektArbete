@@ -144,12 +144,20 @@ namespace Library
             {
                 string textToDraw = null;
                 bool drawText = false;
-                if ((Mouse.GetState().RightButton == ButtonState.Pressed && Mousecontrol.rightClickedOnItem(items)))
+                bool clickedOnItem = false;
+                foreach (Item item in items)
+                {
+                    if (Mousecontrol.rightClickedOnItem(item))
+                    {
+                        clickedOnItem = true;
+                    }
+                }
+                if ((Mouse.GetState().RightButton == ButtonState.Pressed && clickedOnItem))
                 {
                     textToDraw = Mousecontrol.getDescription();
                     drawText = true;
                 }
-                else if (Mousecontrol.rightClickedOnItem(items))
+                else if (clickedOnItem)
                 {
                     textToDraw = Mousecontrol.getName();
                     drawText = true;
@@ -169,23 +177,6 @@ namespace Library
             }
         }
 
-
-        public void mousecontrolUpdate()
-        {
-            //Om man klickar ner musen
-            //Om man klickar på ett föremål i rummet
-            if (Mousecontrol.clickedOnItem(items, Mousecontrol.clicked()))
-            {
-                //Kan man plocka upp föremålet?
-                if (Mousecontrol.getClickedItem().isPickable)
-                {
-                    //Ändra en bool som anger om ett föremål har blivit klickat på
-                    isItemClicked = true;
-                    //Föremålet som klickades på tilldelas till en variabel i rummet
-                    itemClicked = Mousecontrol.getClickedItem();
-                }
-            }
-        }
         public bool isItemClickedInRoom()
         {
             return isItemClicked;
@@ -207,13 +198,41 @@ namespace Library
             return items;
         }
 
+        public void mousecontrolUpdate()
+        {
+            //Om man klickar ner musen
+            //Om man klickar på ett föremål i rummet
+            bool clickedOnItem = false;
+            Item tempItem = new Item();
+            isItemClicked = false;
+            foreach (Item item in items)
+            {
+                if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, Mousecontrol.clicked()))
+                {
+                    clickedOnItem = true;
+                    tempItem = item;
+                }
+            }
+            if (clickedOnItem)
+            {
+                //Kan man plocka upp föremålet?
+                if (tempItem.isPickable)
+                {
+                    //Ändra en bool som anger om ett föremål har blivit klickat på
+                    isItemClicked = true;
+                    //Föremålet som klickades på tilldelas till en variabel i rummet
+                    itemClicked = tempItem;
+                }
+            }
+        }
+
         public void doorUpdate()
         {
             bool changeRoom = false;
             int nextRoomId = 0;
             foreach (Door item in doors)
             {
-                if (Mousecontrol.inProximityToItem(item.position, new Point(0, 0)))
+                if (Mousecontrol.inProximityToItem(item.position, item.getSprite().FrameSize) && Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, Mousecontrol.clicked()))
                 {
                     changeRoom = true;
                     nextRoomId = int.Parse(item.nextRoomID);
@@ -226,6 +245,7 @@ namespace Library
                 
                 Registry.currentRoom = Registry.rooms[nextRoomId];
                 Registry.currentRoom.LoadContent(game);
+                changeRoom = false;
                 
             }
 
