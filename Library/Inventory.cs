@@ -38,6 +38,20 @@ namespace Library
 
         public void Update()
         {
+            if (isInteractingWithItem && !Registry.inventoryInUse)
+            {
+                if (Mousecontrol.clicked())
+                {
+                    addItem(itemClickedOn);
+                    isInteractingWithItem = false;
+                }
+            }
+            if (isInteractingWithItem)
+            {
+                itemClickedOn.setPosition(new Vector2(Mouse.GetState().X / 3 - itemClickedOn.getSprite().Texture.Width / 2,
+                    Mouse.GetState().Y / 3 - itemClickedOn.getSprite().Texture.Height / 2));
+            }
+            
             //Uppdatering av muskontroll
             if (Registry.inventoryInUse)
             {
@@ -77,11 +91,9 @@ namespace Library
                         }
                     }
                 }
-
-                if (isInteractingWithItem)
-                    itemClickedOn.setPosition(new Vector2(Mouse.GetState().X / 3 - itemClickedOn.getSprite().Texture.Width / 2,
-                        Mouse.GetState().Y / 3 - itemClickedOn.getSprite().Texture.Height / 2));
             }
+
+            
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -102,7 +114,10 @@ namespace Library
                 }
                 wait = 0;
             }
-            
+
+            if (isInteractingWithItem)
+                itemClickedOn.Draw(gameTime, spriteBatch, 0);
+
             if (Registry.inventoryInUse)
             {
                 backgroundSprite.Draw(gameTime, spriteBatch, 1f, 0.002f);
@@ -112,8 +127,7 @@ namespace Library
                     item.Draw(gameTime, spriteBatch, 0f);
                 }
 
-                if (isInteractingWithItem)
-                    itemClickedOn.Draw(gameTime, spriteBatch, 0);
+                
 
                 string textToDraw = null;
                 bool drawText = false;
@@ -137,7 +151,7 @@ namespace Library
                     //Texten placeras längst ned i inventoryn. 
                     spriteBatch.DrawString(game.Content.Load<SpriteFont>(@"textfont"), textToDraw,
                         new Vector2(game.Window.ClientBounds.Width / 6 - textToDraw.Count() * 4f,
-                            inventoryPosition + 24), Color.White);
+                            0), Color.White);
                 }
             }
         }

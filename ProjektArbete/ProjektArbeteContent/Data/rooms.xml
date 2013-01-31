@@ -22,7 +22,7 @@
         <Item>
           <position>260 21</position>
           <nextRoomID>1</nextRoomID>
-          <door2Position>0 200</door2Position>
+          <door2Position>0 80</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -48,7 +48,7 @@
         <Item>
           <position>320 90</position>
           <nextRoomID>0</nextRoomID>
-          <door2Position>0 200</door2Position>
+          <door2Position>0 80</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
