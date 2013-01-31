@@ -47,11 +47,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\AnimatedSprites\threerings.png">
-      <Name>threerings</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Images\Sprites\object.png">
       <Name>object</Name>
       <Importer>TextureImporter</Importer>
