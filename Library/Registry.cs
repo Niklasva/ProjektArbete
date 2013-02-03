@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
+
 
 namespace Library
 {
@@ -20,9 +23,10 @@ namespace Library
         public static Room[] rooms;
         public static bool inventoryInUse = false;
         public static bool playerIsMoving = false;
-
+        
         public static bool changingRoom = false;
         public static Vector2 nextRoomDoorPosition;
-
+        public static Song music;
+        public static bool musbol = false;
      }
 }

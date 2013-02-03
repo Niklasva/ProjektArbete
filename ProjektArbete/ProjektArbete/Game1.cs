@@ -163,9 +163,5 @@ namespace ProjektArbete
             // Returnerar var "väggen" är jämfört med spelaren
             return where;
         }
-
-
-
-
     }
 }

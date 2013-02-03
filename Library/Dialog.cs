@@ -39,7 +39,7 @@ namespace Library
         public void Speak(GameTime gameTime, SpriteBatch spriteBatch, Vector2 npcPosition)
         {
 
-            float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float elapsed = (float)gameTime.ElapsedGameTime.Milliseconds;
             timer -= elapsed;
             speaker = lines[i].speaker;
             if (timer > 0)

@@ -28,7 +28,8 @@ namespace Library
         private AnimatedSprite talkSprite;
         private AnimatedSprite activeSprite;
         private float layerPosition;
-        private Boolean isTalking = true;
+        private Boolean isTalking = false;
+        private SoundEffect dialogSound;
 
         public void loadContent(Game game)
         {
@@ -39,6 +40,8 @@ namespace Library
             dialog = Registry.dialogs[dialogID];
             dialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
             this.activeSprite = stillSprite;
+            this.dialogSound = game.Content.Load<SoundEffect>(@"Sound/Voice/" + dialogID);
+            Talk();
         }
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
@@ -63,6 +66,7 @@ namespace Library
         public void Talk()
         {
             isTalking = true;
+            dialogSound.Play();
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)

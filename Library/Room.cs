@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace Library
 {
@@ -19,6 +20,7 @@ namespace Library
         public string[] itemID;
         public string[] itemPosition;
         public List<Door> doors = new List<Door>();
+        public string song;
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
         private Game game;
@@ -78,7 +80,23 @@ namespace Library
                     item.setPosition(new Vector2(float.Parse(temp[0]), float.Parse(temp[1])));
                     i++;
                 }
+
+
                 visited = true;
+            }
+            if (song != "null")
+            {
+                if (Registry.musbol == true)
+                {
+                    if (!Registry.music.IsDisposed)
+                    {
+                        MediaPlayer.Stop();
+                        Registry.music.Dispose();
+                    }
+                }
+                Registry.music = game.Content.Load<Song>(@"Sound/BGM/" + song);
+                MediaPlayer.Play(Registry.music);
+                Console.WriteLine(song);
             }
         }
 

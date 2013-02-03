@@ -39,6 +39,7 @@
           <textureID>dorr</textureID>
         </Item>
       </doors>
+      <song>acmidi</song>
     </Item>
 
     <!-- Rum 1 - test 2 -->
@@ -58,13 +59,37 @@
       <doors>
         <Item>
           <position>320 90</position>
-          <nextRoomID>0</nextRoomID>
+          <nextRoomID>2</nextRoomID>
           <door2Position>0 80</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
       </doors>
+      <song>null</song>
+    </Item>
+    
+    
+    <Item>
+      <backgroundID>room3</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>0 90</position>
+          <nextRoomID>0</nextRoomID>
+          <door2Position>0 80</door2Position>
+          <isLocked>true</isLocked>
+          <key>null</key>
+          <textureID>dorr</textureID>
+        </Item>
+      </doors>
+      <song>song</song>
     </Item>
 
   </Asset>
