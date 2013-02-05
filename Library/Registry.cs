@@ -30,10 +30,10 @@ namespace Library
         public static Song music;
         public static bool musbol = false;
 
-        private List<Item> itemsInInventory = new List<Item>();
+        private static List<Item> itemsInInventory = new List<Item>();
 
 
-        public void save()
+        public static void save()
         {
             StreamWriter utfil = new StreamWriter(@"save.txt");
 
@@ -58,7 +58,7 @@ namespace Library
             
         }
 
-        public void load()
+        public static void load()
         {
             List<string> data = new List<string>();
             StreamReader open = new StreamReader(@"save.txt");

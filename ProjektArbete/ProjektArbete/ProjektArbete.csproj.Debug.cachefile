@@ -26,6 +26,8 @@ Content\Images\Sprites\dorr.xnb
 Content\Images\Backgrounds\room3.xnb
 Content\Images\Backgrounds\room3mask.xnb
 Content\Images\Backgrounds\room3fg.xnb
+Content\Images\Sprites\NEWBUTTON.xnb
+Content\Images\Sprites\OPENBUTTON.xnb
 Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
