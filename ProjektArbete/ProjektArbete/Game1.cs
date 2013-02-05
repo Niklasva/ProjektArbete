@@ -21,6 +21,8 @@ namespace ProjektArbete
         SpriteBatch spriteBatch;
         Player player;
         Item[] items;
+        enum StateOfGame {menu, game};
+        StateOfGame stateOfGame = StateOfGame.game;
 
         public Game1()
         {
@@ -86,27 +88,30 @@ namespace ProjektArbete
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            Mousecontrol.update();
-            player.Update(this, gameTime, Window.ClientBounds);
-            Registry.currentRoom.Update(gameTime, Window.ClientBounds);
-            
-            //Muskontroll
-            if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom())
+            if (stateOfGame == StateOfGame.game)
             {
-                Sprite item = Registry.currentRoom.getClickedItem().getSprite();
-                if (Mousecontrol.inProximityToItem(item.Position, item.FrameSize))
-                {
-                    player.addItem(Registry.currentRoom.getClickedItem());
-                    Registry.currentRoom.removeItem();
-                    Registry.currentRoom.itemWasClicked();
-                }
-            }
+                Mousecontrol.update();
+                player.Update(this, gameTime, Window.ClientBounds);
+                Registry.currentRoom.Update(gameTime, Window.ClientBounds);
 
-            // Kollar om spelaren rör sig utanför spelområdet
-            if (IntersectMask(Registry.currentRoom.getMask()) != Vector2.Zero)
-            {
-                // Rättar till spelarens position så att man inte går utanför spelområdet (det icke-transparenta i masken)
-                player.Stop(IntersectMask(Registry.currentRoom.getMask()));
+                //Muskontroll
+                if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom())
+                {
+                    Sprite item = Registry.currentRoom.getClickedItem().getSprite();
+                    if (Mousecontrol.inProximityToItem(item.Position, item.FrameSize))
+                    {
+                        player.addItem(Registry.currentRoom.getClickedItem());
+                        Registry.currentRoom.removeItem();
+                        Registry.currentRoom.itemWasClicked();
+                    }
+                }
+
+                // Kollar om spelaren rör sig utanför spelområdet
+                if (IntersectMask(Registry.currentRoom.getMask()) != Vector2.Zero)
+                {
+                    // Rättar till spelarens position så att man inte går utanför spelområdet (det icke-transparenta i masken)
+                    player.Stop(IntersectMask(Registry.currentRoom.getMask()));
+                }
             }
 
             base.Update(gameTime);
