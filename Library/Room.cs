@@ -80,8 +80,6 @@ namespace Library
                     item.setPosition(new Vector2(float.Parse(temp[0]), float.Parse(temp[1])));
                     i++;
                 }
-
-
                 visited = true;
             }
             if (song != "null")
@@ -96,7 +94,6 @@ namespace Library
                 }
                 Registry.music = game.Content.Load<Song>(@"Sound/BGM/" + song);
                 MediaPlayer.Play(Registry.music);
-                Console.WriteLine(song);
             }
         }
 

@@ -18,12 +18,14 @@ Content\Images\Backgrounds\room1.xnb
 Content\Images\Backgrounds\room1mask.xnb
 Content\Images\Backgrounds\room2.xnb
 Content\Images\Backgrounds\room2mask.xnb
-Content\Images\Backgrounds\room3.xnb
 Content\Images\Characters\nulltalk.xnb
 Content\Images\Characters\null.xnb
 Content\Images\Backgrounds\room1fg.xnb
 Content\Images\Backgrounds\room2fg.xnb
 Content\Images\Sprites\dorr.xnb
+Content\Images\Backgrounds\room3.xnb
+Content\Images\Backgrounds\room3mask.xnb
+Content\Images\Backgrounds\room3fg.xnb
 Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
@@ -32,7 +34,5 @@ Content\Sound\Voice\1.xnb
 Content\Sound\Voice\0.xnb
 Content\Sound\BGM\song.xnb
 Content\Sound\BGM\acmidi.xnb
-Content\Images\Backgrounds\room3mask.xnb
-Content\Images\Backgrounds\room3fg.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma
