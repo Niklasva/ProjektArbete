@@ -13,7 +13,6 @@ Content\Images\Characters\test.xnb
 Content\Images\Sprites\chair.xnb
 Content\Images\Sprites\hook.xnb
 Content\Images\Sprites\stone.xnb
-Content\Images\Backgrounds\test.xnb
 Content\Images\Backgrounds\room1.xnb
 Content\Images\Backgrounds\room1mask.xnb
 Content\Images\Backgrounds\room2.xnb
@@ -36,5 +35,6 @@ Content\Sound\Voice\1.xnb
 Content\Sound\Voice\0.xnb
 Content\Sound\BGM\song.xnb
 Content\Sound\BGM\acmidi.xnb
+Content\Sound\Voice\2.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma

@@ -67,6 +67,45 @@
 
         <Item>
           <speaker>null</speaker>
+          <position>0 0</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+
+        <Item>
+          <speaker>NPC</speaker>
+          <position>4 4</position>
+          <line>Have some fine looking rope</line>
+          <time>1000</time>
+        </Item>
+        
+
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[2] - Testdialog 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Enjoy your rope</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
           <position>95 100</position>
           <line>0</line>
           <time>4040</time>

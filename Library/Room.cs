@@ -104,6 +104,15 @@ namespace Library
             foreach (NPC item in npcs)
             {
                 item.Update(gameTime, clientBounds);
+                if (item.GiveItem)
+                {
+                    Item itemToBeAdded = new Item();
+                    itemToBeAdded.loadNewItem(Registry.items[item.ItemID]);
+                    itemToBeAdded.Initialize(game.Content.Load<Texture2D>(@itemToBeAdded.TextureString));
+                    itemToBeAdded.setPosition(new Vector2(item.position.X, item.position.Y + 44));
+                    items.Add(itemToBeAdded);
+                    item.resetItem();
+                }
             }
             mousecontrolUpdate();
             

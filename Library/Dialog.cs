@@ -36,9 +36,16 @@ namespace Library
             return speaker;
         }
 
+        public void resetDialog()
+        {
+            i = 0;
+            activeLine = "";
+            speaker = "";
+            timer = 2;
+        }
+
         public void Speak(GameTime gameTime, SpriteBatch spriteBatch, Vector2 npcPosition)
         {
-
             float elapsed = (float)gameTime.ElapsedGameTime.Milliseconds;
             timer -= elapsed;
             speaker = lines[i].speaker;

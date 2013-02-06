@@ -146,6 +146,7 @@ namespace ProjektArbete
             if (x < 1) x = 1;
             if (x > 298) x = 298;
             if (y < 1) y = 1;
+            if (y > 140) y = 140;
 
             // Letar efter genomsynlighet i närheten av spelaren
             if (data[x - 1, y].A == 0)

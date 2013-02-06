@@ -5,11 +5,15 @@
       <name>null</name>
       <position>0 0</position>
       <dialogID>0</dialogID>
+      <dialog2ID>0</dialog2ID>
+      <itemID>0</itemID>
     </Item>
     <Item>
       <name>test</name>
       <position>100 62</position>
       <dialogID>1</dialogID>
+      <dialog2ID>2</dialog2ID>
+      <itemID>2</itemID>
     </Item>
 
   </Asset>
