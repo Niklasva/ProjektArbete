@@ -10,7 +10,7 @@
     </Item>
     <Item>
       <name>test</name>
-      <position>100 62</position>
+      <position>100 40</position>
       <dialogID>1</dialogID>
       <dialog2ID>2</dialog2ID>
       <itemID>2</itemID>

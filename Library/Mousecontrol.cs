@@ -115,8 +115,8 @@ namespace Library
             /// </summary>
             bool isInProximity = false;
             //Befinner sig spelare inom en visst område runt föremålet?
-            if ((Registry.playerPosition.X + 10) >= position.X && (Registry.playerPosition.X - 10) <= (position.X + frameSize.X) &&
-                (Registry.playerPosition.Y + 40) >= position.Y && (Registry.playerPosition.Y - 10) <= (position.Y + frameSize.Y))
+            if ((Registry.playerPosition.X + 15) >= position.X && (Registry.playerPosition.X - 10) <= (position.X + frameSize.X) &&
+                (Registry.playerPosition.Y + 67) >= position.Y && (Registry.playerPosition.Y - 10) <= (position.Y + frameSize.Y))
             {
                 isInProximity = true;
             }

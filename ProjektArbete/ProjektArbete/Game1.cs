@@ -142,7 +142,7 @@ namespace ProjektArbete
             Vector2 where = Vector2.Zero;
             // Konverterar spelarpositionen (Vector2/float) till int för att kunna använda den som arrayposition
             int x = (int)Math.Round(Registry.playerPosition.X);
-            int y = (int)Math.Round(Registry.playerPosition.Y + 39);
+            int y = (int)Math.Round(Registry.playerPosition.Y + 67);
             if (x < 1) x = 1;
             if (x > 298) x = 298;
             if (y < 1) y = 1;
@@ -153,7 +153,7 @@ namespace ProjektArbete
             {
                 where.X = -1;
             } 
-            if (data[x + 21, y].A == 0)
+            if (data[x + 27, y].A == 0)
             {
                 where.X = 1;
             }
