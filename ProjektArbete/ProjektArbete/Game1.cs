@@ -169,5 +169,20 @@ namespace ProjektArbete
             // Returnerar var "väggen" är jämfört med spelaren
             return where;
         }
+
+        private void save()
+        {
+            Registry.save();
+        }
+
+        private void load()
+        {
+            Registry.load();
+            foreach (Item item in Registry.itemsInInventory)
+            {
+                item.Initialize(Content.Load<Texture2D>(@item.TextureString));
+            }
+            player.position = Registry.currentRoom.doors[0].position;
+        }
     }
 }

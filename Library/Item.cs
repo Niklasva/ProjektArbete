@@ -26,6 +26,7 @@ namespace Library
         private Sprite sprite;
         private Vector2 position;
         private float layerPosition = 0;
+        private bool isActive = true;
 
 
         public string TextureString
@@ -77,6 +78,15 @@ namespace Library
             textureString = item.textureString;
             isCombinable = item.isCombinable;
             combinedItemInt = item.combinedItemInt;
+        }
+
+        public void isInactive()
+        {
+            isActive = false;
+        }
+        public bool getActive()
+        {
+            return isActive;
         }
     }
 }

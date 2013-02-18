@@ -30,7 +30,7 @@ namespace Library
         private Color[,] maskData;
         private Texture2D foreground;
         private bool visited = false;
-        
+
         //Muskontroll 
         //Bool för att lägga till föremål i spelaren och ta bort från rummet
         private bool isItemClicked;
@@ -115,7 +115,7 @@ namespace Library
                 }
             }
             mousecontrolUpdate();
-            
+
         }
         /// <summary>
         /// Ritar ut allt som ska ritas ut i rummet
@@ -162,7 +162,7 @@ namespace Library
                  SpriteEffects.None,
                  0.003f);
 
-            
+
 
             if (!Registry.inventoryInUse)
             {
@@ -266,11 +266,11 @@ namespace Library
             }
             if (changeRoom)
             {
-                
+
                 Registry.currentRoom = Registry.rooms[nextRoomId];
                 Registry.currentRoom.LoadContent(game);
                 changeRoom = false;
-                
+
             }
 
         }
@@ -307,6 +307,16 @@ namespace Library
                 item.setLayerPosition((1 - ((item.getSprite().Position.Y + item.getSprite().Texture.Height) / 180)) / 3);
             }
         }
-        
+
+        public bool getVisited()
+        {
+            return visited;
+        }
+
+        public void setVisited()
+        {
+            visited = true;
+        }
+
     }
 }

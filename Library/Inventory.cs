@@ -12,7 +12,7 @@ namespace Library
     /// Tar hand om all "inventory managment"
     /// </summary>
     class Inventory
-    {   
+    {
         private List<Item> inventory = new List<Item>();
         private int inventoryPosition;
         private Texture2D background;
@@ -31,7 +31,7 @@ namespace Library
         {
             this.background = background;
             this.inventoryPosition = clientBounds.Height / 6;
-            backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - (background.Height/2)), 0, new Point(background.Width, background.Height));
+            backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - (background.Height / 2)), 0, new Point(background.Width, background.Height));
             this.game = game;
         }
 
@@ -51,7 +51,7 @@ namespace Library
                 itemClickedOn.setPosition(new Vector2(Mouse.GetState().X / 3 - itemClickedOn.getSprite().Texture.Width / 2,
                     Mouse.GetState().Y / 3 - itemClickedOn.getSprite().Texture.Height / 2));
             }
-            
+
             //Uppdatering av muskontroll
             if (Registry.inventoryInUse)
             {
@@ -75,8 +75,8 @@ namespace Library
                             itemClickedOn.isCombinable)
                         {
                             //...går det att kombinera föremålen så kombineras de och annars läggs det föremålet som man klickat på tillagt i inventoryn
-                            if(!combineItem(itemClickedOn, tempItem))
-                                 addItem(itemClickedOn);
+                            if (!combineItem(itemClickedOn, tempItem))
+                                addItem(itemClickedOn);
                             isInteractingWithItem = false;
                         }
                         else
@@ -93,7 +93,7 @@ namespace Library
                     {
                         bool clickedOnItem = false;
                         //... och om man klickar på ett föremål i sin inventory...
-                        foreach (Item item in  inventory)
+                        foreach (Item item in inventory)
                         {
                             if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, true))
                             {
@@ -101,17 +101,18 @@ namespace Library
                                 clickedOnItem = true;
                             }
                         }
-                        
-                        if(clickedOnItem)
+
+                        if (clickedOnItem)
                         {
                             //Blir föremålet ett föremål som följer musen och den tas bort från själva inventoryn
                             isInteractingWithItem = true;
                             removeItem(itemClickedOn);
                         }
-                        
+
                     }
                 }
-            }   
+            }
+            Registry.itemsInInventory = inventory;
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -123,12 +124,12 @@ namespace Library
                 if (!Registry.inventoryInUse && wait > 1)
                 {
                     Registry.inventoryInUse = true;
-                    
+
                 }
                 else if (wait > 1)
                 {
                     Registry.inventoryInUse = false;
-                    
+
                 }
                 wait = 0;
             }
@@ -145,7 +146,7 @@ namespace Library
                     item.Draw(gameTime, spriteBatch, 0f);
                 }
 
-                
+
 
                 string textToDraw = null;
                 bool drawText = false;
@@ -233,7 +234,7 @@ namespace Library
             {
                 //Om föremålet ligger längre fram i listan än på första platsen så ska den hamna bakom den förra föremålets rutstorlek
                 if (i != 0)
-                    inventory[i].setPosition(new Vector2((3 + inventory[i - 1].getSprite().Texture.Width) * i + 3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
+                    inventory[i].setPosition(new Vector2((5 + inventory[i - 1].getSprite().Texture.Width) * i + 3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
                 else
                     inventory[i].setPosition(new Vector2(3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
             }
