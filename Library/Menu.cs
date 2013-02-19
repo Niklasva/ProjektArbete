@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Library
 {
-    class Menu
+    public class Menu
     {
         private Sprite background;
         private AnimatedSprite openSprite;
@@ -21,9 +21,9 @@ namespace Library
         {
             background = new Sprite(backgroundTexture, Vector2.Zero, 0, new Point(backgroundTexture.Width, backgroundTexture.Height));
             openSprite = new AnimatedSprite(openTexture, new Vector2(20, 40), 0, new Point(openTexture.Width / 2, openTexture.Height), new Point(0, 0),
-                new Point(1, 0), 16);
+                new Point(2, 0), 16);
             newSprite = new AnimatedSprite(newTexture, new Vector2(20, 80), 0, new Point(newTexture.Width / 2, newTexture.Height), new Point(0, 0),
-                new Point(1, 0), 16);
+                new Point(2, 0), 16);
         }
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
@@ -37,6 +37,7 @@ namespace Library
             {
                 clickedOnNew = true;
             }
+
             if (clickedOnNew)
                 newSprite.Update(gameTime, clientBounds);
             if (clickedOnOpen)

@@ -59,6 +59,10 @@ namespace Library
         {
             position = x;
         }
+        public Vector2 getPosition()
+        {
+            return position;
+        }
 
         public Sprite getSprite()
         {
@@ -80,9 +84,9 @@ namespace Library
             combinedItemInt = item.combinedItemInt;
         }
 
-        public void isInactive()
+        public void setInactive(bool x)
         {
-            isActive = false;
+            isActive = x;
         }
         public bool getActive()
         {

@@ -70,7 +70,7 @@ namespace Library
             {
                 foreach (Item item in room.getItems())
                 {
-                    utfil.Write(item.name + " ");
+                    utfil.Write(item.getSprite().Position.X + "," + item.getSprite().Position.Y + " ");
                 }
                 utfil.Write(".");
             }
@@ -111,21 +111,29 @@ namespace Library
 
             //Ladda de rum som man tidigare besökt
             string[] roomsPreviouslyVisitedInt = data[2].Split('.');
-            string[] itemsLeftInEachRoom = data[2].Split('.');
+            string[] itemsLeftInEachRoom = data[3].Split('.');
 
             foreach (string stringInt in roomsPreviouslyVisitedInt)
             {
-                rooms[int.Parse(stringInt)].setVisited();
-                foreach (Item item in rooms[int.Parse(stringInt)].getItems())
+                int temp;
+                int.TryParse(stringInt, out temp);
+                foreach (Item item in rooms[temp].getItems())
                 {
+                    item.setInactive(false);
                     foreach (string String in itemsLeftInEachRoom)
                     {
-                        string[] itemsName = String.Split(' ');
-                        foreach (string name in itemsName)
+                        string[] itemsPosition = String.Split(' ');
+                        foreach (string position in itemsPosition)
                         {
-                            if (item.name != name)
+                            string[] positions = position.Split(',');
+                            float floatTempX;
+                            float floatTempY;
+                            if (float.TryParse(positions[0], out floatTempX) && float.TryParse(positions[1], out floatTempY))
                             {
-                                item.isInactive();
+                                if (!item.getActive() && item.getPosition() == new Vector2(floatTempX, floatTempY))
+                                {
+                                    item.setInactive(true);
+                                }
                             }
                         }
                     }

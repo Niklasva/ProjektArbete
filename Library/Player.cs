@@ -68,7 +68,7 @@ namespace Library
             this.upSprite = new AnimatedSprite(upTexture, position, 10, new Point(29, 68), upCurrentFrame, new Point(2, 1), 100);
             this.stillTexture = stillTexture;
             this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(34, 67), new Point(0, 0), new Point(1, 1), 100);
-            
+            currentSprite = stillSprite;
             this.inventory = new Inventory(invBackGround, clientBounds, game);
             this.scale = 1f;
         }

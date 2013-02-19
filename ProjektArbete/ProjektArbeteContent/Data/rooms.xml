@@ -57,17 +57,17 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>260 21</position>
-          <nextRoomID>2</nextRoomID>
-          <door2Position>0 30</door2Position>
+          <position>0 90</position>
+          <nextRoomID>0</nextRoomID>
+          <door2Position>260 21</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
-          <position>0 90</position>
-          <nextRoomID>0</nextRoomID>
-          <door2Position>260 21</door2Position>
+          <position>260 21</position>
+          <nextRoomID>2</nextRoomID>
+          <door2Position>0 30</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -88,7 +88,7 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>0 90</position>
+          <position>5 90</position>
           <nextRoomID>1</nextRoomID>
           <door2Position>260 21</door2Position>
           <isLocked>true</isLocked>

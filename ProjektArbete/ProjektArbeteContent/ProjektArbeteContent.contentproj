@@ -231,12 +231,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\Sprites\NEWBUTTON.png">
+    <Compile Include="Images\MenuImages\NEWBUTTON.png">
       <Name>NEWBUTTON</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Images\Sprites\OPENBUTTON.png">
+    <Compile Include="Images\MenuImages\OPENBUTTON.png">
       <Name>OPENBUTTON</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -284,6 +284,13 @@
     </Compile>
     <Compile Include="Images\Characters\testtalk.png">
       <Name>testtalk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\MenuImages\splash.PNG">
+      <Name>splash</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

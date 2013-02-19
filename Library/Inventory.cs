@@ -113,6 +113,15 @@ namespace Library
                 }
             }
             Registry.itemsInInventory = inventory;
+
+            //Är föremålet inaktivt tas det bort
+            for (int j = 0; j < inventory.Count; j++)
+            {
+                if (!inventory[j].getActive())
+                    inventory.RemoveAt(j);
+            }
+            sortInventory();
+                
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -224,8 +233,7 @@ namespace Library
         //Tar bort föremål från inventory
         public void removeItem(Item item)
         {
-            inventory.Remove(item);
-            sortInventory();
+            item.setInactive(false);
         }
 
         private void sortInventory()

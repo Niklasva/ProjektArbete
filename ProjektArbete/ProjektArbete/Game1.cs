@@ -21,8 +21,10 @@ namespace ProjektArbete
         SpriteBatch spriteBatch;
         Player player;
         Item[] items;
+        Menu menu;
+        
         enum StateOfGame {menu, game};
-        StateOfGame stateOfGame = StateOfGame.game;
+        StateOfGame stateOfGame = StateOfGame.menu;
 
         public Game1()
         {
@@ -65,6 +67,8 @@ namespace ProjektArbete
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/downTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/upTexture"), 
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
+            menu = new Menu(Content.Load<Texture2D>(@"Images/MenuImages/splash"), Content.Load<Texture2D>(@"Images/MenuImages/OPENBUTTON"), Content.Load<Texture2D>(@"Images/MenuImages/NEWBUTTON"));
+
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");
@@ -88,9 +92,10 @@ namespace ProjektArbete
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            Mousecontrol.update();
             if (stateOfGame == StateOfGame.game)
             {
-                Mousecontrol.update();
+                
                 player.Update(this, gameTime, Window.ClientBounds);
                 Registry.currentRoom.Update(gameTime, Window.ClientBounds);
 
@@ -116,6 +121,14 @@ namespace ProjektArbete
                 if (Registry.changingRoom)
                     save();
             }
+            if (stateOfGame == StateOfGame.menu)
+            {
+                menu.Update(gameTime, Window.ClientBounds);
+                if (menu.ClickedOnNew)
+                    stateOfGame = StateOfGame.game;
+                if (menu.ClickedOnOpen)
+                    load();
+            }
 
             base.Update(gameTime);
         }
@@ -127,10 +140,17 @@ namespace ProjektArbete
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.AntiqueWhite);
-
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
-            Registry.currentRoom.Draw(gameTime, spriteBatch);
-            player.Draw(gameTime, spriteBatch);
+            if (stateOfGame == StateOfGame.game)
+            {
+                Registry.currentRoom.Draw(gameTime, spriteBatch);
+                player.Draw(gameTime, spriteBatch);
+            }
+
+            if (stateOfGame == StateOfGame.menu)
+            {
+                menu.Draw(gameTime, spriteBatch);
+            }
             spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -184,8 +204,12 @@ namespace ProjektArbete
             foreach (Item item in Registry.itemsInInventory)
             {
                 item.Initialize(Content.Load<Texture2D>(@item.TextureString));
+                player.addItem(item);
             }
-            player.position = Registry.currentRoom.doors[0].position;
+            player.position = Registry.currentRoom.doors[0].position - new Vector2(0, 40);
+            Registry.currentRoom.LoadContent(this);
+            stateOfGame = StateOfGame.game;
+            
         }
     }
 }
