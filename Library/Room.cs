@@ -113,6 +113,14 @@ namespace Library
                     items.Add(itemToBeAdded);
                     item.resetItem();
                 }
+                if (Mousecontrol.clicked())
+                {
+                    bool clickedOnItem = false;
+                    if (Mousecontrol.clickedOnItem(item.getPosition, item.getFrameSize, true) )
+                    {
+                        clickedOnItem = true;
+                    }
+                }
             }
             mousecontrolUpdate();
 

@@ -24,7 +24,6 @@ namespace Library
         public static Room[] rooms;
         public static bool inventoryInUse = false;
         public static bool playerIsMoving = false;
-
         public static bool changingRoom = false;
         public static Vector2 nextRoomDoorPosition;
         public static Song music;

@@ -36,9 +36,12 @@ namespace Library
         private SoundEffect dialog2Sound;
         private bool giveItem = false;
         private bool dialogSwitch = false;
+        private Point frameSize;
 
         public bool GiveItem { get { return giveItem; }}
         public int ItemID { get { return itemID; } }
+        public Vector2 getPosition { get { return position; } }
+        public Point getFrameSize { get { return frameSize; } }
 
         /// <summary>
         /// Laddar in karaktärens
@@ -51,12 +54,12 @@ namespace Library
         {
             this.talkTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name + "talk");
             this.stillTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name);
+            frameSize = new Point(stillTexture.Width / 3, stillTexture.Height);
             stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(stillTexture.Width / 3, stillTexture.Height), new Point(0, 0), new Point(3, 1), 200);
             talkSprite = new AnimatedSprite(talkTexture, position, 0, new Point(talkTexture.Width / 3, talkTexture.Height), new Point(0, 0), new Point(3, 1), 200);
             dialog = Registry.dialogs[dialogID];
             dialog2 = Registry.dialogs[dialog2ID];
             dialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
-            
             dialog2.setFont(game.Content.Load<SpriteFont>(@"textfont"));
             this.activeSprite = stillSprite;
             this.dialogSound = game.Content.Load<SoundEffect>(@"Sound/Voice/" + dialogID);
