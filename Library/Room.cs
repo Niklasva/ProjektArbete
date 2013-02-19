@@ -273,6 +273,14 @@ namespace Library
 
             }
 
+            for (int j = 0; j < items.Count; j++)
+            {
+                List<Item> itemsInRoom = items;
+                if (!itemsInRoom[j].getActive())
+                    itemsInRoom.RemoveAt(j);
+            }
+                
+            
         }
 
         /// <summary>

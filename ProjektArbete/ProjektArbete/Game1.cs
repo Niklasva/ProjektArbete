@@ -112,6 +112,9 @@ namespace ProjektArbete
                     // Rättar till spelarens position så att man inte går utanför spelområdet (det icke-transparenta i masken)
                     player.Stop(IntersectMask(Registry.currentRoom.getMask()));
                 }
+
+                if (Registry.changingRoom)
+                    save();
             }
 
             base.Update(gameTime);
