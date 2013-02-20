@@ -18,6 +18,7 @@ namespace Library
         private Texture2D background;
         private Sprite backgroundSprite;
         private int wait = 0;
+        private bool inventoryInUse;
 
         //Muskontroll
         private Item itemClickedOn;
@@ -33,12 +34,13 @@ namespace Library
             this.inventoryPosition = clientBounds.Height / 6;
             backgroundSprite = new Sprite(background, new Vector2(0, inventoryPosition - (background.Height / 2)), 0, new Point(background.Width, background.Height));
             this.game = game;
+            this.inventoryInUse = false;
         }
 
 
         public void Update()
         {
-            if (isInteractingWithItem && !Registry.inventoryInUse)
+            if (isInteractingWithItem && !inventoryInUse)
             {
                 if (Mousecontrol.clicked())
                 {
@@ -53,7 +55,7 @@ namespace Library
             }
 
             //Uppdatering av muskontroll
-            if (Registry.inventoryInUse)
+            if (inventoryInUse)
             {
                 if (isInteractingWithItem)
                 {
@@ -113,15 +115,7 @@ namespace Library
                 }
             }
             Registry.itemsInInventory = inventory;
-
-            //Är föremålet inaktivt tas det bort
-            for (int j = 0; j < inventory.Count; j++)
-            {
-                if (!inventory[j].getActive())
-                    inventory.RemoveAt(j);
-            }
-            sortInventory();
-                
+            Registry.inventoryInUse = inventoryInUse;
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -130,14 +124,14 @@ namespace Library
             wait++;
             if (Keyboard.GetState().IsKeyDown(Keys.I))
             {
-                if (!Registry.inventoryInUse && wait > 1)
+                if (!inventoryInUse && wait > 1)
                 {
-                    Registry.inventoryInUse = true;
+                    inventoryInUse = true;
 
                 }
                 else if (wait > 1)
                 {
-                    Registry.inventoryInUse = false;
+                    inventoryInUse = false;
 
                 }
                 wait = 0;
@@ -146,7 +140,7 @@ namespace Library
             if (isInteractingWithItem)
                 itemClickedOn.Draw(gameTime, spriteBatch, 0);
 
-            if (Registry.inventoryInUse)
+            if (inventoryInUse)
             {
                 backgroundSprite.Draw(gameTime, spriteBatch, 1f, 0.002f);
 
@@ -154,8 +148,6 @@ namespace Library
                 {
                     item.Draw(gameTime, spriteBatch, 0f);
                 }
-
-
 
                 string textToDraw = null;
                 bool drawText = false;
@@ -233,7 +225,8 @@ namespace Library
         //Tar bort föremål från inventory
         public void removeItem(Item item)
         {
-            item.setInactive(false);
+            inventory.Remove(item);
+            sortInventory();
         }
 
         private void sortInventory()
@@ -253,6 +246,14 @@ namespace Library
             get
             {
                 return isInteractingWithItem;
+            }
+        }
+
+        public bool InventoryInUse
+        {
+            get
+            {
+                return inventoryInUse;
             }
         }
     }

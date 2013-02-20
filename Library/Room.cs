@@ -229,6 +229,13 @@ namespace Library
         {
             return items;
         }
+        public void addItem(Item x)
+        {
+            Item itemToBeAdded = x;
+            itemToBeAdded.loadNewItem(x);
+            itemToBeAdded.Initialize(game.Content.Load<Texture2D>(@itemToBeAdded.TextureString));
+            items.Add(itemToBeAdded);
+        }
 
         public void mousecontrolUpdate()
         {
@@ -333,6 +340,11 @@ namespace Library
         {
             visited = true;
         }
+        public void removeItem(Item x)
+        {
+            items.Remove(x);
+        }
+
 
     }
 }

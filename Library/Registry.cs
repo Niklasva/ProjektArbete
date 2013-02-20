@@ -23,7 +23,6 @@ namespace Library
         public static NPC[] npcs;
         public static Room[] rooms;
         public static bool inventoryInUse = false;
-        public static bool playerIsMoving = false;
         public static bool changingRoom = false;
         public static Vector2 nextRoomDoorPosition;
         public static Song music;
@@ -64,13 +63,13 @@ namespace Library
                 }
                 roomInt++;
             }
-            utfil.WriteLine();
+            utfil.WriteLine();  
             //Skriver de föremål som är kvar i dessa rum 
             foreach (Room room in roomsVisited)
             {
                 foreach (Item item in room.getItems())
                 {
-                    utfil.Write(item.getSprite().Position.X + "," + item.getSprite().Position.Y + " ");
+                    utfil.Write(item + "!");
                 }
                 utfil.Write(".");
             }
@@ -78,7 +77,7 @@ namespace Library
             utfil.Close();
         }
 
-        public static void load()
+        public static void load(Game game)
         {
             List<string> data = new List<string>();
             StreamReader open = new StreamReader(@"save.txt");
@@ -113,31 +112,30 @@ namespace Library
             string[] roomsPreviouslyVisitedInt = data[2].Split('.');
             string[] itemsLeftInEachRoom = data[3].Split('.');
 
+            int numberOfRoom = 0;
             foreach (string stringInt in roomsPreviouslyVisitedInt)
             {
                 int temp;
                 int.TryParse(stringInt, out temp);
-                foreach (Item item in rooms[temp].getItems())
+                rooms[temp].LoadContent(game);
+                for (int i = 0; i < rooms[temp].getItems().Count; i = i)
                 {
-                    item.setInactive(false);
-                    foreach (string String in itemsLeftInEachRoom)
+                    rooms[temp].removeItem(rooms[temp].getItems()[i]);
+                }
+
+                string[] eachItemLeftInEachRoom = itemsLeftInEachRoom[numberOfRoom].Split('!');
+                foreach (string stringItem in eachItemLeftInEachRoom)
+                {
+                    if (stringItem != "")
                     {
-                        string[] itemsPosition = String.Split(' ');
-                        foreach (string position in itemsPosition)
-                        {
-                            string[] positions = position.Split(',');
-                            float floatTempX;
-                            float floatTempY;
-                            if (float.TryParse(positions[0], out floatTempX) && float.TryParse(positions[1], out floatTempY))
-                            {
-                                if (!item.getActive() && item.getPosition() == new Vector2(floatTempX, floatTempY))
-                                {
-                                    item.setInactive(true);
-                                }
-                            }
-                        }
+                        string[] eachItem = stringItem.Split(',');
+
+                        Item newItem = new Item();
+                        newItem.loadNewItem(eachItem[0], eachItem[1], eachItem[2], eachItem[3], eachItem[4], eachItem[5]);
+                        rooms[temp].addItem(newItem);
                     }
                 }
+                numberOfRoom++;
             }
             for (int i = 0; i < rooms.Length; i++)
             {

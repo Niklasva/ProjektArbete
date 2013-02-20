@@ -100,7 +100,7 @@ namespace ProjektArbete
                 Registry.currentRoom.Update(gameTime, Window.ClientBounds);
 
                 //Muskontroll
-                if (!Registry.playerIsMoving && !Registry.inventoryInUse && Registry.currentRoom.isItemClickedInRoom())
+                if (!player.IsMoving && !player.InventoryInUse && Registry.currentRoom.isItemClickedInRoom())
                 {
                     Sprite item = Registry.currentRoom.getClickedItem().getSprite();
                     if (Mousecontrol.inProximityToItem(item.Position, item.FrameSize))
@@ -200,11 +200,13 @@ namespace ProjektArbete
 
         private void load()
         {
-            Registry.load();
+            Registry.load(this);
             foreach (Item item in Registry.itemsInInventory)
             {
-                item.Initialize(Content.Load<Texture2D>(@item.TextureString));
-                player.addItem(item);
+                Item itemToBeAdded = new Item();
+                itemToBeAdded.loadNewItem(item);
+                itemToBeAdded.Initialize(Content.Load<Texture2D>(@itemToBeAdded.TextureString));
+                player.addItem(itemToBeAdded);
             }
             player.position = Registry.currentRoom.doors[0].position - new Vector2(0, 40);
             Registry.currentRoom.LoadContent(this);

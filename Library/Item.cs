@@ -83,6 +83,15 @@ namespace Library
             isCombinable = item.isCombinable;
             combinedItemInt = item.combinedItemInt;
         }
+        public void loadNewItem(string name, string isPickable, string description, string textureString, string isCombinable, string combinedItemInt)
+        {
+            this.name = name;
+            this.isPickable = bool.Parse(isPickable);
+            this.description = description;
+            this.textureString = textureString;
+            this.isCombinable = bool.Parse(isCombinable);
+            this.combinedItemInt = int.Parse(combinedItemInt);
+        }
 
         public void setInactive(bool x)
         {
@@ -91,6 +100,11 @@ namespace Library
         public bool getActive()
         {
             return isActive;
+        }
+
+        public override string ToString()
+        {
+            return name + "," + isPickable + "," + description + "," + textureString + "," + isCombinable + "," + combinedItemInt;
         }
     }
 }

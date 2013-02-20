@@ -85,7 +85,7 @@ namespace Library
                 Registry.changingRoom = false;
 
             }
-            if (!Registry.inventoryInUse || Registry.changingRoom)
+            if (!inventory.InventoryInUse || Registry.changingRoom)
             {
                 //Rör spelaren på sig?
                 isMoving = true;
@@ -175,14 +175,12 @@ namespace Library
                 downCurrentFrame = new Point(0, 0);
                 upCurrentFrame = new Point(0, 0);
             }
-            
-            Registry.playerIsMoving = isMoving;
 
             inventory.Update();
             currentSprite.Position = position;
             Registry.playerPosition = position;
             updateLayerDepth();
-            if(!Registry.inventoryInUse)
+            if(!inventory.InventoryInUse)
                  currentSprite.Update(gameTime, clientBounds);
         }
 
@@ -227,5 +225,21 @@ namespace Library
         //    double doubleScale = 1 - (temp * 0.001);
         //    scale = float.Parse(doubleScale.ToString());
         //}
+
+        public bool IsMoving
+        {
+            get
+            {
+                return isMoving;
+            }
+        }
+
+        public bool InventoryInUse
+        {
+            get
+            {
+                return inventory.InventoryInUse;
+            }
+        }
     }
 }
