@@ -113,17 +113,23 @@ namespace Library
                     items.Add(itemToBeAdded);
                     item.resetItem();
                 }
-                if (Mousecontrol.clicked())
-                {
-                    bool clickedOnItem = false;
-                    if (Mousecontrol.clickedOnItem(item.getPosition, item.getFrameSize, true) )
-                    {
-                        clickedOnItem = true;
-                    }
-                }
             }
             mousecontrolUpdate();
 
+        }
+
+        public bool giveNPCItem(Item itemClickedOn)
+        {
+            bool temp = false;
+            foreach (NPC npc in npcs)
+            {
+                if (Mousecontrol.clickedOnItem(npc.getPosition, npc.getFrameSize, true) && (itemClickedOn.name == npc.wantedItem))
+                {
+                    npc.givenItem();
+                    temp = true;
+                }
+            }
+            return temp;
         }
         /// <summary>
         /// Ritar ut allt som ska ritas ut i rummet

@@ -21,21 +21,36 @@ namespace Library
         private String activeLine = "";
         private String speaker = "";
 
+        /// <summary>
+        /// Ger dialogen ett typsnitt
+        /// </summary>
+        /// <param name="spriteFont">Dialogens typsnitt</param>
         public void setFont(SpriteFont spriteFont)
         {
             font = spriteFont;
         }
 
+        /// <summary>
+        /// Repliken som används vid tilfället
+        /// </summary>
+        /// <returns>Aktiv replik</returns>
         public String getActiveLine()
         {
             return activeLine;
         }
 
+        /// <summary>
+        /// Hen som yttrar aktiv replik
+        /// </summary>
+        /// <returns></returns>
         public String getSpeaker()
         {
             return speaker;
         }
 
+        /// <summary>
+        /// Återställer dialogen
+        /// </summary>
         public void resetDialog()
         {
             i = 0;
@@ -44,6 +59,12 @@ namespace Library
             timer = 2;
         }
 
+        /// <summary>
+        /// En variant av draw-funktionen som istället för att rita ut alla repliker samtidigt, ritar ut en i taget med hjälp av tidkoderna i dialogens XML-fil
+        /// </summary>
+        /// <param name="gameTime"></param>
+        /// <param name="spriteBatch"></param>
+        /// <param name="npcPosition">positionen för objektet</param>
         public void Speak(GameTime gameTime, SpriteBatch spriteBatch, Vector2 npcPosition)
         {
             float elapsed = (float)gameTime.ElapsedGameTime.Milliseconds;
@@ -74,7 +95,7 @@ namespace Library
                 else
                     timer = -10;
                 activeLine = lines[i].line;
-                
+
             }
         }
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, String output, Vector2 position, Color color)
@@ -83,6 +104,15 @@ namespace Library
         }
     }
 
+    /// <summary>
+    /// Underklass för varje enskild replik
+    /// Ger replikerna:
+    /// • en rad text
+    /// • en position (om det inte är spelaren eller objektet som talar)
+    /// • namnet på subjektet
+    /// • TID
+    /// • färg
+    /// </summary>
     public class Line
     {
         public string speaker;

@@ -4,16 +4,22 @@
     <Item>
       <name>null</name>
       <position>0 0</position>
-      <dialogID>0</dialogID>
-      <dialog2ID>0</dialog2ID>
+      <dialogIDs>
+        <Item>0</Item>
+      </dialogIDs>
       <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
     </Item>
     <Item>
       <name>test</name>
       <position>100 40</position>
-      <dialogID>1</dialogID>
-      <dialog2ID>2</dialog2ID>
+      <dialogIDs>
+        <Item>1</Item>
+        <Item>2</Item>
+        <Item>3</Item>
+      </dialogIDs>
       <itemID>2</itemID>
+      <wantedItem>Rope</wantedItem>
     </Item>
 
   </Asset>

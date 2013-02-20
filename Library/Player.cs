@@ -176,6 +176,16 @@ namespace Library
                 upCurrentFrame = new Point(0, 0);
             }
 
+            if (inventory.InteractingWithItem)
+            {
+                if (Mousecontrol.clicked() && Registry.currentRoom.giveNPCItem(inventory.getItemClickedon))
+                {
+                    inventory.removeItem(inventory.getItemClickedon);
+                }
+                else if (Mousecontrol.clicked())
+                    addItem(inventory.getItemClickedon);
+            }
+
             inventory.Update();
             currentSprite.Position = position;
             Registry.playerPosition = position;

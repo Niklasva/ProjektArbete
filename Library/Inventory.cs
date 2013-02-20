@@ -23,6 +23,7 @@ namespace Library
         //Muskontroll
         private Item itemClickedOn;
         private bool isInteractingWithItem = false;
+        public Item getItemClickedon { get { return itemClickedOn; } }
 
         //game
         Game game;
@@ -44,7 +45,6 @@ namespace Library
             {
                 if (Mousecontrol.clicked())
                 {
-                    addItem(itemClickedOn);
                     isInteractingWithItem = false;
                 }
             }

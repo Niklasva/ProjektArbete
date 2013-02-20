@@ -27,6 +27,7 @@ namespace Library
         public static Vector2 nextRoomDoorPosition;
         public static Song music;
         public static bool musbol = false;
+        public static bool pause = false;
 
         public static List<Item> itemsInInventory = new List<Item>();
 
