@@ -83,14 +83,14 @@ namespace Library
             isCombinable = item.isCombinable;
             combinedItemInt = item.combinedItemInt;
         }
-        public void loadNewItem(string name, string isPickable, string description, string textureString, string isCombinable, string combinedItemInt)
+        public void loadNewItem(string name, bool isPickable, string description, string textureString, bool isCombinable, int combinedItemInt)
         {
             this.name = name;
-            this.isPickable = bool.Parse(isPickable);
+            this.isPickable = isPickable;
             this.description = description;
             this.textureString = textureString;
-            this.isCombinable = bool.Parse(isCombinable);
-            this.combinedItemInt = int.Parse(combinedItemInt);
+            this.isCombinable = isCombinable;
+            this.combinedItemInt = combinedItemInt;
         }
 
         public void setInactive(bool x)

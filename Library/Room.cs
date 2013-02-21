@@ -176,8 +176,6 @@ namespace Library
                  SpriteEffects.None,
                  0.003f);
 
-
-
             if (!Registry.inventoryInUse)
             {
                 string textToDraw = null;
@@ -293,7 +291,7 @@ namespace Library
                 changeRoom = false;
 
             }
-
+            //Använder niklas detta?
             for (int j = 0; j < items.Count; j++)
             {
                 List<Item> itemsInRoom = items;

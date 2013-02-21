@@ -121,7 +121,7 @@ namespace ProjektArbete
                 if (Registry.changingRoom)
                     save();
             }
-            if (stateOfGame == StateOfGame.menu)
+            else if (stateOfGame == StateOfGame.menu)
             {
                 menu.Update(gameTime, Window.ClientBounds);
                 if (menu.ClickedOnNew)

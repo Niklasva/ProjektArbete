@@ -70,7 +70,7 @@ namespace Library
             {
                 foreach (Item item in room.getItems())
                 {
-                    utfil.Write(item + "!");
+                    utfil.Write(item + "," + item.getPosition().X.ToString() + ":" + item.getPosition().Y + "!");
                 }
                 utfil.Write(".");
             }
@@ -88,8 +88,6 @@ namespace Library
                 data.Add(input);
             }
             open.Close();
-            //Laddar nuvarande rum
-            currentRoom = rooms[int.Parse(data[0])];
             //Laddar föremålen i inventoryn
             string[] namesOfItems = data[1].Split('.');
             List<Item> itemsToBeAddedToInventory = new List<Item>();
@@ -116,40 +114,48 @@ namespace Library
             int numberOfRoom = 0;
             foreach (string stringInt in roomsPreviouslyVisitedInt)
             {
-                int temp;
-                int.TryParse(stringInt, out temp);
-                rooms[temp].LoadContent(game);
-                for (int i = 0; i < rooms[temp].getItems().Count; i = i)
+                if (stringInt != "")
                 {
-                    rooms[temp].removeItem(rooms[temp].getItems()[i]);
-                }
+                    int temp;
+                    int.TryParse(stringInt, out temp);
+                    rooms[temp].LoadContent(game);
 
-                string[] eachItemLeftInEachRoom = itemsLeftInEachRoom[numberOfRoom].Split('!');
-                foreach (string stringItem in eachItemLeftInEachRoom)
-                {
-                    if (stringItem != "")
+                    while (0 < rooms[temp].getItems().Count)
                     {
-                        string[] eachItem = stringItem.Split(',');
+                        rooms[temp].removeItem(rooms[temp].getItems()[0]);
+                    }
 
-                        Item newItem = new Item();
-                        newItem.loadNewItem(eachItem[0], eachItem[1], eachItem[2], eachItem[3], eachItem[4], eachItem[5]);
-                        rooms[temp].addItem(newItem);
+                    string[] eachItemLeftInEachRoom = itemsLeftInEachRoom[numberOfRoom].Split('!');
+                    numberOfRoom++;
+                    foreach (string stringItem in eachItemLeftInEachRoom)
+                    {
+                        if (stringItem != "")
+                        {
+                            string[] eachItem = stringItem.Split(',');
+
+                            Item newItem = new Item();
+                            bool tempPickable;
+                            bool tempCombinable;
+                            int tempCombine;
+                            if (bool.TryParse(eachItem[1], out tempPickable) && bool.TryParse(eachItem[4], out tempCombinable) && int.TryParse(eachItem[5], out tempCombine))
+                            {
+                                newItem.loadNewItem(eachItem[0], tempPickable, eachItem[2], eachItem[3], tempCombinable, tempCombine);
+                                string[] positionOfItem = eachItem[6].Split(':');
+                                float tempX;
+                                float tempY;
+                                if (float.TryParse(positionOfItem[0], out tempX) && float.TryParse(positionOfItem[1], out tempY))
+                                {
+                                    newItem.setPosition(new Vector2(tempX, tempY));
+                                    rooms[temp].addItem(newItem);
+                                }
+                            }
+                        }
                     }
                 }
-                numberOfRoom++;
             }
-            for (int i = 0; i < rooms.Length; i++)
-            {
-                if (rooms[i].getVisited())
-                {
-                    for (int j = 0; j < rooms[i].getItems().Count; j++)
-                    {
-                        List<Item> itemsInRoom = rooms[i].getItems();
-                        if (!itemsInRoom[j].getActive())
-                            itemsInRoom.RemoveAt(j);
-                    }
-                }
-            }
+
+            //Laddar nuvarande rum
+            currentRoom = rooms[int.Parse(data[0])];
         }
     }
 }
