@@ -66,6 +66,7 @@ namespace Library
                         Item tempItem = new Item();
                         foreach (Item item in inventory)
                         {
+                            //På ett föremål...
                             if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, true))
                             {
                                 clickedOnItem = true;
@@ -76,7 +77,7 @@ namespace Library
                         if (itemClickedOn.isCombinable && clickedOnItem &&
                             itemClickedOn.isCombinable)
                         {
-                            //...går det att kombinera föremålen så kombineras de och annars läggs det föremålet som man klickat på tillagt i inventoryn
+                            //...går det att kombinera föremålen så kombineras de och annars läggs det föremålet som man klickat på tillbaks i inventoryn
                             if (!combineItem(itemClickedOn, tempItem))
                                 addItem(itemClickedOn);
                             isInteractingWithItem = false;
@@ -96,8 +97,8 @@ namespace Library
                         bool clickedOnItem = false;
                         //... och om man klickar på ett föremål i sin inventory...
                         foreach (Item item in inventory)
-                        {
-                            if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, true))
+                        {                            
+                            if (Mousecontrol.clickedOnItem(item.getPosition(), item.getSprite().FrameSize, true))
                             {
                                 itemClickedOn = item;
                                 clickedOnItem = true;
@@ -158,7 +159,7 @@ namespace Library
                     if (Mousecontrol.rightClickedOnItem(item))
                     {
                         clickedOnItem = true;
-                    }
+                    }     
                 }
                 if ((Mouse.GetState().RightButton == ButtonState.Pressed && clickedOnItem))
                 {

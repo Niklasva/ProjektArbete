@@ -176,7 +176,7 @@ namespace Library
                 upCurrentFrame = new Point(0, 0);
             }
 
-            if (inventory.InteractingWithItem)
+            if (inventory.InteractingWithItem && !inventory.InventoryInUse)
             {
                 if (Mousecontrol.clicked() && Registry.currentRoom.giveNPCItem(inventory.getItemClickedon))
                 {
