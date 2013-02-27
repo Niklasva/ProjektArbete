@@ -88,7 +88,7 @@
         </Item>
       </lines>
     </Item>
-    <!-- dialogs[2] - Testdialog 2-->
+    <!-- dialogs[2] - Rumdialog för ikea1-->
     <Item>
       <lines>
         <Item>
@@ -99,9 +99,57 @@
         </Item>
 
         <Item>
+          <speaker>Narrator</speaker>
+          <position>92 100</position>
+          <line>Det var en gång en man vid namn Jerry</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>92 100</position>
+          <line>Jerry och han bästa kompis Bertil/jobbar på möbeljätten Jkea</line>
+          <time>3500</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>92 100</position>
+          <line>Idag jobbar de med support och Jerry/ska precis hjälpa en kund</line>
+          <time>3500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[3] - Jerry pratar med kund 1-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>Vad kan jaghjälpa till med?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
           <speaker>NPC</speaker>
           <position>92 100</position>
-          <line>Enjoy your rope</line>
+          <line>Har ni skruvmejslar?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>Låt mig kolla i lagret</line>
           <time>1500</time>
         </Item>
         <Item>
@@ -112,7 +160,7 @@
         </Item>
       </lines>
     </Item>
-    <!-- dialogs[3] - Testdialog 3-->
+        <!-- dialogs[4] - Jerry pratar med Bertil-->
     <Item>
       <lines>
         <Item>
@@ -125,7 +173,43 @@
         <Item>
           <speaker>NPC</speaker>
           <position>92 100</position>
-          <line>Tack!</line>
+          <line>ÖH JERRY</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>Borde inte du jobba?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Var bussig och sätt ihop det är skåpet åt mig medans jag tar en fimp</line>
+          <time>1500</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>Hur gör jag det? Det hör inte till mitt jobb</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Men det är inte så jävla svårt.</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Sätt bara ihop de här plankorna och ge skåpet till herrn där borta</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>OK</line>
           <time>1500</time>
         </Item>
         <Item>

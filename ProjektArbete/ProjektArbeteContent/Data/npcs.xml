@@ -21,6 +21,15 @@
       <itemID>2</itemID>
       <wantedItem>Rope</wantedItem>
     </Item>
-
+    
+    <Item>
+      <name>ikeakund1</name>
+      <position>110 76</position>
+      <dialogIDs>
+        <Item>3</Item>
+      </dialogIDs>
+      <itemID>2</itemID>
+      <wantedItem>Rope</wantedItem>
+    </Item>
   </Asset>
 </XnaContent>

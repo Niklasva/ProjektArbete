@@ -21,6 +21,7 @@ namespace Library
         public string[] itemPosition;
         public List<Door> doors = new List<Door>();
         public string song;
+        public string dialogID;
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
         private Game game;
@@ -30,6 +31,8 @@ namespace Library
         private Color[,] maskData;
         private Texture2D foreground;
         private bool visited = false;
+        private Dialog roomDialog;
+        private bool dialogIsActive = false;
 
         //Muskontroll 
         //Bool för att lägga till föremål i spelaren och ta bort från rummet
@@ -51,8 +54,12 @@ namespace Library
                 this.foreground = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "fg");
                 this.maskData = TextureTo2DArray(mask);
                 this.game = game;
-
+                int tal = 0;
+                int.TryParse(dialogID, out tal);
+                this.roomDialog = Registry.dialogs[tal];
                 isItemClicked = false;
+                roomDialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
+                dialogIsActive = true;
                 foreach (string id in itemID)
                 {
                     Item itemToBeAdded = new Item();
@@ -99,7 +106,6 @@ namespace Library
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
-
             doorUpdate();
             foreach (NPC item in npcs)
             {
@@ -113,7 +119,22 @@ namespace Library
                     items.Add(itemToBeAdded);
                     item.resetItem();
                 }
+                if (dialogIsActive || item.getIsTalking)
+                {
+                    Registry.pause = true;
+                }
+                else
+                {
+                    Registry.pause = false;
+                }
             }
+            if (roomDialog.getActiveLine() == "0")
+            {
+                dialogIsActive = false;
+            }
+
+
+
             mousecontrolUpdate();
 
         }
@@ -211,6 +232,10 @@ namespace Library
             {
                 npc.Draw(gameTime, spriteBatch, Registry.playerPosition);
             }
+            if (dialogIsActive)
+            {
+                roomDialog.Speak(gameTime, spriteBatch, Vector2.Zero);
+            }
         }
 
         public bool isItemClickedInRoom()
@@ -291,8 +316,6 @@ namespace Library
                 changeRoom = false;
 
             }
-                
-            
         }
 
         /// <summary>

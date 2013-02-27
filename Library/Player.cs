@@ -66,11 +66,11 @@ namespace Library
         //Konstruktor
         public Player(Game game, Texture2D vanligTexture, Texture2D militarTexture, Texture2D kvinnaTexture, Texture2D spionTexture, Texture2D jkeaTexture, Texture2D invBackGround, Rectangle clientBounds)
         {
-            this.vanligSprite = new AnimatedSprite(vanligTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
-            this.militarSprite = new AnimatedSprite(militarTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
-            this.kvinnaSprite = new AnimatedSprite(kvinnaTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
-            this.spionSprite = new AnimatedSprite(spionTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
-            this.jkeaSprite = new AnimatedSprite(jkeaTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
+            this.vanligSprite = new AnimatedSprite(vanligTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 1000);
+            this.militarSprite = new AnimatedSprite(militarTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
+            this.kvinnaSprite = new AnimatedSprite(kvinnaTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
+            this.spionSprite = new AnimatedSprite(spionTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
+            this.jkeaSprite = new AnimatedSprite(jkeaTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
             this.inventory = new Inventory(invBackGround, clientBounds, game);
             currentSprite = vanligSprite;
             this.scale = 1f;
@@ -235,7 +235,7 @@ namespace Library
 
         private void updateLayerDepth()
         {
-            layerPosition = (1 - (position.Y + 68) / 180) / 3;
+            layerPosition = (1 - (position.Y + 70) / 180) / 3;
         }
 
         //private void scaleToPosition(Rectangle clientBounds)

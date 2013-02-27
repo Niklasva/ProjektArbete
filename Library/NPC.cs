@@ -26,6 +26,7 @@ namespace Library
         public int ItemID { get { return itemID; } }
         public Vector2 getPosition { get { return position; } }
         public Point getFrameSize { get { return frameSize; } }
+        public bool getIsTalking { get { return isTalking; } }
         public string wantedItem;
         private List<Dialog> dialogs = new List<Dialog>();
         private List<SoundEffect> dialogAudio = new List<SoundEffect>();
@@ -65,9 +66,9 @@ namespace Library
             activeDialog = Registry.dialogs[0];
             this.talkTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name + "talk");
             this.stillTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name);
-            frameSize = new Point(stillTexture.Width / 3, stillTexture.Height);
-            stillSprite = new AnimatedSprite(stillTexture, position, 0, frameSize, new Point(0, 0), new Point(3, 1), 200);
-            talkSprite = new AnimatedSprite(talkTexture, position, 0, new Point(talkTexture.Width / 3, talkTexture.Height), new Point(0, 0), new Point(3, 1), 200);
+            frameSize = new Point(stillTexture.Width / 5, stillTexture.Height);
+            stillSprite = new AnimatedSprite(stillTexture, position, 0, frameSize, new Point(0, 0), new Point(5, 1), 400);
+            talkSprite = new AnimatedSprite(talkTexture, position, 0, new Point(talkTexture.Width / 2, talkTexture.Height), new Point(0, 0), new Point(2, 1), 200);
             this.activeSprite = stillSprite;
         }
         public void Update(GameTime gameTime, Rectangle clientBounds)

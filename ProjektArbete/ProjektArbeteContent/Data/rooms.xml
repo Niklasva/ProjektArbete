@@ -39,6 +39,7 @@
         </Item>
       </doors>
       <song>acmidi</song>
+      <dialogID>0</dialogID>
     </Item>
 
     <!-- Rum 1 - test 2 -->
@@ -68,7 +69,7 @@
         </Item>
         <Item>
           <position>260 21</position>
-          <nextRoomID>2</nextRoomID>
+          <nextRoomID>3</nextRoomID>
           <door2Position>0 30</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
@@ -76,9 +77,10 @@
         </Item>
       </doors>
       <song>null</song>
+      <dialogID>0</dialogID>
     </Item>
-    
-    
+
+    <!-- Rum 2 - test 3 -->
     <Item>
       <backgroundID>room3</backgroundID>
       <npcID>
@@ -99,6 +101,57 @@
         </Item>
       </doors>
       <song>song</song>
+      <dialogID>0</dialogID>
+    </Item>
+
+    <!-- Rum [3] - ikeas supporthörna -->
+    <Item>
+      <backgroundID>ikea1</backgroundID>
+      <npcID>
+        <Item>2</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>0 95</position>
+          <nextRoomID>4</nextRoomID>
+          <door2Position>310 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>dorr</textureID>
+        </Item>
+      </doors>
+      <song>song</song>
+      <dialogID>2</dialogID>
+    </Item>
+    
+    <!-- Rum [4] - ikeas lager -->
+    <Item>
+      <backgroundID>ikea2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>3</Item>
+      </itemID>
+      <itemPosition>
+        <Item>42,71</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>319 73</position>
+          <nextRoomID>3</nextRoomID>
+          <door2Position>0 95</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>dorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>4</dialogID>
     </Item>
 
   </Asset>
