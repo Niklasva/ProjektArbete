@@ -232,13 +232,13 @@ namespace Library
 
         private void sortInventory()
         {
+            int itemOffset = 0;
             for (int i = 0; i < inventory.Count; i++)
             {
                 //Om föremålet ligger längre fram i listan än på första platsen så ska den hamna bakom den förra föremålets rutstorlek
-                if (i != 0)
-                    inventory[i].setPosition(new Vector2((5 + inventory[i - 1].getSprite().Texture.Width) * i + 3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
-                else
-                    inventory[i].setPosition(new Vector2(3, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
+
+                inventory[i].setPosition(new Vector2(itemOffset + 5, inventoryPosition - inventory[i].getSprite().Texture.Height / 6));
+                itemOffset += inventory[i].getSprite().FrameSize.X + 3;
             }
         }
 

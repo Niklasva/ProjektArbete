@@ -291,13 +291,6 @@ namespace Library
                 changeRoom = false;
 
             }
-            //Använder niklas detta?
-            for (int j = 0; j < items.Count; j++)
-            {
-                List<Item> itemsInRoom = items;
-                if (!itemsInRoom[j].getActive())
-                    itemsInRoom.RemoveAt(j);
-            }
                 
             
         }

@@ -20,25 +20,33 @@ namespace Library
     {
         //Texturer och animation av spelaren
         public Vector2 position = new Vector2(36, 39);
-        private Texture2D leftTexture;
-        private Texture2D rightTexture;
-        private Texture2D downTexture;
-        private Texture2D upTexture;
-        private Texture2D stillTexture;
-        private AnimatedSprite leftSprite;
-        private AnimatedSprite rightSprite;
-        private AnimatedSprite downSprite;
-        private AnimatedSprite upSprite;
+        //De olika texturerna
+        //private Texture2D vanligTexture;
+        //private Texture2D militarTexture;
+        //private Texture2D spionTexture;
+        //private Texture2D kvinnaTexture;
+        //private Texture2D jkeaTexture;
+        //De olika spritarna
+        private AnimatedSprite vanligSprite;
+        private AnimatedSprite militarSprite;
+        private AnimatedSprite spionSprite;
+        private AnimatedSprite kvinnaSprite;
+        private AnimatedSprite jkeaSprite;
+        //De spriten som används vid utritning
         private AnimatedSprite currentSprite;
-        private AnimatedSprite stillSprite;
+        int yBounds = 5;
+
         private Point leftCurrentFrame = new Point(0, 0);
-        private Point rightCurrentFrame = new Point(0, 0);
-        private Point downCurrentFrame = new Point(0, 0);
-        private Point upCurrentFrame = new Point(0, 0);
+        private Point rightCurrentFrame = new Point(0, 1);
+        private Point downCurrentFrame = new Point(0, 2);
+        private Point upCurrentFrame = new Point(0, 3);
         private double deltaX;
         private double deltaY;
         private bool isMoving;
-       //Lagerposition
+        //Variabler för att bestämma vilka kläder spelaren ska ha
+        enum WhichClothes { vanliga, militar, kvinna, spion, jkea };
+        private WhichClothes whichClothes = WhichClothes.vanliga;
+        //Lagerposition
         private float layerPosition = 0;
 
         //Skala spriten
@@ -56,26 +64,31 @@ namespace Library
         private int speed = 1;
 
         //Konstruktor
-        public Player(Game game, Texture2D leftTexture, Texture2D rightTexture, Texture2D downTexture, Texture2D upTexture, Texture2D stillTexture, Texture2D invBackGround, Rectangle clientBounds)
+        public Player(Game game, Texture2D vanligTexture, Texture2D militarTexture, Texture2D kvinnaTexture, Texture2D spionTexture, Texture2D jkeaTexture, Texture2D invBackGround, Rectangle clientBounds)
         {
-            this.leftTexture = leftTexture;
-            this.leftSprite = new AnimatedSprite(leftTexture, position, 10, new Point(34, 68), leftCurrentFrame, new Point(4, 1), 100);
-            this.rightTexture = rightTexture;
-            this.rightSprite = new AnimatedSprite(rightTexture, position, 10, new Point(34, 68), rightCurrentFrame, new Point(4, 1), 100);
-            this.downTexture = downTexture;
-            this.downSprite = new AnimatedSprite(downTexture, position, 10, new Point(29, 68), downCurrentFrame, new Point(2, 1), 100);
-            this.upTexture = upTexture;
-            this.upSprite = new AnimatedSprite(upTexture, position, 10, new Point(29, 68), upCurrentFrame, new Point(2, 1), 100);
-            this.stillTexture = stillTexture;
-            this.stillSprite = new AnimatedSprite(stillTexture, position, 0, new Point(34, 67), new Point(0, 0), new Point(1, 1), 100);
-            currentSprite = stillSprite;
+            this.vanligSprite = new AnimatedSprite(vanligTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
+            this.militarSprite = new AnimatedSprite(militarTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
+            this.kvinnaSprite = new AnimatedSprite(kvinnaTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
+            this.spionSprite = new AnimatedSprite(spionTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
+            this.jkeaSprite = new AnimatedSprite(jkeaTexture, position, 0, new Point(34, 68), new Point(0, 0), new Point(4, 5), 100);
             this.inventory = new Inventory(invBackGround, clientBounds, game);
+            currentSprite = vanligSprite;
             this.scale = 1f;
         }
 
         public void Update(Game game, GameTime gameTime, Rectangle clientBounds)
         {
-            
+            if (whichClothes == WhichClothes.vanliga)
+                currentSprite = vanligSprite;   
+            else if (whichClothes == WhichClothes.militar)
+                currentSprite = militarSprite;
+            else if (whichClothes == WhichClothes.spion)
+                currentSprite = spionSprite;
+            else if (whichClothes == WhichClothes.jkea)
+                currentSprite = jkeaSprite;
+            else if (whichClothes == WhichClothes.kvinna)
+                currentSprite = kvinnaSprite;
+
             //scaleToPosition(clientBounds);
             //Är inventoryn öppen ska spelaren inte röra på sig
             if (Registry.changingRoom)
@@ -137,43 +150,41 @@ namespace Library
                 //Går man mest vertikalt eller horisontellt?
                 if (position.X <= target.X && deltaX > deltaY)
                 {
-                    currentSprite = rightSprite;
+                    yBounds = 1;
                     leftCurrentFrame = new Point(0, 0);
-                    downCurrentFrame = new Point(0, 0);
-                    upCurrentFrame = new Point(0, 0);
+                    downCurrentFrame = new Point(0, 2);
+                    upCurrentFrame = new Point(0, 3);
                 }
                 else if (position.X >= target.X && deltaX > deltaY)
                 {
-                    currentSprite = leftSprite;
-                    rightCurrentFrame = new Point(0, 0);
-                    downCurrentFrame = new Point(0, 0);
-                    upCurrentFrame = new Point(0, 0);
+                    yBounds = 0;
+                    rightCurrentFrame = new Point(0, 1);
+                    downCurrentFrame = new Point(0, 2);
+                    upCurrentFrame = new Point(0, 3);
                 }
                 else if (position.Y >= target.Y && deltaX < deltaY)
                 {
-                    currentSprite = upSprite;
+                    yBounds = 3;
                     leftCurrentFrame = new Point(0, 0);
-                    downCurrentFrame = new Point(0, 0);
-                    rightCurrentFrame = new Point(0, 0);
+                    downCurrentFrame = new Point(0, 2);
+                    rightCurrentFrame = new Point(0, 1);
                 }
                 else
                 {
-                    currentSprite = downSprite;
+                    yBounds = 2;
                     leftCurrentFrame = new Point(0, 0);
-                    rightCurrentFrame = new Point(0, 0);
-                    upCurrentFrame = new Point(0, 0);
+                    rightCurrentFrame = new Point(0, 1);
+                    upCurrentFrame = new Point(0, 3);
                 }
-                
-
             }
             //Rör spelaren inte på sig så ska han ha en stillastående sprite
             else
             {
-                currentSprite = stillSprite;
+                yBounds = 4;
                 leftCurrentFrame = new Point(0, 0);
-                rightCurrentFrame = new Point(0, 0);
-                downCurrentFrame = new Point(0, 0);
-                upCurrentFrame = new Point(0, 0);
+                rightCurrentFrame = new Point(0, 1);
+                downCurrentFrame = new Point(0, 2);
+                upCurrentFrame = new Point(0, 3);
             }
 
             if (inventory.InteractingWithItem && !inventory.InventoryInUse)
@@ -191,7 +202,7 @@ namespace Library
             Registry.playerPosition = position;
             updateLayerDepth();
             if(!inventory.InventoryInUse)
-                 currentSprite.Update(gameTime, clientBounds);
+                 currentSprite.Update(gameTime, clientBounds, yBounds);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -224,7 +235,7 @@ namespace Library
 
         private void updateLayerDepth()
         {
-            layerPosition = (1 - (position.Y + currentSprite.Texture.Height) / 180) / 3;
+            layerPosition = (1 - (position.Y + 68) / 180) / 3;
         }
 
         //private void scaleToPosition(Rectangle clientBounds)

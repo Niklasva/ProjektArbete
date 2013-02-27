@@ -26,7 +26,6 @@ namespace Library
         private Sprite sprite;
         private Vector2 position;
         private float layerPosition = 0;
-        private bool isActive = true;
 
 
         public string TextureString
@@ -91,15 +90,6 @@ namespace Library
             this.textureString = textureString;
             this.isCombinable = isCombinable;
             this.combinedItemInt = combinedItemInt;
-        }
-
-        public void setInactive(bool x)
-        {
-            isActive = x;
-        }
-        public bool getActive()
-        {
-            return isActive;
         }
 
         public override string ToString()

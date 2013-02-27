@@ -52,6 +52,25 @@ namespace Library
         }
 
         //Updaterar figuren
+        public void Update(GameTime gameTime, Rectangle clientBounds, int yFrameRow)
+        {
+            currentFrame.Y = yFrameRow;
+            timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
+            if (timeSinceLastFrame > millisecondsPerFrame)
+            {
+                timeSinceLastFrame = 0;
+                ++currentFrame.X;
+                if (currentFrame.X >= sheetSize.X)
+                {
+                    currentFrame.X = 0;
+                    //++currentFrame.Y;
+                    //if (currentFrame.Y >= sheetSize.Y)
+                    //    currentFrame.Y = 0;
+                }
+
+            }
+        }
+
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
@@ -66,7 +85,6 @@ namespace Library
                     if (currentFrame.Y >= sheetSize.Y)
                         currentFrame.Y = 0;
                 }
-
             }
         }
     }
