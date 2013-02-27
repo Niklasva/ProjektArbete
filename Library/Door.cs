@@ -35,17 +35,22 @@ namespace Library
             texture = game.Content.Load<Texture2D>(@"Images/Sprites/" + textureID);
             sprite = new AnimatedSprite(texture, position, 0, new Point(texture.Width / 2, texture.Height), currentframe, new Point(1, 0), 1);
         }
-
-        void Unlock(Item objct)
+        public void Update(GameTime gameTime, Rectangle clientBounds)
         {
-            if (objct.name == this.key)
+            if (isLocked == true)
             {
-                isLocked = false;
+                currentframe = new Point(0, 0);
             }
             else
             {
-                //TODO: Berättaren säger något om att man inte kan använda objektet på det sättet
+                currentframe = new Point(1, 0);
             }
+            sprite.Update(gameTime, clientBounds);
+        }
+
+        public void Unlock()
+        {
+            isLocked = false;
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -56,6 +61,10 @@ namespace Library
         public Sprite getSprite()
         {
             return sprite;
+        }
+        public string getKey()
+        {
+            return key;
         }
     }
 }

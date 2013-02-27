@@ -20,12 +20,6 @@ namespace Library
     {
         //Texturer och animation av spelaren
         public Vector2 position = new Vector2(36, 39);
-        //De olika texturerna
-        //private Texture2D vanligTexture;
-        //private Texture2D militarTexture;
-        //private Texture2D spionTexture;
-        //private Texture2D kvinnaTexture;
-        //private Texture2D jkeaTexture;
         //De olika spritarna
         private AnimatedSprite vanligSprite;
         private AnimatedSprite militarSprite;
@@ -44,8 +38,7 @@ namespace Library
         private double deltaY;
         private bool isMoving;
         //Variabler för att bestämma vilka kläder spelaren ska ha
-        enum WhichClothes { vanliga, militar, kvinna, spion, jkea };
-        private WhichClothes whichClothes = WhichClothes.vanliga;
+        //Ligger i registret
         //Lagerposition
         private float layerPosition = 0;
 
@@ -78,15 +71,15 @@ namespace Library
 
         public void Update(Game game, GameTime gameTime, Rectangle clientBounds)
         {
-            if (whichClothes == WhichClothes.vanliga)
-                currentSprite = vanligSprite;   
-            else if (whichClothes == WhichClothes.militar)
+            if (Registry.playersClothes == Registry.WhichClothes.vanliga)
+                currentSprite = vanligSprite;
+            else if (Registry.playersClothes == Registry.WhichClothes.militar)
                 currentSprite = militarSprite;
-            else if (whichClothes == WhichClothes.spion)
+            else if (Registry.playersClothes == Registry.WhichClothes.spion)
                 currentSprite = spionSprite;
-            else if (whichClothes == WhichClothes.jkea)
+            else if (Registry.playersClothes == Registry.WhichClothes.jkea)
                 currentSprite = jkeaSprite;
-            else if (whichClothes == WhichClothes.kvinna)
+            else if (Registry.playersClothes == Registry.WhichClothes.kvinna)
                 currentSprite = kvinnaSprite;
 
             //scaleToPosition(clientBounds);
@@ -190,6 +183,10 @@ namespace Library
             if (inventory.InteractingWithItem && !inventory.InventoryInUse)
             {
                 if (Mousecontrol.clicked() && Registry.currentRoom.giveNPCItem(inventory.getItemClickedon))
+                {
+                    inventory.removeItem(inventory.getItemClickedon);
+                }
+                else if (Mousecontrol.clicked() && Registry.currentRoom.giveDoorItem(inventory.getItemClickedon))
                 {
                     inventory.removeItem(inventory.getItemClickedon);
                 }

@@ -134,7 +134,10 @@ namespace Library
             }
 
 
-
+            foreach (Door door in doors)
+            {
+                door.Update(gameTime, clientBounds);
+            }
             mousecontrolUpdate();
 
         }
@@ -147,6 +150,19 @@ namespace Library
                 if (Mousecontrol.clickedOnItem(npc.getPosition, npc.getFrameSize, true) && (itemClickedOn.name == npc.wantedItem))
                 {
                     npc.givenItem();
+                    temp = true;
+                }
+            }
+            return temp;
+        }
+        public bool giveDoorItem(Item itemClickedOn)
+        {
+            bool temp = false;
+            foreach (Door door in doors)
+            {
+                if (door.isLocked && Mousecontrol.clickedOnItem(door.getSprite().Position, door.getSprite().FrameSize, true) && (itemClickedOn.name == door.getKey()))
+                {
+                    door.Unlock();
                     temp = true;
                 }
             }

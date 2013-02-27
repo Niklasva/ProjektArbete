@@ -63,9 +63,6 @@ namespace Library
                 if (currentFrame.X >= sheetSize.X)
                 {
                     currentFrame.X = 0;
-                    //++currentFrame.Y;
-                    //if (currentFrame.Y >= sheetSize.Y)
-                    //    currentFrame.Y = 0;
                 }
 
             }

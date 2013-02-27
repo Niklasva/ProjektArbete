@@ -28,6 +28,8 @@ namespace Library
         public static Song music;
         public static bool musbol = false;
         public static bool pause = false;
+        public enum WhichClothes { vanliga, militar, kvinna, spion, jkea };
+        public static WhichClothes playersClothes = WhichClothes.vanliga;
 
         public static List<Item> itemsInInventory = new List<Item>();
 
