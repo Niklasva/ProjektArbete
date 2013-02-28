@@ -92,7 +92,10 @@ namespace ProjektArbete
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            Mousecontrol.update();
+            if (this.IsActive && !Registry.pause)
+            {
+                Mousecontrol.update();
+            }
             if (stateOfGame == StateOfGame.game)
             {
                 
@@ -169,7 +172,7 @@ namespace ProjektArbete
             if (x < 1) x = 1;
             if (x > 273) x = 273;
             if (y < 1) y = 1;
-            if (y > 179) y = 179;
+            if (y > 178) y = 178;
 
             // Letar efter genomsynlighet i närheten av spelaren
             if (data[x - 1, y].A == 0)

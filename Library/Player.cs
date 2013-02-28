@@ -59,7 +59,7 @@ namespace Library
         //Konstruktor
         public Player(Game game, Texture2D vanligTexture, Texture2D militarTexture, Texture2D kvinnaTexture, Texture2D spionTexture, Texture2D jkeaTexture, Texture2D invBackGround, Rectangle clientBounds)
         {
-            this.vanligSprite = new AnimatedSprite(vanligTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 1000);
+            this.vanligSprite = new AnimatedSprite(vanligTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 120);
             this.militarSprite = new AnimatedSprite(militarTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
             this.kvinnaSprite = new AnimatedSprite(kvinnaTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
             this.spionSprite = new AnimatedSprite(spionTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
@@ -102,10 +102,14 @@ namespace Library
                 mousePosition.X = (mouseState.X / 3);
                 mousePosition.Y = (mouseState.Y / 3);
 
-                if (mouseState.LeftButton == ButtonState.Pressed && oldState.LeftButton != ButtonState.Pressed)
+                if (Mousecontrol.clicked())
                 {
                     target.X = mousePosition.X - 15;
                     target.Y = mousePosition.Y - 67;
+                }
+                if (Registry.pause)
+                {
+                    target = position;
                 }
                 direction = target - position;
                 direction.Normalize();
