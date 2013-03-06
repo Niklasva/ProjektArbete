@@ -52,6 +52,10 @@ namespace Library
         {
             isLocked = false;
         }
+        public void Lock()
+        {
+            isLocked = true;
+        }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {

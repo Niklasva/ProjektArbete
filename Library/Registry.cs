@@ -76,7 +76,19 @@ namespace Library
                 }
                 utfil.Write(".");
             }
-
+            utfil.WriteLine();
+            //Skriver huruvida dörrarna i rummet är låsta eller inte
+            foreach (Room room in roomsVisited)
+            {
+                foreach (Door door in room.getDoors())
+                {
+                    utfil.Write(door.isLocked + "!");
+                }
+                utfil.Write(".");
+            }
+            utfil.WriteLine();
+            //Skriver strängen som anger vilka kläder som spelaren har.
+            utfil.Write(playersClothes);
             utfil.Close();
         }
 
@@ -112,6 +124,7 @@ namespace Library
             //Ladda de rum som man tidigare besökt
             string[] roomsPreviouslyVisitedInt = data[2].Split('.');
             string[] itemsLeftInEachRoom = data[3].Split('.');
+            string[] doorsInEachRoom = data[4].Split('.');
 
             int numberOfRoom = 0;
             foreach (string stringInt in roomsPreviouslyVisitedInt)
@@ -121,14 +134,15 @@ namespace Library
                     int temp;
                     int.TryParse(stringInt, out temp);
                     rooms[temp].LoadContent(game);
-
+                    //Tar bort alla föremål från rummet
                     while (0 < rooms[temp].getItems().Count)
                     {
                         rooms[temp].removeItem(rooms[temp].getItems()[0]);
                     }
 
                     string[] eachItemLeftInEachRoom = itemsLeftInEachRoom[numberOfRoom].Split('!');
-                    numberOfRoom++;
+
+                    //Lägger tillbaka föremålen som finns sparade i rummet
                     foreach (string stringItem in eachItemLeftInEachRoom)
                     {
                         if (stringItem != "")
@@ -153,8 +167,40 @@ namespace Library
                             }
                         }
                     }
+                    string[] eachDoorInEachRoom = doorsInEachRoom[numberOfRoom].Split('!');
+                    int numberOfDoor = 0;
+                    foreach (string doorString in eachDoorInEachRoom)
+                    {
+                        if (doorString != "")
+                        {
+                            bool tempBool;
+                            if (bool.TryParse(doorString, out tempBool))
+                            {
+                                if (tempBool)
+                                {
+                                    rooms[temp].doors[numberOfDoor].Lock();
+                                }
+                                else
+                                {
+                                    rooms[temp].doors[numberOfDoor].Lock();
+                                }
+                            }
+                            numberOfDoor++;
+                        }
+                    }
+                    numberOfRoom++;
                 }
             }
+            if (data[5] == "vanliga")
+                playersClothes = WhichClothes.vanliga;
+            if (data[5] == "militar")
+                playersClothes = WhichClothes.militar;
+            if (data[5] == "kvinna")
+                playersClothes = WhichClothes.kvinna;
+            if (data[5] == "jkea")
+                playersClothes = WhichClothes.jkea;
+            if (data[5] == "spion")
+                playersClothes = WhichClothes.spion;
 
             //Laddar nuvarande rum
             currentRoom = rooms[int.Parse(data[0])];

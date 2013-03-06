@@ -37,8 +37,7 @@ namespace Library
         private double deltaX;
         private double deltaY;
         private bool isMoving;
-        //Variabler för att bestämma vilka kläder spelaren ska ha
-        //Ligger i registret
+        //Variabler för att bestämma vilka kläder spelaren ska ha ligger i registret
         //Lagerposition
         private float layerPosition = 0;
 

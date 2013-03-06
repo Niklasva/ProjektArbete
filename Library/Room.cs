@@ -282,7 +282,7 @@ namespace Library
             items.Add(itemToBeAdded);
         }
 
-        public void mousecontrolUpdate()
+        private void mousecontrolUpdate()
         {
             //Om man klickar ner musen
             //Om man klickar på ett föremål i rummet
@@ -310,7 +310,7 @@ namespace Library
             }
         }
 
-        public void doorUpdate()
+        private void doorUpdate()
         {
             bool changeRoom = false;
             int nextRoomId = 0;
@@ -380,7 +380,10 @@ namespace Library
         {
             items.Remove(x);
         }
-
+        public List<Door> getDoors()
+        {
+            return doors;
+        }
 
     }
 }
