@@ -132,7 +132,14 @@ namespace ProjektArbete
                 if (menu.ClickedOnOpen)
                     load();
             }
-
+            if (Registry.pause)
+            {
+                    MediaPlayer.Volume = 0.5f;
+            }
+            else
+            {
+                    MediaPlayer.Volume = 1;
+            }
             base.Update(gameTime);
         }
 
