@@ -80,17 +80,27 @@ namespace Library
                         if (temp.Length != 1)
                         {
                             Draw(gameTime, spriteBatch, temp[0], new Vector2(0f, Registry.playerPosition.Y - 20), lines[i].getColor());
-                            Draw(gameTime, spriteBatch, temp[1], new Vector2(0f, Registry.playerPosition.Y - 14), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(0f, Registry.playerPosition.Y - 10), lines[i].getColor());
                         }
                         else
                         Draw(gameTime, spriteBatch, lines[i].line, new Vector2(0f, Registry.playerPosition.Y - 15), lines[i].getColor());
+                    }
+                    else if (Registry.playerPosition.X + (temp[0].Count() * 6) >= 320)
+                    {
+                        if (temp.Length != 1)
+                        {
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(320 - temp[0].Count() * 8, Registry.playerPosition.Y - 20), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(320 - temp[1].Count() * 8, Registry.playerPosition.Y - 10), lines[i].getColor());
+                        }
+                        else
+                            Draw(gameTime, spriteBatch, lines[i].line, new Vector2(320 - temp[0].Count() * 8, Registry.playerPosition.Y - 15), lines[i].getColor());
                     }
                     else
                     {
                         if (temp.Length != 1)
                         {
-                            Draw(gameTime, spriteBatch, temp[0], new Vector2(Registry.playerPosition.X - ((temp[0].Count() * 6) / 1.33f), Registry.playerPosition.Y - 20), lines[i].getColor());
-                            Draw(gameTime, spriteBatch, temp[1], new Vector2(Registry.playerPosition.X - ((temp[1].Count() * 6) / 1.33f), Registry.playerPosition.Y - 13), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(Registry.playerPosition.X - ((temp[0].Count() * 8) / 1.33f), Registry.playerPosition.Y - 20), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(Registry.playerPosition.X - ((temp[1].Count() * 8) / 1.33f), Registry.playerPosition.Y - 10), lines[i].getColor());
                         }
                         else
                             Draw(gameTime, spriteBatch, lines[i].line, new Vector2(Registry.playerPosition.X - ((lines[i].line.Count() * 6) / 2), Registry.playerPosition.Y - 15), lines[i].getColor());
@@ -100,10 +110,24 @@ namespace Library
                 {
                     if (npcPosition.X - ((npcPosition.X - lines[i].line.Count() * 6) / 2) <= 0)
                     {
-                        Draw(gameTime, spriteBatch, lines[i].line, new Vector2(0f, npcPosition.Y - 15), lines[i].getColor());
-                    } 
+                        if (temp.Length != 1)
+                        {
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(0f, npcPosition.Y - 20), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(0f, npcPosition.Y - 10), lines[i].getColor());
+                        }
+                        else
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(0f, npcPosition.Y - 15), lines[i].getColor());
+                    }
                     else
-                    Draw(gameTime, spriteBatch, lines[i].line, new Vector2(npcPosition.X - ((lines[i].line.Count() * 6) / 2), npcPosition.Y - 15), lines[i].getColor());
+                    {
+                        if (temp.Length != 1)
+                        {
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(npcPosition.X - ((temp[0].Count() * 8) / 2), npcPosition.Y - 20), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(npcPosition.X - ((temp[1].Count() * 8) / 2), npcPosition.Y - 10), lines[i].getColor());
+                        }
+                        else
+                        Draw(gameTime, spriteBatch, lines[i].line, new Vector2(npcPosition.X - ((lines[i].line.Count() * 8) / 2), npcPosition.Y - 15), lines[i].getColor());
+                    }
            
 
                 }
@@ -119,6 +143,12 @@ namespace Library
                 }
                 else
                 {
+                    if (temp.Length != 1)
+                    {
+                        Draw(gameTime, spriteBatch, temp[0], new Vector2(lines[i].position.X, lines[i].position.Y - 5), lines[i].getColor());
+                        Draw(gameTime, spriteBatch, temp[1], new Vector2(lines[i].position.X, lines[i].position.Y + 5), lines[i].getColor());
+                    }
+                    else
                     Draw(gameTime, spriteBatch, lines[i].line, lines[i].position, lines[i].getColor());
                 }
             }

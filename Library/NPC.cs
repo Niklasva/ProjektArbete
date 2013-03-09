@@ -60,17 +60,17 @@ namespace Library
                 dialogAudio.Add(game.Content.Load<SoundEffect>(@"Sound/Voice/" + temp));
             }
             foreach (Dialog dialog in dialogs)
-            {
+            {//
                 dialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
             }
             activeDialog = Registry.dialogs[0];
             this.talkTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name + "talk");
             this.stillTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name);
-            frameSize = new Point(stillTexture.Width / 5, stillTexture.Height);
-            stillSprite = new AnimatedSprite(stillTexture, position, 0, frameSize, new Point(0, 0), new Point(5, 1), 400);
+            frameSize = new Point(stillTexture.Width / 3, stillTexture.Height);
+            stillSprite = new AnimatedSprite(stillTexture, position, 0, frameSize, new Point(0, 0), new Point(3, 1), 400);
             talkSprite = new AnimatedSprite(talkTexture, position, 0, new Point(talkTexture.Width / 2, talkTexture.Height), new Point(0, 0), new Point(2, 1), 200);
             this.activeSprite = stillSprite;
-        }
+        } 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
             // När man klickar på NPC:n så börjar dialogen

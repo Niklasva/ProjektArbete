@@ -101,20 +101,8 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>92 100</position>
-          <line>Det var en gång en man vid namn Jerry</line>
-          <time>2000</time>
-        </Item>
-        <Item>
-          <speaker>Narrator</speaker>
-          <position>92 100</position>
-          <line>Jerry och han bästa kompis Bertil/jobbar på möbeljätten Jkea</line>
-          <time>3500</time>
-        </Item>
-        <Item>
-          <speaker>Narrator</speaker>
-          <position>92 100</position>
-          <line>Idag jobbar de med support och Jerry/ska precis hjälpa en kund</line>
-          <time>3500</time>
+          <line>cool intro in english</line>
+          <time>250</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -137,19 +125,19 @@
         <Item>
           <speaker>Player</speaker>
           <position>92 100</position>
-          <line>Vad kan jaghjälpa till med?</line>
+          <line>What can I do for you?</line>
           <time>1500</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>92 100</position>
-          <line>Har ni skruvmejslar?</line>
+          <line>Do you have screwdrivers?</line>
           <time>1500</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>92 100</position>
-          <line>Låt mig kolla i lagret</line>
+          <line>Let me check the ??lager??</line>
           <time>1500</time>
         </Item>
         <Item>
@@ -160,7 +148,104 @@
         </Item>
       </lines>
     </Item>
-        <!-- dialogs[4] - Jerry pratar med Bertil-->
+        <!-- dialogs[4] - rumdialog i lagret-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>100 20</position>
+          <line>Jerry!</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>Shouldn't you be working?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Bertil</speaker>
+          <position>30 20</position>
+          <line>Build this thing for me</line>
+          <time>1500</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>60 20</position>
+          <line>How do I do that?/It is not part of my job</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Bertil</speaker>
+          <position>80 20</position>
+          <line>It's not that fucking hard</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Bertil</speaker>
+          <position>30 20</position>
+          <line>Put these pieces together and give/them to the gentleman out there</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>Fine</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+            <!-- dialogs[5] - dialog med bertil i supporthörnan-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>Hey Bertil...</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Shut up, I'm working</line>
+          <time>2500</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>92 100</position>
+          <line>*sigh*</line>
+          <time>1000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[6] - tackdialog-->
     <Item>
       <lines>
         <Item>
@@ -173,44 +258,105 @@
         <Item>
           <speaker>NPC</speaker>
           <position>92 100</position>
-          <line>ÖH JERRY</line>
-          <time>1500</time>
+          <line>Thanks</line>
+          <time>1000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>92 100</position>
-          <line>Borde inte du jobba?</line>
-          <time>1500</time>
+          <line>You're welcome</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[7] - dialog med bertil i lagret-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
-          <position>92 100</position>
-          <line>Var bussig och sätt ihop det är skåpet åt mig medans jag tar en fimp</line>
-          <time>1500</time>
-        </Item>        
+          <position>0 30</position>
+          <line>Pick up the screws and/combine them with this</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Bertil</speaker>
+          <position>0 30</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+            <!-- dialogs[8] - dialog med bertil i lagret 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 30</position>
+          <line>What are you waiting for?</line>
+          <time>3000</time>
+        </Item>
+
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+                <!-- dialogs[9] - dialog med personen som vill ha en sak som bertil bygger -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 30</position>
+          <line>Have you seen a manbuilding/a chair?</line>
+          <time>3000</time>
+        </Item>
         <Item>
           <speaker>Player</speaker>
           <position>92 100</position>
-          <line>Hur gör jag det? Det hör inte till mitt jobb</line>
+          <line>Excuse me?</line>
           <time>1500</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
-          <position>92 100</position>
-          <line>Men det är inte så jävla svårt.</line>
-          <time>1500</time>
-        </Item>
-        <Item>
-          <speaker>NPC</speaker>
-          <position>92 100</position>
-          <line>Sätt bara ihop de här plankorna och ge skåpet till herrn där borta</line>
-          <time>1500</time>
-        </Item>
-        <Item>
-          <speaker>Player</speaker>
-          <position>92 100</position>
-          <line>OK</line>
-          <time>1500</time>
+          <position>0 30</position>
+          <line>He just walked away</line>
+          <time>3000</time>
         </Item>
         <Item>
           <speaker>null</speaker>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <Asset Type="Library.Item[]">
+    <!-- [0] -->
     <Item>
       <name>Stone</name>
       <isPickable>true</isPickable>
@@ -9,25 +10,25 @@
       <isCombinable>true</isCombinable>
       <combinedItemInt>2</combinedItemInt>
     </Item>
-
+    <!-- [1] -->
     <Item>
       <name>Chair</name>
-      <isPickable>false</isPickable>
-      <description>A sturdy chair</description>
+      <isPickable>true</isPickable>
+      <description>A sturdy chair, built by you</description>
       <textureString>Images/Sprites/chair</textureString>
-      <isCombinable>true</isCombinable>
+      <isCombinable>false</isCombinable>
       <combinedItemInt>3</combinedItemInt>
     </Item>
-
+    <!-- [2] -->
     <Item>
       <name>Rope</name>
       <isPickable>true</isPickable>
       <description>Some nice looking rope</description>
       <textureString>Images/Sprites/rope</textureString>
       <isCombinable>true</isCombinable>
-      <combinedItemInt>3</combinedItemInt>
+      <combinedItemInt>0</combinedItemInt>
     </Item>
-
+    <!-- [3] -->
     <Item>
       <name>Hook</name>
       <isPickable>true</isPickable>
@@ -36,5 +37,34 @@
       <isCombinable>false</isCombinable>
       <combinedItemInt>3</combinedItemInt>
     </Item>
+    <!-- [4] -->
+    <Item>
+      <name>Screwdriver</name>
+      <isPickable>true</isPickable>
+      <description>A flat-head screwdriver</description>
+      <textureString>Images/Sprites/screwdrvr</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>3</combinedItemInt>
+    </Item>
+<!-- [5] -->
+    <Item>
+      <name>Wooden thing</name>
+      <isPickable>true</isPickable>
+      <description>Part of a chair</description>
+      <textureString>Images/Sprites/part</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>
+
+<!-- [6] -->
+    <Item>
+      <name>Wooden screws</name>
+      <isPickable>true</isPickable>
+      <description>Can be combined with wooden thing</description>
+      <textureString>Images/Sprites/2part</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>
+
   </Asset>
 </XnaContent>

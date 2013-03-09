@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <Asset Type="Library.NPC[]">
+        <!-- [0] -->
     <Item>
       <name>null</name>
       <position>0 0</position>
@@ -10,6 +11,7 @@
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
     </Item>
+    <!-- [1] -->
     <Item>
       <name>test</name>
       <position>100 40</position>
@@ -21,15 +23,50 @@
       <itemID>2</itemID>
       <wantedItem>Rope</wantedItem>
     </Item>
-    
+      <!-- [2] -->  
     <Item>
       <name>ikeakund1</name>
       <position>110 76</position>
       <dialogIDs>
         <Item>3</Item>
+        <Item>6</Item>
       </dialogIDs>
       <itemID>2</itemID>
-      <wantedItem>Rope</wantedItem>
+      <wantedItem>Screwdriver</wantedItem>
+    </Item>
+
+          <!-- [3] -->  
+    <Item>
+      <name>bertillager</name>
+      <position>110 30</position>
+      <dialogIDs>
+        <Item>7</Item>
+        <Item>8</Item>
+      </dialogIDs>
+      <itemID>5</itemID>
+      <wantedItem>null</wantedItem>
+    </Item>
+
+      <!-- [4] -->  
+    <Item>
+      <name>bertiljkea</name>
+      <position>40 20</position>
+      <dialogIDs>
+        <Item>5</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+    </Item>
+
+          <!-- [5] -->  
+    <Item>
+      <name>ikeakund2</name>
+      <position>110 35</position>
+      <dialogIDs>
+        <Item>9</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
     </Item>
   </Asset>
 </XnaContent>

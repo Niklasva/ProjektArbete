@@ -109,6 +109,7 @@
       <backgroundID>ikea1</backgroundID>
       <npcID>
         <Item>2</Item>
+        <Item>4</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -118,7 +119,7 @@
         <Item>
           <position>0 95</position>
           <nextRoomID>4</nextRoomID>
-          <door2Position>310 42</door2Position>
+          <door2Position>280 42</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -128,22 +129,48 @@
       <dialogID>2</dialogID>
     </Item>
     
-    <!-- Rum [4] - ikeas lager -->
+    <!-- Rum [4] - ikeas lager 1 -->
     <Item>
       <backgroundID>ikea2</backgroundID>
       <npcID>
         <Item>0</Item>
       </npcID>
       <itemID>
-        <Item>3</Item>
+        <Item>4</Item>
       </itemID>
       <itemPosition>
-        <Item>42,71</Item>
+        <Item>52,66</Item>
       </itemPosition>
       <doors>
         <Item>
           <position>319 73</position>
-          <nextRoomID>3</nextRoomID>
+          <nextRoomID>6</nextRoomID>
+          <door2Position>0 95</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>dorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+    </Item>
+
+        <!-- Rum [5] - ikeas lager 2 -->
+    <Item>
+      <backgroundID>ikea2</backgroundID>
+      <npcID>
+        <Item>3</Item>
+      </npcID>
+      <itemID>
+        <Item>6</Item>
+      </itemID>
+      <itemPosition>
+        <Item>95,70</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>319 73</position>
+          <nextRoomID>6</nextRoomID>
           <door2Position>0 95</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
@@ -154,5 +181,30 @@
       <dialogID>4</dialogID>
     </Item>
 
+    <!-- Rum [6] - ikeas supporthörna 2 -->
+    <Item>
+      <backgroundID>ikea1</backgroundID>
+      <npcID>
+        <Item>2</Item>
+        <Item>5</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>0 95</position>
+          <nextRoomID>5</nextRoomID>
+          <door2Position>280 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>dorr</textureID>
+        </Item>
+      </doors>
+      <song>song</song>
+      <dialogID>2</dialogID>
+    </Item>
+    
   </Asset>
 </XnaContent>
