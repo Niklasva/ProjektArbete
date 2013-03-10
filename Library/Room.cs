@@ -8,24 +8,24 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 namespace Library
-{
+{        
+    /// <summary>
+    /// Rum
+    /// </summary>
     public class Room
     {
-        /// <summary>
-        /// Rum
-        /// </summary>
-        /// 
-        public string backgroundID;
-        public string[] npcID;
-        public string[] itemID;
-        public string[] itemPosition;
-        public List<Door> doors = new List<Door>();
-        public string song;
-        public string dialogID;
+        //XML
+        public string backgroundID;                         // Bakgrundens filnamn (används även till förgrund och mask)
+        public string[] npcID;                              // NPC:ers nummer (hämtar ur Registry)
+        public string[] itemID;                             // ID nummer på de items som finns i rummet (hämtar ur Registry)
+        public string[] itemPosition;                       // Positioner för tidigare nämnda items
+        public List<Door> doors = new List<Door>();         // Rummets dörrar
+        public string song;                                 // Rummets bakgrundsmusik (sätt som null om det inte ska vara någon ny musik i rummet)
+        public string dialogID;                             // Rumdialog
+        
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
         private Game game;
-
         private Texture2D background;
         private Texture2D mask;
         private Color[,] maskData;

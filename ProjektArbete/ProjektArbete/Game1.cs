@@ -29,10 +29,10 @@ namespace ProjektArbete
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferWidth = 320 * 3;
+            graphics.IsFullScreen = false;                              // SPELET ÄR INTE I FULLSCREEN (det ser konstigt ut då)
+            graphics.PreferredBackBufferWidth = 320 * 3;                // Ändrar storleken på fönstret så att det passar 3x skalningen
             graphics.PreferredBackBufferHeight = 180 * 3;
-            this.IsMouseVisible = true;
+            this.IsMouseVisible = true;                                 // Ska ändras till false när vi har en muspekare i spelet
             Content.RootDirectory = "Content";
             
         }
@@ -69,11 +69,11 @@ namespace ProjektArbete
 
             menu = new Menu(Content.Load<Texture2D>(@"Images/MenuImages/splash"), Content.Load<Texture2D>(@"Images/MenuImages/OPENBUTTON"), Content.Load<Texture2D>(@"Images/MenuImages/NEWBUTTON"));
 
-            Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");
-            Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");
-            Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");
-            Registry.currentRoom = Registry.rooms[3];
-            Registry.currentRoom.LoadContent(this);
+            Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
+            Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
+            Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
+            Registry.currentRoom = Registry.rooms[3];                               // Startrummet
+            Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 
         /// <summary>
@@ -92,6 +92,7 @@ namespace ProjektArbete
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            // När spelet är inaktivt eller pausat går det inte att göra saker (duh)
             if (this.IsActive && !Registry.pause)
             {
                 Mousecontrol.update();
@@ -132,13 +133,15 @@ namespace ProjektArbete
                 if (menu.ClickedOnOpen)
                     load();
             }
+
+            // Ändrar musikvolymen om man pratar med folk
             if (Registry.pause)
             {
-                    MediaPlayer.Volume = 0.5f;
+                    MediaPlayer.Volume = 0.5f;          // Låg volym
             }
             else
             {
-                    MediaPlayer.Volume = 1;
+                    MediaPlayer.Volume = 1;             // Hög volym (MINA ÖRON)
             }
             base.Update(gameTime);
         }
