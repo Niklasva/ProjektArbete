@@ -55,6 +55,8 @@ namespace Library
         private Vector2 direction;
         private int speed = 1;
 
+        bool flip; //Håller reda på vilket håll spelaren ska peka åt
+
         //Konstruktor
         public Player(Game game, Texture2D vanligTexture, Texture2D militarTexture, Texture2D kvinnaTexture, Texture2D spionTexture, Texture2D jkeaTexture, Texture2D invBackGround, Rectangle clientBounds)
         {
@@ -146,13 +148,15 @@ namespace Library
                 //Går man mest vertikalt eller horisontellt?
                 if (position.X <= target.X && deltaX > deltaY)
                 {
-                    yBounds = 1;
-                    leftCurrentFrame = new Point(0, 0);
+                    flip = true;
+                    yBounds = 0;
+                    rightCurrentFrame = new Point(0, 1);
                     downCurrentFrame = new Point(0, 2);
                     upCurrentFrame = new Point(0, 3);
                 }
                 else if (position.X >= target.X && deltaX > deltaY)
                 {
+                    flip = false;
                     yBounds = 0;
                     rightCurrentFrame = new Point(0, 1);
                     downCurrentFrame = new Point(0, 2);
@@ -160,14 +164,14 @@ namespace Library
                 }
                 else if (position.Y >= target.Y && deltaX < deltaY)
                 {
-                    yBounds = 3;
+                    yBounds = 2;
                     leftCurrentFrame = new Point(0, 0);
                     downCurrentFrame = new Point(0, 2);
                     rightCurrentFrame = new Point(0, 1);
                 }
                 else
                 {
-                    yBounds = 2;
+                    yBounds = 1;
                     leftCurrentFrame = new Point(0, 0);
                     rightCurrentFrame = new Point(0, 1);
                     upCurrentFrame = new Point(0, 3);
@@ -176,7 +180,7 @@ namespace Library
             //Rör spelaren inte på sig så ska han ha en stillastående sprite
             else
             {
-                yBounds = 4;
+                yBounds = 3;
                 leftCurrentFrame = new Point(0, 0);
                 rightCurrentFrame = new Point(0, 1);
                 downCurrentFrame = new Point(0, 2);
@@ -207,7 +211,7 @@ namespace Library
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            currentSprite.Draw(gameTime, spriteBatch, scale, layerPosition);
+            currentSprite.Draw(gameTime, spriteBatch, scale, layerPosition, flip);
             inventory.Draw(gameTime, spriteBatch);
         }
 

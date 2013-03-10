@@ -100,7 +100,7 @@
           <textureID>dorr</textureID>
         </Item>
       </doors>
-      <song>song</song>
+      <song>null</song>
       <dialogID>0</dialogID>
     </Item>
 
@@ -125,7 +125,7 @@
           <textureID>dorr</textureID>
         </Item>
       </doors>
-      <song>song</song>
+      <song>null</song>
       <dialogID>2</dialogID>
     </Item>
     
@@ -149,6 +149,15 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+        </Item>
+
+       <Item>
+          <position>0 0</position>
+          <nextRoomID>7</nextRoomID>
+          <door2Position>106 104</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
         </Item>
       </doors>
       <song>null</song>
@@ -176,6 +185,15 @@
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
+
+               <Item>
+          <position>0 0</position>
+          <nextRoomID>5</nextRoomID>
+          <door2Position>106 104</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
       </doors>
       <song>null</song>
       <dialogID>4</dialogID>
@@ -202,9 +220,54 @@
           <textureID>dorr</textureID>
         </Item>
       </doors>
-      <song>song</song>
+      <song>null</song>
       <dialogID>2</dialogID>
     </Item>
-    
+
+    <!-- Rum [7] - bakom lager (tom) -->
+    <Item>
+      <backgroundID>bakomlager</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>22 59</position>
+          <nextRoomID>4</nextRoomID>
+          <door2Position>35 5</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>bakomlagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>2</dialogID>
+    </Item>
+
+        <!-- Rum [8] - bakom lager (tom) 2 -->
+    <Item>
+      <backgroundID>bakomlager</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>22 59</position>
+          <nextRoomID>5</nextRoomID>
+          <door2Position>35 5</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>bakomlagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>2</dialogID>
+    </Item>
   </Asset>
 </XnaContent>

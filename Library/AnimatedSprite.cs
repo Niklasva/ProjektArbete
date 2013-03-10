@@ -35,20 +35,38 @@ namespace Library
         }
 
         //Ritar ut den animerade figuren
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, float scale, float layerPosition)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, float scale, float layerPosition, bool flip)
         {
-            spriteBatch.Draw(Texture,
-                Position,
-                new Rectangle(currentFrame.X * frameSize.X,
-                    currentFrame.Y * frameSize.Y,
-                    frameSize.X,
-                    frameSize.Y),
-                Color.White,
-                0,
-                Vector2.Zero,
-                scale,
-                SpriteEffects.None,
-                layerPosition);
+            if (flip)
+            {
+                spriteBatch.Draw(Texture,
+                    Position,
+                    new Rectangle(currentFrame.X * frameSize.X,
+                        currentFrame.Y * frameSize.Y,
+                        frameSize.X,
+                        frameSize.Y),
+                    Color.White,
+                    0,
+                    Vector2.Zero,
+                    scale,
+                    SpriteEffects.None,
+                    layerPosition);
+            }
+            else
+            {
+                spriteBatch.Draw(Texture,
+                  Position,
+                  new Rectangle(currentFrame.X * frameSize.X,
+                      currentFrame.Y * frameSize.Y,
+                      frameSize.X,
+                      frameSize.Y),
+                  Color.White,
+                  0,
+                  Vector2.Zero,
+                  scale,
+                  SpriteEffects.FlipHorizontally,
+                  layerPosition);
+            }
         }
 
         //Updaterar figuren

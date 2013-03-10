@@ -10,6 +10,7 @@
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
     </Item>
     <!-- [1] -->
     <Item>
@@ -22,6 +23,8 @@
       </dialogIDs>
       <itemID>2</itemID>
       <wantedItem>Rope</wantedItem>
+
+      <lookatplayer>true</lookatplayer>
     </Item>
       <!-- [2] -->  
     <Item>
@@ -33,8 +36,8 @@
       </dialogIDs>
       <itemID>2</itemID>
       <wantedItem>Screwdriver</wantedItem>
+      <lookatplayer>true</lookatplayer>
     </Item>
-
           <!-- [3] -->  
     <Item>
       <name>bertillager</name>
@@ -45,6 +48,7 @@
       </dialogIDs>
       <itemID>5</itemID>
       <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
     </Item>
 
       <!-- [4] -->  
@@ -56,6 +60,7 @@
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
     </Item>
 
           <!-- [5] -->  
@@ -67,6 +72,7 @@
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
     </Item>
   </Asset>
 </XnaContent>

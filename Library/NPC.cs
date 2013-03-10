@@ -28,6 +28,7 @@ namespace Library
         public Point getFrameSize { get { return frameSize; } }
         public bool getIsTalking { get { return isTalking; } }
         public string wantedItem;
+        public bool lookatplayer;
         private List<Dialog> dialogs = new List<Dialog>();
         private List<SoundEffect> dialogAudio = new List<SoundEffect>();
         private Dialog activeDialog;
@@ -41,6 +42,7 @@ namespace Library
         private bool giveItem = false;
         private int dialogNumber = 0;
         private Point frameSize;
+        private bool flip;
 
 
         /// <summary>
@@ -60,7 +62,7 @@ namespace Library
                 dialogAudio.Add(game.Content.Load<SoundEffect>(@"Sound/Voice/" + temp));
             }
             foreach (Dialog dialog in dialogs)
-            {//
+            {
                 dialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
             }
             activeDialog = Registry.dialogs[0];
@@ -117,6 +119,17 @@ namespace Library
                 Registry.pause = false;
             }
 
+            if (lookatplayer)
+            {
+                if (position.X < Registry.playerPosition.X)
+                {
+                    flip = false;
+                }
+                else
+                {
+                    flip = true;
+                }
+            }
 
         }
 
@@ -136,7 +149,7 @@ namespace Library
         /// </summary>
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 playerPosition)
         {
-            activeSprite.Draw(gameTime, spriteBatch, 1f, layerPosition);
+            activeSprite.Draw(gameTime, spriteBatch, 1f, layerPosition, flip);
 
             if (isTalking == true)
             {
