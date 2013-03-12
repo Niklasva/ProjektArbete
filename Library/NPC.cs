@@ -76,9 +76,9 @@ namespace Library
             activeDialog = Registry.dialogs[0];
             this.talkTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name + "talk");
             this.stillTexture = game.Content.Load<Texture2D>(@"Images/Characters/" + name);
-            frameSize = new Point(stillTexture.Width / 3, stillTexture.Height);
-            stillSprite = new AnimatedSprite(stillTexture, position, 0, frameSize, new Point(0, 0), new Point(3, 1), 400);
-            talkSprite = new AnimatedSprite(talkTexture, position, 0, new Point(talkTexture.Width / 2, talkTexture.Height), new Point(0, 0), new Point(2, 1), 200);
+            frameSize = new Point(stillTexture.Width / 4, stillTexture.Height);
+            stillSprite = new AnimatedSprite(stillTexture, position, 0, frameSize, new Point(0, 0), new Point(3, 1), 600);
+            talkSprite = new AnimatedSprite(talkTexture, position, 0, new Point(talkTexture.Width / 2, talkTexture.Height), new Point(0, 0), new Point(2, 1), 100);
             
             this.activeSprite = stillSprite;    // Eftersom NPC:n står still i början, blir activeSprite stillSprite i LoadContent
         } 

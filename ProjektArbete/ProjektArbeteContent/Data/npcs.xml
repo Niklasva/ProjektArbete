@@ -40,7 +40,7 @@
     </Item>
           <!-- [3] -->  
     <Item>
-      <name>bertillager</name>
+      <name>bertiljkea</name>
       <position>110 30</position>
       <dialogIDs>
         <Item>7</Item>
@@ -54,7 +54,7 @@
       <!-- [4] -->  
     <Item>
       <name>bertiljkea</name>
-      <position>40 20</position>
+      <position>45 20</position>
       <dialogIDs>
         <Item>5</Item>
       </dialogIDs>

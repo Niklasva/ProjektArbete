@@ -227,7 +227,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>92 100</position>
-          <line>Shut up, I'm working</line>
+          <line>Shut up,/I'm working</line>
           <time>2500</time>
         </Item>
         <Item>
