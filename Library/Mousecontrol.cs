@@ -97,6 +97,20 @@ namespace Library
 
             return rightClickedOnItem;
         }
+        public static bool rightClickedOnItem(Door door)
+        {            bool rightClickedOnItem = false;
+
+            if (clickedOnItem(door.getSprite().Position, door.getSprite().FrameSize, true))
+            {
+                rightClickedOnItem = true;
+                if (door.isLocked)
+                    description = "Locked";
+                else
+                    description = "Open";
+            }
+
+            return rightClickedOnItem;
+        }
 
         public static string getDescription()
         {

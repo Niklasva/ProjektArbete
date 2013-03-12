@@ -57,7 +57,7 @@ Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
 Content\Data\npcs.xnb
-Content\Sound\Voice\1.xnb
+Content\Sound\Voice\10.xnb
 Content\Sound\Voice\0.xnb
 Content\Sound\BGM\song.xnb
 Content\Sound\BGM\acmidi.xnb
@@ -66,9 +66,10 @@ Content\Sound\Voice\3.xnb
 Content\Sound\Voice\6.xnb
 Content\Sound\Voice\4.xnb
 Content\Sound\Voice\5.xnb
-Content\Sound\Voice\10.xnb
+Content\Sound\Voice\1.xnb
 Content\Sound\Voice\7.xnb
 Content\Sound\Voice\8.xnb
 Content\Sound\Voice\9.xnb
+Content\Sound\Voice\11.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma

@@ -36,6 +36,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>acmidi</song>
@@ -66,6 +67,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
         <Item>
           <position>260 21</position>
@@ -74,6 +76,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>
@@ -98,6 +101,7 @@
           <isLocked>true</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>
@@ -112,17 +116,20 @@
         <Item>4</Item>
       </npcID>
       <itemID>
+        <Item>0</Item>
       </itemID>
       <itemPosition>
+        <Item>20,100</Item>
       </itemPosition>
       <doors>
         <Item>
           <position>0 95</position>
           <nextRoomID>4</nextRoomID>
           <door2Position>280 42</door2Position>
-          <isLocked>false</isLocked>
-          <key>null</key>
+          <isLocked>true</isLocked>
+          <key>Stone</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>
@@ -149,6 +156,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
 
        <Item>
@@ -158,6 +166,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>lagerdorr</textureID>
+         <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>
@@ -184,6 +193,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
 
                <Item>
@@ -193,6 +203,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>lagerdorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>
@@ -218,6 +229,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>
@@ -241,6 +253,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>bakomlagerdorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>
@@ -264,6 +277,7 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>bakomlagerdorr</textureID>
+          <dialogInt>10</dialogInt>
         </Item>
       </doors>
       <song>null</song>

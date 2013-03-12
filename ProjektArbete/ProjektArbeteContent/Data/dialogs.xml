@@ -366,5 +366,29 @@
         </Item>
       </lines>
     </Item>
+
+    <!-- dialogs[10] - dialog för dörr som är stängd -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 30</position>
+          <line>The door is locked, good sir!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
   </Asset>
 </XnaContent>

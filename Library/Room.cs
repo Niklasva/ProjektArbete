@@ -218,6 +218,7 @@ namespace Library
                 string textToDraw = null;
                 bool drawText = false;
                 bool clickedOnItem = false;
+                bool clickedOnDoor = false;
                 foreach (Item item in items)
                 {
                     if (Mousecontrol.rightClickedOnItem(item))
@@ -225,6 +226,7 @@ namespace Library
                         clickedOnItem = true;
                     }
                 }
+                
                 if ((Mouse.GetState().RightButton == ButtonState.Pressed && clickedOnItem))
                 {
                     textToDraw = Mousecontrol.getDescription();
@@ -233,6 +235,19 @@ namespace Library
                 else if (clickedOnItem)
                 {
                     textToDraw = Mousecontrol.getName();
+                    drawText = true;
+                }
+                if (!clickedOnItem)
+                {
+                    foreach (Door door in doors)
+                    {
+                        if (Mousecontrol.rightClickedOnItem(door))
+                            clickedOnDoor = true;
+                    }
+                }
+                if (clickedOnDoor)
+                {
+                    textToDraw = Mousecontrol.getDescription();
                     drawText = true;
                 }
                 if (drawText)
@@ -316,12 +331,18 @@ namespace Library
             int nextRoomId = 0;
             foreach (Door item in doors)
             {
-                if (Mousecontrol.inProximityToItem(item.position, item.getSprite().FrameSize) && Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, Mousecontrol.clicked()))
+                if (Mousecontrol.inProximityToItem(item.position, new Point(item.getSprite().FrameSize.X + 10, item.getSprite().FrameSize.Y + 10)) && Mousecontrol.clickedOnItem(item.getSprite().Position,
+                    item.getSprite().FrameSize, Mousecontrol.clicked()))
                 {
-                    changeRoom = true;
-                    nextRoomId = int.Parse(item.nextRoomID);
-                    Registry.nextRoomDoorPosition = item.door2Position;
-                    Registry.changingRoom = true;
+                    if (!item.isLocked)
+                    {
+                        changeRoom = true;
+                        nextRoomId = int.Parse(item.nextRoomID);
+                        Registry.nextRoomDoorPosition = item.door2Position;
+                        Registry.changingRoom = true;
+                    }
+                    else
+                        item.Talk();
                 }
             }
             if (changeRoom)

@@ -66,7 +66,7 @@ namespace Library
                 }
                 roomInt++;
             }
-            utfil.WriteLine();  
+            utfil.WriteLine();
             //Skriver de föremål som är kvar i dessa rum 
             foreach (Room room in roomsVisited)
             {
@@ -182,7 +182,7 @@ namespace Library
                                 }
                                 else
                                 {
-                                    rooms[temp].doors[numberOfDoor].Lock();
+                                    rooms[temp].doors[numberOfDoor].Unlock();
                                 }
                             }
                             numberOfDoor++;
