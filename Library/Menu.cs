@@ -28,6 +28,8 @@ namespace Library
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
+            clickedOnNew = false;
+            clickedOnOpen = false;
             if (Mousecontrol.clickedOnItem(openSprite.Position, openSprite.FrameSize, Mousecontrol.clicked()))
             {
                 clickedOnOpen = true;

@@ -241,15 +241,16 @@ namespace Library
                 {
                     foreach (Door door in doors)
                     {
-                        if (Mousecontrol.rightClickedOnItem(door))
+                        if (Mousecontrol.rightClickedOnItem(door) && Mouse.GetState().RightButton == ButtonState.Pressed)
                             clickedOnDoor = true;
                     }
+                    if (clickedOnDoor)
+                    {
+                        textToDraw = Mousecontrol.getDescription();
+                        drawText = true;
+                    }
                 }
-                if (clickedOnDoor)
-                {
-                    textToDraw = Mousecontrol.getDescription();
-                    drawText = true;
-                }
+
                 if (drawText)
                 {
                     spriteBatch.DrawString(game.Content.Load<SpriteFont>(@"textfont"), textToDraw,
@@ -332,7 +333,7 @@ namespace Library
             foreach (Door item in doors)
             {
                 if (Mousecontrol.inProximityToItem(item.position, new Point(item.getSprite().FrameSize.X + 10, item.getSprite().FrameSize.Y + 10)) && Mousecontrol.clickedOnItem(item.getSprite().Position,
-                    item.getSprite().FrameSize, Mousecontrol.clicked()))
+                    item.getSprite().FrameSize, Mousecontrol.clicked()) && !Registry.inventoryInUse)
                 {
                     if (!item.isLocked)
                     {

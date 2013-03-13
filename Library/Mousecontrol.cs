@@ -58,7 +58,7 @@ namespace Library
             return clickedOnItem;
         }
 
-        private static bool mouseOverItem(Vector2 position, Point frameSize)
+        public static bool mouseOverItem(Vector2 position, Point frameSize)
         {
             bool isMouseOverItem = false;
             //Beffinner sig musen inom området för spriten?
@@ -98,7 +98,8 @@ namespace Library
             return rightClickedOnItem;
         }
         public static bool rightClickedOnItem(Door door)
-        {            bool rightClickedOnItem = false;
+        {            
+            bool rightClickedOnItem = false;
 
             if (clickedOnItem(door.getSprite().Position, door.getSprite().FrameSize, true))
             {

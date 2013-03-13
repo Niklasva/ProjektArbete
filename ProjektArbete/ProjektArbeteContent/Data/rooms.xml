@@ -152,7 +152,7 @@
         <Item>
           <position>319 73</position>
           <nextRoomID>6</nextRoomID>
-          <door2Position>0 95</door2Position>
+          <door2Position>10 75</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -224,9 +224,18 @@
       <doors>
         <Item>
           <position>0 95</position>
-          <nextRoomID>5</nextRoomID>
+          <nextRoomID>4</nextRoomID>
           <door2Position>280 42</door2Position>
           <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>dorr</textureID>
+          <dialogInt>10</dialogInt>
+        </Item>
+        <Item>
+          <position>0 95</position>
+          <nextRoomID>5</nextRoomID>
+          <door2Position>280 42</door2Position>
+          <isLocked>true</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
           <dialogInt>10</dialogInt>

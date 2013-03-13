@@ -88,7 +88,9 @@ namespace Library
             }
             utfil.WriteLine();
             //Skriver strängen som anger vilka kläder som spelaren har.
-            utfil.Write(playersClothes);
+            utfil.WriteLine(playersClothes);
+            //Skriver spelarens position
+            utfil.Write(playerPosition.X + ":" + playerPosition.Y);
             utfil.Close();
         }
 
@@ -201,6 +203,13 @@ namespace Library
                 playersClothes = WhichClothes.jkea;
             if (data[5] == "spion")
                 playersClothes = WhichClothes.spion;
+            string[] playerPositionString = data[6].Split(':');
+            float tempPlayerX;
+            float tempPlayerY;
+            if(float.TryParse(playerPositionString[0], out tempPlayerX) && float.TryParse(playerPositionString[1], out tempPlayerY))
+            {
+                playerPosition = new Vector2(tempPlayerX, tempPlayerY);
+            }
 
             //Laddar nuvarande rum
             currentRoom = rooms[int.Parse(data[0])];

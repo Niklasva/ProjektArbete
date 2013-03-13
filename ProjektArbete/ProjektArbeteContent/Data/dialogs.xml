@@ -269,6 +269,18 @@
         </Item>
         <Item>
           <speaker>null</speaker>
+          <position>92 100</position>
+          <line>open 1</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>92 100</position>
+          <line>lock 0</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
           <position>95 100</position>
           <line>0</line>
           <time>4040</time>

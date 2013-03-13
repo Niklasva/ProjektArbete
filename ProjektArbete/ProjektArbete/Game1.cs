@@ -100,7 +100,14 @@ namespace ProjektArbete
             if (stateOfGame == StateOfGame.game)
             {
                 
+
                 player.Update(this, gameTime, Window.ClientBounds);
+
+                if (Registry.changingRoom)
+                {
+                    save();
+                    Registry.changingRoom = false;
+                }
                 Registry.currentRoom.Update(gameTime, Window.ClientBounds);
 
                 //Muskontroll
@@ -122,11 +129,13 @@ namespace ProjektArbete
                     player.Stop(IntersectMask(Registry.currentRoom.getMask()));
                 }
 
-                if (Registry.changingRoom)
-                    save();
+                if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                    stateOfGame = StateOfGame.menu;
             }
             else if (stateOfGame == StateOfGame.menu)
             {
+                if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                    stateOfGame = StateOfGame.game;
                 menu.Update(gameTime, Window.ClientBounds);
                 if (menu.ClickedOnNew)
                     stateOfGame = StateOfGame.game;
@@ -221,8 +230,11 @@ namespace ProjektArbete
                 itemToBeAdded.Initialize(Content.Load<Texture2D>(@itemToBeAdded.TextureString));
                 player.addItem(itemToBeAdded);
             }
-            player.position = Registry.currentRoom.doors[0].position - new Vector2(0, 40);
+
+            player.position = Registry.playerPosition;
+
             Registry.currentRoom.LoadContent(this);
+
             stateOfGame = StateOfGame.game;
             
         }

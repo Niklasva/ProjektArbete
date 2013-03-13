@@ -91,18 +91,54 @@ namespace Library
             }
 
             // -- Händelser baserade på dialoger -- //
-            if (activeDialog.getActiveLine() == "0")                    // Avslutar dialogen
-            {
-                isTalking = false;
-            }
+            string[] dialogStrings = activeDialog.getActiveLine().Split(' ');
+            int tempDoorInt;
 
+            
             if (activeDialog.getActiveLine() == "give")                 // NPC:n ger bort sin item
             {
                 giveItem = true;
                 dialogNumber++;
             }
+            if (dialogStrings[0].ToLower() == "open")
+            {
+                if (int.TryParse(dialogStrings[1], out tempDoorInt))
+                {
+                    Registry.currentRoom.getDoors()[tempDoorInt].Unlock();
+                }
+            }
+            if (dialogStrings[0].ToLower() == "lock")
+            {
+                if (int.TryParse(dialogStrings[1], out tempDoorInt))
+                {
+                    Registry.currentRoom.getDoors()[tempDoorInt].Lock();
+                }
+            }
+            if (activeDialog.getActiveLine() == "0")                    // Avslutar dialogen
+            {
+                isTalking = false;
+            }
 
-            /// - Någonstans här ska kläder ändras? - ///
+            if (activeDialog.getActiveLine() == "militar")
+            {
+                Registry.playersClothes = Registry.WhichClothes.militar;
+            }
+            if (activeDialog.getActiveLine() == "kvinna")
+            {
+                Registry.playersClothes = Registry.WhichClothes.kvinna;
+            }
+            if (activeDialog.getActiveLine() == "vanlig")
+            {
+                Registry.playersClothes = Registry.WhichClothes.vanliga;
+            }
+            if (activeDialog.getActiveLine() == "jkea")
+            {
+                Registry.playersClothes = Registry.WhichClothes.jkea;
+            }
+            if (activeDialog.getActiveLine() == "spion")
+            {
+                Registry.playersClothes = Registry.WhichClothes.spion;
+            }
 
             // Spriteändringar beroende på om NPC:N pratar
             if (activeDialog.getSpeaker() == "NPC")

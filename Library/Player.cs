@@ -89,7 +89,7 @@ namespace Library
             {
                 position = Registry.nextRoomDoorPosition;
                 target = position;
-                Registry.changingRoom = false;
+                
 
             }
             if (!inventory.InventoryInUse || Registry.changingRoom)
