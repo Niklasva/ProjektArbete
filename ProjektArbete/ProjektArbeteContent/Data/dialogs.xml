@@ -101,8 +101,8 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>92 100</position>
-          <line>cool intro in english</line>
-          <time>250</time>
+          <line>I know I've know him since high school /but I really don't fell like draging him with me anymore</line>
+          <time>2500</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -171,7 +171,7 @@
           <time>1500</time>
         </Item>
         <Item>
-          <speaker>Bertil</speaker>
+          <speaker>Stephen</speaker>
           <position>30 20</position>
           <line>Build this thing for me</line>
           <time>1500</time>
@@ -183,13 +183,13 @@
           <time>1500</time>
         </Item>
         <Item>
-          <speaker>Bertil</speaker>
+          <speaker>Stephen</speaker>
           <position>80 20</position>
           <line>It's not that fucking hard</line>
           <time>1500</time>
         </Item>
         <Item>
-          <speaker>Bertil</speaker>
+          <speaker>Stephen</speaker>
           <position>30 20</position>
           <line>Put these pieces together and give/them to the gentleman out there</line>
           <time>3000</time>
@@ -209,7 +209,7 @@
       </lines>
     </Item>
 
-            <!-- dialogs[5] - dialog med bertil i supporthörnan-->
+            <!-- dialogs[5] - dialog med Stephen i supporthörnan-->
     <Item>
       <lines>
         <Item>
@@ -221,7 +221,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>92 100</position>
-          <line>Hey Bertil...</line>
+          <line>Hey Stephen...</line>
           <time>1500</time>
         </Item>
         <Item>
@@ -288,7 +288,7 @@
       </lines>
     </Item>
 
-        <!-- dialogs[7] - dialog med bertil i lagret-->
+        <!-- dialogs[7] - dialog med Stephen i lagret-->
     <Item>
       <lines>
         <Item>
@@ -304,7 +304,7 @@
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>Bertil</speaker>
+          <speaker>Stephen</speaker>
           <position>0 30</position>
           <line>give</line>
           <time>0</time>
@@ -318,7 +318,7 @@
       </lines>
     </Item>
 
-            <!-- dialogs[8] - dialog med bertil i lagret 2-->
+            <!-- dialogs[8] - dialog med Stephen i lagret 2-->
     <Item>
       <lines>
         <Item>
@@ -343,7 +343,7 @@
       </lines>
     </Item>
 
-                <!-- dialogs[9] - dialog med personen som vill ha en sak som bertil bygger -->
+                <!-- dialogs[9] - dialog med personen som vill ha en sak som Stephen bygger -->
     <Item>
       <lines>
         <Item>
@@ -391,7 +391,638 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>0 30</position>
-          <line>The door is locked, good sir!</line>
+          <line>It is locked!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[11] - Bråk med Stephen -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 30</position>
+          <line>What the hell are you doing?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 30</position>
+          <line>Smoking, you want some?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 30</position>
+          <line>Why do you try to give me your work all the time? I'm not your slave!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 30</position>
+          <line>Don't start with that shit again, you know I don't like it!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 30</position>
+          <line>You knw very well I don't like you using me!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>vadsomhelst</speaker>
+          <position>200 20</position>
+          <line>What are you doing over therer? Go back to work!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>vadsomhelst</speaker>
+          <position>200 20</position>
+          <line>Jerry, come with me!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[12] - dialog med chefen på jkea -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>chefgöran</speaker>
+          <position>195 8</position>
+          <line>This is the third time I hear you and Stephen arguing! What is the problem?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>195 8</position>
+          <line>It's Stephen...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>chefgöran</speaker>
+          <position>195 8</position>
+          <line>What do you mean Stephen? He gets his work done, which is more that I can say for you!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>195 8</position>
+          <line>I haven't got time to do my own work if I have to help others all the time!</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>chefgöran</speaker>
+          <position>195 8</position>
+          <line>Your job is to help others! If that's not good enough for you then I don't see you working here anymore!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[13] - Narrator på väg hem -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>On his final walk home from work, Jerry's thoughts were bearing down on him</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+            <!-- dialogs[14] - Jerry på väg hem -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Why do I keep spending time with Stephen?/All he does is give me trouble</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>And all these people that are like him</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>I know I've know him since high school /but I really don't fell like draging him with me anymore</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+        <!-- dialogs[15] - Berättare i sista rutan -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerry live on the third floor in the apartemnt buiding to the left</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+<!-- dialogs[16] - Lägenhet, Stephens rums dörr -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerry didn't want to go into Stephen's bedrrom./Last time he saw some... disturbing things</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[17] - Lägenhet, i korridor -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>Hey! You must be Jerry!/I've heard so mych about you!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Where is Stephen?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>In the shower, he had to scrub off a bit, /if you catch my drift</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+        <!-- dialogs[18] - Lägenhet, duschdörren -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Stephen?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>Yeah?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>It's Jerry, we reallt have to talk!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>Meet me in the kitch when I'm done, ok?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+            <!-- dialogs[19] - Lägenhet, jerrys sovrum -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>When Jerry went in to his own bedroom he noticed the boys/hadn't only been using their own bedroom</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Terrific...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+                <!-- dialogs[20] - Lägenhet, köket -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Stephen! What the hell is wrong with you?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>What?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>I've been fired and it's all your fault!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>I can't help you getting fired!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Kent</speaker>
+          <position>200 30</position>
+          <line>Awkward...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>But it's your fucking fault! All the time you make me do your/ work for you!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>It makes me being unable to do my own work</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>Don't blame your inability on me! You're just a whiny bitch!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>You can't even managed a job on Jkea!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+                <!-- dialogs[20] - Lägenhet, köket -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Stephen! What the hell is wrong with you?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>What?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>I've been fired and it's all your fault!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>I can't help you getting fired!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Kent</speaker>
+          <position>200 30</position>
+          <line>Awkward...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>But it's your fucking fault! All the time you make me do your/ work for you!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>It makes me being unable to do my own work</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>Don't blame your inability on me! You're just a whiny bitch!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>You can't even managed a job on Jkea!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+                <!-- dialogs[21] - Lägenhet, dagen efter köket -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>Good morning, Jerry! How are you?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>What's up?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Let me just make my breakfast in peace, okay?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+                <!-- dialogs[22] - PASSAGE till supportgrupp -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>In the following weeks Jerry struggled to get a job</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Eventually, when he couldn't, he got invited to a /supportgroup for people who are out of work</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerry didn't know yet, but this group would/completely change his life</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>In the meantime he had started to forgive Stephen./Probably because of Stephens never ending attempts of mending their friendship</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>He cooked Jerry dinner, got him candy and /comforted him when he felt down about not having a job</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+               <!-- dialogs[23] - Arbetsförmedlingens stödgrupp -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup host</speaker>
+          <position>90 50</position>
+          <line>Hi and welcome everybody!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup host</speaker>
+          <position>90 50</position>
+          <line>Today we have a new member of our gang./His name is Jerry!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup host</speaker>
+          <position>90 50</position>
+          <line>We sincerely hope you will enjoy your time here and that you will find/this to be an uplifting experience</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Thank you! I'm sure I will!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup Host</speaker>
+          <position>90 50</position>
+          <line>So, let's tlak about what we have doing since last time. /Miranda, how about you start</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>70 90</position>
+          <line>These past weeks I have been spending a lot of time with my family./Just as you all recomended last week</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>70 90</position>
+          <line>Thank you all for that!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>70 90</position>
+          <line>Alongside of that I've honing my skills as a hairstylist /while applying for jobs</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>70 90</position>
+          <line>I acctually met a nice lady who was  willing to give me a job/if I just practised  more. And that's what I've been doing!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Random groupmember</speaker>
+          <position>120 90</position>
+          <line>Great work Miranda!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup Host</speaker>
+          <position>90 50</position>
+          <line>Yes, really nice work! It's lovely seeing you making progress. Let's move on to you, John....</line>
           <time>3000</time>
         </Item>
         <Item>
