@@ -102,12 +102,7 @@ namespace ProjektArbete
                 
 
                 player.Update(this, gameTime, Window.ClientBounds);
-
-                if (Registry.changingRoom)
-                {
-                    save();
-                    Registry.changingRoom = false;
-                }
+                Registry.changingRoom = false;               
                 Registry.currentRoom.Update(gameTime, Window.ClientBounds);
 
                 //Muskontroll
@@ -213,11 +208,6 @@ namespace ProjektArbete
 
             // Returnerar var "väggen" är jämfört med spelaren
             return where;
-        }
-
-        private void save()
-        {
-            Registry.save();
         }
 
         private void load()

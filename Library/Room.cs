@@ -22,6 +22,7 @@ namespace Library
         public List<Door> doors = new List<Door>();         // Rummets dörrar
         public string song;                                 // Rummets bakgrundsmusik (sätt som null om det inte ska vara någon ny musik i rummet)
         public string dialogID;                             // Rumdialog
+        public bool save;                                   // Om spelet ska spara
         
         private List<NPC> npcs = new List<NPC>();
         private List<Item> items = new List<Item>();
@@ -88,6 +89,7 @@ namespace Library
                     i++;
                 }
                 visited = true;
+                
             }
             if (song != "null")
             {
@@ -139,6 +141,11 @@ namespace Library
                 door.Update(gameTime, clientBounds);
             }
             mousecontrolUpdate();
+            if (save)
+            {
+                Registry.save();
+                save = false;
+            }
 
         }
 
@@ -328,8 +335,9 @@ namespace Library
 
         private void doorUpdate()
         {
-            bool changeRoom = false;
+            bool toChangeRoom = false;
             int nextRoomId = 0;
+            Vector2 nextRoomDoorPosition = Vector2.Zero;
             foreach (Door item in doors)
             {
                 if (Mousecontrol.inProximityToItem(item.position, new Point(item.getSprite().FrameSize.X + 10, item.getSprite().FrameSize.Y + 10)) && Mousecontrol.clickedOnItem(item.getSprite().Position,
@@ -337,23 +345,26 @@ namespace Library
                 {
                     if (!item.isLocked)
                     {
-                        changeRoom = true;
+                        toChangeRoom = true;
                         nextRoomId = int.Parse(item.nextRoomID);
-                        Registry.nextRoomDoorPosition = item.door2Position;
-                        Registry.changingRoom = true;
+                        nextRoomDoorPosition = item.door2Position; 
                     }
                     else
                         item.Talk();
                 }
             }
-            if (changeRoom)
+            if (toChangeRoom)
             {
-
-                Registry.currentRoom = Registry.rooms[nextRoomId];
-                Registry.currentRoom.LoadContent(game);
-                changeRoom = false;
-
+                changeRoom(nextRoomId, nextRoomDoorPosition);
             }
+        }
+        public void changeRoom(int nextRoomId, Vector2 nextRoomDoorPosition)
+        {
+            Registry.nextRoomDoorPosition = nextRoomDoorPosition;
+            Registry.currentRoom = Registry.rooms[nextRoomId];
+            Registry.currentRoom.LoadContent(game);
+            Registry.changingRoom = true;
+
         }
 
         /// <summary>

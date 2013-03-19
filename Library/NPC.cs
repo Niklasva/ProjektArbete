@@ -92,9 +92,7 @@ namespace Library
 
             // -- Händelser baserade på dialoger -- //
             string[] dialogStrings = activeDialog.getActiveLine().Split(' ');
-            int tempDoorInt;
-
-            
+            int tempInt;
             if (activeDialog.getActiveLine() == "give")                 // NPC:n ger bort sin item
             {
                 giveItem = true;
@@ -102,16 +100,28 @@ namespace Library
             }
             if (dialogStrings[0].ToLower() == "open")
             {
-                if (int.TryParse(dialogStrings[1], out tempDoorInt))
+                if (int.TryParse(dialogStrings[1], out tempInt))
                 {
-                    Registry.currentRoom.getDoors()[tempDoorInt].Unlock();
+                    Registry.currentRoom.getDoors()[tempInt].Unlock();
                 }
             }
             if (dialogStrings[0].ToLower() == "lock")
             {
-                if (int.TryParse(dialogStrings[1], out tempDoorInt))
+                if (int.TryParse(dialogStrings[1], out tempInt))
                 {
-                    Registry.currentRoom.getDoors()[tempDoorInt].Lock();
+                    Registry.currentRoom.getDoors()[tempInt].Lock();
+                }
+            }
+            //Skriv cr + vilket rum + spelarens position i rummet(x,y)
+            if (dialogStrings[0].ToLower() == "cr")
+            {
+                string[] vector2Strings = dialogStrings[2].Split(',');
+                float tempFloatX;
+                float tempFloatY;
+                if (int.TryParse(dialogStrings[1], out tempInt) && float.TryParse(vector2Strings[0], out tempFloatX) && 
+                    float.TryParse(vector2Strings[1], out tempFloatY))
+                {
+                    Registry.currentRoom.changeRoom(tempInt, new Vector2(tempFloatX, tempFloatY));
                 }
             }
             if (activeDialog.getActiveLine() == "0")                    // Avslutar dialogen
