@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <!-- TODO: replace this Asset with your own XML asset data. -->
   <Asset Type="Library.Room[]">
@@ -40,7 +40,7 @@
         </Item>
       </doors>
       <song>acmidi</song>
-      <dialogID>0</dialogID>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
 
     <!-- Rum 1 - test 2 -->
@@ -80,7 +80,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>0</dialogID>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
 
     <!-- Rum 2 - test 3 -->
@@ -105,7 +105,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>0</dialogID>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
 
     <!-- Rum [3] - ikeas supporthörna -->
@@ -133,7 +133,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID>
+      <dialogID>2</dialogID><save>false</save>
     </Item>
     
     <!-- Rum [4] - ikeas lager 1 -->
@@ -170,7 +170,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>0</dialogID>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
 
         <!-- Rum [5] - ikeas lager 2 -->
@@ -207,7 +207,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>4</dialogID>
+      <dialogID>4</dialogID><save>false</save>
     </Item>
 
     <!-- Rum [6] - ikeas supporthörna 2 -->
@@ -242,7 +242,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID>
+      <dialogID>2</dialogID><save>false</save>
     </Item>
 
     <!-- Rum [7] - bakom lager (tom) -->
@@ -266,7 +266,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID>
+      <dialogID>2</dialogID><save>false</save>
     </Item>
 
         <!-- Rum [8] - bakom lager (tom) 2 -->
@@ -290,7 +290,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID>
+      <dialogID>2</dialogID><save>false</save>
     </Item>
   </Asset>
 </XnaContent>
