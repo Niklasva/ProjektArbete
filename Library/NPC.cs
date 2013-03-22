@@ -91,64 +91,20 @@ namespace Library
             }
 
             // -- Händelser baserade på dialoger -- //
-            string[] dialogStrings = activeDialog.getActiveLine().Split(' ');
-            int tempInt;
+            
             if (activeDialog.getActiveLine() == "give")                 // NPC:n ger bort sin item
             {
                 giveItem = true;
                 dialogNumber++;
             }
-            if (dialogStrings[0].ToLower() == "open")
-            {
-                if (int.TryParse(dialogStrings[1], out tempInt))
-                {
-                    Registry.currentRoom.getDoors()[tempInt].Unlock();
-                }
-            }
-            if (dialogStrings[0].ToLower() == "lock")
-            {
-                if (int.TryParse(dialogStrings[1], out tempInt))
-                {
-                    Registry.currentRoom.getDoors()[tempInt].Lock();
-                }
-            }
-            //Skriv cr + vilket rum + spelarens position i rummet(x,y)
-            if (dialogStrings[0].ToLower() == "cr")
-            {
-                string[] vector2Strings = dialogStrings[2].Split(',');
-                float tempFloatX;
-                float tempFloatY;
-                if (int.TryParse(dialogStrings[1], out tempInt) && float.TryParse(vector2Strings[0], out tempFloatX) && 
-                    float.TryParse(vector2Strings[1], out tempFloatY))
-                {
-                    Registry.currentRoom.changeRoom(tempInt, new Vector2(tempFloatX, tempFloatY));
-                }
-            }
-            if (activeDialog.getActiveLine() == "0")                    // Avslutar dialogen
+            
+            if (activeDialog.getActiveLine() == "0" || Keyboard.GetState().IsKeyDown(Keys.S))                    // Avslutar dialogen
             {
                 isTalking = false;
+                Registry.pause = false;
             }
 
-            if (activeDialog.getActiveLine() == "militar")
-            {
-                Registry.playersClothes = Registry.WhichClothes.militar;
-            }
-            if (activeDialog.getActiveLine() == "kvinna")
-            {
-                Registry.playersClothes = Registry.WhichClothes.kvinna;
-            }
-            if (activeDialog.getActiveLine() == "vanlig")
-            {
-                Registry.playersClothes = Registry.WhichClothes.vanliga;
-            }
-            if (activeDialog.getActiveLine() == "jkea")
-            {
-                Registry.playersClothes = Registry.WhichClothes.jkea;
-            }
-            if (activeDialog.getActiveLine() == "spion")
-            {
-                Registry.playersClothes = Registry.WhichClothes.spion;
-            }
+            activeDialog.checkLines();
 
             // Spriteändringar beroende på om NPC:N pratar
             if (activeDialog.getSpeaker() == "NPC")
@@ -175,10 +131,7 @@ namespace Library
             {
                 Registry.pause = true;
             }
-            else
-            {
-                Registry.pause = false;
-            }
+
 
             // Följ efterspelaren
             if (lookatplayer)

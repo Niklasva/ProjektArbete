@@ -169,6 +169,64 @@ namespace Library
         {
             spriteBatch.DrawString(font, output, position, color, 0f, Vector2.Zero, 1, SpriteEffects.None, 0.001f);
         }
+
+        public void checkLines()
+        {
+            string[] dialogStrings = activeLine.Split(' ');
+            int tempInt;
+            if (dialogStrings[0].ToLower() == "open")
+            {
+                if (int.TryParse(dialogStrings[1], out tempInt))
+                {
+                    Registry.currentRoom.getDoors()[tempInt].Unlock();
+                }
+            }
+            if (dialogStrings[0].ToLower() == "lock")
+            {
+                if (int.TryParse(dialogStrings[1], out tempInt))
+                {
+                    Registry.currentRoom.getDoors()[tempInt].Lock();
+                }
+            }
+            //Skriv cr + vilket rum + spelarens position i rummet(x,y)
+            if (dialogStrings[0].ToLower() == "cr")
+            {
+                string[] vector2Strings = dialogStrings[2].Split(',');
+                float tempFloatX;
+                float tempFloatY;
+                if (int.TryParse(dialogStrings[1], out tempInt) && float.TryParse(vector2Strings[0], out tempFloatX) &&
+                    float.TryParse(vector2Strings[1], out tempFloatY))
+                {
+                    Registry.currentRoom.changeRoom(tempInt, new Vector2(tempFloatX, tempFloatY));
+                }
+            }
+
+            //Om dialogen är något av dessa byts jerrys kläder.
+            if (activeLine == "militar")
+            {
+                Registry.playersClothes = Registry.WhichClothes.militar;
+            }
+            if (activeLine == "kvinna")
+            {
+                Registry.playersClothes = Registry.WhichClothes.kvinna;
+            }
+            if (activeLine == "vanlig")
+            {
+                Registry.playersClothes = Registry.WhichClothes.vanliga;
+            }
+            if (activeLine == "jkea")
+            {
+                Registry.playersClothes = Registry.WhichClothes.jkea;
+            }
+            if (activeLine == "spion")
+            {
+                Registry.playersClothes = Registry.WhichClothes.spion;
+            }
+            if (activeLine == "vanligaKort")
+            {
+                Registry.playersClothes = Registry.WhichClothes.vanligaKort;
+            }
+        }
     }
 
     /// <summary>

@@ -134,19 +134,14 @@ namespace Library
             {
                 dialogIsActive = false;
             }
+            roomDialog.checkLines();
 
-
-            foreach (Door door in doors)
-            {
-                door.Update(gameTime, clientBounds);
-            }
             mousecontrolUpdate();
             if (save)
             {
                 Registry.save();
                 save = false;
             }
-
         }
 
         public bool giveNPCItem(Item itemClickedOn)
@@ -349,8 +344,6 @@ namespace Library
                         nextRoomId = int.Parse(item.nextRoomID);
                         nextRoomDoorPosition = item.door2Position; 
                     }
-                    else
-                        item.Talk();
                 }
             }
             if (toChangeRoom)

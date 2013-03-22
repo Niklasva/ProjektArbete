@@ -64,15 +64,15 @@ namespace ProjektArbete
             Registry.items = items;
 
             player = new Player(this, Content.Load<Texture2D>(@"Images/AnimatedSprites/vanligTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/RightTexture"), 
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/DownTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/UpTexture"), 
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/DownTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/UpTexture"),
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
             menu = new Menu(Content.Load<Texture2D>(@"Images/MenuImages/splash"), Content.Load<Texture2D>(@"Images/MenuImages/OPENBUTTON"), Content.Load<Texture2D>(@"Images/MenuImages/NEWBUTTON"));
 
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[3];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[9];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 

@@ -34,7 +34,7 @@
         <Item>3</Item>
         <Item>6</Item>
       </dialogIDs>
-      <itemID>2</itemID>
+      <itemID>0</itemID>
       <wantedItem>Screwdriver</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>
@@ -63,12 +63,35 @@
       <lookatplayer>true</lookatplayer>
     </Item>
 
-          <!-- [5] -->  
+          <!-- [5] jkeakund 2 -->  
     <Item>
       <name>ikeakund2</name>
       <position>110 35</position>
       <dialogIDs>
         <Item>9</Item>
+        <Item>10</Item>
+      </dialogIDs>
+      <itemID>1</itemID>
+      <wantedItem>Chair</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+              <!-- [6] Bertil röker -->  
+    <Item>
+      <!-- Ändra till bertil röker-->
+      <name>bertiljkea</name>
+      <position>110 35</position>
+      <dialogIDs>
+        <Item>11</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [7] Chefen -->  
+    <Item>
+      <name>ikeakund2</name>
+      <position>206 66</position>
+      <dialogIDs>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
