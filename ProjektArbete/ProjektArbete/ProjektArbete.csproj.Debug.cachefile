@@ -62,6 +62,13 @@ Content\Images\Backgrounds\stad2mask.xnb
 Content\Images\Backgrounds\stad3.xnb
 Content\Images\Backgrounds\stad3fg.xnb
 Content\Images\Backgrounds\stad3mask.xnb
+Content\Images\Backgrounds\jerryslagenhet.xnb
+Content\Images\Backgrounds\jerryslagenhetfg.xnb
+Content\Images\Backgrounds\jerryslagenhetmask.xnb
+Content\Images\MenuImages\splash - Copy.xnb
+Content\Images\MenuImages\cursor.xnb
+Content\Images\MenuImages\cursor2.xnb
+Content\Images\MenuImages\wait.xnb
 Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
@@ -80,8 +87,5 @@ Content\Sound\Voice\7.xnb
 Content\Sound\Voice\8.xnb
 Content\Sound\Voice\9.xnb
 Content\Sound\Voice\11.xnb
-Content\Images\Backgrounds\jerryslagenhet.xnb
-Content\Images\Backgrounds\jerryslagenhetfg.xnb
-Content\Images\Backgrounds\jerryslagenhetmask.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma

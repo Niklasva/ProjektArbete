@@ -72,10 +72,11 @@ namespace Library
             speaker = lines[i].speaker;
             if (timer > 0)
             {
+                Registry.pause = true;
                 string[] temp = lines[i].line.Split(new char[] { '/' }, 2);
                 if (speaker == "Player")
                 {
-                    if (Registry.playerPosition.X - ((lines[i].line.Count() * 6) / 1.33f) <= 0)
+                    if (Registry.playerPosition.X - ((lines[i].line.Count() * 8) / 3) <= 0)
                     {
                         if (temp.Length != 1)
                         {
@@ -85,7 +86,7 @@ namespace Library
                         else
                         Draw(gameTime, spriteBatch, lines[i].line, new Vector2(0f, Registry.playerPosition.Y - 15), lines[i].getColor());
                     }
-                    else if (Registry.playerPosition.X + (temp[0].Count() * 6) >= 320)
+                    else if (Registry.playerPosition.X + (temp[0].Count() * 8) >= 320)
                     {
                         if (temp.Length != 1)
                         {
@@ -99,8 +100,8 @@ namespace Library
                     {
                         if (temp.Length != 1)
                         {
-                            Draw(gameTime, spriteBatch, temp[0], new Vector2(Registry.playerPosition.X - ((temp[0].Count() * 8) / 1.33f), Registry.playerPosition.Y - 20), lines[i].getColor());
-                            Draw(gameTime, spriteBatch, temp[1], new Vector2(Registry.playerPosition.X - ((temp[1].Count() * 8) / 1.33f), Registry.playerPosition.Y - 10), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(Registry.playerPosition.X - (temp[0].Count() * 8), Registry.playerPosition.Y - 20), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(Registry.playerPosition.X - (temp[1].Count() * 8), Registry.playerPosition.Y - 10), lines[i].getColor());
                         }
                         else
                             Draw(gameTime, spriteBatch, lines[i].line, new Vector2(Registry.playerPosition.X - ((lines[i].line.Count() * 6) / 2), Registry.playerPosition.Y - 15), lines[i].getColor());
@@ -108,7 +109,7 @@ namespace Library
                 }
                 else if (speaker == "NPC")
                 {
-                    if (npcPosition.X - ((npcPosition.X - lines[i].line.Count() * 6) / 2) <= 0)
+                    if (npcPosition.X - (npcPosition.X - lines[i].line.Count() * 8) <= 0)
                     {
                         if (temp.Length != 1)
                         {
@@ -255,7 +256,7 @@ namespace Library
 
                 else if (speaker == "NPC")
                 {
-                    return Color.PaleVioletRed;
+                    return Color.White;
                 }
 
                 else if (speaker == "Narrator")

@@ -22,6 +22,11 @@ namespace ProjektArbete
         Player player;
         Item[] items;
         Menu menu;
+        Texture2D cursor;
+        Texture2D cursor2;
+        Texture2D waitcursor;
+        bool wait = false;
+        MouseState mouseState;
         
         enum StateOfGame {menu, game};
         StateOfGame stateOfGame = StateOfGame.menu;
@@ -32,7 +37,6 @@ namespace ProjektArbete
             graphics.IsFullScreen = false;                              // SPELET ÄR INTE I FULLSCREEN (det ser konstigt ut då)
             graphics.PreferredBackBufferWidth = 320 * 3;                // Ändrar storleken på fönstret så att det passar 3x skalningen
             graphics.PreferredBackBufferHeight = 180 * 3;
-            this.IsMouseVisible = true;                                 // Ska ändras till false när vi har en muspekare i spelet
             Content.RootDirectory = "Content";
             
         }
@@ -62,7 +66,9 @@ namespace ProjektArbete
                 item.Initialize(Content.Load<Texture2D>(@item.TextureString));
             }
             Registry.items = items;
-
+            cursor = Content.Load<Texture2D>(@"Images/MenuImages/cursor");
+            cursor2 = Content.Load<Texture2D>(@"Images/MenuImages/cursor2");
+            waitcursor = Content.Load<Texture2D>(@"Images/MenuImages/wait");
             player = new Player(this, Content.Load<Texture2D>(@"Images/AnimatedSprites/vanligTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/RightTexture"), 
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/DownTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/UpTexture"),
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
@@ -72,7 +78,7 @@ namespace ProjektArbete
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[9];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[0];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 
@@ -96,6 +102,11 @@ namespace ProjektArbete
             if (this.IsActive && !Registry.pause)
             {
                 Mousecontrol.update();
+                wait = false;
+            }
+            else
+            {
+                wait = true;
             }
             if (stateOfGame == StateOfGame.game)
             {
@@ -141,12 +152,15 @@ namespace ProjektArbete
             // Ändrar musikvolymen om man pratar med folk
             if (Registry.pause)
             {
-                    MediaPlayer.Volume = 0.5f;          // Låg volym
+                MediaPlayer.Volume = 0.5f;          // Låg volym
             }
             else
             {
-                    MediaPlayer.Volume = 1;             // Hög volym (MINA ÖRON)
+                MediaPlayer.Volume = 1;             // Hög volym (MINA ÖRON)
             }
+
+            mouseState = Mouse.GetState();
+
             base.Update(gameTime);
         }
 
@@ -158,6 +172,51 @@ namespace ProjektArbete
         {
             GraphicsDevice.Clear(Color.AntiqueWhite);
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
+            if (Mousecontrol.hover)
+            {
+                spriteBatch.Draw(
+                    cursor2,
+                   new Vector2(mouseState.X / 3 - 7, mouseState.Y / 3 - 7),
+                    new Rectangle(0, 0,
+                    cursor2.Width,
+                    cursor2.Height),
+                    Color.White,
+                    0,
+                    Vector2.Zero,
+                    1,
+                    SpriteEffects.None,
+                    0.1f);
+            }
+            else if (wait)
+            {
+                spriteBatch.Draw(
+                waitcursor,
+                new Vector2(mouseState.X / 3 - 7, mouseState.Y / 3 - 7),
+                new Rectangle(0, 0,
+                waitcursor.Width,
+                waitcursor.Height),
+                Color.White,
+                0,
+                Vector2.Zero,
+                1,
+                SpriteEffects.None,
+                0f);
+            }
+            else
+            {
+                spriteBatch.Draw(
+                    cursor,
+                    new Vector2(mouseState.X / 3 - 7, mouseState.Y / 3 - 7),
+                    new Rectangle(0, 0,
+                    cursor.Width,
+                    cursor.Height),
+                    Color.White,
+                    0,
+                    Vector2.Zero,
+                    1,
+                    SpriteEffects.None,
+                    0f);
+            }
             if (stateOfGame == StateOfGame.game)
             {
                 Registry.currentRoom.Draw(gameTime, spriteBatch);

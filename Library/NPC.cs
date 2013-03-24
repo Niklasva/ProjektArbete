@@ -101,7 +101,6 @@ namespace Library
             if (activeDialog.getActiveLine() == "0" || Keyboard.GetState().IsKeyDown(Keys.S))                    // Avslutar dialogen
             {
                 isTalking = false;
-                Registry.pause = false;
             }
 
             activeDialog.checkLines();
@@ -124,14 +123,6 @@ namespace Library
             layerPosition = (1 - (position.Y + activeSprite.Texture.Height) / 180) / 3; //3-D EFFEKTER!!!! NPC:n hamnar bakom och framför saker beroende på vart den står
 
             activeSprite.Update(gameTime, clientBounds);
-
-
-            // Pausning av spel
-            if (isTalking)
-            {
-                Registry.pause = true;
-            }
-
 
             // Följ efterspelaren
             if (lookatplayer)

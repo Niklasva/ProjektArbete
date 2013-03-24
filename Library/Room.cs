@@ -134,6 +134,14 @@ namespace Library
             {
                 dialogIsActive = false;
             }
+            if (dialogIsActive)
+            {
+                Registry.pause = true;
+            }
+            else
+            {
+                Registry.pause = false;
+            }
             roomDialog.checkLines();
 
             mousecontrolUpdate();

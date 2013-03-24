@@ -18,15 +18,18 @@ namespace Library
         /// Sköter allt som har med att man klickar att göra
         /// </summary>
         private static MouseState prevMouseState;
-        private static  MouseState currMouseState;
-
+        private static MouseState currMouseState;
         private static string description;
         private static string name;
-
+        private static Vector2 position;
+        public static Vector2 getPosition { get { return position; } }
+        private static bool isMouseOverItem = false;
+        public static bool hover { get { return isMouseOverItem; } }
         public static void update()
         {
             prevMouseState = currMouseState;
             currMouseState = Mouse.GetState();
+            position = new Vector2(currMouseState.X / 3, currMouseState.Y / 3);
         }
 
         public static bool clicked()
@@ -60,7 +63,7 @@ namespace Library
 
         public static bool mouseOverItem(Vector2 position, Point frameSize)
         {
-            bool isMouseOverItem = false;
+            isMouseOverItem = false;
             //Beffinner sig musen inom området för spriten?
             //Delar positionen med 3 för spelets grafik dras ut
             if (currMouseState.X / 3 >= position.X && currMouseState.X / 3 <= position.X + frameSize.X)
@@ -98,7 +101,7 @@ namespace Library
             return rightClickedOnItem;
         }
         public static bool rightClickedOnItem(Door door)
-        {            
+        {
             bool rightClickedOnItem = false;
 
             if (clickedOnItem(door.getSprite().Position, door.getSprite().FrameSize, true))
