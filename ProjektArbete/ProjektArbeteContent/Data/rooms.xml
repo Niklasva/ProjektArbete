@@ -51,7 +51,6 @@
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
-
        <Item>
           <position>0 0</position>
           <nextRoomID>4</nextRoomID>

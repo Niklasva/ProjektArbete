@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Library
 {        
@@ -34,7 +35,9 @@ namespace Library
         private bool visited = false;
         private Dialog roomDialog;
         private bool dialogIsActive = false;
-
+        private AnimatedSprite animbackground;
+        private SoundEffect dialogSound;
+        private bool soundhasplayed = true;
         //Muskontroll 
         //Bool för att lägga till föremål i spelaren och ta bort från rummet
         private bool isItemClicked;
@@ -50,7 +53,9 @@ namespace Library
             // Om man redan har besökt ett rum är allting där det var när man lämnade rummet
             if (visited == false)
             {
+                soundhasplayed = false;
                 this.background = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID);
+                animbackground = new AnimatedSprite(background, new Vector2(0,0) , 0, new Point(background.Width / (background.Width / 320), background.Height), new Point(0, 0), new Point(2, 1), 100);
                 this.mask = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "mask");
                 this.foreground = game.Content.Load<Texture2D>(@"Images/Backgrounds/" + backgroundID + "fg");
                 this.maskData = TextureTo2DArray(mask);
@@ -61,6 +66,7 @@ namespace Library
                 isItemClicked = false;
                 roomDialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
                 dialogIsActive = true;
+                dialogSound = game.Content.Load<SoundEffect>(@"Sound/Voice/" + dialogID);
                 foreach (string id in itemID)
                 {
                     Item itemToBeAdded = new Item();
@@ -80,6 +86,7 @@ namespace Library
                 {
                     item.LoadContent(game);
                 }
+                
 
                 int i = 0;
                 foreach (Item item in items)
@@ -103,11 +110,13 @@ namespace Library
                 }
                 Registry.music = game.Content.Load<Song>(@"Sound/BGM/" + song);
                 MediaPlayer.Play(Registry.music);
+                MediaPlayer.IsRepeating = true;
             }
         }
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
+            animbackground.Update(gameTime, clientBounds);
             doorUpdate();
             foreach (NPC item in npcs)
             {
@@ -133,6 +142,7 @@ namespace Library
             if (roomDialog.getActiveLine() == "0")
             {
                 dialogIsActive = false;
+                roomDialog.resetDialog();
             }
             if (dialogIsActive)
             {
@@ -198,18 +208,7 @@ namespace Library
             }
 
             // bakgrunden
-            spriteBatch.Draw(background,
-                 Vector2.Zero,
-                 new Rectangle(0, 0,
-                 game.Window.ClientBounds.Width,
-                 game.Window.ClientBounds.Height),
-                 Color.White,
-                 0,
-                 Vector2.Zero,
-                 1,
-                 SpriteEffects.None,
-                 0.333333333333f);
-
+            animbackground.Draw(gameTime, spriteBatch, 1f, 0.3f);
             // förgrunden
             spriteBatch.Draw(foreground,
                  Vector2.Zero,
@@ -276,6 +275,11 @@ namespace Library
             }
             if (dialogIsActive)
             {
+                if (soundhasplayed == false)
+                {
+                    dialogSound.Play();
+                    soundhasplayed = true;
+                }
                 roomDialog.Speak(gameTime, spriteBatch, Vector2.Zero);
             }
         }

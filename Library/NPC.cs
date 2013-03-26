@@ -120,7 +120,14 @@ namespace Library
                 activeSprite = stillSprite;
             }
 
-            layerPosition = (1 - (position.Y + activeSprite.Texture.Height) / 180) / 3; //3-D EFFEKTER!!!! NPC:n hamnar bakom och framför saker beroende på vart den står
+            if (position.Y != 0)
+            {
+                layerPosition = (1 - (position.Y + activeSprite.Texture.Height) / 180) / 3; //3-D EFFEKTER!!!! NPC:n hamnar bakom och framför saker beroende på vart den står
+            }
+            else
+            {
+                layerPosition = 0.2f;
+            }
 
             activeSprite.Update(gameTime, clientBounds);
 

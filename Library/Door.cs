@@ -27,7 +27,7 @@ namespace Library
         {
            
             texture = game.Content.Load<Texture2D>(@"Images/Sprites/" + textureID);
-            sprite = new AnimatedSprite(texture, position, 0, new Point(texture.Width / 2, texture.Height), new Point(0, 0), new Point(1, 0), 1);
+            sprite = new AnimatedSprite(texture, position, 0, new Point(texture.Width, texture.Height), new Point(0, 0), new Point(1, 0), 1);
         }
 
         public void Unlock()

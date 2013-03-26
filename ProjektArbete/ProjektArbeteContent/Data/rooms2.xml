@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <!-- TODO: replace this Asset with your own XML asset data. -->
+  <Asset Type="Library.Room[]">
+
+    <!-- Akt 2: THE FURNITURE WARRIOR -->
+
+    <!-- Rum 0 - sjukhuset -->
+    <!--  
+          Här ligger Jerry i en sjukhussäng efter att ha blivit skjuten
+          Rumdialog som timer för att låta spelaren titta runt lite innan Miranda kommer in
+
+          Musik: bakgrundsljud från sjukhus
+      -->
+    <Item>
+      <backgroundID>sjukhus</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>sjukhus</song>
+      <dialogID>1</dialogID>
+      <save>false</save>
+    </Item>
+
+        <!-- Rum 1 - sjukhuset m. Miranda och kompis -->
+    <!--  
+          Miranda står nu vid dörren och pratar med Jerry.
+          Hon har en kompis med sig
+          Musik: null (fortsättning på bakgrundsljudet från rum 0)
+      -->
+    <Item>
+      <backgroundID>sjukhus1</backgroundID>
+      <npcID>
+        <Item>1</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>2</dialogID>
+      <save>false</save>
+    </Item>
+
+    <!-- Rum 2 - sjukhuset efter Miranda -->
+    <!-- 
+          Snubben i sängen bredvid säger något under täcket
+          Byter rum till ett rum med snubben som en synlig NPC
+        -->
+
+     <Item>
+      <backgroundID>sjukhus</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+       <itemID>
+         <Item>0</Item>
+       </itemID>
+       <itemPosition>
+         <Item>0,0</Item>
+       </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>2</dialogID>
+      <save>false</save>
+    </Item>
+
+      <!-- Rum 3 - sjukhuset efter Miranda m. skadad soldat (i säng) -->
+
+      <Item>
+      <backgroundID>sjukhus</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+        <itemID>
+          <Item>0</Item>
+        </itemID>
+        <itemPosition>
+          <Item>0,0</Item>
+        </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>4</dialogID>
+      <save>false</save>
+    </Item>
+
+      <!-- Rum 4 - sjukhuset efter Miranda m. skadad soldat -->
+      <!-- 
+          Snubben i sängen är en NPC här som man kan prata med
+      -->
+
+      <Item>
+      <backgroundID>sjukhus2</backgroundID>
+      <npcID>
+        <Item>2</Item>
+      </npcID>
+        <itemID>
+          <Item>0</Item>
+        </itemID>
+        <itemPosition>
+          <Item>0,0</Item>
+        </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+
+          <!-- Rum 5 - rekryteringssnubbe -->
+      <!-- 
+          Jerry pratar med snubben som fixar arme
+      -->
+
+      <Item>
+      <backgroundID>sjukhus2</backgroundID>
+      <npcID>
+        <Item>3</Item>
+      </npcID>
+        <itemID>
+          <Item>0</Item>
+        </itemID>
+        <itemPosition>
+          <Item>0,0</Item>
+        </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>10</dialogID>
+      <save>false</save>
+    </Item>
+          <!-- Rum 6 - intro screen -->
+      <Item>
+      <backgroundID>furnwar</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+        <itemID>
+          <Item>0</Item>
+        </itemID>
+        <itemPosition>
+          <Item>0,0</Item>
+        </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>8</dialogID>
+      <save>false</save>
+    </Item>          
+
+    <!-- Rum 7 - utanför flygplan -->      
+    <!-- 
+          Här får Jerry sitt uppdrag
+      -->
+      <Item>
+      <backgroundID>plan</backgroundID>
+      <npcID>
+      <Item>0</Item>
+      </npcID>
+        <itemID>
+          <Item>0</Item>
+        </itemID>
+        <itemPosition>
+          <Item>0,0</Item>
+        </itemPosition>
+      <doors>
+      </doors>
+      <song>air</song>
+      <dialogID>7</dialogID>
+      <save>false</save>
+    </Item>
+    
+     <!-- Rum 8 - startskärm -->
+    <!-- 
+          Borde vara rum 0
+      -->
+    <Item>
+      <backgroundID>black</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>9</dialogID>
+      <save>false</save>
+    </Item>
+
+         <!-- Rum 9 - startskärm -->
+    <!-- 
+          Inuti flygplanet (1)
+      -->
+    <Item>
+      <backgroundID>flygin3</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>0 30</position>
+          <nextRoomID>10</nextRoomID>
+          <door2Position>280 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>flygdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>         
+
+    <!-- Rum 10 - startskärm -->
+    <!-- 
+          Inuti flygplanet (2)
+      -->
+    <Item>
+      <backgroundID>flygin2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>50,100</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>0 30</position>
+          <nextRoomID>11</nextRoomID>
+          <door2Position>280 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>flygdorr</textureID>
+        </Item>        
+        <Item>
+          <position>298 30</position>
+          <nextRoomID>9</nextRoomID>
+          <door2Position>30 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>flygdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+
+         <!-- Rum 11 - startskärm -->
+    <!-- 
+          Inuti flygplanet (3)
+      -->    
+    <Item>
+      <backgroundID>flygin1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>298 30</position>
+          <nextRoomID>10</nextRoomID>
+          <door2Position>30 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>flygdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>      
+  </Asset>
+</XnaContent>

@@ -76,7 +76,7 @@ namespace Library
                 string[] temp = lines[i].line.Split(new char[] { '/' }, 2);
                 if (speaker == "Player")
                 {
-                    if (Registry.playerPosition.X - ((lines[i].line.Count() * 8) / 3) <= 0)
+                    if (Registry.playerPosition.X - ((temp[0].Count() * 8)) <= 0)
                     {
                         if (temp.Length != 1)
                         {
@@ -109,7 +109,17 @@ namespace Library
                 }
                 else if (speaker == "NPC")
                 {
-                    if (npcPosition.X - (npcPosition.X - lines[i].line.Count() * 8) <= 0)
+                   if (npcPosition.Y <= 1)
+                    {
+                        if (temp.Length != 1)
+                        {
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(320 / 2 - ((temp[0].Count() * 6) / 1.5f), 12), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(320 / 2 - ((temp[1].Count() * 6) / 1.5f), 22), lines[i].getColor());
+                        }
+                        else
+                            Draw(gameTime, spriteBatch, lines[i].line, new Vector2(320 / 2 - ((lines[i].line.Count() * 6) / 1.5f), 15), lines[i].getColor());
+                    }
+                    else if (npcPosition.X - temp[0].Count() * 8 <= 0)
                     {
                         if (temp.Length != 1)
                         {
@@ -119,6 +129,16 @@ namespace Library
                         else
                             Draw(gameTime, spriteBatch, temp[0], new Vector2(0f, npcPosition.Y - 15), lines[i].getColor());
                     }
+                    else if (npcPosition.X + temp[0].Count() * 6 >= 320)
+                    {
+                        if (temp.Length != 1)
+                        {
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(320 - temp[0].Count() * 8, npcPosition.Y - 20), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(320 - temp[1].Count() * 8, npcPosition.Y - 10), lines[i].getColor());
+                        }
+                        else
+                            Draw(gameTime, spriteBatch, lines[i].line, new Vector2(320 - temp[0].Count() * 8, npcPosition.Y - 15), lines[i].getColor());
+                    }
                     else
                     {
                         if (temp.Length != 1)
@@ -127,7 +147,7 @@ namespace Library
                             Draw(gameTime, spriteBatch, temp[1], new Vector2(npcPosition.X - ((temp[1].Count() * 8) / 2), npcPosition.Y - 10), lines[i].getColor());
                         }
                         else
-                        Draw(gameTime, spriteBatch, lines[i].line, new Vector2(npcPosition.X - ((lines[i].line.Count() * 8) / 2), npcPosition.Y - 15), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, lines[i].line, new Vector2(npcPosition.X - ((lines[i].line.Count() * 8) / 2), npcPosition.Y - 15), lines[i].getColor());
                     }
            
 
@@ -142,15 +162,38 @@ namespace Library
                     else
                         Draw(gameTime, spriteBatch, lines[i].line, new Vector2(320 / 2 - ((lines[i].line.Count() * 6) / 1.5f), 15), lines[i].getColor());
                 }
-                else
+                else if (speaker == "Radio")
                 {
                     if (temp.Length != 1)
                     {
-                        Draw(gameTime, spriteBatch, temp[0], new Vector2(lines[i].position.X, lines[i].position.Y - 5), lines[i].getColor());
-                        Draw(gameTime, spriteBatch, temp[1], new Vector2(lines[i].position.X, lines[i].position.Y + 5), lines[i].getColor());
+                        Draw(gameTime, spriteBatch, temp[0], new Vector2(320 / 2 - ((temp[0].Count() * 6) / 1.5f), 12), lines[i].getColor());
+                        Draw(gameTime, spriteBatch, temp[1], new Vector2(320 / 2 - ((temp[1].Count() * 6) / 1.5f), 22), lines[i].getColor());
                     }
                     else
-                    Draw(gameTime, spriteBatch, lines[i].line, lines[i].position, lines[i].getColor());
+                        Draw(gameTime, spriteBatch, lines[i].line, new Vector2(320 / 2 - ((lines[i].line.Count() * 6) / 1.5f), 15), lines[i].getColor());
+                }
+                else
+                {
+                    if (lines[i].position.X + (temp[0].Count() * 8) >= 320)
+                    {
+                        if (temp.Length != 1)
+                        {
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2((320 - temp[0].Count() * 8), lines[i].position.Y), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2((320 - temp[0].Count() * 8), lines[i].position.Y + 10), lines[i].getColor());
+                        }
+                        else
+                            Draw(gameTime, spriteBatch, lines[i].line, new Vector2(320 - temp[0].Count() * 8, lines[i].position.Y), lines[i].getColor());
+                    }
+                    else
+                    {
+                        if (temp.Length != 1)
+                        {
+                            Draw(gameTime, spriteBatch, temp[0], new Vector2(lines[i].position.X, lines[i].position.Y - 5), lines[i].getColor());
+                            Draw(gameTime, spriteBatch, temp[1], new Vector2(lines[i].position.X, lines[i].position.Y + 5), lines[i].getColor());
+                        }
+                        else
+                            Draw(gameTime, spriteBatch, lines[i].line, lines[i].position, lines[i].getColor());
+                    }
                 }
             }
             if (timer <= 0)
@@ -256,7 +299,7 @@ namespace Library
 
                 else if (speaker == "NPC")
                 {
-                    return Color.White;
+                    return Color.LightBlue;
                 }
 
                 else if (speaker == "Narrator")
@@ -265,9 +308,15 @@ namespace Library
                     return Color.Wheat;
                 }
 
+                else if (speaker == "Radio")
+                {
+                    //smoke
+                    return Color.DarkOrange;
+                }
+
                 else
                 {
-                    return Color.Brown;
+                    return Color.LightGoldenrodYellow;
                 }
             }
         }

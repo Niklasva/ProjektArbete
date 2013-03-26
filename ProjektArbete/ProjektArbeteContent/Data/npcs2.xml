@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Library.NPC[]">
+    <!-- [0] -->
+    <Item>
+      <name>null</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+
+    <!-- [1] Miranda i sjukhuset -->
+    <Item>
+      <name>miranda</name>
+      <position>90 32</position>
+      <dialogIDs>
+        <Item>3</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+
+    <!-- [2] Patientkompis -->
+    <Item>
+      <name>patient</name>
+      <position>239 32</position>
+      <dialogIDs>
+        <Item>5</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>  
+  <!-- [3] rekryteringssnubbe -->
+    <Item>
+      <name>armechef</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>6</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+  </Asset>
+</XnaContent>
