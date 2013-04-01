@@ -108,8 +108,12 @@ namespace Library
                         Registry.music.Dispose();
                     }
                 }
-                Registry.music = game.Content.Load<Song>(@"Sound/BGM/" + song);
-                MediaPlayer.Play(Registry.music);
+                if (Registry.currentSong != song)
+                {
+                    Registry.music = game.Content.Load<Song>(@"Sound/BGM/" + song);
+                    Registry.currentSong = song;
+                    MediaPlayer.Play(Registry.music);
+                }
                 MediaPlayer.IsRepeating = true;
             }
         }
@@ -126,7 +130,15 @@ namespace Library
                     Item itemToBeAdded = new Item();
                     itemToBeAdded.loadNewItem(Registry.items[item.ItemID]);
                     itemToBeAdded.Initialize(game.Content.Load<Texture2D>(@itemToBeAdded.TextureString));
-                    itemToBeAdded.setPosition(new Vector2(item.position.X, item.position.Y + 61));
+                    Console.WriteLine(item.position.Y.ToString() + " + " + item.getFrameSize.Y.ToString() + " = " + (item.position.Y + item.getFrameSize.Y).ToString());
+                    if ((item.position.Y + item.getFrameSize.Y) >= 170)
+                    {
+                        itemToBeAdded.setPosition(new Vector2(item.position.X + item.getFrameSize.X + 20, item.position.Y + item.getFrameSize.Y / 2));
+                    }
+                    else
+                    {
+                        itemToBeAdded.setPosition(new Vector2(item.position.X, item.position.Y + item.getFrameSize.Y + 10));
+                    }
                     items.Add(itemToBeAdded);
                     item.resetItem();
                 }

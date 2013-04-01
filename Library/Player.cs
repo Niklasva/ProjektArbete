@@ -54,7 +54,7 @@ namespace Library
         private Vector2 mousePosition;
         private Vector2 target = new Vector2(36, 39);
         private Vector2 direction;
-        private int speed = 1;
+        private float speed = 1;
 
         bool flip; //Håller reda på vilket håll spelaren ska peka åt
 
@@ -127,7 +127,7 @@ namespace Library
                     //Spelaren rör inte på sig
                     isMoving = false;
                 }
-                else speed = 2;
+                else speed = 1.5f;
 
                 oldState = mouseState;
             }

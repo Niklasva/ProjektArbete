@@ -60,7 +60,7 @@ namespace ProjektArbete
         {
             //Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            items = Content.Load<Library.Item[]>(@"Data/ItemXML");
+            items = Content.Load<Library.Item[]>(@"Data/ItemXML2");
             foreach (Item item in items)
             {
                 item.Initialize(Content.Load<Texture2D>(@item.TextureString));

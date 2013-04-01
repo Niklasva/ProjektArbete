@@ -30,7 +30,7 @@ namespace Library
         public static bool pause = false;
         public enum WhichClothes { vanliga, militar, kvinna, spion, jkea, vanligaKort };
         public static WhichClothes playersClothes = WhichClothes.vanliga;
-
+        public static string currentSong = "";
         public static List<Item> itemsInInventory = new List<Item>();
 
 

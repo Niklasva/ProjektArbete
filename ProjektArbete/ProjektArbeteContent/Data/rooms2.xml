@@ -206,14 +206,14 @@
       <save>false</save>
     </Item>
 
-         <!-- Rum 9 - startskärm -->
+         <!-- Rum 9 - flygplan -->
     <!-- 
           Inuti flygplanet (1)
       -->
     <Item>
       <backgroundID>flygin3</backgroundID>
       <npcID>
-        <Item>0</Item>
+        <Item>4</Item>
       </npcID>
       <itemID>
         <Item>0</Item>
@@ -236,7 +236,7 @@
       <save>false</save>
     </Item>         
 
-    <!-- Rum 10 - startskärm -->
+    <!-- Rum 10 - flygplan -->
     <!-- 
           Inuti flygplanet (2)
       -->
@@ -246,7 +246,7 @@
         <Item>0</Item>
       </npcID>
       <itemID>
-        <Item>0</Item>
+        <Item>1</Item>
       </itemID>
       <itemPosition>
         <Item>50,100</Item>
@@ -268,13 +268,21 @@
           <key>null</key>
           <textureID>flygdorr</textureID>
         </Item>
+        <Item>
+          <position>0 30</position>
+          <nextRoomID>11</nextRoomID>
+          <door2Position>280 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>flygdorr</textureID>
+        </Item>
       </doors>
       <song>null</song>
       <dialogID>0</dialogID>
       <save>false</save>
     </Item>
 
-         <!-- Rum 11 - startskärm -->
+         <!-- Rum 11 - flygplan -->
     <!-- 
           Inuti flygplanet (3)
       -->    
@@ -297,11 +305,435 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>flygdorr</textureID>
+        </Item>        
+        <Item>
+          <position>14 44</position>
+          <nextRoomID>12</nextRoomID>
+          <door2Position>300 1</door2Position>
+          <isLocked>true</isLocked>
+          <key>Parachute</key>
+          <textureID>flyglucka</textureID>
         </Item>
       </doors>
       <song>null</song>
       <dialogID>0</dialogID>
       <save>false</save>
+    </Item>  
+
+    <!-- Rum 12 - i luften -->
+    <!-- 
+          Här faller Jerry med fallskärm
+      -->    
+    <Item>
+      <backgroundID>sky</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+      </doors>
+      <song>null</song>
+      <dialogID>13</dialogID>
+      <save>false</save>
+    </Item>        
+
+    <!-- Rum 13 - öken (1) -->
+    <!-- 
+          Här har jerry landat
+      -->    
+    <Item>
+      <backgroundID>desert1</backgroundID>
+      <npcID>
+        <Item>5</Item>
+      </npcID>
+      <itemID>
+        <Item>5</Item>
+      </itemID>
+      <itemPosition>
+        <Item>70,98</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>14</nextRoomID>
+          <door2Position>0 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>        
+      </doors>
+      <song>desert</song>
+      <dialogID>14</dialogID>
+      <save>false</save>
+    </Item>
+        <!-- Rum 14 - öken (2) -->
+    <Item>
+      <backgroundID>desert2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>15</nextRoomID>
+          <door2Position>0 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>13</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>         
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+    <!-- Rum 15 - djungel (1) -->
+    <Item>
+      <backgroundID>jungle1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>16</nextRoomID>
+          <door2Position>0 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>        
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>14</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>           
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+        <!-- Rum 16 - djungel (3) -->
+    <Item>
+      <backgroundID>jungle3</backgroundID>
+      <npcID>
+        <Item>6</Item>
+      </npcID>
+      <itemID>
+        <Item>7</Item>
+      </itemID>
+      <itemPosition>
+        <Item>123,84</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>17</nextRoomID>
+          <door2Position>0 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>        
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>15</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>           
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>        
+    <!-- Rum 17 - djungel (4) -->
+    <Item>
+      <backgroundID>jungle4</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>18</nextRoomID>
+          <door2Position>0 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>        
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>16</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>           
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>     
+    <!-- Rum 18 - djungel (2) -->
+    <Item>
+      <backgroundID>jungle2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>2</Item>
+      </itemID>
+      <itemPosition>
+        <Item>180,100</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>19</nextRoomID>
+          <door2Position>0 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>        
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>17</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>           
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>         
+    <!-- Rum 19 - öken (2) -->
+    <Item>
+      <backgroundID>desert4</backgroundID>
+      <npcID>
+        <Item>7</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>20</nextRoomID>
+          <door2Position>0 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>        
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>18</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>           
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+        <!-- Rum 20 - ingång till staden -->
+    <Item>
+      <backgroundID>desert3</backgroundID>
+      <npcID>
+        <Item>8</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>19</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+
+    <!-- Rum 21 - utanför ambassaden -->
+    <Item>
+      <backgroundID>extembas1</backgroundID>
+      <npcID>
+        <Item>9</Item>
+        <Item>10</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>20</nextRoomID>
+          <door2Position>306 66</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>        
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>24</nextRoomID>
+          <door2Position>10 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item> 
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>                       
+    <!-- Rum 22 - utanför ambassaden -->
+    <Item>
+      <backgroundID>extembas2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>27</dialogID>
+      <save>false</save>
+    </Item>   
+
+     <!-- Rum 23 - utanför ambassaden -->
+    <Item>
+      <backgroundID>extembas3</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>        
+        <Item>
+          <position>172 57</position>
+          <nextRoomID>25</nextRoomID>
+          <door2Position>1000 1000</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ambdor</textureID>
+        </Item> 
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
     </Item>      
+     <!-- Rum 24 - utanför ambassaden -->
+    <Item>
+      <backgroundID>bredvidamb</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>3</Item>
+      </itemID>
+      <itemPosition>
+        <Item>220,100</Item>
+      </itemPosition>
+      <doors>       
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>21</nextRoomID>
+          <door2Position>306 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item> 
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+    <!-- Rum 25 - SAVE -->
+    <Item>
+      <backgroundID>black</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>220,100</Item>
+      </itemPosition>
+      <doors>       
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>21</nextRoomID>
+          <door2Position>306 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item> 
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>true</save>
+    </Item>               
   </Asset>
 </XnaContent>

@@ -36,6 +36,7 @@
       <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>  
+
   <!-- [3] rekryteringssnubbe -->
     <Item>
       <name>armechef</name>
@@ -45,6 +46,98 @@
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+
+  <!-- [4] pilot -->
+    <Item>
+      <name>pilot</name>
+      <position>122 66</position>
+      <dialogIDs>
+        <Item>11</Item>
+        <Item>12</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+
+    <!-- [5] vatten -->
+    <Item>
+      <name>water</name>
+      <position>0 107</position>
+      <dialogIDs>
+        <Item>15</Item>
+        <Item>16</Item>
+        <Item>17</Item>
+      </dialogIDs>
+      <itemID>9</itemID>
+      <wantedItem>Empty bottle</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>  
+
+    <!-- [6] soptunna -->
+    <Item>
+      <name>trashcan</name>
+      <position>123 84</position>
+      <dialogIDs>
+        <Item>19</Item>
+        <Item>20</Item>
+      </dialogIDs>
+      <itemID>8</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+
+    <!-- [7] snubbe som vill ha vatten -->
+    <Item>
+      <name>desertman</name>
+      <position>240 59</position>
+      <dialogIDs>
+        <Item>18</Item>
+        <Item>21</Item>
+        <Item>22</Item>
+      </dialogIDs>
+      <itemID>10</itemID>
+      <wantedItem>Water bottle</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>    
+
+    <!-- [8] vakt -->
+    <Item>
+      <name>vakt</name>
+      <position>297 54</position>
+      <dialogIDs>
+        <Item>23</Item>
+        <Item>24</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Wad of dough</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item> 
+
+    <!-- [9] fönstervakt -->
+    <Item>
+      <name>fonstervakt</name>
+      <position>96 28</position>
+      <dialogIDs>
+        <Item>25</Item>
+        <Item>26</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Loaded slingshot</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>    
+
+    <!-- [10] fönstervakt dörr -->
+    <Item>
+      <name>ambdor</name>
+      <position>172 57</position>
+      <dialogIDs>
+        <Item>28</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem></wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
   </Asset>
