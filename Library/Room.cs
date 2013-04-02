@@ -137,7 +137,7 @@ namespace Library
                     }
                     else
                     {
-                        itemToBeAdded.setPosition(new Vector2(item.position.X, item.position.Y + item.getFrameSize.Y + 10));
+                        itemToBeAdded.setPosition(new Vector2(item.position.X, item.position.Y + item.getFrameSize.Y + 5));
                     }
                     items.Add(itemToBeAdded);
                     item.resetItem();
@@ -153,8 +153,8 @@ namespace Library
             }
             if (roomDialog.getActiveLine() == "0")
             {
-                dialogIsActive = false;
                 roomDialog.resetDialog();
+                dialogIsActive = false;
             }
             if (dialogIsActive)
             {

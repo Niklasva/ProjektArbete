@@ -78,7 +78,7 @@ namespace ProjektArbete
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs2");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs2");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms2");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[8];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[12];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 
