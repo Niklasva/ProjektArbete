@@ -66,5 +66,80 @@
       <combinedItemInt>1</combinedItemInt>
     </Item>
 
+<!-- [7] -->
+    <Item>
+      <name>Cup of coffee</name>
+      <isPickable>true</isPickable>
+      <description>mmm... Lovely coffee</description>
+      <textureString>Images/Sprites/kaffekopp</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+
+<!-- [8] -->
+    <Item>
+      <name>A tie</name>
+      <isPickable>true</isPickable>
+      <description>That really is a nice tie!</description>
+      <textureString>Images/Sprites/slips</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+<!-- [9] -->
+    <Item>
+      <name>Some wine</name>
+      <isPickable>true</isPickable>
+      <description>A nice wine, perfect for comforting along with some tissues</description>
+      <textureString>Images/Sprites/wine</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>11</combinedItemInt>
+    </Item>
+<!-- [10] -->
+    <Item>
+      <name>Tissues</name>
+      <isPickable>true</isPickable>
+      <description>Tissues, perfect for comforting with wine</description>
+      <textureString>Images/Sprites/tissues</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>11</combinedItemInt>
+    </Item>
+<!-- [11] -->
+    <Item>
+      <name>Material for comforting</name>
+      <isPickable>true</isPickable>
+      <description>The perfect way to make your friend feel better</description>
+      <textureString>Images/Sprites/comfortingmaterial</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [12] -->
+    <Item>
+      <name>Trousers</name>
+      <isPickable>true</isPickable>
+      <description>Nice trousers</description>
+      <textureString>Images/Sprites/tissues</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>14</combinedItemInt>
+    </Item>
+    <!-- [13] -->
+    <Item>
+      <name>Jacket</name>
+      <isPickable>true</isPickable>
+      <description>A stylish jacket</description>
+      <textureString>Images/Sprites/tissues</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>14</combinedItemInt>
+    </Item>
+    <!-- [14] -->
+    <Item>
+      <name>Outfit</name>
+      <isPickable>true</isPickable>
+      <description>A fancy outfit(use on door to go to the date)</description>
+      <textureString>Images/Sprites/tissues</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    
+
   </Asset>
 </XnaContent>

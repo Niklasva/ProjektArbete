@@ -11,18 +11,16 @@
         <Item>4</Item>
       </npcID>
       <itemID>
-        <Item>0</Item>
       </itemID>
       <itemPosition>
-        <Item>20,100</Item>
       </itemPosition>
       <doors>
         <Item>
           <position>0 95</position>
           <nextRoomID>1</nextRoomID>
           <door2Position>280 42</door2Position>
-          <isLocked>true</isLocked>
-          <key>Stone</key>
+          <isLocked>false</isLocked>
+          <key>null</key>
           <textureID>dorr</textureID>
         </Item>
       </doors>
@@ -51,6 +49,7 @@
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
+
        <Item>
           <position>0 0</position>
           <nextRoomID>4</nextRoomID>
@@ -217,7 +216,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>4</dialogID><save>false</save>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
        <!-- Rum [7] - bakom lager bråk med bertil -->
     <Item>
@@ -262,12 +261,13 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID><save>false</save>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
     <!-- Rum [9] - Chefens rum-->
     <Item>
       <backgroundID>chefrum</backgroundID>
       <npcID>
+        <Item>7</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -329,7 +329,7 @@
         <Item>
           <position>315 110</position>
           <nextRoomID>12</nextRoomID>
-          <door2Position>35 5</door2Position>
+          <door2Position>5 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>bakomlagerdorr</textureID>
@@ -358,8 +358,8 @@
         </Item>
         <Item>
           <position>68 53</position>
-          <nextRoomID>10</nextRoomID>
-          <door2Position>35 5</door2Position>
+          <nextRoomID>13</nextRoomID>
+          <door2Position>100 110</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>bakomlagerdorr</textureID>
@@ -367,6 +367,982 @@
       </doors>
       <song>null</song>
       <dialogID>15</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [13] - Jerrys lägenhet-->
+    <Item>
+      <backgroundID>jerrysinrelagenhet</backgroundID>
+      <npcID>
+        <Item>8</Item>
+        <Item>9</Item>
+        <Item>10</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>271 51</position>
+          <nextRoomID>14</nextRoomID>
+          <door2Position>34 110</door2Position>
+          <isLocked>true</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+        <Item>
+          <position>109 11</position>
+          <nextRoomID>17</nextRoomID>
+          <door2Position>35 105</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [14] - Jerrys rum-->
+    <Item>
+      <backgroundID>jerrysrum</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>34 94</position>
+          <nextRoomID>15</nextRoomID>
+          <door2Position>255 85</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>19</dialogID><save>false</save>
+    </Item>
+        <!-- Rum [15] - Jerrys lägenhet efter sovrummet-->
+    <Item>
+      <backgroundID>jerrysinrelagenhet</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>271 51</position>
+          <nextRoomID>16</nextRoomID>
+          <door2Position>48 140</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+        <Item>
+          <position>109 11</position>
+          <nextRoomID>18</nextRoomID>
+          <door2Position>35 105</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+        <!-- Rum [16] - Jerrys rum-->
+    <Item>
+      <backgroundID>jerrysrum</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>34 94</position>
+          <nextRoomID>15</nextRoomID>
+          <door2Position>255 85</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+            <!-- Rum [17] - Köket tomt-->
+    <Item>
+      <backgroundID>jerryskok</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>42 68</position>
+          <nextRoomID>13</nextRoomID>
+          <door2Position>109 11</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+                <!-- Rum [18] - Köket med st och ken-->
+    <Item>
+      <backgroundID>jerryskok</backgroundID>
+      <npcID>
+        <Item>11</Item>
+        <Item>12</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>42 68</position>
+          <nextRoomID>15</nextRoomID>
+          <door2Position>109 11</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+              <!-- Rum [19] - passage till supportgrupp-->
+    <Item>
+      <backgroundID>passage</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>310 71</position>
+          <nextRoomID>20</nextRoomID>
+          <door2Position>20 0</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>22</dialogID><save>true</save>
+    </Item>
+        <!-- Rum [20] - Supportgrupp-->
+    <Item>
+      <backgroundID>supportgrupp</backgroundID>
+      <npcID>
+        <Item>13</Item>
+        <Item>14</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>5 50</position>
+          <nextRoomID>21</nextRoomID>
+          <door2Position>314 30</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>23</dialogID><save>false</save>
+    </Item>
+            <!-- Rum [21] - Supportgrupp fika(1)-->
+            <!-- få detta rum att se fullt ut plz -->
+    <Item>
+      <backgroundID>supportgruppfika1</backgroundID>
+      <npcID>
+        <Item>15</Item>
+        <Item>16</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>5 50</position>
+          <nextRoomID>22</nextRoomID>
+          <door2Position>314 20</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>24</dialogID><save>false</save>
+    </Item>
+                <!-- Rum [22] - Supportgrupp fika(2)-->
+            <!-- få detta rum att se fullt ut plz -->
+    <Item>
+      <backgroundID>supportgruppfika2</backgroundID>
+      <npcID>
+        <Item>17</Item>
+      </npcID>
+      <itemID>
+        <Item>7</Item>
+      </itemID>
+      <itemPosition>
+        <Item>145,66</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>314 70</position>
+          <nextRoomID>21</nextRoomID>
+          <door2Position>5 20</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+                <!-- Rum [23] - Supportgrupp fika(3)-->
+            <!-- få detta rum att se fullt ut plz - gubben utan slips -->
+    <Item>
+      <backgroundID>supportgruppfika1</backgroundID>
+      <npcID>
+        <Item>15</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>5 50</position>
+          <nextRoomID>22</nextRoomID>
+          <door2Position>314 20</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>29</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [24] - passage efter supportgrupp-->
+    <Item>
+      <backgroundID>passage</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>310 71</position>
+          <nextRoomID>25</nextRoomID>
+          <door2Position>134 77</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>30</dialogID><save>true</save>
+    </Item>
+            <!-- Rum [25] - Jerrys rum efter support-->
+    <Item>
+      <backgroundID>jerrysrum</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>34 94</position>
+          <nextRoomID>26</nextRoomID>
+          <door2Position>255 85</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>31</dialogID><save>false</save>
+    </Item>
+            <!-- Rum [26] - Jerrys lägenhet kent/stephen bråk-->
+    <Item>
+      <backgroundID>jerrysinrelagenhet</backgroundID>
+      <npcID>
+        <Item>19</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>271 51</position>
+          <nextRoomID>25</nextRoomID>
+          <door2Position>48 140</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+        <Item>
+          <position>109 11</position>
+          <nextRoomID>27</nextRoomID>
+          <door2Position>35 105</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+        <Item>
+          <position>181 33</position>
+          <nextRoomID>28</nextRoomID>
+          <door2Position>124 20</door2Position>
+          <isLocked>true</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+                <!-- Rum [27] - Köket hämta tröstande saker-->
+    <Item>
+      <backgroundID>jerryskok</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+        <Item>10</Item>
+        <Item>9</Item>
+      </itemID>
+      <itemPosition>
+        <Item>108,100</Item>
+        <Item>254,80</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>42 68</position>
+          <nextRoomID>26</nextRoomID>
+          <door2Position>109 11</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [28] - Vardagsrum-->
+    <Item>
+      <backgroundID>jerrysvardagsrum</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>42 68</position>
+          <nextRoomID>26</nextRoomID>
+          <door2Position>109 11</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>34</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [29] - Vardagsrum natt-->
+    <Item>
+      <backgroundID>jerrysvardagsrum</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>42 68</position>
+          <nextRoomID>26</nextRoomID>
+          <door2Position>109 11</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>35</dialogID><save>false</save>
+    </Item>
+        <!-- Rum [30] - passage efter tröstande av stephen-->
+    <Item>
+      <backgroundID>passage</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>310 71</position>
+          <nextRoomID>31</nextRoomID>
+          <door2Position>134 77</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>36</dialogID><save>true</save>
+    </Item>
+        <!-- Rum [31] - I staden letandes efter salongen(1)-->
+    <Item>
+      <backgroundID>jerryslagenhet</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>33</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>32</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+              <!-- Rum [32] - I staden letandes efter salongen(2)-->
+    <Item>
+      <backgroundID>stad5</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>1 116</position>
+          <nextRoomID>31</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>318 116</position>
+          <nextRoomID>35</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+          <Item>
+          <position>34 50</position>
+          <nextRoomID>39</nextRoomID>
+          <door2Position>39 65</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>staddorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+              <!-- Rum [33] - I staden letandes efter salongen(3)-->
+    <Item>
+      <backgroundID>stad2</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>34</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>31</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+                    <!-- Rum [34] - I staden letandes efter salongen(4)-->
+    <Item>
+      <backgroundID>stad1</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>33</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+                        <!-- Rum [35] - I staden letandes efter salongen(5)-->
+    <Item>
+      <backgroundID>stad4</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>32</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>36</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>1 50</position>
+          <nextRoomID>38</nextRoomID>
+          <door2Position>39 65</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>staddorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [36] - I staden letandes efter salongen(6)-->
+    <Item>
+      <backgroundID>stad3</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>35</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>149 52</position>
+          <nextRoomID>37</nextRoomID>
+          <door2Position>39 65</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>staddorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [37] - Salong 1 (Rätt salong)-->
+    <Item>
+      <backgroundID>salong</backgroundID>
+      <npcID>
+        <Item>21</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 41</position>
+          <nextRoomID>36</nextRoomID>
+          <door2Position>169 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>salongdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [38] - Salong 2-->
+    <Item>
+      <backgroundID>salong</backgroundID>
+      <npcID>
+        <Item>22</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 41</position>
+          <nextRoomID>35</nextRoomID>
+          <door2Position>169 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>salongdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [39] - Salong 3-->
+    <Item>
+      <backgroundID>salong</backgroundID>
+      <npcID>
+        <Item>22</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 41</position>
+          <nextRoomID>32</nextRoomID>
+          <door2Position>169 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>salongdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [40] - Jerrys rum inför dejt-->
+    <Item>
+      <backgroundID>jerrysrum</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+        <Item>12</Item>
+        <Item>13</Item>
+      </itemID>
+      <itemPosition>
+        <Item>50,50</Item>
+        <Item>100,50</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>34 94</position>
+          <nextRoomID>41</nextRoomID>
+          <door2Position>255 60</door2Position>
+          <isLocked>true</isLocked>
+          <key>Outfit</key>
+          <textureID>door</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>38</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [41] - På dejt 1-->
+    <Item>
+      <backgroundID>stad5</backgroundID>
+      <npcID>
+        <Item>23</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>1 116</position>
+          <nextRoomID>42</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>318 116</position>
+          <nextRoomID>43</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+              <!-- Rum [42] - På dejt, åt fel håll-->
+    <Item>
+      <backgroundID>stad2</backgroundID>
+      <npcID>
+        <Item>24</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>41</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+                        <!-- Rum [43] - På dejt 2-->
+    <Item>
+      <backgroundID>stad4</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>41</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>44</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [44] - På dejt 3-->
+    <Item>
+      <backgroundID>stad3</backgroundID>
+      <npcID>
+        <Item>25</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>43</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>45</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [45] - På dejt 4-->
+    <Item>
+      <backgroundID>stad6</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>44</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>65 50</position>
+          <nextRoomID>46</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>staddorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [46] - I Resturangen-->
+    <Item>
+      <backgroundID>resturang</backgroundID>
+      <npcID>
+        <Item>26</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1000 116</position>
+          <nextRoomID>45</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+<!-- Rum [47] - Efter resturang 1-->
+    <Item>
+      <backgroundID>stad6</backgroundID>
+      <npcID>
+        <Item>27</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>310 116</position>
+          <nextRoomID>48</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+        <!-- Rum [48] - Efter resturang 2-->
+    <Item>
+      <backgroundID>stad3</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>47</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>49</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+        <!-- Rum [49] - Efter resturang 3-->
+    <Item>
+      <backgroundID>stad3</backgroundID>
+      <npcID>
+        <Item>25</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1241 116</position>
+          <nextRoomID>48</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
   </Asset>
 </XnaContent>
