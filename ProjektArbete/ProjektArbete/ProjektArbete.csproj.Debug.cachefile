@@ -235,6 +235,25 @@ Content\Images\Characters\doortalk.xnb
 Content\Images\Characters\grrltalk.xnb
 Content\Images\Characters\null.xnb
 Content\Images\Characters\nulltalk.xnb
+Content\Images\Characters\kaffemaskin.xnb
+Content\Images\Characters\kaffemaskintalk.xnb
+Content\Images\Sprites\lego.xnb
+Content\Images\Sprites\legokey.xnb
+Content\Images\Backgrounds\tutorial.xnb
+Content\Images\Backgrounds\tutorial2.xnb
+Content\Images\Backgrounds\tutorial2fg.xnb
+Content\Images\Backgrounds\tutorial2mask.xnb
+Content\Images\Backgrounds\tutorial3.xnb
+Content\Images\Backgrounds\tutorial3fg.xnb
+Content\Images\Backgrounds\tutorial3mask.xnb
+Content\Images\Backgrounds\tutorial4.xnb
+Content\Images\Backgrounds\tutorial4fg.xnb
+Content\Images\Backgrounds\tutorial4mask.xnb
+Content\Images\Backgrounds\tutorialfg.xnb
+Content\Images\Backgrounds\tutorialmask.xnb
+Content\Images\Backgrounds\stad4ingen passage.xnb
+Content\Images\Backgrounds\stad4ingen passagemask.xnb
+Content\Images\Backgrounds\stad4ingen passagefg.xnb
 Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
@@ -294,6 +313,16 @@ Content\Sound\Voice\41.xnb
 Content\Sound\Voice\42.xnb
 Content\Sound\Voice\43.xnb
 Content\Sound\Voice\44.xnb
+Content\Sound\Voice\46.xnb
+Content\Sound\Voice\49.xnb
+Content\Sound\Voice\47.xnb
+Content\Sound\Voice\48.xnb
+Content\Sound\Voice\50.xnb
+Content\Sound\Voice\51.xnb
+Content\Sound\Voice\52.xnb
+Content\Sound\Voice\53.xnb
+Content\Sound\Voice\54.xnb
+Content\Sound\Voice\55.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma
 Content\Sound\BGM\air.wma

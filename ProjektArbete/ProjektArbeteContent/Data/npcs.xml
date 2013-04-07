@@ -192,10 +192,10 @@
       <name>test</name>
       <position>277 77</position>
       <dialogIDs>
-        <Item>0</Item>
+        <Item>50</Item>
         <Item>28</Item>
       </dialogIDs>
-      <itemID>1</itemID>
+      <itemID>0</itemID>
       <wantedItem>A tie</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>
@@ -343,6 +343,62 @@
         <Item>0</Item>
       </dialogIDs>
       <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [30] Miranda tom -->  
+    <Item>
+      <name>grrl</name>
+      <position>146 83</position>
+      <dialogIDs>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [31] Kaffemaskin -->  
+    <Item>
+      <name>kaffemaskin</name>
+      <position>185 48</position>
+      <dialogIDs>
+        <Item>51</Item>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>7</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [32] Badass-->  
+    <Item>
+      <name>test</name>
+      <position>265 70</position>
+      <dialogIDs>
+        <Item>54</Item>
+      </dialogIDs>
+      <itemID>7</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+<!-- [33] Badass 2-->  
+    <Item>
+      <name>test</name>
+      <position>285 80</position>
+      <dialogIDs>
+        <Item>54</Item>
+      </dialogIDs>
+      <itemID>7</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [33] Badass 3-->  
+    <Item>
+      <name>test</name>
+      <position>285 80</position>
+      <dialogIDs>
+        <Item>55</Item>
+      </dialogIDs>
+      <itemID>7</itemID>
       <wantedItem>null</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>

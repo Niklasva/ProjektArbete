@@ -42,7 +42,7 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>319 73</position>
+          <position>310 73</position>
           <nextRoomID>3</nextRoomID>
           <door2Position>10 75</door2Position>
           <isLocked>false</isLocked>
@@ -77,7 +77,7 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>319 73</position>
+          <position>310 73</position>
           <nextRoomID>5</nextRoomID>
           <door2Position>0 95</door2Position>
           <isLocked>false</isLocked>
@@ -129,7 +129,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID><save>false</save>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
 
     <!-- Rum [4] - bakom lager (tom) -->
@@ -152,7 +152,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID><save>false</save>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
 
         <!-- Rum [5] - ikeas supporthörna 3 -->
@@ -184,7 +184,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID><save>false</save>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
 
 <!-- Rum [6] - ikeas lager 3 -->
@@ -198,7 +198,7 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>319 73</position>
+          <position>310 73</position>
           <nextRoomID>5</nextRoomID>
           <door2Position>0 95</door2Position>
           <isLocked>false</isLocked>
@@ -239,7 +239,7 @@
         </Item>
       </doors>
       <song>null</song>
-      <dialogID>2</dialogID><save>false</save>
+      <dialogID>0</dialogID><save>false</save>
     </Item>
     <!-- Rum [8] - bakom lager (tom) 2-->
     <Item>
@@ -302,7 +302,7 @@
           <door2Position>5 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
-          <textureID>bakomlagerdorr</textureID>
+          <textureID>lagerdorr</textureID>
         </Item>
       </doors>
       <song>null</song>
@@ -319,12 +319,12 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>5 120</position>
+          <position>0 120</position>
           <nextRoomID>10</nextRoomID>
           <door2Position>315 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
-          <textureID>bakomlagerdorr</textureID>
+          <textureID>lagerdorr</textureID>
         </Item>
         <Item>
           <position>315 110</position>
@@ -332,7 +332,7 @@
           <door2Position>5 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
-          <textureID>bakomlagerdorr</textureID>
+          <textureID>lagerdorr</textureID>
         </Item>
       </doors>
       <song>null</song>
@@ -349,12 +349,12 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>5 120</position>
+          <position>0 120</position>
           <nextRoomID>11</nextRoomID>
           <door2Position>315 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
-          <textureID>bakomlagerdorr</textureID>
+          <textureID>lagerdorr</textureID>
         </Item>
         <Item>
           <position>68 53</position>
@@ -362,7 +362,7 @@
           <door2Position>100 110</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
-          <textureID>bakomlagerdorr</textureID>
+          <textureID>staddorr</textureID>
         </Item>
       </doors>
       <song>null</song>
@@ -574,6 +574,7 @@
       <npcID>
         <Item>15</Item>
         <Item>16</Item>
+        <Item>31</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -600,10 +601,8 @@
         <Item>17</Item>
       </npcID>
       <itemID>
-        <Item>7</Item>
       </itemID>
       <itemPosition>
-        <Item>145,66</Item>
       </itemPosition>
       <doors>
         <Item>
@@ -867,7 +866,7 @@
         </Item>
         <Item>
           <position>318 116</position>
-          <nextRoomID>35</nextRoomID>
+          <nextRoomID>56</nextRoomID>
           <door2Position>5 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
@@ -963,14 +962,6 @@
           <key>null</key>
           <textureID>lagerdorr</textureID>
         </Item>
-        <Item>
-          <position>1 50</position>
-          <nextRoomID>38</nextRoomID>
-          <door2Position>39 65</door2Position>
-          <isLocked>false</isLocked>
-          <key>null</key>
-          <textureID>staddorr</textureID>
-        </Item>
       </doors>
       <song>null</song>
       <dialogID>0</dialogID><save>false</save>
@@ -996,7 +987,7 @@
         <Item>
           <position>149 52</position>
           <nextRoomID>37</nextRoomID>
-          <door2Position>39 65</door2Position>
+          <door2Position>39 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>staddorr</textureID>
@@ -1065,8 +1056,16 @@
         <Item>
         <position>1 41</position>
           <nextRoomID>32</nextRoomID>
-          <door2Position>169 60</door2Position>
+          <door2Position>35 60</door2Position>
           <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>salongdorr</textureID>
+        </Item>
+        <Item>
+        <position>1 41</position>
+          <nextRoomID>57</nextRoomID>
+          <door2Position>35 60</door2Position>
+          <isLocked>true</isLocked>
           <key>null</key>
           <textureID>salongdorr</textureID>
         </Item>
@@ -1158,6 +1157,7 @@
     <Item>
       <backgroundID>stad4</backgroundID>
       <npcID>
+        <Item>30</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -1219,6 +1219,7 @@
     <Item>
       <backgroundID>stad6</backgroundID>
       <npcID>
+        <Item>30</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -1295,6 +1296,7 @@
     <Item>
       <backgroundID>stad3</backgroundID>
       <npcID>
+        <Item>30</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -1325,7 +1327,8 @@
     <Item>
       <backgroundID>stad3</backgroundID>
       <npcID>
-        <Item>25</Item>
+        <Item>28</Item>
+        <Item>29</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -1336,6 +1339,237 @@
         <position>1241 116</position>
           <nextRoomID>48</nextRoomID>
           <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+            <!-- Rum [50] - Tutorial rum-->
+    <Item>
+      <backgroundID>tutorial</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>310 0</position>
+          <nextRoomID>51</nextRoomID>
+          <door2Position>20 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>46</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [51] - Tutorial rum 2-->
+    <Item>
+      <backgroundID>tutorial</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+        <Item>15</Item>
+      </itemID>
+      <itemPosition>
+        <Item>90,65</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>50</nextRoomID>
+          <door2Position>315 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+        <position>310 0</position>
+          <nextRoomID>52</nextRoomID>
+          <door2Position>20 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>47</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [52] - Tutorial rum 3-->
+    <Item>
+      <backgroundID>tutorial</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+        <Item>15</Item>
+      </itemID>
+      <itemPosition>
+        <Item>100,100</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>51</nextRoomID>
+          <door2Position>315 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+        <position>310 0</position>
+          <nextRoomID>53</nextRoomID>
+          <door2Position>20 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>48</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [53] - Tutorial rum 4-->
+    <Item>
+      <backgroundID>tutorial4</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>52</nextRoomID>
+          <door2Position>315 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+        <position>248 37</position>
+          <nextRoomID>55</nextRoomID>
+          <door2Position>369 39</door2Position>
+          <isLocked>true</isLocked>
+          <key>Toy key</key>
+          <textureID>staddorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>49</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [54] - Intro-->
+    <Item>
+      <backgroundID>black</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>52</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+        <position>248 37</position>
+          <nextRoomID>0</nextRoomID>
+          <door2Position>36 39</door2Position>
+          <isLocked>true</isLocked>
+          <key>Toy key</key>
+          <textureID>staddorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>52</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [55] - Intro 2-->
+    <Item>
+      <backgroundID>black</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>52</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+        <position>248 37</position>
+          <nextRoomID>0</nextRoomID>
+          <door2Position>36 39</door2Position>
+          <isLocked>true</isLocked>
+          <key>Toy key</key>
+          <textureID>staddorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>53</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [56] - I staden letandes efter salongen(5)Ingen passage-->
+    <Item>
+      <backgroundID>stad4ingen passage</backgroundID>
+      <npcID>
+        <Item>32</Item>
+        <Item>33</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>1 116</position>
+          <nextRoomID>32</nextRoomID>
+          <door2Position>315 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+        <Item>
+          <position>310 116</position>
+          <nextRoomID>36</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID><save>false</save>
+    </Item>
+    <!-- Rum [57] - I staden letandes efter salongen(2)-->
+    <Item>
+      <backgroundID>stad5</backgroundID>
+      <npcID>
+        <Item>33</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>318 116</position>
+          <nextRoomID>35</nextRoomID>
+          <door2Position>5 60</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>lagerdorr</textureID>

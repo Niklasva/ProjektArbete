@@ -71,7 +71,7 @@ namespace ProjektArbete
             waitcursor = Content.Load<Texture2D>(@"Images/MenuImages/wait");
             player = new Player(this, Content.Load<Texture2D>(@"Images/AnimatedSprites/vanligTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"),
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"),
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/stilltexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/stillTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
             menu = new Menu(Content.Load<Texture2D>(@"Images/MenuImages/splash"), Content.Load<Texture2D>(@"Images/MenuImages/OPENBUTTON"), Content.Load<Texture2D>(@"Images/MenuImages/NEWBUTTON"));
 

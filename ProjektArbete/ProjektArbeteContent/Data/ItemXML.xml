@@ -139,7 +139,24 @@
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>
     </Item>
-    
+    <!-- [15] -->
+    <Item>
+      <name>Toy part</name>
+      <isPickable>true</isPickable>
+      <description>A toy part</description>
+      <textureString>Images/Sprites/lego</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>16</combinedItemInt>
+    </Item>
+    <!-- [16] -->
+    <Item>
+      <name>Toy key</name>
+      <isPickable>true</isPickable>
+      <description>A mego key</description>
+      <textureString>Images/Sprites/legokey</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
 
   </Asset>
 </XnaContent>

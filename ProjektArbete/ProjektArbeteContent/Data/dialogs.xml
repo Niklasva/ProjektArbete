@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <!-- TODO: replace this Asset with your own XML asset data. -->
   <Asset Type="Library.Dialog[]">
@@ -558,7 +558,7 @@
           <speaker>chefgöran</speaker>
           <position>120 30</position>
           <line>then I don't see you/working here anymore!</line>
-          <time>5000</time>
+          <time>9000</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -880,7 +880,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>cr 19 5,45</line>
+          <line>cr 19 5,30</line>
           <time>0</time>
         </Item>
         <Item>
@@ -988,6 +988,18 @@
           <speaker>Narrator</speaker>
           <position>0 0</position>
           <line>comforted him when he/felt down about not having a job</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>saving</speaker>
+          <position>0 160</position>
+          <line>saving....</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>cr 20 20,0</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1176,25 +1188,7 @@
         <Item>
           <speaker>Gubbe vid bordet</speaker>
           <position>277 70</position>
-          <line>Damn! That was my last tie,/and I managed to dip it in the coffee!</line>
-          <time>3000</time>
-        </Item>
-        <Item>
-          <speaker>Gubbe vid bordet</speaker>
-          <position>277 70</position>
-          <line>How am I supposed to get a job now?/Does anyone have a spare tie?</line>
-          <time>3000</time>
-        </Item>
-        <Item>
-          <speaker>Player</speaker>
-          <position>0 0</position>
-          <line>Hey! I can get you a new tie in exchange/for your chair. Just wait one moment</line>
-          <time>3000</time>
-        </Item>
-        <Item>
-          <speaker>Gubbe vid bordet</speaker>
-          <position>277 70</position>
-          <line>You can? How nice of you!</line>
+          <line></line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1217,7 +1211,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>Damn it I'm tied. I managed to/pour all of my coffee on the floor</line>
+          <line>Why am I'm tired. I managed to/pour all of my coffee on the floor</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1227,9 +1221,9 @@
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>Player</speaker>
+          <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>I can get you a cup of coffee./Just sit tight</line>
+          <line>And now I'm out of coins</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1431,6 +1425,18 @@
           <position>180 50</position>
           <line>But suddenly he heard someone/screaming from the other room</line>
           <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>saving</speaker>
+          <position>0 160</position>
+          <line>saving....</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>cr 25 134,77</line>
+          <time>0</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -1696,6 +1702,18 @@
           <position>180 50</position>
           <line>Problem was, he dind't know which/of the hairsaloons she worked at...</line>
           <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>saving</speaker>
+          <position>0 160</position>
+          <line>saving....</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>cr 31 134,77</line>
+          <time>0</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -2028,19 +2046,60 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Hello! Is this where miranda works?</line>
+          <line>Hi! I would like to get my hair cut!</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Who? I'm sorry she does not</line>
+          <line>How?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Although I heard the hair saloon/down the street got a new worker</line>
+          <line>To look really cool!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>vanligKort</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>lock 0</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>open 1</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[46] - Tutorial 1 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry really liked going right!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2051,5 +2110,280 @@
         </Item>
       </lines>
     </Item>
+    <!-- dialogs[47] - Tutorial 2 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Another thing Jerry learned/early on was to pick up things</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>He did this by clicking on them</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>He could then review the items he had/collected by pressing the I key</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>By pressing the right mouse button on/the item he inspected the item further</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[48] - Tutorial 3 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>He also enjoyed building things</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>This was done by clicking on one/item and then clicking on another</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[49] - Tutorial 4 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>The built thing could then be used to/open doors or they could be given to other people</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Clicking on an item, closing the inventory/and then using it on a door unlocked it</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[50] - Slipsgubben -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>If only I looked better I could get a job!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>And be out of here!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[51] - ge -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[52] - Intro 1-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>The story of Jerry is/a touching one indeed</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>And I'm not one easily/touched by stories</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Now Jerry was a very ordinary man,/he had his work and he had his friends</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry picked up how to/interact with the world eary on</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>cr 50 150,60</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[53] - Intro 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>One day followed another and soon Jerry/got employed by a large furniture company</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>The days started to melt togheter as/the work got more and more monotonous</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>And one day Jerry was at a crossroads</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Even though he didn't know yet,/that day would change his life forever</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>cr 0 36,39</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[54] - Badass dialog ingen passage-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Hey! You can't pass here!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>You look silly!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      
   </Asset>
 </XnaContent>
