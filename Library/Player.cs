@@ -241,7 +241,7 @@ namespace Library
 
         private void updateLayerDepth()
         {
-            layerPosition = (1 - (position.Y + 70) / 180) / 3;
+            layerPosition = (1 - (position.Y + currentSprite.FrameSize.Y) / 180) / 3;
         }
 
         //private void scaleToPosition(Rectangle clientBounds)

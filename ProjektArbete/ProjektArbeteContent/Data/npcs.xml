@@ -90,7 +90,7 @@
     <!-- [7] Chefen -->  
     <Item>
       <name>ikeakund2</name>
-      <position>206 66</position>
+      <position>165 80</position>
       <dialogIDs>
       </dialogIDs>
       <itemID>0</itemID>
@@ -101,7 +101,7 @@
     <Item>
       <!-- Byt till Kents sprite -->
       <name>ikeakund1</name>
-      <position>122 86</position>
+      <position>60 75</position>
       <dialogIDs>
         <Item>17</Item>
       </dialogIDs>
@@ -112,7 +112,7 @@
         <!-- [9] Stephens dörr -->  
     <Item>
       <name>door</name>
-      <position>230 28</position>
+      <position>170 25</position>
       <dialogIDs>
         <Item>16</Item>
       </dialogIDs>
@@ -123,7 +123,7 @@
             <!-- [10] badrummets dörr -->  
     <Item>
       <name>door</name>
-      <position>50 46</position>
+      <position>0 60</position>
       <dialogIDs>
         <Item>18</Item>
       </dialogIDs>
@@ -179,7 +179,7 @@
                   <!-- [15] Miranda -->  
     <Item>
       <name>grrl</name>
-      <position>231 29</position>
+      <position>280 125</position>
       <dialogIDs>
         <Item>25</Item>
       </dialogIDs>
@@ -190,7 +190,7 @@
               <!-- [16] kille som behöver slips -->  
     <Item>
       <name>test</name>
-      <position>277 77</position>
+      <position>175 115</position>
       <dialogIDs>
         <Item>50</Item>
         <Item>28</Item>
