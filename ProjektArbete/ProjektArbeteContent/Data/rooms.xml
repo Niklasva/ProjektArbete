@@ -1371,14 +1371,14 @@
     </Item>
     <!-- Rum [51] - Tutorial rum 2-->
     <Item>
-      <backgroundID>tutorial</backgroundID>
+      <backgroundID>tutorial2</backgroundID>
       <npcID>
       </npcID>
       <itemID>
         <Item>15</Item>
       </itemID>
       <itemPosition>
-        <Item>90,65</Item>
+        <Item>90,78</Item>
       </itemPosition>
       <doors>
         <Item>
@@ -1403,7 +1403,7 @@
     </Item>
     <!-- Rum [52] - Tutorial rum 3-->
     <Item>
-      <backgroundID>tutorial</backgroundID>
+      <backgroundID>tutorial3</backgroundID>
       <npcID>
       </npcID>
       <itemID>
