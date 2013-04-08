@@ -17,11 +17,6 @@ Content\Images\Backgrounds\room3mask.xnb
 Content\Images\Backgrounds\room3fg.xnb
 Content\Images\MenuImages\NEWBUTTON.xnb
 Content\Images\MenuImages\OPENBUTTON.xnb
-Content\Images\AnimatedSprites\downTexture.xnb
-Content\Images\AnimatedSprites\leftTexture.xnb
-Content\Images\AnimatedSprites\rightTexture.xnb
-Content\Images\AnimatedSprites\stillTexture.xnb
-Content\Images\AnimatedSprites\upTexture.xnb
 Content\Images\Characters\test.xnb
 Content\Images\Characters\testtalk.xnb
 Content\Images\MenuImages\splash.xnb
@@ -254,6 +249,7 @@ Content\Images\Backgrounds\tutorialmask.xnb
 Content\Images\Backgrounds\stad4ingen passage.xnb
 Content\Images\Backgrounds\stad4ingen passagemask.xnb
 Content\Images\Backgrounds\stad4ingen passagefg.xnb
+Content\Images\AnimatedSprites\jerrybaby.xnb
 Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb

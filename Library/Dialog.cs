@@ -262,7 +262,7 @@ namespace Library
             {
                 Registry.playersClothes = Registry.WhichClothes.jkea;
             }
-            if (activeLine == "spion")
+            if (activeLine == "babyjerry")
             {
                 Registry.playersClothes = Registry.WhichClothes.spion;
             }

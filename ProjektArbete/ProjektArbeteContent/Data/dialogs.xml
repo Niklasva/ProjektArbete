@@ -2097,6 +2097,12 @@
           <time>1</time>
         </Item>
         <Item>
+          <speaker>ble</speaker>
+          <position>180 50</position>
+          <line>babyjerry</line>
+          <time>0</time>
+        </Item>
+        <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
           <line>Jerry really liked going right!</line>
