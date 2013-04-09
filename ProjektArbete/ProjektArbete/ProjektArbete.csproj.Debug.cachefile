@@ -250,6 +250,16 @@ Content\Images\Backgrounds\stad4ingen passage.xnb
 Content\Images\Backgrounds\stad4ingen passagemask.xnb
 Content\Images\Backgrounds\stad4ingen passagefg.xnb
 Content\Images\AnimatedSprites\jerrybaby.xnb
+Content\Images\Characters\fikamiranda.xnb
+Content\Images\Characters\fikamirandatalk.xnb
+Content\Images\Sprites\peng.xnb
+Content\Images\Characters\villhaslips.xnb
+Content\Images\Characters\villhaslipstalk.xnb
+Content\Images\Characters\laskmaskin.xnb
+Content\Images\Characters\laskmaskintalk.xnb
+Content\Images\Sprites\bord.xnb
+Content\Images\Characters\garderobe.xnb
+Content\Images\Characters\garderobetalk.xnb
 Content\Data\ItemXML.xnb
 Content\Data\rooms.xnb
 Content\Data\dialogs.xnb
@@ -319,6 +329,9 @@ Content\Sound\Voice\52.xnb
 Content\Sound\Voice\53.xnb
 Content\Sound\Voice\54.xnb
 Content\Sound\Voice\55.xnb
+Content\Sound\Voice\56.xnb
+Content\Sound\Voice\57.xnb
+Content\Sound\Voice\58.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma
 Content\Sound\BGM\air.wma

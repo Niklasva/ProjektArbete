@@ -157,6 +157,24 @@
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>
     </Item>
-
+    <!-- [17] -->
+    <Item>
+      <name>Coin</name>
+      <isPickable>true</isPickable>
+      <description>A coin</description>
+      <textureString>Images/Sprites/peng</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+<!-- [18] -->
+<!--BORD-->
+    <Item>
+      <name></name>
+      <isPickable>false</isPickable>
+      <description></description>
+      <textureString>Images/Sprites/bord</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
   </Asset>
 </XnaContent>

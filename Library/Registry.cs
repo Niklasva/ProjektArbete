@@ -28,7 +28,7 @@ namespace Library
         public static Song music;
         public static bool musbol = false;
         public static bool pause = false;
-        public enum WhichClothes { vanliga, militar, kvinna, spion, jkea, vanligaKort };
+        public enum WhichClothes { vanliga, militar, kvinna, babyjerry, jkea, vanligaKort, finkladd };
         public static WhichClothes playersClothes = WhichClothes.jkea;
         public static string currentSong = "";
         public static List<Item> itemsInInventory = new List<Item>();
@@ -90,17 +90,19 @@ namespace Library
             itemsInInventory = itemsToBeAddedToInventory;
             //KÖR INTIZIALIZE EFTER LOAD I GAME
 
-            if (data[5] == "vanliga")
+            if (data[2] == "vanliga")
                 playersClothes = WhichClothes.vanliga;
-            if (data[5] == "militar")
+            if (data[2] == "militar")
                 playersClothes = WhichClothes.militar;
-            if (data[5] == "kvinna")
+            if (data[2] == "kvinna")
                 playersClothes = WhichClothes.kvinna;
-            if (data[5] == "jkea")
+            if (data[2] == "jkea")
                 playersClothes = WhichClothes.jkea;
-            if (data[5] == "spion")
-                playersClothes = WhichClothes.spion;
-            string[] playerPositionString = data[6].Split(':');
+            if (data[2] == "finkladd")
+                playersClothes = WhichClothes.finkladd;
+            if (data[2] == "babyjerry")
+                playersClothes = WhichClothes.babyjerry;
+            string[] playerPositionString = data[3].Split(':');
             float tempPlayerX;
             float tempPlayerY;
             if(float.TryParse(playerPositionString[0], out tempPlayerX) && float.TryParse(playerPositionString[1], out tempPlayerY))

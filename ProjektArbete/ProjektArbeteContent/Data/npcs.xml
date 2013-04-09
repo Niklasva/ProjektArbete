@@ -135,7 +135,7 @@
     <Item>
       <!-- Byt till Kents sprite -->
       <name>ikeakund1</name>
-      <position>265 105</position>
+      <position>245 75</position>
       <dialogIDs>
         <Item>0</Item>
       </dialogIDs>
@@ -146,7 +146,7 @@
       <!-- [12] Bertil i köket -->  
     <Item>
       <name>bertiljkea</name>
-      <position>225 105</position>
+      <position>205 75</position>
       <dialogIDs>
         <Item>20</Item>
       </dialogIDs>
@@ -178,31 +178,31 @@
     </Item>
                   <!-- [15] Miranda -->  
     <Item>
-      <name>grrl</name>
-      <position>280 125</position>
+      <name>fikamiranda</name>
+      <position>260 17</position>
       <dialogIDs>
         <Item>25</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
-      <lookatplayer>true</lookatplayer>
+      <lookatplayer>false</lookatplayer>
     </Item>
               <!-- [16] kille som behöver slips -->  
     <Item>
-      <name>test</name>
-      <position>175 115</position>
+      <name>villhaslips</name>
+      <position>150 17</position>
       <dialogIDs>
         <Item>50</Item>
         <Item>28</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>A tie</wantedItem>
-      <lookatplayer>true</lookatplayer>
+      <lookatplayer>false</lookatplayer>
     </Item>
                   <!-- [17] kille som har slips -->  
     <Item>
       <name>test</name>
-      <position>83 35</position>
+      <position>150 30</position>
       <dialogIDs>
         <Item>26</Item>
         <Item>27</Item>
@@ -213,8 +213,8 @@
     </Item>
                   <!-- [18] Miranda -->  
     <Item>
-      <name>grrl</name>
-      <position>231 29</position>
+      <name>fikamiranda</name>
+      <position>260 85</position>
       <dialogIDs>
         <Item>29</Item>
       </dialogIDs>
@@ -239,7 +239,7 @@
     <Item>
       <!-- Ändra till stephen i vardagsrummet-->
       <name>bertiljkea</name>
-      <position>112 101</position>
+      <position>140 80</position>
       <dialogIDs>
         <Item>0</Item>
       </dialogIDs>
@@ -327,7 +327,7 @@
     <!-- [28] Miranda på dejt vid hennes dörr -->  
     <Item>
       <name>grrl</name>
-      <position>146 83</position>
+      <position>120 60</position>
       <dialogIDs>
         <Item>44</Item>
       </dialogIDs>
@@ -360,13 +360,14 @@
     <!-- [31] Kaffemaskin -->  
     <Item>
       <name>kaffemaskin</name>
-      <position>185 48</position>
+      <position>78 3</position>
       <dialogIDs>
+        <Item>58</Item>
         <Item>51</Item>
         <Item>0</Item>
       </dialogIDs>
       <itemID>7</itemID>
-      <wantedItem>null</wantedItem>
+      <wantedItem>Coin</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
     <!-- [32] Badass-->  
@@ -380,7 +381,7 @@
       <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
-<!-- [33] Badass 2-->  
+    <!-- [33] Badass 2-->  
     <Item>
       <name>test</name>
       <position>285 80</position>
@@ -391,7 +392,7 @@
       <wantedItem>null</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>
-    <!-- [33] Badass 3-->  
+    <!-- [34] Badass 3-->  
     <Item>
       <name>test</name>
       <position>285 80</position>
@@ -401,6 +402,30 @@
       <itemID>7</itemID>
       <wantedItem>null</wantedItem>
       <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [35] Läskmaskin-->  
+    <Item>
+      <name>laskmaskin</name>
+      <position>265 0</position>
+      <dialogIDs>
+        <Item>56</Item>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>17</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [36] Garderobe-->  
+    <Item>
+      <name>garderobe</name>
+      <position>221 16</position>
+      <dialogIDs>
+        <Item>57</Item>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
     </Item>
   </Asset>
 </XnaContent>

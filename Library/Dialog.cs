@@ -264,11 +264,15 @@ namespace Library
             }
             if (activeLine == "babyjerry")
             {
-                Registry.playersClothes = Registry.WhichClothes.spion;
+                Registry.playersClothes = Registry.WhichClothes.babyjerry;
             }
             if (activeLine == "vanligaKort")
             {
                 Registry.playersClothes = Registry.WhichClothes.vanligaKort;
+            }
+            if (activeLine == "finkladd")
+            {
+                Registry.playersClothes = Registry.WhichClothes.finkladd;
             }
         }
     }

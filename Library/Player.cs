@@ -23,10 +23,11 @@ namespace Library
         //De olika spritarna
         private AnimatedSprite vanligSprite;
         private AnimatedSprite militarSprite;
-        private AnimatedSprite spionSprite;
+        private AnimatedSprite babyjerrySprite;
         private AnimatedSprite kvinnaSprite;
         private AnimatedSprite jkeaSprite;
         private AnimatedSprite vanligaKortSprite;
+        private AnimatedSprite finkladdSprite;
         //De spriten som används vid utritning
         private AnimatedSprite currentSprite;
         int yBounds = 5;
@@ -59,14 +60,15 @@ namespace Library
         bool flip; //Håller reda på vilket håll spelaren ska peka åt
 
         //Konstruktor
-        public Player(Game game, Texture2D vanligTexture, Texture2D militarTexture, Texture2D kvinnaTexture, Texture2D spionTexture, Texture2D jkeaTexture, Texture2D vanligaKortTexture, Texture2D invBackGround, Rectangle clientBounds)
+        public Player(Game game, Texture2D vanligTexture, Texture2D militarTexture, Texture2D kvinnaTexture, Texture2D babyjerryTexture, Texture2D jkeaTexture, Texture2D vanligaKortTexture, Texture2D finkladdTexture, Texture2D invBackGround, Rectangle clientBounds)
         {
             this.vanligSprite = new AnimatedSprite(vanligTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 120);
             this.militarSprite = new AnimatedSprite(militarTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
             this.kvinnaSprite = new AnimatedSprite(kvinnaTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
-            this.spionSprite = new AnimatedSprite(spionTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
+            this.babyjerrySprite = new AnimatedSprite(babyjerryTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
             this.jkeaSprite = new AnimatedSprite(jkeaTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
             this.vanligaKortSprite = new AnimatedSprite(vanligaKortTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
+            this.finkladdSprite = new AnimatedSprite(finkladdTexture, position, 0, new Point(34, 70), new Point(0, 0), new Point(4, 5), 100);
             this.inventory = new Inventory(invBackGround, clientBounds, game);
             currentSprite = vanligSprite;
             this.scale = 1f;
@@ -78,14 +80,16 @@ namespace Library
                 currentSprite = vanligSprite;
             else if (Registry.playersClothes == Registry.WhichClothes.militar)
                 currentSprite = militarSprite;
-            else if (Registry.playersClothes == Registry.WhichClothes.spion)
-                currentSprite = spionSprite;
+            else if (Registry.playersClothes == Registry.WhichClothes.babyjerry)
+                currentSprite = babyjerrySprite;
             else if (Registry.playersClothes == Registry.WhichClothes.jkea)
                 currentSprite = jkeaSprite;
             else if (Registry.playersClothes == Registry.WhichClothes.kvinna)
                 currentSprite = kvinnaSprite;
             else if (Registry.playersClothes == Registry.WhichClothes.vanligaKort)
                 currentSprite = vanligaKortSprite;
+            else if (Registry.playersClothes == Registry.WhichClothes.finkladd)
+                currentSprite = finkladdSprite;
 
             //scaleToPosition(clientBounds);
             //Är inventoryn öppen ska spelaren inte röra på sig
