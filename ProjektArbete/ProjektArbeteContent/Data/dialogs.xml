@@ -156,7 +156,6 @@
           <line></line>
           <time>1</time>
         </Item>
-
         <Item>
           <speaker>Jerry</speaker>
           <position>100 20</position>
@@ -232,7 +231,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>92 100</position>
-          <line>*sigh*</line>
+          <line>Well I am too! *sigh*</line>
           <time>1000</time>
         </Item>
         <Item>
@@ -1063,14 +1062,14 @@
         </Item>
         <Item>
           <speaker>Random groupmember</speaker>
-          <position>115 15</position>
-          <line>Great work Miranda!</line>
+          <position>85 15</position>
+          <line>Can you cut my hair too?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Supportgroup Host</speaker>
           <position>57 15</position>
-          <line>Yes, really nice work!/It's lovely seeing you making progress. </line>
+          <line>Yes, really nice work!/It's lovely seeing you making progress</line>
           <time>7000</time>
         </Item>
         <Item>
@@ -1111,7 +1110,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>0 0</position>
-          <line>Jerry couldn't help but/notice how sweet Miranda looked</line>
+          <line>Jerry couldn't help but/notice how nice Miranda looked</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1140,7 +1139,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>Oh, hi Jerry! We would love to chat with you,/why don't you try to find a chair here at my table?</line>
+          <line>Oh, hi Jerry! We would love to chat with you!/Get a spot at our table!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1228,7 +1227,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Of course! Anything for you!</line>
+          <line>Of course!/I would do anything for the man who gave me coffee!</line>
           <time>3000</time>
         </Item>
          <Item>
@@ -1316,13 +1315,13 @@
         <Item>
           <speaker>Miranda</speaker>
           <position>220 50</position>
-          <line>You seem to be a very interesting/person. Where are you from?</line>
+          <line>You seem like a lovely/person. At which hospital where you born?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Well, I was born...</line>
+          <line>I was born in...</line>
           <time>8000</time>
         </Item>
         <Item>
@@ -1540,13 +1539,13 @@
         <Item>
           <speaker>Stephen</speaker>
           <position>112 90</position>
-          <line>Yes it was. And do you remember when we/threw eggs on that proffessor's house?</line>
+          <line>Yes it was. And do you remember when we/threw wheat at that proffessor's house?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Stephen</speaker>
           <position>112 90</position>
-          <line>And do you remember how/mad he was next day in class?</line>
+          <line>And do you remember how/high he was next day in class?</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1558,7 +1557,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>cr 29 170,35</line>
+          <line>cr 29 190,35</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1593,7 +1592,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>...</line>
+          <line>Moron...</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1646,7 +1645,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Last meeting, she announced that/she had finally got that job she was talking about</line>
+          <line>Last meeting, she announced that/she had finally got a job</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1851,7 +1850,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Well ofcourse we are. When my family wanted to celebrate/we always went to this place</line>
+          <line>Well of course we are. My favourite</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1881,7 +1880,19 @@
           <speaker>NPC</speaker>
           <position>180 50</position>
           <line>This place is great!</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>It is, eat up and we'll be off</line>
           <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Fine, I'm all done!</line>
+          <time>5000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
@@ -1992,8 +2003,8 @@
         <Item>
           <speaker>Player</speaker>
           <position>220 50</position>
-          <line>OOF!</line>
-          <time>1000</time>
+          <line>With a shot, I die!</line>
+          <time>5000</time>
         </Item>        
         <Item>
           <speaker>Player</speaker>
@@ -2032,7 +2043,7 @@
           <time>1000</time>
         </Item>
         <Item>
-          <speaker>Jerry</speaker>
+          <speaker>NPC</speaker>
           <position>180 50</position>
           <line>I will turn you into the/most handsome man on earth</line>
           <time>3000</time>
@@ -2309,7 +2320,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Jerry picked up how to/interact with the world eary on</line>
+          <line>Jerry picked up how to/interact with the world early on</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2447,7 +2458,7 @@
           <time>1</time>
         </Item>
         <Item>
-          <speaker>NPC</speaker>
+          <speaker>Narrator</speaker>
           <position>180 50</position>
           <line>Jerry searches the soda dispenser!</line>
           <time>3000</time>
@@ -2511,9 +2522,15 @@
           <time>1</time>
         </Item>
         <Item>
-          <speaker>NPC</speaker>
+          <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Coffee dispenser</line>
+          <line>Jerry tried pushing a button</line>
+          <time>1000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>The machine lights up and says:/insert coins</line>
           <time>1000</time>
         </Item>
         <Item>
@@ -3394,7 +3411,8 @@
           <position>122 62</position>
           <line>cr 71 147,63</line>
           <time>0</time>
-        </Item>          <Item>
+        </Item>          
+        <Item>
           <speaker>timer</speaker>
           <position>122 62</position>
           <line>fall</line>
@@ -3885,7 +3903,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>90 20</position>
-          <line>This is where the demo ends</line>
+          <line>This is where the beta ends</line>
           <time>3000</time>
         </Item>         
         <Item>
