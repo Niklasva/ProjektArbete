@@ -40,7 +40,7 @@
         <Item>
           <speaker></speaker>
           <position>92 100</position>
-          <line>cr 1 1000,1000</line>
+          <line>cr 59 1000,1000</line>
           <time>0</time>
         </Item>
         <Item>
@@ -160,7 +160,7 @@
         <Item>
           <speaker></speaker>
           <position>92 100</position>
-          <line>cr 3 1000,1000</line>
+          <line>cr 61 1000,1000</line>
           <time>1</time>
         </Item>
         <Item>
@@ -272,7 +272,7 @@
         <Item>
           <speaker>null</speaker>
           <position>92 100</position>
-          <line>cr 5 1000,1000</line>
+          <line>cr 63 1000,1000</line>
           <time>0</time>
         </Item>
         <Item>
@@ -452,7 +452,7 @@
         <Item>
           <speaker>null</speaker>
           <position>92 100</position>
-          <line>cr 6 1000,1000</line>
+          <line>cr 64 1000,1000</line>
           <time>0</time>
         </Item>
         <Item>
@@ -677,7 +677,7 @@
         <Item>
           <speaker>null</speaker>
           <position>86 18</position>
-          <line>cr 11 280,42</line>
+          <line>cr 69 280,42</line>
           <time>0</time>
         </Item>
         <Item>
@@ -707,7 +707,7 @@
         <Item>
           <speaker>null</speaker>
           <position>86 18</position>
-          <line>cr 7 1000,1000</line>
+          <line>cr 65 1000,1000</line>
           <time>1500</time>
         </Item>
         <Item>
@@ -794,13 +794,7 @@
           <position>122 62</position>
           <line>Don't forget your parachute</line>
           <time>3000</time>
-        </Item>
-        <Item>
-          <speaker>NPC</speaker>
-          <position>122 62</position>
-          <line>give</line>
-          <time>0</time>
-        </Item>              
+        </Item>          
         <Item>
           <speaker>null</speaker>
           <position>95 100</position>
@@ -858,7 +852,7 @@
         <Item>
           <speaker>teleport</speaker>
           <position>122 62</position>
-          <line>cr 13 147,63</line>
+          <line>cr 71 147,63</line>
           <time>0</time>
         </Item>       
         <Item>
@@ -1209,7 +1203,7 @@
         <Item>
           <speaker>null</speaker>
           <position>122 62</position>
-          <line>cr 21 6,60</line>
+          <line>cr 79 6,60</line>
           <time>0</time>
         </Item>                                                          
         <Item>
@@ -1269,7 +1263,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>122 62</position>
-          <line>cr 22 236,60</line>
+          <line>cr 80 236,60</line>
           <time>1000</time>
         </Item>                                                             
         <Item>
@@ -1299,7 +1293,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>122 62</position>
-          <line>cr 23 236,60</line>
+          <line>cr 81 236,60</line>
           <time>0</time>
         </Item>                                                             
         <Item>

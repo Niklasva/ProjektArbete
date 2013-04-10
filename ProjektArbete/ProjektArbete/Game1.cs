@@ -71,15 +71,16 @@ namespace ProjektArbete
             waitcursor = Content.Load<Texture2D>(@"Images/MenuImages/wait");
             player = new Player(this, Content.Load<Texture2D>(@"Images/AnimatedSprites/vanligTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"),
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/jerrybaby"),
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/jkeatexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/vanligtexture"),
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"), Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/jkeatexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/skalligTexture"),
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/finJerry"), Content.Load<Texture2D>(@"Images/AnimatedSprites/fallTexture"), 
+                Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
-            menu = new Menu(Content.Load<Texture2D>(@"Images/MenuImages/splash"), Content.Load<Texture2D>(@"Images/MenuImages/OPENBUTTON"), Content.Load<Texture2D>(@"Images/MenuImages/NEWBUTTON"));
+            menu = new Menu(Content.Load<Texture2D>(@"Images/MenuImages/betasplash"), Content.Load<Texture2D>(@"Images/MenuImages/OPENBUTTON"), Content.Load<Texture2D>(@"Images/MenuImages/NEWBUTTON"));
 
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[28];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[70];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 

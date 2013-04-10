@@ -13,7 +13,7 @@
       <lookatplayer>false</lookatplayer>
     </Item>
 
-    <!-- [1] Miranda i sjukhuset -->
+    <!-- [1] 37Miranda i sjukhuset -->
     <Item>
       <name>miranda</name>
       <position>90 32</position>
@@ -25,116 +25,116 @@
       <lookatplayer>false</lookatplayer>
     </Item>
 
-    <!-- [2] Patientkompis -->
+    <!-- [2] 38Patientkompis -->
     <Item>
       <name>patient</name>
       <position>239 32</position>
       <dialogIDs>
-        <Item>5</Item>
+        <Item>64</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>  
 
-  <!-- [3] rekryteringssnubbe -->
+  <!-- [3] 39rekryteringssnubbe -->
     <Item>
       <name>armechef</name>
       <position>0 0</position>
       <dialogIDs>
-        <Item>6</Item>
+        <Item>65</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
 
-  <!-- [4] pilot -->
+  <!-- [4] 40pilot -->
     <Item>
       <name>pilot</name>
       <position>122 66</position>
       <dialogIDs>
-        <Item>11</Item>
-        <Item>12</Item>
+        <Item>70</Item>
+        <Item>71</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
 
-    <!-- [5] vatten -->
+    <!-- [5] 41vatten -->
     <Item>
       <name>water</name>
       <position>0 107</position>
       <dialogIDs>
-        <Item>15</Item>
-        <Item>16</Item>
-        <Item>17</Item>
+        <Item>74</Item>
+        <Item>75</Item>
+        <Item>76</Item>
       </dialogIDs>
       <itemID>9</itemID>
       <wantedItem>Empty bottle</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>  
 
-    <!-- [6] soptunna -->
+    <!-- [6] 42soptunna -->
     <Item>
       <name>trashcan</name>
       <position>123 84</position>
       <dialogIDs>
-        <Item>19</Item>
-        <Item>20</Item>
+        <Item>78</Item>
+        <Item>79</Item>
       </dialogIDs>
       <itemID>8</itemID>
       <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
 
-    <!-- [7] snubbe som vill ha vatten -->
+    <!-- [7] 43snubbe som vill ha vatten -->
     <Item>
       <name>desertman</name>
       <position>240 59</position>
       <dialogIDs>
-        <Item>18</Item>
-        <Item>21</Item>
-        <Item>22</Item>
+        <Item>77</Item>
+        <Item>80</Item>
+        <Item>81</Item>
       </dialogIDs>
       <itemID>10</itemID>
       <wantedItem>Water bottle</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>    
 
-    <!-- [8] vakt -->
+    <!-- [8] 44vakt -->
     <Item>
       <name>vakt</name>
       <position>297 54</position>
       <dialogIDs>
-        <Item>23</Item>
-        <Item>24</Item>
+        <Item>82</Item>
+        <Item>83</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>Wad of dough</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item> 
 
-    <!-- [9] fönstervakt -->
+    <!-- [9] 45fönstervakt -->
     <Item>
       <name>fonstervakt</name>
       <position>96 28</position>
       <dialogIDs>
-        <Item>25</Item>
-        <Item>26</Item>
+        <Item>84</Item>
+        <Item>85</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>Loaded slingshot</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>    
 
-    <!-- [10] fönstervakt dörr -->
+    <!-- [10] 46fönstervakt dörr -->
     <Item>
       <name>ambdor</name>
       <position>172 57</position>
       <dialogIDs>
-        <Item>28</Item>
+        <Item>87</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem></wantedItem>

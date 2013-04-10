@@ -175,6 +175,99 @@
       <textureString>Images/Sprites/bord</textureString>
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>
+    </Item>    
+
+
+
+    <!-- [19] -->
+    <Item>
+      <name>Parachute</name>
+      <isPickable>true</isPickable>
+      <description>A packed parachute</description>
+      <textureString>Images/Sprites/parachute</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>3</combinedItemInt>
+    </Item>    
+    <!-- [20] -->
+    <Item>
+      <name>Vine</name>
+      <isPickable>true</isPickable>
+      <description>Ooh. It's stretchy</description>
+      <textureString>Images/Sprites/vine</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>22</combinedItemInt>
+    </Item>    
+    <!-- [21] -->
+    <Item>
+      <name>Twig</name>
+      <isPickable>true</isPickable>
+      <description>Neat! A twig!</description>
+      <textureString>Images/Sprites/twig</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>22</combinedItemInt>
+    </Item>    
+    <!-- [22] -->
+    <Item>
+      <name>Slingshot</name>
+      <isPickable>true</isPickable>
+      <description>An unloaded slingshot</description>
+      <textureString>Images/Sprites/unldsling</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>24</combinedItemInt>
+    </Item>
+    <!-- [23] -->   
+    <Item>
+      <name>Pebble</name>
+      <isPickable>true</isPickable>
+      <description>A small pebble</description>
+      <textureString>Images/Sprites/pebble</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>24</combinedItemInt>
+    </Item>    
+    <!-- [24] -->   
+    <Item>
+      <name>Loaded slingshot</name>
+      <isPickable>true</isPickable>
+      <description>A loaded slingshot</description>
+      <textureString>Images/Sprites/ldsling</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>
+    <!-- [25] -->
+    <Item>
+      <name>Trash can</name>
+      <isPickable>false</isPickable>
+      <description>Someone put a trashcan here. Weird</description>
+      <textureString>Images/Sprites/trashcan</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>    
+    <!-- [26] -->
+    <Item>
+      <name>Empty bottle</name>
+      <isPickable>true</isPickable>
+      <description>An empty water bottle</description>
+      <textureString>Images/Sprites/emptybottle</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>    
+    <!-- [27] -->
+    <Item>
+      <name>Water bottle</name>
+      <isPickable>true</isPickable>
+      <description>A bottle of water</description>
+      <textureString>Images/Sprites/filledbottle</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>
+    <!-- [28] -->     
+    <Item>
+      <name>Wad of dough</name>
+      <isPickable>true</isPickable>
+      <description>Cash money</description>
+      <textureString>Images/Sprites/money</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
     </Item>
   </Asset>
 </XnaContent>

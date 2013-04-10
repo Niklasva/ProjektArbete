@@ -274,6 +274,10 @@ namespace Library
             {
                 Registry.playersClothes = Registry.WhichClothes.finkladd;
             }
+            if (activeLine == "fall")
+            {
+                Registry.playersClothes = Registry.WhichClothes.fall;
+            }
         }
     }
 

@@ -365,7 +365,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 30</position>
-          <line>He went into the storeroom</line>
+          <line>The idiot just left without/putting together my chair</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -467,7 +467,7 @@
         <Item>
           <speaker>Chefen</speaker>
           <position>170 10</position>
-          <line>Jerry, come with me!</line>
+          <line>Jerry, come to my office!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -533,13 +533,13 @@
         <Item>
           <speaker>Player</speaker>
           <position>120 30</position>
-          <line>I haven't got time to do my own work </line>
+          <line>I haven't got time/to do my own work </line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>120 30</position>
-          <line>if I have to help others all the time!</line>
+          <line>if I have to help/others all the time!</line>
           <time>3000</time>
         </Item>
          <Item>
@@ -613,12 +613,6 @@
           <line>Why do I keep spending time with Stephen?/All he does is give me trouble</line>
           <time>3000</time>
         </Item>
-        <Item>
-          <speaker>Player</speaker>
-          <position>0 0</position>
-          <line>And all these people that are like him</line>
-          <time>3000</time>
-        </Item>
          <Item>
           <speaker>Player</speaker>
           <position>0 0</position>
@@ -628,7 +622,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>0 0</position>
-          <line>but I really don't fell like/draging him with me anymore</line>
+          <line>but I really don't feel like/dragging him with me anymore</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -651,7 +645,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>0 0</position>
-          <line>Jerry lives on the third floor in the /apartment buiding to the left</line>
+          <line></line>
           <time>3000</time>
         </Item>
         <Item>
@@ -750,7 +744,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>0 0</position>
-          <line>It's Jerry, we really have to talk!</line>
+          <line>It's Jerry/we really have to talk!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -838,13 +832,13 @@
         <Item>
           <speaker>Player</speaker>
           <position>0 0</position>
-          <line>I've been fired and it's all your fault!</line>
+          <line>I've just been fired/and it's all your fault!</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>I can't help you getting fired!</line>
+          <line>I can't help/you getting fired!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -874,7 +868,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>You can't even managed a job on Jkea!</line>
+          <line>You can't even/manage a job on Jkea!</line>
           <time>6000</time>
         </Item>
         <Item>
@@ -950,13 +944,13 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>0 0</position>
-          <line>Eventually, when he couldn't,he/got invited to a </line>
+          <line>Eventually, when he couldn't, he/got invited to a </line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Narrator</speaker>
           <position>0 0</position>
-          <line>supportgroup for people who/are out of work</line>
+          <line>support group for people who/are out of work</line>
           <time>3000</time>
         </Item>
 
@@ -1052,13 +1046,13 @@
         <Item>
           <speaker>Miranda</speaker>
           <position>150 15</position>
-          <line>hairstylist while/applying for jobs</line>
+          <line>hair stylist while/applying for jobs</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Miranda</speaker>
           <position>150 15</position>
-          <line>I acctually met a nice lady/who was  willing to give me a job</line>
+          <line>I actually met a nice lady/who was  willing to give me a job</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1146,7 +1140,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>Oh, hi Jerry! We would love to talk with you,/why don't you try to find a chair here at my table?</line>
+          <line>Oh, hi Jerry! We would love to chat with you,/why don't you try to find a chair here at my table?</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1169,7 +1163,13 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>Why am I'm tired. I managed to/pour all of my coffee on the floor</line>
+          <line>FUCK!</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>I managed to/pour all of my coffee on the floor</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1228,7 +1228,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Ofcourse! Anything for you!</line>
+          <line>Of course! Anything for you!</line>
           <time>3000</time>
         </Item>
          <Item>
@@ -1257,7 +1257,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Thank you so very much!/Now I will go and get myself a job!</line>
+          <line>Thank you so much!/Time to get myself a job!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1296,33 +1296,33 @@
           <time>1</time>
         </Item>
         <Item>
-          <speaker>NPC</speaker>
-          <position>180 50</position>
+          <speaker>Miranda</speaker>
+          <position>220 50</position>
           <line>Hi Jerry!</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Hi Miranda! That is your name, is it not?</line>
+          <line>Hi Miranda! That is your name, right?</line>
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>NPC</speaker>
-          <position>180 50</position>
-          <line>hihi, yes it is!</line>
+          <speaker>Miranda</speaker>
+          <position>220 50</position>
+          <line>Yes it is!</line>
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>NPC</speaker>
-          <position>180 50</position>
+          <speaker>Miranda</speaker>
+          <position>220 50</position>
           <line>You seem to be a very interesting/person. Where are you from?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Acctually, I was born...</line>
+          <line>Well, I was born...</line>
           <time>8000</time>
         </Item>
         <Item>
@@ -1363,7 +1363,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>As Jerry got home to the/apartment it was very quiet</line>
+          <line>As Jerry got to his/apartment it was very quiet</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1375,7 +1375,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>He went into his bedroom/and got ready for bed</line>
+          <line>So he went into his bedroom/and got ready for bed</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1415,7 +1415,7 @@
         </Item>
         <Item>
           <speaker>Kent</speaker>
-          <position>166 30</position>
+          <position>105 20</position>
           <line>I knew you didn't really care about me!</line>
           <time>3000</time>
         </Item>
@@ -1427,8 +1427,8 @@
         </Item>
         <Item>
           <speaker>Kent</speaker>
-          <position>166 30</position>
-          <line>I'll be glad when this is over!</line>
+          <position>105 20</position>
+          <line>FUCK YOU. I'm leaving</line>
           <time>3000</time>
         </Item>
         <!-- dörrsmäll -->
@@ -1452,19 +1452,19 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Hey Stephen, how is it?</line>
+          <line>How are you feeling?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>That bastard!</line>
+          <line>That idiot!</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>I know. He really wasn't that nice./You're better off without him.</line>
+          <line>I know. He really wasn't that nice./You're better off without him</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1493,13 +1493,13 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>That you Jerry./Do you want to drink it with me?</line>
+          <line>Thanks, Jerry./Do you want to drink this with me?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Sure, let's go into the livingroom</line>
+          <line>Sure, let's go into the living room</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1605,7 +1605,7 @@
         <Item>
         <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Goodnight Stephen</line>
+          <line>Good night, Stephen</line>
           <time>9000</time>
         </Item>
         <Item>
@@ -1646,19 +1646,19 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Last supportmeeting she announced that/she had finally got that job she was talking about</line>
+          <line>Last meeting, she announced that/she had finally got that job she was talking about</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Having heard this and missing her very/much he decided he acctually needed a haircut</line>
+          <line>Having heard this and missing her very/much he decided he needed a haircut</line>
           <time>3000</time>
         </Item>
         <Item>
         <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Problem was, he dind't know which/of the hairsaloons she worked at...</line>
+          <line>Problem was, he dind't know which/of the salons she worked at...</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1670,7 +1670,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>cr 30 85,50</line>
+          <line>cr 31 85,50</line>
           <time>0</time>
         </Item>
         <Item>
@@ -1693,37 +1693,43 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Hello! I wold like to get my hair cut</line>
+          <line>Hello! I would like to get my hair cut</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Jerry?? Well... ofcourse!/I'm so surprised to see you here!</line>
+          <line>Jerry? Well, of course!/I'm so surprised to see you here!</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Please, have a seat</line>
+          <line>But... you don't have any hair</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Miranda, you are such a nice person.</line>
-          <time>3000</time>
+          <line>Oh! I...</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>uh</line>
+          <time>1000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line> How would you feel about/having dinner with me tonight?</line>
+          <line>How would you feel about/having dinner with me tonight?</line>
           <time>3000</time>
         </Item>
         <Item>
         <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>I would acctually love that./It's been so long since I went out</line>
+          <line>I would love that./It's been so long since I went out</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1909,7 +1915,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>I'll walk you</line>
+          <line>I'll walk you home</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1960,7 +1966,7 @@
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>NPC</speaker>
+          <speaker>Player</speaker>
           <position>180 50</position>
           <line>Okay, let me just reach into my pocket</line>
           <time>3000</time>
@@ -1979,9 +1985,21 @@
         </Item>
         <Item>
           <speaker>Theif</speaker>
-          <position>90 50</position>
+          <position>220 50</position>
           <line>Okay! *Pang*</line>
           <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>220 50</position>
+          <line>OOF!</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>220 50</position>
+          <line>cr 58 1000,1000</line>
+          <time>0</time>
         </Item>
         <!--- Jerry blir skjuten och med det avslutas akt 1 -->
         <Item>
@@ -2004,25 +2022,31 @@
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>Hi! I would like to get my hair cut!</line>
-          <time>3000</time>
+          <line>Hello! I would like/to get my hair cut!</line>
+          <time>2500</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>How?</line>
+          <line>A HAIR CUT!?</line>
+          <time>1000</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>180 50</position>
+          <line>I will turn you into the/most handsome man on earth</line>
           <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>And he did</line>
+          <time>1500</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>To look really cool!</line>
-          <time>3000</time>
-        </Item>
-        <Item>
-          <speaker>NPC</speaker>
-          <position>180 50</position>
-          <line>vanligKort</line>
+          <line>vanligaKort</line>
           <time>0</time>
         </Item>
         <Item>
@@ -2036,6 +2060,30 @@
           <position>180 50</position>
           <line>open 1</line>
           <time>0</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Oh toots!</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>I cut it all off!</line>
+          <time>1500</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>You get this cut for free, okay?</line>
+          <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>This was good, because/Jerry forgot to bring cash</line>
+          <time>3000</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -2133,7 +2181,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>This was done by clicking on one/item and then clicking on another</line>
+          <line>This was done by clicking on/one item and then clicking on another</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2162,7 +2210,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Clicking on an item, closing the inventory/and then using it on a door unlocked it</line>
+          <line>Clicking on an item, closing/the inventory and then using it on a door unlocked it</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2233,6 +2281,12 @@
           <position>0 0</position>
           <line></line>
           <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>180 50</position>
+          <line>This game saves automatically/You will be notified when a save occurs</line>
+          <time>3000</time>
         </Item>
         <Item>
           <speaker>Narrator</speaker>
@@ -2337,13 +2391,13 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Hey! You can't pass here!</line>
+          <line>Hey! This part of town is/for non-uggos only</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>You look silly!</line>
+          <line>SO FIX YOUR LOOKS OR LEAVE</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2366,7 +2420,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Hey! You look cool now!</line>
+          <line>Hey! You look cool!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2462,6 +2516,1390 @@
           <line>Coffee dispenser</line>
           <time>1000</time>
         </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[0] 59- Tom dialog-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>3</time>
+        </Item>
+      </lines>
+    </Item>
+
+  <!-- Akt 2: THE FURNITURE WARRIOR -->
+
+    <!-- dialogs[1] 60- Timer i sjukhuset-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>92 100</position>
+          <line>The next morning</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>92 100</position>
+          <line>Jerry found himself inside/the local hospital</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>ingen</speaker>
+          <position>92 100</position>
+          <line></line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker></speaker>
+          <position>92 100</position>
+          <line>cr 59 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+      </Item>
+
+          <!-- dialogs[2] 61- Miranda kommer in i rummet och hälsar-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>86 18</position>
+          <line>Jerry?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[3] 62- Dialog med Mirandas NPC-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>258 95</position>
+          <line>Nrrrghghrg...</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>I wanted to thank you for/taking that bullet for me</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>It's the nicest thing anyone's done for me</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>258 95</position>
+          <line>Yerrr welcomefhsewfh...</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>There's something else I/want to talk to you about</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>258 95</position>
+          <line>Qeagjrtyui...</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>I'm afraid there might/have been a misunderstanding</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>I'm not really into...boys</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>I hope you didn't think we were/going out as anything but friends</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>TYSTNAD</speaker>
+          <position>92 100</position>
+          <line></line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Jerry?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Okay. Get some sleep. You deserve it</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker></speaker>
+          <position>92 100</position>
+          <line>cr 61 1000,1000</line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+          <!-- dialogs[4] 63- Snubben i sängen bredvid Jerry pratar-->
+          <!--
+                Tystnaden i den här dialogen ska ha ljudet av en dörr som stängs
+                Spelaren teleporteras till ett rum där NPC:n för snubben i sängen finns
+          -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>92 100</position>
+          <line></line>
+          <time>5000</time>
+        </Item>
+        <Item>
+          <speaker>Säng</speaker>
+          <position>239 28</position>
+          <line>That sucks</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>92 100</position>
+          <line>cr 62 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[5] 64- Dialog med killen som delar sjukhusrum -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>258 95</position>
+          <line>Yeah</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>But you know what?</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>Heartbreaks like these can/lead to the best parts of your life</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>My wife left me a couple of years/ ago so I joined the army</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>and I've never been/happier</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>258 95</position>
+          <line>I don't know...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line>It's a great way to let your anger out</line>
+          <time>3000</time>
+        </Item>         
+        <Item>
+          <speaker>NPC</speaker>
+          <position>92 100</position>
+          <line></line>
+          <time>3000</time>
+        </Item>       
+        <Item>
+          <speaker>null</speaker>
+          <position>92 100</position>
+          <line>cr 63 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>     
+
+      <!-- dialogs[6] 65- Arméchefen pratar-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>You want to join the army?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>10 10</position>
+          <line>Correct, sir</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>What's your name?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>10 10</position>
+          <line>Jerry, sir</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Think you got what it takes?</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>10 10</position>
+          <line>I do, sir</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Well...</line>
+          <time>500</time>
+        </Item>      
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>May I ask why?</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>10 10</position>
+          <line>It's complicated</line>
+          <time>1500</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>It's a woman, isn't it?</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Silence</speaker>
+          <position>239 28</position>
+          <line></line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>I understand</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Since broken-hearted men are the/toughest fighters I say</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Since broken-hearted men are the/toughest fighters I say</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Welcome to the army</line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>Jerru</speaker>
+          <position>10 10</position>
+          <line>Just like that?</line>
+          <time>2000</time>
+        </Item>  
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Just like that</line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Now, you're going to need a code name</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>In the army we don't go around talking to/people by their wimpy real names</line>
+          <time>4000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Tell me. What are you good at?</line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>Silence</speaker>
+          <position>239 28</position>
+          <line></line>
+          <time>2000</time>
+        </Item> 
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Uh huh</line>
+          <time>1000</time>
+        </Item>           
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Well, what did you work with before?</line>
+          <time>1000</time>
+        </Item>               
+        <Item>
+          <speaker>Jerru</speaker>
+          <position>10 10</position>
+          <line>Jkea</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Silence</speaker>
+          <position>239 28</position>
+          <line></line>
+          <time>100</time>
+        </Item> 
+        <Item>
+          <speaker>NPC</speaker>
+          <position>239 28</position>
+          <line>Then we'll call you</line>
+          <time>1000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>92 100</position>
+          <line>cr 64 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+          <!-- dialogs[7] 66- Jerry får sitt uppdrag-->
+          <!--
+                Tystnaden i den här dialogen ska ha ljudet av en dörr som stängs
+                Spelaren teleporteras till ett rum där NPC:n för snubben i sängen finns
+          -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>92 100</position>
+          <line>14 months later</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>92 100</position>
+          <line>14 months later/13000ft above the qatarian desert</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>239 28</position>
+          <line>Ready for briefing?</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>122 62</position>
+          <line>Yeah</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>239 28</position>
+          <line>All right</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>239 28</position>
+          <line>You know about our relations/with Denmark, right?</line>
+          <time>3200</time>
+        </Item>        
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>122 62</position>
+          <line>Refresh my memory</line>
+          <time>1500</time>
+        </Item>   
+        <Item>
+          <speaker>Radio</speaker>
+          <position>239 28</position>
+          <line>The situation is tense, to say the least</line>
+          <time>4300</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>239 28</position>
+          <line>Ten months ago/the danes elected king Johnson</line>
+          <time>3500</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>122 62</position>
+          <line>I've heard of this</line>
+          <time>1800</time>
+        </Item>          
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>122 62</position>
+          <line>Strange that people would elect a king</line>
+          <time>2500</time>
+        </Item>          
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Yeah. Anyway</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>239 28</position>
+          <line>King Johnson is not fond of our country/and he's spoken publicly</line>
+          <time>3500</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>239 28</position>
+          <line>about the death of everyone/of our nationality</line>
+          <time>3500</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>122 62</position>
+          <line>Harsh. Does he have a reason for this?</line>
+          <time>3500</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Not that I know of</line>
+          <time>2500</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Anyway</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>There are rumors going around saying/that they are planning</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>to attack us with a nuclear bomb</line>
+          <time>2500</time>
+        </Item>
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>122 62</position>
+          <line>Christ</line>
+          <time>1200</time>
+        </Item>        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>The only ally to the Danish that/would have access to nuclear weapons</line>
+          <time>3500</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Is Qatar</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Which leads me to your mission:</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Infiltrate the Danish embassy and/find out what they're up to</line>
+          <time>4000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>I will assist you using this radio</line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>You will not need any weapons/for this mission</line>
+          <time>3000</time>
+        </Item>         
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>as any fatalities would/make situations worse</line>
+          <time>3000</time>
+        </Item>         
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Any equipment you need, you will have/to find or construct yourself</line>
+          <time>4000</time>
+        </Item>             
+        <Item>
+          <speaker>Jerry</speaker>
+          <position>122 62</position>
+          <line>You've got to be kidding me</line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>And one more thing...</line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Congratulations on your promotion</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>FURNITURE WARRIOR</line>
+          <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>militar</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>86 18</position>
+          <line>cr 69 280,42</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[8] 67- timer i FURNITURE WARRIOR skärmen -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>null</speaker>
+          <position>122 62</position>
+          <line></line>
+          <time>10000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>86 18</position>
+          <line>cr 65 1000,1000</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[9] 68- början av spelet -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>This game saves automatically/You will be notified when a save occurs</line>
+          <time>10000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>86 18</position>
+          <line>cr 0 1000,1000</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[10] 69- rumdialog armechef -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>The next morning</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+
+    <!-- dialogs[11] 70- pilot(1) -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Almost time to jump!</line>
+          <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Don't forget your parachute</line>
+          <time>3000</time>
+        </Item>          
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[12] 71- pilot(2) -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Got your parachute?</line>
+          <time>2000</time>
+        </Item>    
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[13] 72- timer -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>timer</speaker>
+          <position>122 62</position>
+          <line>fall</line>
+          <time>0</time>
+        </Item>  
+        <Item>
+          <speaker>timer</speaker>
+          <position>122 62</position>
+          <line></line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>timer</speaker>
+          <position>122 62</position>
+          <line>militar</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>teleport</speaker>
+          <position>122 62</position>
+          <line>cr 71 147,63</line>
+          <time>0</time>
+        </Item>          <Item>
+          <speaker>timer</speaker>
+          <position>122 62</position>
+          <line>fall</line>
+          <time>0</time>
+        </Item>      
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[14] 73- Dialog med colonel efter att man har landat -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Oh</line>
+          <time>1500</time>
+        </Item>            
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>You already jumped?</line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>That's fine</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>I guess</line>
+          <time>1500</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>You're gonna have to walk for a litte/while to get to your target</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>122 62</position>
+          <line>Why didn't you tell me to wait?</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>122 62</position>
+          <line>Shouldn't have to</line>
+          <time>2500</time>
+        </Item>                    
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+  <!-- dialogs[15] 74- vatten -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>NICE POND</line>
+          <time>1000</time>
+        </Item>                         
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>  
+    <!-- dialogs[16] 75- vatten -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>122 62</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>                               
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+    <!-- dialogs[17] 76- vatten -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>Still a neat pond!</line>
+          <time>1000</time>
+        </Item>                               
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[18] 77- gubbe i öknen-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>I'm really thirsty</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Got any water?</line>
+          <time>1500</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>122 62</position>
+          <line>Nope</line>
+          <time>1000</time>
+        </Item>                                          
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[19] 78- soptunna-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>Jerry searched the trash can</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line></line>
+          <time>1000</time>
+        </Item>      
+        <Item>
+          <speaker>null</speaker>
+          <position>122 62</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>      
+        <Item>
+          <speaker>Player</speaker>
+          <position>122 62</position>
+          <line>Bingo</line>
+          <time>1000</time>
+        </Item>                                          
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[20] 79- soptunna 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>                                        
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[21] 80- gubbe i öknen-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Thanks man!</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Here's a little something/for helping me</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>122 62</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>                                          
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[22] 81- gubbe i öknen-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Thanks again for the water</line>
+          <time>1000</time>
+        </Item>                                                 
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[23] 82vakt-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>STOP!</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Only qatari or danish/residents may enter</line>
+          <time>2000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Identification please</line>
+          <time>1500</time>
+        </Item>                                                     
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[24] 83vakt-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>Follow me, sir</line>
+          <time>1500</time>
+        </Item>         
+        <Item>
+          <speaker>null</speaker>
+          <position>122 62</position>
+          <line>cr 79 6,60</line>
+          <time>0</time>
+        </Item>                                                          
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[25] 84fönstervakt-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>HEY!</line>
+          <time>1000</time>
+        </Item>              
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>YOU'RE NOT ALLOWED TO ENTER</line>
+          <time>1000</time>
+        </Item>                                                             
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+        <!-- dialogs[26] 85fönstervakt slangbella-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>*PING*</line>
+          <time>1000</time>
+        </Item>              
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>cr 80 236,60</line>
+          <time>1000</time>
+        </Item>                                                             
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>        
+
+    <!-- dialogs[27] 86fönstervakt slangbella (2) -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line></line>
+          <time>100</time>
+        </Item>              
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line>cr 81 236,60</line>
+          <time>0</time>
+        </Item>                                                             
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[28] 87fönstervakt -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>vakt</speaker>
+          <position>90 20</position>
+          <line>HEY!</line>
+          <time>1000</time>
+        </Item>                                                                  
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+    <!-- dialogs[29] 88 THANKS FOR PLAYING -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>This is where the demo ends</line>
+          <time>3000</time>
+        </Item>         
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>Thanks for playing!</line>
+          <time>300000</time>
+        </Item>         
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>GO HOME!</line>
+          <time>300000</time>
+        </Item>                                                                    
         <Item>
           <speaker>null</speaker>
           <position>95 100</position>
