@@ -3926,5 +3926,40 @@
         </Item>
       </lines>
     </Item>
+    <!-- dialogs[89] Gubbe med slips3 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>90 20</position>
+          <line>I've already given you my tie</line>
+          <time>3000</time>
+        </Item>         
+        <Item>
+          <speaker>NPC</speaker>
+          <position>90 20</position>
+          <line>What else can I give you?</line>
+          <time>300000</time>
+        </Item>         
+        <Item>
+          <speaker>Player</speaker>
+          <position>90 20</position>
+          <line>Oh... nothing</line>
+          <time>300000</time>
+        </Item>                                                                    
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
   </Asset>
 </XnaContent>

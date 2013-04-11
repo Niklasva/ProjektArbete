@@ -1379,9 +1379,11 @@
       </npcID>
       <itemID>
         <Item>15</Item>
+        <Item>15</Item>
       </itemID>
       <itemPosition>
         <Item>90,78</Item>
+        <Item>120,78</Item>
       </itemPosition>
       <doors>
         <Item>
@@ -1605,7 +1607,7 @@
       </doors>
       <song>sjukhus</song>
       <dialogID>60</dialogID>
-      <save>false</save>
+      <save>true</save>
     </Item>
 
         <!-- Rum 59 - sjukhuset m. Miranda och kompis -->

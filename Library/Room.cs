@@ -39,10 +39,13 @@ namespace Library
         private SoundEffect dialogSound;
         private bool soundhasplayed = true;
         //Muskontroll 
-        //Bool för att lägga till föremål i spelaren och ta bort från rummet
+        //variabler för att lägga till föremål i spelaren och ta bort från rummet
         private bool isItemClicked;
         //Och föremålet i fråga
         private Item itemClicked;
+        //Variabler för att byta rum
+        private bool toChangeRoom;
+        private Door nextDoor = new Door();
 
         /// <summary>
         /// Laddar rummets och de saker i rummets innehåll
@@ -64,6 +67,8 @@ namespace Library
                 int.TryParse(dialogID, out tal);
                 this.roomDialog = Registry.dialogs[tal];
                 isItemClicked = false;
+
+                toChangeRoom = false;
                 roomDialog.setFont(game.Content.Load<SpriteFont>(@"textfont"));
                 dialogIsActive = true;
                 dialogSound = game.Content.Load<SoundEffect>(@"Sound/Voice/" + dialogID);
@@ -296,26 +301,13 @@ namespace Library
             }
         }
 
-        public bool isItemClickedInRoom()
-        {
-            return isItemClicked;
-        }
+        
         public void itemWasClicked()
         {
             isItemClicked = false;
+            itemClicked = new Item();
         }
-        public Item getClickedItem()
-        {
-            return itemClicked;
-        }
-        public void removeItem()
-        {
-            items.Remove(itemClicked);
-        }
-        public List<Item> getItems()
-        {
-            return items;
-        }
+        
         public void addItem(Item x)
         {
             Item itemToBeAdded = x;
@@ -326,53 +318,56 @@ namespace Library
 
         private void mousecontrolUpdate()
         {
-            //Om man klickar ner musen
+            //Om man klickar med musen
             //Om man klickar på ett föremål i rummet
-            bool clickedOnItem = false;
-            Item tempItem = new Item();
-            isItemClicked = false;
+            bool clickedThisFrame = false;
             foreach (Item item in items)
             {
                 if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, Mousecontrol.clicked()))
                 {
-                    clickedOnItem = true;
-                    tempItem = item;
+                    if (item.isPickable)
+                    {
+                        isItemClicked = true;
+                        itemClicked = item;
+                        clickedThisFrame = true;
+                    }
                 }
+                else if (Mousecontrol.clicked() && !clickedThisFrame)
+                    isItemClicked = false;
             }
-            if (clickedOnItem)
-            {
-                //Kan man plocka upp föremålet?
-                if (tempItem.isPickable)
-                {
-                    //Ändra en bool som anger om ett föremål har blivit klickat på
-                    isItemClicked = true;
-                    //Föremålet som klickades på tilldelas till en variabel i rummet
-                    itemClicked = tempItem;
-                }
-            }
+            
         }
 
         private void doorUpdate()
         {
-            bool toChangeRoom = false;
-            int nextRoomId = 0;
-            Vector2 nextRoomDoorPosition = Vector2.Zero;
+            bool clickedThisFrame = false;
             foreach (Door item in doors)
             {
-                if (Mousecontrol.inProximityToItem(item.position, new Point(item.getSprite().FrameSize.X + 10, item.getSprite().FrameSize.Y + 10)) && Mousecontrol.clickedOnItem(item.getSprite().Position,
-                    item.getSprite().FrameSize, Mousecontrol.clicked()) && !Registry.inventoryInUse)
+                if (Mousecontrol.clickedOnItem(item.getSprite().Position, item.getSprite().FrameSize, Mousecontrol.clicked()) && !Registry.inventoryInUse)
                 {
                     if (!item.isLocked)
                     {
                         toChangeRoom = true;
-                        nextRoomId = int.Parse(item.nextRoomID);
-                        nextRoomDoorPosition = item.door2Position; 
+                        nextDoor = item;
+                        clickedThisFrame = true;
                     }
+                }
+                else if (Mousecontrol.clicked() && !clickedThisFrame)
+                {
+                    toChangeRoom = false;
+                    //nextDoor = new Door();
                 }
             }
             if (toChangeRoom)
             {
-                changeRoom(nextRoomId, nextRoomDoorPosition);
+                if (Mousecontrol.inProximityToItem(nextDoor.position, new Point(nextDoor.getSprite().FrameSize.X + 10, nextDoor.getSprite().FrameSize.Y + 10)))
+                {
+                    toChangeRoom = false;
+                    int nextRoomId = int.Parse(nextDoor.nextRoomID);
+                    Vector2 door2Position = nextDoor.door2Position;
+                    nextDoor = new Door();
+                    changeRoom(nextRoomId, door2Position);
+                }
             }
         }
         public void changeRoom(int nextRoomId, Vector2 nextRoomDoorPosition)
@@ -433,6 +428,22 @@ namespace Library
         public List<Door> getDoors()
         {
             return doors;
+        }
+        public Item getClickedItem()
+        {
+            return itemClicked;
+        }
+        public void removeItem()
+        {
+            items.Remove(itemClicked);
+        }
+        public List<Item> getItems()
+        {
+            return items;
+        }
+        public bool isItemClickedInRoom()
+        {
+            return isItemClicked;
         }
 
     }

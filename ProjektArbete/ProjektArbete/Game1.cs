@@ -80,7 +80,7 @@ namespace ProjektArbete
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[54];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[51];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 
@@ -102,9 +102,9 @@ namespace ProjektArbete
         {
             // När spelet är inaktivt eller pausat går det inte att göra saker (duh)
             if (this.IsActive && !Registry.pause)
-            {
-                Mousecontrol.update();
+            {   
                 wait = false;
+                Mousecontrol.update();
             }
             else
             {
@@ -112,14 +112,12 @@ namespace ProjektArbete
             }
             if (stateOfGame == StateOfGame.game)
             {
-                
-
                 player.Update(this, gameTime, Window.ClientBounds);
                 Registry.changingRoom = false;               
                 Registry.currentRoom.Update(gameTime, Window.ClientBounds);
 
                 //Muskontroll
-                if (!player.IsMoving && !player.InventoryInUse && Registry.currentRoom.isItemClickedInRoom())
+                if (!player.InventoryInUse && Registry.currentRoom.isItemClickedInRoom())
                 {
                     Sprite item = Registry.currentRoom.getClickedItem().getSprite();
                     if (Mousecontrol.inProximityToItem(item.Position, item.FrameSize))
