@@ -80,7 +80,7 @@ namespace ProjektArbete
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[51];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[84];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 
@@ -195,7 +195,7 @@ namespace ProjektArbete
                     Vector2.Zero,
                     1,
                     SpriteEffects.None,
-                    0.1f);
+                    0f);
             }
             else if (wait)
             {

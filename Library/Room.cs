@@ -360,7 +360,7 @@ namespace Library
             }
             if (toChangeRoom)
             {
-                if (Mousecontrol.inProximityToItem(nextDoor.position, new Point(nextDoor.getSprite().FrameSize.X + 10, nextDoor.getSprite().FrameSize.Y + 10)))
+                if (Mousecontrol.inProximityToItem(nextDoor.position, new Point(nextDoor.getSprite().FrameSize.X + 2, nextDoor.getSprite().FrameSize.Y + 2)))
                 {
                     toChangeRoom = false;
                     int nextRoomId = int.Parse(nextDoor.nextRoomID);

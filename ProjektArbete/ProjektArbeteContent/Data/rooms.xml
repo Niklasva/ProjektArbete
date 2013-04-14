@@ -2298,6 +2298,134 @@
       <song>null</song>
       <dialogID>88</dialogID>
       <save>true</save>
-    </Item>               
+    </Item>         
+
+    <!-- Rum 84- Lobby -->
+    <Item>
+      <backgroundID>intembaslobby</backgroundID>
+      <npcID>
+        <Item>47</Item>
+      </npcID>
+      <itemID>
+        <Item>29</Item>
+      </itemID>
+      <itemPosition>
+        <Item>39,85</Item>
+      </itemPosition>
+      <doors>         
+        <Item>
+          <position>60 52</position>
+          <nextRoomID>85</nextRoomID>
+          <door2Position>0 0</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lobbysight</textureID>
+        </Item>       
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>     
+
+    <!-- Rum 85- caught! -->
+    <!-- Jerry upptäcks och fångas av vakterna i ambassaden.
+        Används flera gånger -->
+    <Item>
+      <backgroundID>black</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>           
+      </doors>
+      <song>null</song>
+      <dialogID>90</dialogID>
+      <save>false</save>
+    </Item>            
+
+    <!-- Rum 86- finkan -->
+    <Item>
+      <backgroundID>intembascell</backgroundID>
+      <npcID>
+        <Item>48</Item>
+        <Item>49</Item>
+      </npcID>
+      <itemID>
+        <Item>30</Item>
+        <Item>31</Item>
+      </itemID>
+      <itemPosition>
+        <Item>50,23</Item>
+        <Item>170,89</Item>
+      </itemPosition>
+      <doors>           
+      </doors>
+      <song>null</song>
+      <dialogID>91</dialogID>
+      <save>false</save>
+    </Item>           
+
+    <!-- Rum 87- finkan 2 -->
+    <Item>
+      <backgroundID>intembascell</backgroundID>
+      <npcID>
+        <Item>50</Item>
+        <Item>51</Item>
+      </npcID>
+      <itemID>
+        <Item>30</Item>
+      </itemID>
+      <itemPosition>
+        <Item>50,23</Item>
+      </itemPosition>
+      <doors>           
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+    <!-- Rum 88- finkan 3 -->
+    <Item>
+      <backgroundID>intembascell2</backgroundID>
+      <npcID>
+        <Item>51</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>           
+      </doors>
+      <song>null</song>
+      <dialogID>98</dialogID>
+      <save>false</save>
+    </Item>     
+    
+    <!-- Rum 89- finkan 4 -->
+    <Item>
+      <backgroundID>intembascell3</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>33</Item>
+      </itemID>
+      <itemPosition>
+        <Item>50,23</Item>
+      </itemPosition>
+      <doors>           
+      </doors>
+      <song>null</song>
+      <dialogID>97</dialogID>
+      <save>false</save>
+    </Item>   
   </Asset>
 </XnaContent>

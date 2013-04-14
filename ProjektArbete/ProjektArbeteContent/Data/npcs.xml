@@ -555,6 +555,69 @@
       <itemID>0</itemID>
       <wantedItem></wantedItem>
       <lookatplayer>false</lookatplayer>
+    </Item>    
+
+    <!-- [47] lobbyvakt -->
+    <Item>
+      <name>guard</name>
+      <position>136 5</position>
+      <dialogIDs>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem></wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>    
+
+    <!-- [48] fängelsevakt -->
+    <Item>
+      <name>guard</name>
+      <position>146 20</position>
+      <dialogIDs>
+        <Item>92</Item>
+        <Item>95</Item>
+      </dialogIDs>
+      <itemID>32</itemID>
+      <wantedItem></wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>    
+
+    <!-- [49] brandlarm -->
+    <Item>
+      <name>firealarm</name>
+      <position>65 30</position>
+      <dialogIDs>
+        <Item>93</Item>
+        <Item>94</Item>
+      </dialogIDs>
+      <itemID>93</itemID>
+      <wantedItem>Spoon</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>    
+
+    <!-- [50] Celldörr -->
+    <Item>
+      <name>celldorr</name>
+      <position>175 22</position>
+      <dialogIDs>
+        <Item>97</Item>
+        <Item>96</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Bowl of hot soup</wantedItem>
+      <lookatplayer>false</lookatplayer>
     </Item>
+
+    <!-- [51] brandlarm -->
+    <Item>
+      <name>firealarm</name>
+      <position>65 30</position>
+      <dialogIDs>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem></wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>  
   </Asset>
 </XnaContent>

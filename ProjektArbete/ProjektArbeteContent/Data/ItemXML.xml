@@ -268,6 +268,56 @@
       <textureString>Images/Sprites/money</textureString>
       <isCombinable>false</isCombinable>
       <combinedItemInt>1</combinedItemInt>
+    </Item>    
+
+    <!-- [29] sak man gömmer sig bakom i lobbyn -->     
+    <Item>
+      <name></name>
+      <isPickable>false</isPickable>
+      <description></description>
+      <textureString>Images/Sprites/embseparator</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
     </Item>
+   
+    <!-- [30] -->
+    <Item>
+      <name></name>
+      <isPickable>false</isPickable>
+      <description></description>
+      <textureString>Images/Sprites/cell1</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>   
+
+    <!-- [31] -->
+    <Item>
+      <name>Bowl of hot soup</name>
+      <isPickable>true</isPickable>
+      <description>Extremely hot</description>
+      <textureString>Images/Sprites/bowl</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>    
+
+    <!-- [32] -->
+    <Item>
+      <name>Spoon</name>
+      <isPickable>true</isPickable>
+      <description>A light spoon</description>
+      <textureString>Images/Sprites/spoon</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>
+
+    <!-- [33] -->
+    <Item>
+      <name></name>
+      <isPickable>false</isPickable>
+      <description></description>
+      <textureString>Images/Sprites/cell2</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>1</combinedItemInt>
+    </Item>   
   </Asset>
 </XnaContent>

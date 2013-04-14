@@ -3960,6 +3960,281 @@
           <time>4040</time>
         </Item>
       </lines>
+    </Item>    
+
+    <!-- dialogs[90] CAUGHT! -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>Who's there?</line>
+          <time>3000</time>
+        </Item>              
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>HEY! You're not supposed to be here</line>
+          <time>3000</time>
+        </Item>          
+        <Item>
+          <speaker>ble</speaker>
+          <position>122 62</position>
+          <line>cr 86 112,50</line>
+          <time>0</time>
+        </Item>    
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[91] rumdialog för finkan -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Vakt</speaker>
+          <position>146 20</position>
+          <line>Welcome to hell</line>
+          <time>3000</time>
+        </Item>              
+        <Item>
+          <speaker>Vakt</speaker>
+          <position>146 20</position>
+          <line>Today's special is hot soup</line>
+          <time>3000</time>
+        </Item>     
+        <Item>
+          <speaker>Player</speaker>
+          <position>146 20</position>
+          <line>Thanks</line>
+          <time>3000</time>
+        </Item>     
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[92] prata med finkvakt -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>146 20</position>
+          <line>What?</line>
+          <time>3000</time>
+        </Item>           
+        <Item>
+          <speaker>Player</speaker>
+          <position>146 20</position>
+          <line>I can't eat this</line>
+          <time>3000</time>
+        </Item>              
+        <Item>
+          <speaker>Player</speaker>
+          <position>146 20</position>
+          <line>It'll kill me</line>
+          <time>3000</time>
+        </Item>         
+        <Item>
+          <speaker>NPC</speaker>
+          <position>146 20</position>
+          <line>Don't be a baby/Here's a spoon</line>
+          <time>3000</time>
+        </Item>              
+        <Item>
+          <speaker>NPC</speaker>
+          <position>146 20</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>                
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[93] brandlarm -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>                
+        <Item>
+          <speaker>Player</speaker>
+          <position>146 20</position>
+          <line>I can't reach it</line>
+          <time>3000</time>
+        </Item>                           
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[94] brandlarm -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>                
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>146 20</position>
+          <line>Jerry hit the switch/and the fire alarm started to ring</line>
+          <time>3000</time>
+        </Item>            
+        <Item>
+          <speaker>snubbe</speaker>
+          <position>116 20</position>
+          <line>Oh no there's a fire!</line>
+          <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>ble</speaker>
+          <position>122 62</position>
+          <line>cr 87 112,50</line>
+          <time>0</time>
+        </Item>                              
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>    
+
+    <!-- dialogs[95] dialog med fängelsevakt 2 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>                
+        <Item>
+          <speaker>NPC</speaker>
+          <position>146 20</position>
+          <line>What?</line>
+          <time>3000</time>
+        </Item>                           
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
     </Item>
+
+    <!-- dialogs[96] dörr -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>                      
+        <Item>
+          <speaker>ble</speaker>
+          <position>122 62</position>
+          <line>cr 88 112,50</line>
+          <time>0</time>
+        </Item>                              
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>      
+    <!-- dialogs[97] dörr 2 -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>                                                 
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>  
+
+    <!-- dialogs[98] timer -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>                      
+        <Item>
+          <speaker>ble</speaker>
+          <position>122 62</position>
+          <line></line>
+          <time>350</time>
+        </Item>              
+        <Item>
+          <speaker>ble</speaker>
+          <position>122 62</position>
+          <line>cr 89 112,50</line>
+          <time>0</time>
+        </Item>                                       
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item> 
   </Asset>
 </XnaContent>
