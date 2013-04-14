@@ -24,9 +24,11 @@ namespace Library
         private static Vector2 position;
         public static Vector2 getPosition { get { return position; } }
         private static bool isMouseOverItem = false;
-        public static bool hover { get { return isMouseOverItem; } }
+        private static bool isMouseOverItemThisFrame = false;
+        public static bool hover { get { return isMouseOverItemThisFrame; } }
         public static void update()
         {
+            isMouseOverItemThisFrame = false;
             prevMouseState = currMouseState;
             currMouseState = Mouse.GetState();
             position = new Vector2(currMouseState.X / 3, currMouseState.Y / 3);
@@ -69,7 +71,10 @@ namespace Library
             if (currMouseState.X / 3 >= position.X && currMouseState.X / 3 <= position.X + frameSize.X)
             {
                 if (currMouseState.Y / 3 >= position.Y && currMouseState.Y / 3 <= position.Y + frameSize.Y)
+                {
                     isMouseOverItem = true;
+                    isMouseOverItemThisFrame = true;
+                }
             }
 
             return isMouseOverItem;

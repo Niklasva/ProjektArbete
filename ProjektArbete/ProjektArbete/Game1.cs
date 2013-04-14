@@ -172,6 +172,16 @@ namespace ProjektArbete
         {
             GraphicsDevice.Clear(Color.AntiqueWhite);
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Matrix.CreateScale(3f));
+            if (stateOfGame == StateOfGame.game)
+            {
+                Registry.currentRoom.Draw(gameTime, spriteBatch);
+                player.Draw(gameTime, spriteBatch);
+            }
+
+            if (stateOfGame == StateOfGame.menu)
+            {
+                menu.Draw(gameTime, spriteBatch);
+            }
             if (Mousecontrol.hover)
             {
                 spriteBatch.Draw(
@@ -217,16 +227,7 @@ namespace ProjektArbete
                     SpriteEffects.None,
                     0f);
             }
-            if (stateOfGame == StateOfGame.game)
-            {
-                Registry.currentRoom.Draw(gameTime, spriteBatch);
-                player.Draw(gameTime, spriteBatch);
-            }
-
-            if (stateOfGame == StateOfGame.menu)
-            {
-                menu.Draw(gameTime, spriteBatch);
-            }
+            
             spriteBatch.End();
             base.Draw(gameTime);
         }
