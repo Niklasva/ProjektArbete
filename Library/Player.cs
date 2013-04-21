@@ -112,7 +112,6 @@ namespace Library
                 //mousePosition = mouseState/3 för att mouseState inte har något med upplösningen (som tredubblas) att göra
                 mousePosition.X = (mouseState.X / 3);
                 mousePosition.Y = (mouseState.Y / 3);
-
                 if (Mousecontrol.clicked())
                 {
                     target.X = mousePosition.X - 15;

@@ -318,6 +318,76 @@
       <textureString>Images/Sprites/cell2</textureString>
       <isCombinable>false</isCombinable>
       <combinedItemInt>1</combinedItemInt>
-    </Item>   
+    </Item>       
+
+    <!-- [34] -->
+    <Item>
+      <name>Oil</name>
+      <isPickable>true</isPickable>
+      <description>It seems to be full</description>
+      <textureString>Images/Sprites/gascontainer</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>37</combinedItemInt>
+    </Item> 
+
+    <!-- [35] -->
+    <Item>
+      <name>Assault rifle</name>
+      <isPickable>true</isPickable>
+      <description>Loaded</description>
+      <textureString>Images/Sprites/rifle</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>38</combinedItemInt>
+    </Item> 
+
+    <!-- [36] -->
+    <Item>
+      <name>Pot</name>
+      <isPickable>true</isPickable>
+      <description>Empty cooking pot</description>
+      <textureString>Images/Sprites/pot</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>37</combinedItemInt>
+    </Item> 
+
+    <!-- [37] -->
+    <Item>
+      <name>Pot of oil</name>
+      <isPickable>true</isPickable>
+      <description>Almost a bomb</description>
+      <textureString>Images/Sprites/oilpot</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>38</combinedItemInt>
+    </Item> 
+
+    <!-- [38] -->
+    <Item>
+      <name>Almost a bomb</name>
+      <isPickable>true</isPickable>
+      <description>Only needs a fuse now</description>
+      <textureString>Images/Sprites/oilpot</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>40</combinedItemInt>
+    </Item> 
+
+    <!-- [39] -->
+    <Item>
+      <name>Wire</name>
+      <isPickable>true</isPickable>
+      <description>Yup</description>
+      <textureString>Images/Sprites/wire</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>40</combinedItemInt>
+    </Item> 
+
+    <!-- [40] -->
+    <Item>
+      <name>Bomb</name>
+      <isPickable>true</isPickable>
+      <description>Very explosive</description>
+      <textureString>Images/Sprites/bomb</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item> 
   </Asset>
 </XnaContent>

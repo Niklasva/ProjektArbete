@@ -2421,11 +2421,758 @@
       <itemPosition>
         <Item>50,23</Item>
       </itemPosition>
-      <doors>           
+      <doors>
+      <Item>
+          <position>245 25</position>
+          <nextRoomID>90</nextRoomID>
+          <door2Position>32 33</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>celldorr</textureID>
+        </Item>            
+        <Item>
+          <position>131 25</position>
+          <nextRoomID>93</nextRoomID>
+          <door2Position>152 107</door2Position>
+          <isLocked>true</isLocked>
+          <key>Screwdriver</key>
+          <textureID>ventdorr</textureID>
+        </Item>          
       </doors>
       <song>null</song>
       <dialogID>97</dialogID>
       <save>false</save>
+    </Item>       
+
+    <!-- Rum 90- lobby2 -->
+    <Item>
+      <backgroundID>intembaslobby2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      <Item>
+          <position>245 49</position>
+          <nextRoomID>91</nextRoomID>
+          <door2Position>86 62</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>downstair</textureID>
+        </Item>             
+        <Item>
+          <position>23 12</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>236 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>finkdorr</textureID>
+        </Item>             
+      </doors>
+      <song>null</song>
+      <dialogID>97</dialogID>
+      <save>false</save>
+    </Item>       
+
+    <!-- Rum 91- basement -->
+    <Item>
+      <backgroundID>basement1</backgroundID>
+      <npcID>
+        <Item>52</Item>
+      </npcID>
+      <itemID>
+        <Item>39</Item>
+      </itemID>
+      <itemPosition>
+        <Item>30,100</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>37 60</position>
+          <nextRoomID>90</nextRoomID>
+          <door2Position>300 30</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>finkdorr</textureID>
+        </Item>                    
+        <Item>
+        <position>310 0</position>
+          <nextRoomID>92</nextRoomID>
+          <door2Position>5 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>          
+      </doors>
+      <song>null</song>
+      <dialogID>97</dialogID>
+      <save>false</save>
+    </Item>     
+    <!-- Rum 92- basement 2 -->
+    <Item>
+      <backgroundID>basement2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>34</Item>
+      </itemID>
+      <itemPosition>
+        <Item>250,100</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>91</nextRoomID>
+          <door2Position>300 100</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lagerdorr</textureID>
+        </Item>       
+
+        <Item>
+        <position>220 98</position>
+          <nextRoomID>99</nextRoomID>
+          <door2Position>300 100</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>lappdorr</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+    <!-- Rum 93- duct1 -->
+    <Item>
+      <backgroundID>duct1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>94</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+        <!-- Rum 94- duct2 -->
+    <Item>
+      <backgroundID>duct2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>95</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+            <!-- Rum 95- duct3 -->
+    <Item>
+      <backgroundID>ductsplit</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>96</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ducthalv</textureID>
+        </Item>      
+
+        <Item>
+        <position>160 0</position>
+          <nextRoomID>100</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ducthalv</textureID>
+        </Item>         
+   
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+        <!-- Rum 96- duct1.1 -->
+    <Item>
+      <backgroundID>duct1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>97</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>         
+
+    <!-- Rum 97- duct1.2 -->
+    <Item>
+      <backgroundID>duct2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>98</nextRoomID>
+          <door2Position>277 67</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>     
+
+    <!-- Rum 98- rum efter duct1.2 -->
+    <Item>
+      <backgroundID>rum</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>35</Item>
+      </itemID>
+      <itemPosition>
+        <Item>96,112</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>276 62</position>
+          <nextRoomID>95</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ventdorr</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+    <!-- Rum 99- titta på lapp -->
+    <Item>
+      <backgroundID>bomblapp</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>92</nextRoomID>
+          <door2Position>213 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>92</nextRoomID>
+          <door2Position>213 50</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>101</dialogID>
+      <save>false</save>
+    </Item> 
+
+    <!-- Rum 100- duct2.1 -->
+    <Item>
+      <backgroundID>duct2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>101</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+                <!-- Rum 101- duct2.2 -->
+    <Item>
+      <backgroundID>ductsplit</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>102</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ducthalv</textureID>
+        </Item>      
+
+        <Item>
+        <position>160 0</position>
+          <nextRoomID>104</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ducthalv</textureID>
+        </Item>         
+   
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+    <!-- Rum 102- duct2.2 -->
+    <Item>
+      <backgroundID>duct1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>103</nextRoomID>
+          <door2Position>22 61</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+
+    <!-- Rum 103- rum efter duct2.2 -->
+    <Item>
+      <backgroundID>ambkok</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>36</Item>
+      </itemID>
+      <itemPosition>
+        <Item>200,112</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>22 61</position>
+          <nextRoomID>101</nextRoomID>
+          <door2Position>141 75</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ventdorr</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+
+        <!-- Rum 104- duct2.1.1-->
+    <Item>
+      <backgroundID>duct1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>105</nextRoomID>
+          <door2Position>277 67</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>89</nextRoomID>
+          <door2Position>131 15</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>      
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>  
+
+    <!-- Rum 105- kungens rum-->
+    <Item>
+      <backgroundID>kungrum</backgroundID>
+      <npcID>
+        <Item>53</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>227 3</position>
+          <nextRoomID>101</nextRoomID>
+          <door2Position>277 67</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ventdorr</textureID>
+        </Item>         
+      </doors>
+      <song>null</song>
+      <dialogID>102</dialogID>
+      <save>false</save>
+    </Item>
+
+    <!-- Rum 106 utanför ambassaden -->
+    <Item>
+      <backgroundID>extembas1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>0 40</position>
+          <nextRoomID>107</nextRoomID>
+          <door2Position>1000 1000</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>
+
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>107</nextRoomID>
+          <door2Position>1000 1000</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item> 
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item> 
+
+
+        <!-- Rum 107 ambassaden exploderar 1 -->
+    <Item>
+      <backgroundID>extembas1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>105</dialogID>
+      <save>false</save>
+    </Item>    
+            <!-- Rum 108 ambassaden exploderar 1 -->
+    <Item>
+      <backgroundID>extembasexplosion1</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>106</dialogID>
+      <save>false</save>
+    </Item>  
+            <!-- Rum 109 ambassaden exploderar 1 -->
+    <Item>
+      <backgroundID>extembasexplosion2</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>107</dialogID>
+      <save>false</save>
+    </Item>  
+            <!-- Rum 110 ambassaden exploderar 1 -->
+    <Item>
+      <backgroundID>extembasexplosion3</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>108</dialogID>
+      <save>false</save>
+    </Item>      
+                <!-- Rum 111 ambassaden exploderar 1 -->
+    <Item>
+      <backgroundID>extembasexplosion4</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>109</dialogID>
+      <save>false</save>
+    </Item>               
+
+    <!-- Rum 112 ambassaden exploderar 1 -->
+    <Item>
+      <backgroundID>extembasexplosion5</backgroundID>
+      <npcID>
+        <Item>0</Item>
+      </npcID>
+      <itemID>
+        <Item>0</Item>
+      </itemID>
+      <itemPosition>
+        <Item>0,0</Item>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>110</dialogID>
+      <save>false</save>
     </Item>   
+
+    <!-- Rum [113] - akt 2 slutar-->
+    <Item>
+      <backgroundID>black</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>111</dialogID>
+      <save>true</save>
+    </Item>            
   </Asset>
 </XnaContent>

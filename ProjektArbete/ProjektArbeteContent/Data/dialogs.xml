@@ -520,7 +520,7 @@
         <Item>
           <speaker>chefgöran</speaker>
           <position>120 30</position>
-          <line> He gets his work done, </line>
+          <line> He gets his work done,</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -532,7 +532,7 @@
         <Item>
           <speaker>Player</speaker>
           <position>120 30</position>
-          <line>I haven't got time/to do my own work </line>
+          <line>I haven't got time/to do my own work</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1139,7 +1139,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>Oh, hi Jerry! We would love to chat with you!/Get a spot at our table!</line>
+          <line>Oh, hi Jerry! We would love to chat with you!/Take a seat!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1315,7 +1315,7 @@
         <Item>
           <speaker>Miranda</speaker>
           <position>220 50</position>
-          <line>You seem like a lovely/person. At which hospital where you born?</line>
+          <line>You seem like a lovely/person. Where are you from?</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1844,7 +1844,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Sorry, I've never been to this part of town,/are we going to a fancy resturant?</line>
+          <line>Are we going to a fancy resturant?</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1883,15 +1883,9 @@
           <time>2000</time>
         </Item>
         <Item>
-          <speaker>Player</speaker>
+          <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>It is, eat up and we'll be off</line>
-          <time>3000</time>
-        </Item>
-        <Item>
-          <speaker>NPC</speaker>
-          <position>180 50</position>
-          <line>Fine, I'm all done!</line>
+          <line>They had a great time</line>
           <time>5000</time>
         </Item>
         <Item>
@@ -2408,7 +2402,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>SO FIX YOUR LOOKS OR LEAVE</line>
+          <line>SO FIX YOUR LOOKS  /OR LEAVE   </line>
           <time>3000</time>
         </Item>
         <Item>
@@ -3903,21 +3897,64 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>90 20</position>
-          <line>This is where the beta ends</line>
+          <line>Just as Jerry reached for the doorknob/his radio started to beep</line>
           <time>3000</time>
-        </Item>         
+        </Item>
+        <!-- jerry säger det här -->         
         <Item>
           <speaker>Narrator</speaker>
           <position>90 20</position>
-          <line>Thanks for playing!</line>
-          <time>300000</time>
+          <line>Colonel?</line>
+          <time>1000</time>
         </Item>         
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>Just what the hell do you/think you're doing?</line>
+          <time>3000</time>
+        </Item>           
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>I told you not to kill anyone</line>
+          <time>3000</time>
+        </Item>                  
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>No more casualties, understand?</line>
+          <time>3000</time>
+        </Item>
         <Item>
           <speaker>Narrator</speaker>
           <position>90 20</position>
-          <line>GO HOME!</line>
-          <time>300000</time>
-        </Item>                                                                    
+          <line>Sorry</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>Guards will be looking for you now</line>
+          <time>3000</time>
+        </Item>                 
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>Don't get caught</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>saving</speaker>
+          <position>0 160</position>
+          <line>saving....</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>ble</speaker>
+          <position>122 62</position>
+          <line>cr 84 1,80</line>
+          <time>0</time>
+        </Item>                                                                
         <Item>
           <speaker>null</speaker>
           <position>95 100</position>
@@ -3975,7 +4012,7 @@
           <speaker>Narrator</speaker>
           <position>90 20</position>
           <line>Who's there?</line>
-          <time>3000</time>
+          <time>1500</time>
         </Item>              
         <Item>
           <speaker>Narrator</speaker>
@@ -4235,6 +4272,507 @@
           <time>4040</time>
         </Item>
       </lines>
+    </Item>
+
+    <!-- dialogs[99] verktygslåda-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>Jerry searched through/the toolbox</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line></line>
+          <time>1000</time>
+        </Item>      
+        <Item>
+          <speaker>null</speaker>
+          <position>122 62</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>       
+    <!-- dialogs[100] verktygslåda 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>Jerry searched through/the toolbox</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>NPC</speaker>
+          <position>122 62</position>
+          <line></line>
+          <time>1000</time>
+        </Item>      
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>But it was empty</line>
+          <time>1000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>   
+
+        <!-- dialogs[101] jerry tittar på lapp-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>          
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>Hm</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <!-- Jerry säger det här -->
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>This could be useful</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>  
+
+    <!-- dialogs[102] kung johnson-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>   
+          <!-- Jerry säger det här -->       
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>It's king Johnson!</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>Soldat</speaker>
+          <position>89 29</position>
+          <line>What can we do for you/your majesty?</line>
+          <time>2500</time>
+        </Item>                
+        <Item>
+          <speaker>Johnson</speaker>
+          <position>188 6</position>
+          <line>I think we're ready</line>
+          <time>2500</time>
+        </Item>
+        <Item>
+          <speaker>Soldat</speaker>
+          <position>89 29</position>
+          <line>Ready for what, your/majesty?</line>
+          <time>2500</time>
+        </Item>  
+        <Item>
+          <speaker>Soldat</speaker>
+          <position>79 33</position>
+          <line>Ready to launch the/nuke, idiot</line>
+          <time>2500</time>
+        </Item>  
+        <Item>
+          <speaker>Johnson</speaker>
+          <position>188 6</position>
+          <line>That's right!</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>Johnson</speaker>
+          <position>188 6</position>
+          <line>I want the entire country of Estonia</line>
+          <time>3000</time>
+        </Item>         
+        <Item>
+          <speaker>Johnson</speaker>
+          <position>188 6</position>
+          <line>to be wiped out in ten minutes</line>
+          <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>No! Not my home!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Johnson</speaker>
+          <position>188 6</position>
+          <line>And please</line>
+          <time>2500</time>
+        </Item>  
+        <Item>
+          <speaker>Johnson</speaker>
+          <position>188 6</position>
+          <line>Call me Rock</line>
+          <time>2500</time>
+        </Item>  
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>122 62</position>
+          <line>I have to stop them</line>
+          <time>2500</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>  
+
+        <!-- dialogs[103] kung johnson 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+
+    <!-- dialogs[104] kung johnson 3-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>95 100</position>
+          <line>Jerry planted the bomb and/left as quickly as he could</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 106 171,55</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
     </Item> 
+
+    <!-- dialogs[105] explosion 1-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Timer</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>4000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 108 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>   
+        
+    <!-- dialogs[106] explosion2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Timer</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>200</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 109 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item> 
+    <!-- dialogs[107] explosion3-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Timer</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>200</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 110 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>     
+    <!-- dialogs[108] explosion3-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Timer</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>200</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 111 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item> 
+    <!-- dialogs[109] explosion3-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Timer</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>200</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 112 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item> 
+        <!-- dialogs[110] explosion3-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Timer</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>5000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 113 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item> 
+
+        <!-- dialogs[111] Akt 2 slut -->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>FURNITURE WARRIOR</line>
+          <time>1500</time>
+        </Item>        
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>What the fuck do/you think you're doing?</line>
+          <time>3000</time>
+        </Item>        
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>King Johnson and his men were going to/nuke Estonia</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>Did I not give you orders/not to kill anyone?</line>
+          <time>3000</time>
+        </Item>          
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>Yes you did sir</line>
+          <time>3000</time>
+        </Item> 
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>And still, you managed to murder/a whole building of people</line>
+          <time>3000</time>
+        </Item>   
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>I had to!</line>
+          <time>3000</time>
+        </Item> 
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>You have to follow orders!</line>
+          <time>3000</time>
+        </Item>  
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>90 20</position>
+          <line>But!</line>
+          <time>3000</time>
+        </Item> 
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>You are immediately releaved of duty</line>
+          <time>3000</time>
+        </Item>  
+        <Item>
+          <speaker>Radio</speaker>
+          <position>90 20</position>
+          <line>Murderer</line>
+          <time>3000</time>
+        </Item>  
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
   </Asset>
 </XnaContent>

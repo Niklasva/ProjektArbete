@@ -99,8 +99,7 @@
     </Item>
         <!-- [8] Kent -->  
     <Item>
-      <!-- Byt till Kents sprite -->
-      <name>ikeakund1</name>
+      <name>kent</name>
       <position>60 75</position>
       <dialogIDs>
         <Item>17</Item>
@@ -133,8 +132,7 @@
     </Item>
             <!-- [11] Kent -->  
     <Item>
-      <!-- Byt till Kents sprite -->
-      <name>ikeakund1</name>
+      <name>kent</name>
       <position>245 75</position>
       <dialogIDs>
         <Item>0</Item>
@@ -373,7 +371,7 @@
     </Item>
     <!-- [32] Badass-->  
     <Item>
-      <name>test</name>
+      <name>skinhead</name>
       <position>250 70</position>
       <dialogIDs>
         <Item>54</Item>
@@ -384,7 +382,7 @@
     </Item>
     <!-- [33] Badass 2-->  
     <Item>
-      <name>test</name>
+      <name>skinhead</name>
       <position>285 80</position>
       <dialogIDs>
         <Item>54</Item>
@@ -395,7 +393,7 @@
     </Item>
     <!-- [34] Badass 3-->  
     <Item>
-      <name>test</name>
+      <name>skinhead</name>
       <position>265 80</position>
       <dialogIDs>
         <Item>55</Item>
@@ -579,7 +577,7 @@
       </dialogIDs>
       <itemID>32</itemID>
       <wantedItem></wantedItem>
-      <lookatplayer>false</lookatplayer>
+      <lookatplayer>true</lookatplayer>
     </Item>    
 
     <!-- [49] brandlarm -->
@@ -618,6 +616,32 @@
       <itemID>0</itemID>
       <wantedItem></wantedItem>
       <lookatplayer>false</lookatplayer>
-    </Item>  
+    </Item>
+
+    <!-- [52] verktygslåda -->
+    <Item>
+      <name>toolbox</name>
+      <position>237 81</position>
+      <dialogIDs>
+        <Item>99</Item>
+        <Item>100</Item>
+      </dialogIDs>
+      <itemID>4</itemID>
+      <wantedItem></wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+
+    <!-- [53] kung rum -->
+    <Item>
+      <name>armechef</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>103</Item>
+        <Item>104</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Bomb</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>   
   </Asset>
 </XnaContent>
