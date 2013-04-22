@@ -643,5 +643,237 @@
       <wantedItem>Bomb</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>   
+
+    <!-- [54] -->
+    <Item>
+      <name>mirandakrog</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>2</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [55] -->
+    <Item>
+      <name>Mur till systemet</name>
+      <position>0 0</position>
+      <dialogIDs>
+      <!--Lägg till dialoger för mur -->
+        <Item>2</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Ladder</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [56] -->
+    <Item>
+      <name>kylskop</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <!--Lägg till kylskåp dialog-->
+        <Item>2</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [57] -->
+    <Item>
+      <!--Står ivägen för en gränd -->
+      <name>man</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <!--Lägg till cool gubbe dialog -->
+        <Item>132</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [58] -->
+    <Item>
+      <!--Skåp som vill ha kniv-->
+      <name>skop</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <!--Lägg till skåp kniv dialog -->
+        <Item>139</Item>
+        <Item>127</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Knife</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [59] -->
+    <Item>
+      <!--Skåp som vill ha alkohol-->
+      <name>skop</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <!--Lägg till skåp alkohol dialog -->
+        <Item>144</Item>
+        <Item>128</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Alcohol</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [60] -->
+    <Item>
+      <!--Knarklangare-->
+      <name>knarklangare</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>133</Item>
+        <Item>134</Item>
+      </dialogIDs>
+      <itemID>49</itemID>
+      <wantedItem>Jacket</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [61] -->
+    <Item>
+      <!--Kille som stulit jacka-->
+      <name>knarklangare</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>135</Item>
+        <Item>136</Item>
+      </dialogIDs>
+      <itemID>48</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [62] -->
+    <Item>
+      <!--Skåp som vill ha knark-->
+      <name>skop</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <!--Lägg till skåp knark dialog -->
+        <Item>145</Item>
+        <Item>129</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Alcohol</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [63] -->
+    <Item>
+      <!--Skåp som vill ha reservdelar-->
+      <name>skop</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <!--Lägg till skåp reservdelar dialog -->
+        <Item>146</Item>
+        <Item>130</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Alcohol</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [64] -->
+    <Item>
+      <!--Man som är reservdelar-->
+      <name>test</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <!--Lägg till reservdelar dialog -->
+        <Item>137</Item>
+        <Item>140</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Saw</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [65] -->
+    <Item>
+      <!--Ett par turister-->
+      <name>test</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>131</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [66] -->
+    <Item>
+      <!--Försäljare-->
+      <name>test</name>
+      <position>0 0</position>
+      <dialogIDs>        
+        <Item>141</Item>
+        <Item>142</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>Wallet</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [67] -->
+    <Item>
+      <!--Knarlangare under alkohol-->
+      <name>test</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>132</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [68] -->
+    <Item>
+      <!--Knivhållare-->
+      <name>knivhallare</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>143</Item>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>41</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [69] -->
+    <Item>
+      <!--Stephen-->
+      <name>Stephen</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>true</lookatplayer>
+    </Item>
+    <!-- [70] -->
+    <Item>
+      <!--Dörr efter telefonsamtalet med stephen. Leder till staden-->
+      <name>doornpc</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>121</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [71] -->
+    <Item>
+      <!--Garderobe i jerrys rum innan krog-->
+      <name>garderobe</name>
+      <position>0 0</position>
+      <dialogIDs>
+        <Item>147</Item>
+        <Item>0</Item>
+      </dialogIDs>
+      <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
   </Asset>
 </XnaContent>

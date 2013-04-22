@@ -389,5 +389,106 @@
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>
     </Item> 
+    <!-- [41] -->
+    <Item>
+      <name>Knife</name>
+      <isPickable>true</isPickable>
+      <description>A sharp knife</description>
+      <textureString>Images/Sprites/knife</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [42] -->
+    <Item>
+      <name>Part of ladder</name>
+      <isPickable>true</isPickable>
+      <description>The upper part of a ladder</description>
+      <textureString>Images/Sprites/upladder</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>4</combinedItemInt>
+    </Item>
+    <!-- [43] -->
+    <Item>
+      <name>Part of ladder</name>
+      <isPickable>true</isPickable>
+      <description>The lower part of a ladder</description>
+      <textureString>Images/Sprites/downladder</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>4</combinedItemInt>
+    </Item>
+    <!-- [44] -->
+    <Item>
+      <name>Ladder</name>
+      <isPickable>true</isPickable>
+      <description>A whole ladder</description>
+      <textureString>Images/Sprites/ladder</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [45] -->
+    <Item>
+      <name>Wallet</name>
+      <isPickable>true</isPickable>
+      <description>Wallet full of money</description>
+      <textureString>Images/Sprites/wallet</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [46] -->
+    <Item>
+      <name>Alcohol</name>
+      <isPickable>true</isPickable>
+      <description>Delicious alcohol</description>
+      <textureString>Images/Sprites/alcohol</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [47] -->
+    <Item>
+      <name>Sign</name>
+      <isPickable>false</isPickable>
+      <description>The sign points to the liquor store</description>
+      <textureString>Images/Sprites/signliquor</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [48] -->
+    <Item>
+      <name>Jacket</name>
+      <isPickable>true</isPickable>
+      <description>A real cool jacket</description>
+      <textureString>Images/Sprites/jacket</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [49] -->
+    <Item>
+      <name>Weed</name>
+      <isPickable>true</isPickable>
+      <description>A bag of weed</description>
+      <textureString>Images/Sprites/weed</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [50] -->
+    <Item>
+      <!--Såg som inte går att plocka upp-->
+      <name>Saw</name>
+      <isPickable>false</isPickable>
+      <description>A saw, seems to be stuck</description>
+      <textureString>Images/Sprites/saw</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [51] -->
+    <Item>
+      <!--Såg som går att plocka upp-->
+      <name>Saw</name>
+      <isPickable>true</isPickable>
+      <description>A saw</description>
+      <textureString>Images/Sprites/saw</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
   </Asset>
 </XnaContent>

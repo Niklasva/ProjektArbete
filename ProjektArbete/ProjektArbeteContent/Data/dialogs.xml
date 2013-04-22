@@ -4774,5 +4774,1340 @@
         </Item>
       </lines>
     </Item>
+
+<!-- dialogs[112] - Jerrys nya lägenhet-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry got home to his new apartment</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>He bought a new one when he/got fired from the military</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Suddenly, he got a phone call</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Hi Jerry!</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Hi! Miranda, how are you?</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Fine, thank you!/I'm going to a bar tonight</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Would you like to join me?</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>I would love to! I'll meet you there</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Great!</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Narrator</speaker>
+          <position>50 30</position>
+          <line>Jerry decided to put on some nicer clothes</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+<!-- dialogs[113] - Jerry och miranda på krogen-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>180 50</position>
+          <line>Hi Jerry!/It's so good to see you again</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Likewise, have you ordered anything?</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Miranda</speaker>
+          <position>180 50</position>
+          <line>I sure have. Ordered for you to</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Player</speaker>
+          <position>50 30</position>
+          <line>Thank you!</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>You know I really like you Miranda./I'm so sad you're not into guys</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Well, you could always change your sex</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Yes...I suppose I could...</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Here comes our drinks./Let's sweep them and hit the dancefloor!</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Let's!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item><!-- dialogs[114] - Jerry och miranda på krogen-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Miranda</speaker>
+          <position>180 50</position>
+          <line>Hi Jerry! It's so good to see you again</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Likewise, have you ordered anything?</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Miranda</speaker>
+          <position>180 50</position>
+          <line>I sure have. Ordered for you to</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Player</speaker>
+          <position>50 30</position>
+          <line>Thank you!</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>You know I really like you Miranda./I'm so sad you're not into guys</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Well, you could always change your sex</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Yes...I suppose I could...</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Miranda</speaker>
+          <position>50 30</position>
+          <line>Here comes our drinks./Let's sweep them and hit the dancefloor!</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Let's!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+<!-- dialogs[115] - Jerry i lägenheten, byta kön, kniven-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Kläder</speaker>
+          <position>0 0</position>
+          <line>vanlig</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry couldn't let that thought go./Maybe he should change his sex</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Then he and Miranda could become two</line>
+          <time>3000</time>
+        </Item>
+          <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Not a bad thought...</line>
+          <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>Narrator</speaker>
+          <position>50 30</position>
+          <line>He decided to collect the things he/needed in the closet in the bathroom.</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>First he needed a knife</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[116] - TOM DIALOG FÖR JAG GJORDE FEL-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Kläder</speaker>
+          <position>0 0</position>
+          <line>vanlig</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>First he needed a knife</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+<!-- dialogs[117] - Jerry i lägenheten, byta kön, spriten-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Great, with a knife in the closet he/now decided to gather som liquor</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Change room</speaker>
+          <position>180 50</position>
+          <line>cr 126 50,50</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+<!-- dialogs[118] - Jerry i lägenheten, byta kön, smärtstillande-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Next he needed some painkillers</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+<!-- dialogs[119] - Jerry i lägenheten, byta kön, reservdelar-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>The only thing now remaining was some spare parts</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+<!-- dialogs[120] - Jerry i lägenheten, bytt kön-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>I do look fancy now! Hope Miranda likes it!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Hi Jerry! I've heard you turned yourself into a woman./How is that working out for you?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Hi! I really don't need to/explain myself yo you!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Sorry, I didn't mean to offend you!/It's been such a long time</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>How do you feel about meeting/me outside your apartment?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>I would like that. It's been/quite awhile since we caught up!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Great! I'll be there in five!</line>
+          <time>7000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[121] - Jerry i lägenheten, när man klickar på dörren-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Had Jerry know what was about to happen he/probably wouldn't have left the comfort of his home</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>But ignorance is bliss and Jerry left to meet his fate</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Change room</speaker>
+          <position>180 50</position>
+          <line>cr 164 50,50</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[122] - Jerry i lägenheten, är utanför-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>180 50</position>
+          <line>So this is what you look like now?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Well, yes. It is</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>You sound weird. What's wrong?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>180 50</position>
+          <line>You know I always loved you, don't you? Jerry?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>180 50</position>
+          <line>And yet, you choose to remain blind</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>I'm sorry...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>180 50</position>
+          <line>No you aren't. It's all about Miranda! That GIRL!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>180 50</position>
+          <line>I'm really sorry Jerry, but what I'm about to do has to be done!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>180 50</position>
+          <line>Goodbye!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <!-- Pistolskott -->
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>NOOOOOO!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[123] - Muren mot systembolaget-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>This wall seems to be in the way of the liquor store</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[124] - Muren mot systembolaget-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>With the ladder, the wall is scaleable</line>
+          <time>3000</time>
+        </Item>
+        <!--Byta rum till systemstaden-->
+        <Item>
+          <speaker>Change Room</speaker>
+          <position>180 50</position>
+          <line>cr 15 280,45</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[125] - Kylskåp-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Jerry tried searching the refrigerator for alcohol</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Turns out there was none there</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[126] - Cool jacka kille under hitta alkohol-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Have you seen a ladder?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Nope, have not</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[127] - skåp kniv-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry put the knife in the cupboard</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Next, he needed some liqour</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Change room</speaker>
+          <position>180 50</position>
+          <line>cr 126 50,50</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[128] - skåp alkohol-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry placed the liquor in the cupboard</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Next, he needed some drugs</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>I do?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry needed drugs</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Change room</speaker>
+          <position>180 50</position>
+          <line>cr 137 50,50</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[129] - skåp drugs-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry placed the drugs in the cupboard</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>The only thing lacking now was some spare parts</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Change room</speaker>
+          <position>180 50</position>
+          <line>cr 149 50,50</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[130] - skåp spare parts-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry took all the things out and started his transformation</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Change room</speaker>
+          <position>180 50</position>
+          <line>cr 162 50,50</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[131] - Jerry frågar om vägen-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Do you know how to get to the liquor store?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Go left, but you need a ladder to get there!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+     <!-- dialogs[132] - Jerry frågar om stege, knarkhandlare-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Hey, have you seen a ladder?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>No, git</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[133] - Köpa knark 1-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Hey, you there, I've lost my cool jacket</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Some punk stole it</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Get it for me and I'll hook you up!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[134] - Köpa knark 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Cool, you got my jacket</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Have some drugs</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[135] - Skaffa jacka-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>You getting this jacket?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>Over my dead body!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Sure...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[136] - Skaffa jacka 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>SHIT! Here! Just take it!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Thank you!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[137] - Skaffa reservdelar-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Hello good sir! May I have your limbs?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>If you can have my limbs?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>You're sick!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <!--Viskandes, läskigt -->
+          <position>180 50</position>
+          <line>Guess I'll have to take'em from him...</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[138] - stödgrupp-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup host</speaker>
+          <position>180 50</position>
+          <line>Welcome back Jerry!/It's been quite a while!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Yes it has, and now I'm back</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup host</speaker>
+          <position>180 50</position>
+          <line>How was your work, it was in the army, was it not?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>Yes it was. Quite stressfull acctually</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Supportgroup host</speaker>
+          <position>180 50</position>
+          <line>Okay, well it's good to see you again</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>change room</speaker>
+          <position>180 50</position>
+          <line>cr 115 50,50</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[139] - kniv skåp-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Jerry needed a knife!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[140] - Skaffa reservdelar 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>AAAH MY LEGS!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>180 50</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      <!-- dialogs[141] - Försäljare 1-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>If you want to buy alcohol, you need money</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      <!-- dialogs[142] - Försäljare 2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>Nice money, here is your alcohol</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      <!-- dialogs[143] - Knivhållare-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerry took a knife</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>give</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      <!-- dialogs[144] - Alkohol skåp-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerry needed some alcohol</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      <!-- dialogs[145] - Knark skåp-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerry needed to find some drugs</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      <!-- dialogs[146] - reservdelar skåp-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerry was looking for spare parts</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+      <!-- dialogs[147] - garderobe-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>Jerrys clothed himself in som fancy clothing</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Kläder</speaker>
+          <position>0 0</position>
+          <line>finkladd</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>öppna dörr</speaker>
+          <position>0 0</position>
+          <line>open 1</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>stäng dörr</speaker>
+          <position>0 0</position>
+          <line>lock 0</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
   </Asset>
 </XnaContent>
