@@ -157,28 +157,34 @@
           <time>1</time>
         </Item>
         <Item>
-          <speaker>Jerry</speaker>
-          <position>100 20</position>
-          <line>Jerry!</line>
-          <time>1500</time>
-        </Item>
-        <Item>
           <speaker>Player</speaker>
           <position>92 100</position>
           <line>Shouldn't you be working?</line>
-          <time>1500</time>
+          <time>2200</time>
         </Item>
         <Item>
           <speaker>Stephen</speaker>
-          <position>30 20</position>
-          <line>Build this thing for me</line>
+          <position>60 20</position>
+          <line>Yo Jerry!</line>
           <time>1500</time>
-        </Item>        
+        </Item>    
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>30 20</position>
+          <line>Can you put this cupboard/together for me</line>
+          <time>1800</time>
+        </Item>   
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>30 20</position>
+          <line>While I go take smoke?</line>
+          <time>2000</time>
+        </Item>              
         <Item>
           <speaker>Player</speaker>
           <position>60 20</position>
           <line>How do I do that?/It is not part of my job</line>
-          <time>1500</time>
+          <time>2500</time>
         </Item>
         <Item>
           <speaker>Stephen</speaker>
@@ -189,8 +195,8 @@
         <Item>
           <speaker>Stephen</speaker>
           <position>30 20</position>
-          <line>Put these pieces together and give/them to the gentleman out there</line>
-          <time>3000</time>
+          <line>Put these pieces together and give/it to the gentleman in support</line>
+          <time>3500</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
@@ -365,7 +371,7 @@
           <speaker>NPC</speaker>
           <position>0 30</position>
           <line>The idiot just left without/putting together my chair</line>
-          <time>3000</time>
+          <time>4500</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -389,7 +395,7 @@
           <speaker>NPC</speaker>
           <position>0 30</position>
           <line>Thank you!</line>
-          <time>3000</time>
+          <time>1000</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -741,7 +747,7 @@
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>Player</speaker>
+          <speaker>Player</speaker> 
           <position>0 0</position>
           <line>It's Jerry/we really have to talk!</line>
           <time>3000</time>
@@ -788,7 +794,7 @@
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>Narrator</speaker>
+          <speaker>Narrator</speaker> 
           <position>0 0</position>
           <line>hadn't only been using their own bedroom</line>
           <time>3000</time>
@@ -838,7 +844,7 @@
           <speaker>NPC</speaker>
           <position>0 0</position>
           <line>I can't help/you getting fired!</line>
-          <time>3000</time>
+          <time>3000</time> 
         </Item>
         <Item>
           <speaker>Kent</speaker>
@@ -847,7 +853,7 @@
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>Player</speaker>
+          <speaker>Player</speaker> 
           <position>0 0</position>
           <line>But it's your fucking fault! All the time/you make me do your work for you!</line>
           <time>3000</time>
@@ -919,7 +925,7 @@
         </Item>
         <Item>
           <speaker>null</speaker>
-          <position>95 100</position>
+          <position>95 100</position> 
           <line>0</line>
           <time>4040</time>
         </Item>
@@ -935,7 +941,7 @@
           <time>1</time>
         </Item>
         <Item>
-          <speaker>Narrator</speaker>
+          <speaker>Narrator</speaker> 
           <position>0 0</position>
           <line>In the following weeks Jerry/struggled to get a job</line>
           <time>3000</time>
@@ -968,14 +974,20 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>0 0</position>
-          <line>Probably because of Stephens never/ending attempts of mending their friendship</line>
+          <line>Probably because of/Stephen's never ending attempts of </line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>0 0</position>
+          <line>mending their friendship</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>saving</speaker>
           <position>0 160</position>
           <line>saving....</line>
-          <time>3000</time>
+          <time>3000</time> 
         </Item>
         <Item>
           <speaker>Narrator</speaker>
@@ -1061,7 +1073,7 @@
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>Random groupmember</speaker>
+          <speaker>Random groupmembe r</speaker>
           <position>85 15</position>
           <line>Can you cut my hair too?</line>
           <time>3000</time>
@@ -1103,7 +1115,7 @@
         </Item>
         <Item>
           <speaker>Narrator</speaker>
-          <position>0 0</position>
+          <position>0 0</position> 
           <line>After the meeting the whole/group sat down and got coffee</line>
           <time>3000</time>
         </Item>
@@ -1139,7 +1151,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>0 0</position>
-          <line>Oh, hi Jerry! We would love to chat with you!/Take a seat!</line>
+          <line>Oh, hi Jerry! We would love to/chat with you! Take a seat!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1179,7 +1191,7 @@
         </Item>
         <Item>
           <speaker>NPC</speaker>
-          <position>180 50</position>
+          <position>180 50</position> 
           <line>And now I'm out of coins</line>
           <time>3000</time>
         </Item>
@@ -1195,7 +1207,7 @@
     <Item>
       <lines>
         <Item>
-          <speaker>Player</speaker>
+          <speaker>Player</speaker> 
           <position>0 0</position>
           <line></line>
           <time>1</time>
@@ -1209,25 +1221,25 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>You are so nice! Thank you!</line>
+          <line>You are so nice!/Thank you!</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>What can I give you in return?</line>
+          <line>What can I give/you in return?</line>
           <time>3000</time>
         </Item>
         <Item>
-          <speaker>Player</speaker>
+          <speaker>Player</speaker> 
           <position>180 50</position>
-          <line>You have a very nice tie. Can I have it?</line>
+          <line>You have a very nice tie/Can I have it?</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>Of course!/I would do anything for the man who gave me coffee!</line>
+          <line>Of course! I would do anything for/the man who gave me coffee!</line>
           <time>3000</time>
         </Item>
          <Item>
@@ -1296,7 +1308,7 @@
         </Item>
         <Item>
           <speaker>Miranda</speaker>
-          <position>220 50</position>
+          <position>220 12</position>
           <line>Hi Jerry!</line>
           <time>3000</time>
         </Item>
@@ -1308,13 +1320,13 @@
         </Item>
         <Item>
           <speaker>Miranda</speaker>
-          <position>220 50</position>
+          <position>220 12</position>
           <line>Yes it is!</line>
           <time>3000</time>
         </Item>
         <Item>
           <speaker>Miranda</speaker>
-          <position>220 50</position>
+          <position>220 12</position>
           <line>You seem like a lovely/person. Where are you from?</line>
           <time>3000</time>
         </Item>
@@ -1421,7 +1433,13 @@
         <Item>
           <speaker>Stephen</speaker>
           <position>166 30</position>
-          <line>Well you are right! Who could?/You are just a disgusting piece of shit!</line>
+          <line>Well you are right!/Who could?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>166 30</position>
+          <line>You are just a disgusting/piece of shit!</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1527,7 +1545,7 @@
         <Item>
           <speaker>Stephen</speaker>
           <position>112 90</position>
-          <line>Hey Jerry, do you remember when we first met?</line>
+          <line>Hey Jerry, do you/remember when we first met?</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1545,7 +1563,7 @@
         <Item>
           <speaker>Stephen</speaker>
           <position>112 90</position>
-          <line>And do you remember how/high he was next day in class?</line>
+          <line>   And do you remember how high/he was next day in class?</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -1633,7 +1651,13 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>After that night, despite the rough end,/Stephen and Jerry became better friends again</line>
+          <line>After that night,/despite the rough end,</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Stephen and Jerry became/better friends again</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2035,7 +2059,7 @@
           <position>180 50</position>
           <line>A HAIR CUT!?</line>
           <time>1000</time>
-        </Item>
+        </Item>r
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
@@ -2209,15 +2233,29 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>The built thing could then be used to/open doors or they could be given to other people</line>
-          <time>3000</time>
+          <line>The built thing could then be used to/open doors</line>
+          <time>1500</time>
         </Item>
         <Item>
           <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Clicking on an item, closing/the inventory and then using it on a door unlocked it</line>
+          <line>or they could be/given to other people</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>Clicking on an item,/closing the inventory</line>
           <time>3000</time>
         </Item>
+
+        <Item>
+          <speaker>Narrator</speaker>
+          <position>180 50</position>
+          <line>and then using it on a door/unlocked it</line>
+          <time>3000</time>
+        </Item>
+
         <Item>
           <speaker>null</speaker>
           <position>95 100</position>
@@ -2238,25 +2276,25 @@
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>If only I looked better I could get a job!</line>
-          <time>3000</time>
+          <line>If only I looked better/I could get a job</line>
+          <time>1500</time>
         </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
-          <line>And be out of here!</line>
-          <time>3000</time>
+          <line>and be out of here!</line>
+          <time>1500</time>
         </Item>
         <Item>
           <speaker>null</speaker>
-          <position>95 100</position>
+          <position>95 100</position> 
           <line>0</line>
           <time>4040</time>
         </Item>
       </lines>
     </Item>
     <!-- dialogs[51] - ge -->
-    <Item>
+    <Item> 
       <lines>
         <Item>
           <speaker>Player</speaker>
@@ -2363,6 +2401,12 @@
           <position>180 50</position>
           <line>Even though he didn't know yet,/that day would change his life forever</line>
           <time>3000</time>
+        </Item>
+         <Item>
+          <speaker>saving</speaker>
+          <position>0 160</position>
+          <line>saving....</line>
+          <time>1000</time>
         </Item>
         <Item>
           <speaker>Narrator</speaker>
@@ -2481,9 +2525,9 @@
           <time>1</time>
         </Item>
         <Item>
-          <speaker>NPC</speaker>
+          <speaker>Narrator</speaker>
           <position>180 50</position>
-          <line>Jerry finds a nice outfit in the closet</line>
+          <line>Jerry finds a nice/outfit in the closet</line>
           <time>3000</time>
         </Item>
         <Item>
@@ -2949,7 +2993,7 @@
         <Item>
           <speaker>NPC</speaker>
           <position>239 28</position>
-          <line>In the army we don't go around talking to/people by their wimpy real names</line>
+          <line>  In the army we don't go around talking to/people by their wimpy real names</line>
           <time>4000</time>
         </Item>
         <Item>
@@ -3663,7 +3707,7 @@
         </Item>        
         <Item>
           <speaker>NPC</speaker>
-          <position>122 62</position>
+          <position>122 62</position>r
           <line>Here's a little something/for helping me</line>
           <time>1500</time>
         </Item>
@@ -3692,7 +3736,7 @@
           <time>1</time>
         </Item>        
         <Item>
-          <speaker>NPC</speaker>
+          <speaker>NPC</speaker> 
           <position>122 62</position>
           <line>Thanks again for the water</line>
           <time>1000</time>
@@ -3816,7 +3860,7 @@
           <position>122 62</position>
           <line>*PING*</line>
           <time>1000</time>
-        </Item>              
+        </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>122 62</position>
@@ -4725,7 +4769,7 @@
           <time>3000</time>
         </Item>          
         <Item>
-          <speaker>Radio</speaker>
+          <speaker>Narrator</speaker>
           <position>90 20</position>
           <line>Yes you did sir</line>
           <time>3000</time>
@@ -4774,7 +4818,6 @@
         </Item>
       </lines>
     </Item>
-
 <!-- dialogs[112] - Jerrys nya lägenhet-->
     <Item>
       <lines>
