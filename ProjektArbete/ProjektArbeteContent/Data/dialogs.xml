@@ -2059,7 +2059,7 @@
           <position>180 50</position>
           <line>A HAIR CUT!?</line>
           <time>1000</time>
-        </Item>r
+        </Item>
         <Item>
           <speaker>NPC</speaker>
           <position>180 50</position>
@@ -3707,7 +3707,7 @@
         </Item>        
         <Item>
           <speaker>NPC</speaker>
-          <position>122 62</position>r
+          <position>122 62</position>
           <line>Here's a little something/for helping me</line>
           <time>1500</time>
         </Item>
