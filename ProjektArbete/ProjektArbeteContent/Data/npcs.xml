@@ -661,7 +661,17 @@
       <position>0 0</position>
       <dialogIDs>
       <!--Lägg till dialoger för mur -->
-        <Item>2</Item>
+        <Item>123</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <Item>124</Item>
+        <!--Hur många gånger man än gör det ska man komma vidare-->
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>Ladder</wantedItem>
@@ -866,7 +876,7 @@
     <Item>
       <!--Garderobe i jerrys rum innan krog-->
       <name>garderobe</name>
-      <position>0 0</position>
+      <position>50 15</position>
       <dialogIDs>
         <Item>147</Item>
         <Item>0</Item>

@@ -3211,27 +3211,27 @@
       <doors>
         <Item>
           <!--dörr till jerrys rum-->
-          <position>20 95</position>
+          <position>236 22</position>
           <nextRoomID>117</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>125 25</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--dörr till bad-->
-          <position>70 95</position>
+          <position>47 22</position>
           <nextRoomID>118</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>150 70</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--dörr till kök-->
-          <position>140 20</position>
+          <position>304 28</position>
           <nextRoomID>119</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>64 64</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3241,9 +3241,9 @@
       <dialogID>112</dialogID>
       <save>false</save>
     </Item>
-    <!-- Rum [117] - nya lagenheten jerrrys rum -->
+    <!-- Rum [116] - TOMMT RUM FÖR JAG HAR VISST GJORT FEL, IGEN! -->
     <Item>
-      <backgroundID>jerrysrum2</backgroundID>
+      <backgroundID>supportgrupp</backgroundID>
       <npcID>
       </npcID>
       <itemID>
@@ -3252,15 +3252,40 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>2220 95</position>
+          <nextRoomID>115</nextRoomID>
+          <door2Position>280 42</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>dorr</textureID>
+        </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>138</dialogID>
+      <save>false</save>
+    </Item>
+    <!-- Rum [117] - nya lagenheten jerrrys rum -->
+    <Item>
+      <backgroundID>jerrysrum2</backgroundID>
+      <npcID>
+        <Item>71</Item>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+          <position>11 45</position>
           <nextRoomID>116</nextRoomID>
-          <door2Position>230 42</door2Position>
+          <door2Position>150 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
-          <position>20 95</position>
+          <!--ÄNDRA HÄR SEN -->
+          <position>111 45</position>
           <nextRoomID>120</nextRoomID>
           <door2Position>140 42</door2Position>
           <isLocked>false</isLocked>
@@ -3283,12 +3308,12 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>45 147</position>
           <nextRoomID>116</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>63 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
-          <textureID>dorr</textureID>
+          <textureID>horisontelldorr</textureID>
         </Item>
       </doors>
       <song>null</song>
@@ -3306,9 +3331,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>17 39</position>
           <nextRoomID>116</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>294 34</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3353,25 +3378,28 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <!--Jerrys rum-->
+          <position>236 22</position>
           <nextRoomID>122</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>125 25</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
-          <position>70 95</position>
+          <!--Badrum-->
+          <position>47 22</position>
           <nextRoomID>123</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>150 70</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
-          <position>140 20</position>
+          <!--Kök -->
+          <position>304 28</position>
           <nextRoomID>124</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>64 64</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3392,9 +3420,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>11 45</position>
           <nextRoomID>121</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>250 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3416,12 +3444,12 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>45 147</position>
           <nextRoomID>121</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>63 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
-          <textureID>dorr</textureID>
+          <textureID>horisontelldorr</textureID>
         </Item>
       </doors>
       <song>null</song>
@@ -3441,9 +3469,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>17 39</position>
           <nextRoomID>121</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>294 34</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3465,9 +3493,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>45 147</position>
           <nextRoomID>126</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>63 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3489,35 +3517,36 @@
       <doors>
         <Item>
           <!--Jerrys rum-->
-          <position>20 95</position>
+          <position>236 22</position>
           <nextRoomID>127</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>125 25</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--badrum -->
-          <position>70 95</position>
+          <position>47 22</position>
           <nextRoomID>125</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>150 70</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--köket-->
-          <position>140 20</position>
+          <position>304 28</position>
           <nextRoomID>128</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>64 64</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--Staden-->
-          <position>20 140</position>
+          <position>0 150</position>
           <nextRoomID>131</nextRoomID>
+          <!--ÄNDRA-->
           <door2Position>280 42</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
@@ -3541,9 +3570,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>111 45</position>
           <nextRoomID>126</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>250 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3565,9 +3594,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>17 39</position>
           <nextRoomID>126</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>294 34</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3598,7 +3627,7 @@
         </Item>
         <!-- Dörr till systemet-->
         <Item>
-          <position>20 20</position>
+          <position>226 52</position>
           <nextRoomID>15</nextRoomID>
           <door2Position>0 45</door2Position>
           <isLocked>false</isLocked>
@@ -3840,9 +3869,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>45 147</position>
           <nextRoomID>137</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>63 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3864,35 +3893,36 @@
       <doors>
         <Item>
           <!--Jerrys rum-->
-          <position>20 95</position>
+          <position>326 22</position>
           <nextRoomID>138</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>125 25</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--badrum -->
-          <position>70 95</position>
+          <position>47 22</position>
           <nextRoomID>136</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>150 70</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--köket-->
-          <position>140 20</position>
+          <position>304 28</position>
           <nextRoomID>139</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>64 64</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--Staden-->
-          <position>20 140</position>
+          <position>0 150</position>
           <nextRoomID>141</nextRoomID>
+          <!--BYT HÄR SEN-->
           <door2Position>280 42</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
@@ -3915,9 +3945,9 @@
       <doors>
         <Item>
           <!--Ut till lägenhet-->
-          <position>20 95</position>
+          <position>111 45</position>
           <nextRoomID>137</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>250 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -3940,9 +3970,9 @@
       <doors>
         <Item>
           <!--Ut till lägenhet-->
-          <position>20 95</position>
+          <position>17 39</position>
           <nextRoomID>137</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>294 34</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -4243,9 +4273,9 @@
       </itemPosition>
       <doors>
         <Item>
-          <position>20 95</position>
+          <position>45 147</position>
           <nextRoomID>149</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>63 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -4267,35 +4297,36 @@
       <doors>
         <Item>
           <!--Jerrys rum-->
-          <position>20 95</position>
+          <position>236 22</position>
           <nextRoomID>150</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>125 25</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--badrum -->
-          <position>70 95</position>
+          <position>47 22</position>
           <nextRoomID>148</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>150 70</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--köket-->
-          <position>140 20</position>
+          <position>304 28</position>
           <nextRoomID>151</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>64 64</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
         </Item>
         <Item>
           <!--Staden-->
-          <position>20 140</position>
+          <position>0 150</position>
           <nextRoomID>153</nextRoomID>
+          <!--ÄNDRA HÄR SEN-->
           <door2Position>280 42</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
@@ -4318,9 +4349,9 @@
       <doors>
         <Item>
           <!--Ut till lägenhet-->
-          <position>20 95</position>
+          <position>111 45</position>
           <nextRoomID>149</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>250 9</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>
@@ -4342,9 +4373,9 @@
       <doors>
         <Item>
           <!--Ut till lägenhet-->
-          <position>20 95</position>
+          <position>17 39</position>
           <nextRoomID>149</nextRoomID>
-          <door2Position>280 42</door2Position>
+          <door2Position>294 34</door2Position>
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>dorr</textureID>

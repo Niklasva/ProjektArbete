@@ -3536,7 +3536,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>122 62</position>
-          <line>NICE POND</line>
+          <line>Jerry dipped his toes in the water</line>
           <time>1000</time>
         </Item>                         
         <Item>
@@ -3582,7 +3582,7 @@
         <Item>
           <speaker>Narrator</speaker>
           <position>122 62</position>
-          <line>Still a neat pond!</line>
+          <line>With toes weat and bottle filled/this pond is useless</line>
           <time>1000</time>
         </Item>                               
         <Item>
@@ -5407,7 +5407,7 @@
         <Item>
           <speaker>Change Room</speaker>
           <position>180 50</position>
-          <line>cr 15 280,45</line>
+          <line>cr 15 272,55</line>
           <time>3000</time>
         </Item>
         <Item>
