@@ -405,7 +405,7 @@
       <description>The upper part of a ladder</description>
       <textureString>Images/Sprites/upladder</textureString>
       <isCombinable>true</isCombinable>
-      <combinedItemInt>4</combinedItemInt>
+      <combinedItemInt>44</combinedItemInt>
     </Item>
     <!-- [43] -->
     <Item>
@@ -414,7 +414,7 @@
       <description>The lower part of a ladder</description>
       <textureString>Images/Sprites/downladder</textureString>
       <isCombinable>true</isCombinable>
-      <combinedItemInt>4</combinedItemInt>
+      <combinedItemInt>44</combinedItemInt>
     </Item>
     <!-- [44] -->
     <Item>
@@ -487,6 +487,16 @@
       <isPickable>true</isPickable>
       <description>A saw</description>
       <textureString>Images/Sprites/saw</textureString>
+      <isCombinable>true</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>
+    <!-- [52] -->
+    <Item>
+      <!--Reservdelar-->
+      <name>Leg</name>
+      <isPickable>true</isPickable>
+      <description>These are perfect</description>
+      <textureString>Images/Sprites/spareparts</textureString>
       <isCombinable>true</isCombinable>
       <combinedItemInt>0</combinedItemInt>
     </Item>

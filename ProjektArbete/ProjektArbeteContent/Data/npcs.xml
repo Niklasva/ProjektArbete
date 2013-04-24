@@ -657,8 +657,8 @@
     </Item>
     <!-- [55] -->
     <Item>
-      <name>Mur till systemet</name>
-      <position>0 0</position>
+      <name>mur</name>
+      <position>14 16</position>
       <dialogIDs>
       <!--Lägg till dialoger för mur -->
         <Item>123</Item>
@@ -673,7 +673,7 @@
     <!-- [56] -->
     <Item>
       <name>kylskop</name>
-      <position>0 0</position>
+      <position>270 22</position>
       <dialogIDs>
         <Item>125</Item>
       </dialogIDs>
@@ -684,8 +684,8 @@
     <!-- [57] -->
     <Item>
       <!--Cool jacka snubbe under alkohol står ivägen för gränd -->
-      <name>man</name>
-      <position>0 0</position>
+      <name>test</name>
+      <position>64 82</position>
       <dialogIDs>
         <Item>148</Item>
       </dialogIDs>
@@ -697,7 +697,7 @@
     <Item>
       <!--Skåp som vill ha kniv-->
       <name>skop</name>
-      <position>0 0</position>
+      <position>152 20</position>
       <dialogIDs>
         <Item>139</Item>
         <Item>127</Item>
@@ -710,7 +710,7 @@
     <Item>
       <!--Skåp som vill ha alkohol-->
       <name>skop</name>
-      <position>0 0</position>
+      <position>152 20</position>
       <dialogIDs>
         <Item>144</Item>
         <Item>128</Item>
@@ -722,8 +722,8 @@
     <!-- [60] -->
     <Item>
       <!--Knarklangare-->
-      <name>knarklangare</name>
-      <position>0 0</position>
+      <name>test</name>
+      <position>140 30</position>
       <dialogIDs>
         <Item>133</Item>
         <Item>134</Item>
@@ -734,53 +734,56 @@
     </Item>
     <!-- [61] -->
     <Item>
-      <!--Kille som stulit jacka-->
-      <name>knarklangare</name>
-      <position>0 0</position>
+      <!--Kille med cool jacka-->
+      <!--ÄNDRA HANS DIALOG-->
+      <name>test</name>
+      <position>120 30</position>
       <dialogIDs>
         <Item>135</Item>
         <Item>136</Item>
       </dialogIDs>
       <itemID>48</itemID>
-      <wantedItem>null</wantedItem>
+      <wantedItem>Knife</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>
     <!-- [62] -->
     <Item>
       <!--Skåp som vill ha knark-->
       <name>skop</name>
-      <position>0 0</position>
+      <position>152 20</position>
       <dialogIDs>
         <Item>145</Item>
         <Item>129</Item>
       </dialogIDs>
       <itemID>0</itemID>
-      <wantedItem>Alcohol</wantedItem>
+      <wantedItem>Weed</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
     <!-- [63] -->
     <Item>
       <!--Skåp som vill ha reservdelar-->
       <name>skop</name>
-      <position>0 0</position>
+      <position>152 20</position>
       <dialogIDs>
         <Item>146</Item>
         <Item>130</Item>
       </dialogIDs>
       <itemID>0</itemID>
-      <wantedItem>Alcohol</wantedItem>
+      <wantedItem>Leg</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
     <!-- [64] -->
     <Item>
       <!--Man som är reservdelar-->
+      <!--HAN BÄR PÅ EN KROPP-->
       <name>test</name>
-      <position>0 0</position>
+      <position>250 60</position>
       <dialogIDs>
         <Item>137</Item>
         <Item>140</Item>
+        <Item>0</Item>
       </dialogIDs>
-      <itemID>0</itemID>
+      <itemID>52</itemID>
       <wantedItem>Saw</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
@@ -788,7 +791,7 @@
     <Item>
       <!--Ett par turister-->
       <name>test</name>
-      <position>0 0</position>
+      <position>90 60</position>
       <dialogIDs>
         <Item>131</Item>
       </dialogIDs>
@@ -800,12 +803,12 @@
     <Item>
       <!--Försäljare-->
       <name>test</name>
-      <position>0 0</position>
+      <position>170 70</position>
       <dialogIDs>        
         <Item>141</Item>
         <Item>142</Item>
       </dialogIDs>
-      <itemID>0</itemID>
+      <itemID>46</itemID>
       <wantedItem>Wallet</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>
@@ -813,7 +816,7 @@
     <Item>
       <!--Knarlangare under alkohol-->
       <name>test</name>
-      <position>0 0</position>
+      <position>285 60</position>
       <dialogIDs>
         <Item>132</Item>
       </dialogIDs>
@@ -825,10 +828,10 @@
     <Item>
       <!--Knivhållare-->
       <name>knivhallare</name>
-      <position>0 0</position>
+      <position>170 60</position>
       <dialogIDs>
         <Item>143</Item>
-        <Item>0</Item>
+        <Item>116</Item>
       </dialogIDs>
       <itemID>41</itemID>
       <wantedItem>null</wantedItem>
@@ -868,6 +871,19 @@
         <Item>0</Item>
       </dialogIDs>
       <itemID>0</itemID>
+      <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>
+    <!-- [72] -->
+    <Item>
+      <!--Knivhållare 2-->
+      <name>knivhallare</name>
+      <position>170 60</position>
+      <dialogIDs>
+        <Item>143</Item>
+        <Item>116</Item>
+      </dialogIDs>
+      <itemID>41</itemID>
       <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
