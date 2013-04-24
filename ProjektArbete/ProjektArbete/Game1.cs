@@ -80,7 +80,7 @@ namespace ProjektArbete
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[21];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[54];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 
@@ -152,11 +152,11 @@ namespace ProjektArbete
             // Ändrar musikvolymen om man pratar med folk
             if (Registry.pause)
             {
-                MediaPlayer.Volume = 0.5f;          // Låg volym
+                MediaPlayer.Volume = 0.1f;          // Låg volym
             }
-            else
+            else if (!Registry.pause)
             {
-                MediaPlayer.Volume = 1;             // Hög volym (MINA ÖRON)
+                MediaPlayer.Volume = 0.5f;             // Hög volym (MINA ÖRON)
             }
 
             mouseState = Mouse.GetState();
