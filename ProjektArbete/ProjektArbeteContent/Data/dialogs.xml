@@ -5276,7 +5276,7 @@
         <Item>
           <speaker>Change room</speaker>
           <position>180 50</position>
-          <line>cr 164 50,50</line>
+          <line>cr 164 55,60</line>
           <time>0</time>
         </Item>
         <Item>
@@ -6143,6 +6143,41 @@
           <position>0 0</position>
           <line>lock 0</line>
           <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+    <!-- dialogs[148] - Cool jacka kille under alkohol-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>I have a cool jacket!</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line>Have you seen a ladder?</line>
+          <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>NPC</speaker>
+          <position>0 0</position>
+          <line>I HAVE A COOL JACKET!</line>
+          <time>3000</time>
         </Item>
         <Item>
           <speaker>null</speaker>

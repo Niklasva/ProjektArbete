@@ -664,14 +664,7 @@
         <Item>123</Item>
         <Item>124</Item>
         <Item>124</Item>
-        <Item>124</Item>
-        <Item>124</Item>
-        <Item>124</Item>
-        <Item>124</Item>
-        <Item>124</Item>
-        <Item>124</Item>
-        <Item>124</Item>
-        <!--Hur många gånger man än gör det ska man komma vidare-->
+      <!--Hur många gånger man än gör det ska man komma vidare-->
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>Ladder</wantedItem>
@@ -682,8 +675,7 @@
       <name>kylskop</name>
       <position>0 0</position>
       <dialogIDs>
-        <!--Lägg till kylskåp dialog-->
-        <Item>2</Item>
+        <Item>125</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
@@ -691,12 +683,11 @@
     </Item>
     <!-- [57] -->
     <Item>
-      <!--Står ivägen för en gränd -->
+      <!--Cool jacka snubbe under alkohol står ivägen för gränd -->
       <name>man</name>
       <position>0 0</position>
       <dialogIDs>
-        <!--Lägg till cool gubbe dialog -->
-        <Item>132</Item>
+        <Item>148</Item>
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
@@ -708,7 +699,6 @@
       <name>skop</name>
       <position>0 0</position>
       <dialogIDs>
-        <!--Lägg till skåp kniv dialog -->
         <Item>139</Item>
         <Item>127</Item>
       </dialogIDs>
@@ -722,7 +712,6 @@
       <name>skop</name>
       <position>0 0</position>
       <dialogIDs>
-        <!--Lägg till skåp alkohol dialog -->
         <Item>144</Item>
         <Item>128</Item>
       </dialogIDs>
@@ -762,7 +751,6 @@
       <name>skop</name>
       <position>0 0</position>
       <dialogIDs>
-        <!--Lägg till skåp knark dialog -->
         <Item>145</Item>
         <Item>129</Item>
       </dialogIDs>
@@ -776,7 +764,6 @@
       <name>skop</name>
       <position>0 0</position>
       <dialogIDs>
-        <!--Lägg till skåp reservdelar dialog -->
         <Item>146</Item>
         <Item>130</Item>
       </dialogIDs>
@@ -790,7 +777,6 @@
       <name>test</name>
       <position>0 0</position>
       <dialogIDs>
-        <!--Lägg till reservdelar dialog -->
         <Item>137</Item>
         <Item>140</Item>
       </dialogIDs>
@@ -864,7 +850,7 @@
     <Item>
       <!--Dörr efter telefonsamtalet med stephen. Leder till staden-->
       <name>doornpc</name>
-      <position>0 0</position>
+      <position>0 150</position>
       <dialogIDs>
         <Item>121</Item>
       </dialogIDs>
