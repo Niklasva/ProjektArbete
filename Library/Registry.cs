@@ -16,15 +16,15 @@ namespace Library
     /// </summary>
     public static class Registry
     {
-        public static Vector2 playerPosition;
-        public static Room currentRoom;
-        public static Item[] items;
-        public static Dialog[] dialogs;
-        public static NPC[] npcs;
-        public static Room[] rooms;
-        public static bool inventoryInUse = false;
-        public static bool changingRoom = false;
-        public static Vector2 nextRoomDoorPosition;
+        public static Vector2 playerPosition;           // Spelarens position  
+        public static Room currentRoom;                 // Rummet som spelaren är i
+        public static Item[] items;                     // Data för alla items i spelet
+        public static Dialog[] dialogs;                 // Data för alla dialoger i spelet
+        public static NPC[] npcs;                       // Data för alla NPC:er
+        public static Room[] rooms;                     // Data för alla rum
+        public static bool inventoryInUse = false;      // om inventoryn är uppe
+        public static bool changingRoom = false;        // Byta rum
+        public static Vector2 nextRoomDoorPosition;     // Positionen som spelaren flyttas till om hen går genom en dörr
         public static Song music;
         public static bool musbol = false;
         public static bool pause = false;
