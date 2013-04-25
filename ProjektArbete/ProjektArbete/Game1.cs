@@ -70,7 +70,7 @@ namespace ProjektArbete
             cursor2 = Content.Load<Texture2D>(@"Images/MenuImages/cursor2");
             waitcursor = Content.Load<Texture2D>(@"Images/MenuImages/wait");
             player = new Player(this, Content.Load<Texture2D>(@"Images/AnimatedSprites/vanligTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"),
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/jerrybaby"),
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/damjerry"), Content.Load<Texture2D>(@"Images/AnimatedSprites/jerrybaby"),
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/jkeaTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/skalligTexture"),
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/finJerry"), Content.Load<Texture2D>(@"Images/AnimatedSprites/fallTexture"), 
                 Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
@@ -80,7 +80,7 @@ namespace ProjektArbete
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[1];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[163];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 
@@ -134,14 +134,9 @@ namespace ProjektArbete
                     // Rättar till spelarens position så att man inte går utanför spelområdet (det icke-transparenta i masken)
                     player.Stop(IntersectMask(Registry.currentRoom.getMask()));
                 }
-
-                if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-                    stateOfGame = StateOfGame.menu;
             }
             else if (stateOfGame == StateOfGame.menu)
             {
-                if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-                    stateOfGame = StateOfGame.game;
                 menu.Update(gameTime, Window.ClientBounds);
                 if (menu.ClickedOnNew)
                     stateOfGame = StateOfGame.game;

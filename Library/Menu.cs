@@ -12,6 +12,10 @@ namespace Library
         private Sprite background;
         private AnimatedSprite openSprite;
         private AnimatedSprite newSprite;
+        private AnimatedSprite openSprite2;
+        private AnimatedSprite newSprite2;
+        private AnimatedSprite newNowSprite;
+        private AnimatedSprite openNowSprite;
 
         private bool clickedOnOpen = false;
         private bool clickedOnNew = false;
@@ -22,14 +26,20 @@ namespace Library
             background = new Sprite(backgroundTexture, Vector2.Zero, 0, new Point(backgroundTexture.Width, backgroundTexture.Height));
             openSprite = new AnimatedSprite(openTexture, new Vector2(12, 130), 0, new Point(openTexture.Width / 2, openTexture.Height), new Point(0, 0),
                 new Point(2, 0), 16);
-            newSprite = new AnimatedSprite(newTexture, new Vector2(12, 144), 0, new Point(newTexture.Width / 2, newTexture.Height), new Point(1, 0),
+            newSprite = new AnimatedSprite(newTexture, new Vector2(12, 144), 0, new Point(newTexture.Width / 2, newTexture.Height), new Point(0, 0),
                 new Point(2, 0), 16);
+            openSprite2 = new AnimatedSprite(openTexture, new Vector2(12, 130), 0, new Point(openTexture.Width / 2, openTexture.Height), new Point(1, 0),
+                new Point(2, 0), 16);
+            newSprite2 = new AnimatedSprite(newTexture, new Vector2(12, 144), 0, new Point(newTexture.Width / 2, newTexture.Height), new Point(1, 0),
+                new Point(2, 0), 16);
+            openNowSprite = openSprite;
+            newNowSprite = newSprite;
         }
 
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
-            
-            
+
+
             clickedOnNew = false;
             clickedOnOpen = false;
             if (Mousecontrol.clickedOnItem(openSprite.Position, openSprite.FrameSize, Mousecontrol.clicked()))
@@ -47,16 +57,27 @@ namespace Library
             if (clickedOnOpen)
                 openSprite.Update(gameTime, clientBounds);
 
-            if (Mousecontrol.mouseOverItem(openSprite.Position, openSprite.FrameSize)) { openSprite.Update(gameTime, clientBounds); }
-            else if (Mousecontrol.mouseOverItem(newSprite.Position, newSprite.FrameSize)) { newSprite.Update(gameTime, clientBounds); }
+            if (Mousecontrol.mouseOverItem(openSprite.Position, openSprite.FrameSize))
+            {
+                openNowSprite = openSprite2;
+            }
+            else if (Mousecontrol.mouseOverItem(newSprite.Position, newSprite.FrameSize))
+            {
+                newNowSprite = newSprite2;
+            }
+            else
+            {
+                newNowSprite = newSprite;
+                openNowSprite = openSprite;
+            }
 
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             background.Draw(gameTime, spriteBatch, 1f, 0.3333333f);
-            openSprite.Draw(gameTime, spriteBatch, 1f, 0.3333332f, true);
-            newSprite.Draw(gameTime, spriteBatch, 1f, 0.3333332f, true);
+            openNowSprite.Draw(gameTime, spriteBatch, 1f, 0.3333332f, true);
+            newNowSprite.Draw(gameTime, spriteBatch, 1f, 0.3333332f, true);
         }
 
         public bool ClickedOnNew
