@@ -88,7 +88,7 @@
     </Item>
     <!-- [7] Chefen -->  
     <Item>
-      <name>ikeakund2</name>
+      <name>chef</name>
       <position>165 80</position>
       <dialogIDs>
       </dialogIDs>
@@ -785,7 +785,7 @@
       </dialogIDs>
       <itemID>52</itemID>
       <wantedItem>Saw</wantedItem>
-      <lookatplayer>false</lookatplayer>
+      <lookatplayer>true</lookatplayer>
     </Item>
     <!-- [65] -->
     <Item>
@@ -797,7 +797,7 @@
       </dialogIDs>
       <itemID>0</itemID>
       <wantedItem>null</wantedItem>
-      <lookatplayer>false</lookatplayer>
+      <lookatplayer>true</lookatplayer>
     </Item>
     <!-- [66] -->
     <Item>

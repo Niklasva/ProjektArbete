@@ -825,7 +825,7 @@
     </Item>
         <!-- Rum [31] - I staden letandes efter salongen(1)-->
     <Item>
-      <backgroundID>jerryslagenhet</backgroundID>
+      <backgroundID>jerryslagenhetljus</backgroundID>
       <npcID>
       </npcID>
       <itemID>
@@ -3404,7 +3404,7 @@
           <textureID>door</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>stad</song>
       <dialogID>115</dialogID>
       <save>false</save>
     </Item>
