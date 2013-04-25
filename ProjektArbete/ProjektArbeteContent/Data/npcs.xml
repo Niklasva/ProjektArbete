@@ -43,7 +43,6 @@
       <name>bertiljkea</name>
       <position>110 30</position>
       <dialogIDs>
-        <Item>7</Item>
         <Item>8</Item>
       </dialogIDs>
       <itemID>5</itemID>

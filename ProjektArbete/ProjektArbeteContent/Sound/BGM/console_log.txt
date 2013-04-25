@@ -1,0 +1,4 @@
+Opening Log file:console_log.txt
+processOffline()
+processOnline()
+processOnline() finished

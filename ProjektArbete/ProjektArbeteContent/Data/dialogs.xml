@@ -5252,7 +5252,7 @@
         <Item>
           <speaker>Change room</speaker>
           <position>180 50</position>
-          <line>cr 164 55,60</line>
+          <line>cr 164 120,51</line>
           <time>0</time>
         </Item>
         <Item>
@@ -5271,6 +5271,12 @@
           <position>0 0</position>
           <line></line>
           <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>200 50</position>
+          <line></line>
+          <time>6000</time>
         </Item>
         <Item>
           <speaker>Stephen</speaker>
@@ -5282,56 +5288,61 @@
           <speaker>Player</speaker>
           <position>180 50</position>
           <line>Well, yes. It is</line>
-          <time>1500</time>
+          <time>3000</time>
         </Item>
         <Item>
           <speaker>Player</speaker>
           <position>180 50</position>
-          <line>You sound weird. What's wrong?</line>
+          <line>You sound weird./What's wrong?</line>
           <time>2000</time>
         </Item>
         <Item>
           <speaker>Stephen</speaker>
           <position>200 50</position>
           <line>You know I always loved/you, don't you? Jerry?</line>
-          <time>2000</time>
-        </Item>
-        <Item>
-          <speaker>Stephen</speaker>
-          <position>200 50</position>
-          <line>And yet, you choose to remain blind</line>
-          <time>2000</time>
-        </Item>
-        <Item>
-          <speaker>Player</speaker>
-          <position>180 50</position>
-          <line>I'm sorry...</line>
-          <time>2000</time>
-        </Item>
-        <Item>
-          <speaker>Stephen</speaker>
-          <position>200 50</position>
-          <line>No you aren't./It's all about Miranda! That GIRL!</line>
-          <time>3000</time>
-        </Item>
-        <Item>
-          <speaker>Stephen</speaker>
-          <position>200 50</position>
-          <line>I'm really sorry Jerry,/but what I'm about to do has to be done!</line>
           <time>4000</time>
         </Item>
         <Item>
           <speaker>Stephen</speaker>
           <position>200 50</position>
-          <line>Goodbye!</line>
+          <line>And yet, you choose to remain blind</line>
+          <time>2500</time>
+        </Item>
+        <Item>
+          <speaker>Player</speaker>
+          <position>180 50</position>
+          <line>I'm sorry...</line>
+          <time>1500</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>100 50</position>
+          <line>No you aren't./It's all about Miranda!</line>
+          <time>2500</time>
+        </Item>        
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>170 50</position>
+          <line>That girl!</line>
+          <time>1000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>150 50</position>
+          <line>I'm really sorry Jerry,/but what I'm about to do</line>
           <time>3000</time>
         </Item>
         <Item>
-          <!-- Pistolskott -->
-          <speaker>Player</speaker>
-          <position>180 50</position>
-          <line>NOOOOOO!</line>
-          <time>5000</time>
+          <speaker>Stephen</speaker>
+          <position>150 50</position>
+          <line>has to be done!</line>
+          <time>1000</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>200 50</position>
+          <line>cr 166 120,51</line>
+          <time>0</time>
         </Item>
         <Item>
           <speaker>null</speaker>
@@ -6173,6 +6184,47 @@
           <position>0 0</position>
           <line>I HAVE A COOL JACKET!</line>
           <time>3000</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+        <!-- dialogs[149] - slut2-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>150 50</position>
+          <line></line>
+          <time>1300</time>
+        </Item>
+        <Item>
+          <speaker>Stephen</speaker>
+          <position>150 50</position>
+          <line>goodbye</line>
+          <time>1000</time>
+        </Item>        
+        <Item>
+          <speaker>Player</speaker>
+          <position>150 50</position>
+          <line>No!</line>
+          <time>900</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>cr 167 1000,1000</line>
+          <time>0</time>
         </Item>
         <Item>
           <speaker>null</speaker>

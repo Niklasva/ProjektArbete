@@ -604,6 +604,19 @@ Content\Images\Backgrounds\systemet.xnb
 Content\Images\Backgrounds\systemetfg.xnb
 Content\Images\Backgrounds\systemetmask.xnb
 Content\Images\AnimatedSprites\damjerry.xnb
+Content\Sound\BGM\pino.xnb
+Content\Sound\BGM\smyg.xnb
+Content\Sound\BGM\stad.xnb
+Content\Sound\BGM\pratmusikradio.xnb
+Content\Images\Backgrounds\slut1.xnb
+Content\Images\Backgrounds\slut1fg.xnb
+Content\Images\Backgrounds\slut1mask.xnb
+Content\Images\Backgrounds\slut2.xnb
+Content\Images\Backgrounds\slut2fg.xnb
+Content\Images\Backgrounds\slut2mask.xnb
+Content\Images\Backgrounds\slut3.xnb
+Content\Images\Backgrounds\slut3fg.xnb
+Content\Images\Backgrounds\slut3mask.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma
 Content\Sound\BGM\air.wma
@@ -611,3 +624,7 @@ Content\Sound\BGM\sjukhus.wma
 Content\Sound\BGM\desert.wma
 Content\Sound\BGM\placeholder1.wma
 Content\Sound\BGM\placeholder2.wma
+Content\Sound\BGM\pino.wma
+Content\Sound\BGM\smyg.wma
+Content\Sound\BGM\stad.wma
+Content\Sound\BGM\pratmusikradio.wma

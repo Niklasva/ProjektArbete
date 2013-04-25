@@ -71,9 +71,11 @@
       </npcID>
       <itemID>
         <Item>6</Item>
+        <Item>5</Item>
       </itemID>
       <itemPosition>
         <Item>95,70</Item>
+        <Item>80,80</Item>
       </itemPosition>
       <doors>
         <Item>
@@ -562,7 +564,7 @@
           <textureID>door</textureID>
         </Item>
       </doors>
-      <song>placeholder2</song>
+      <song>pratmusikradio</song>
       <dialogID>23</dialogID><save>false</save>
     </Item>
             <!-- Rum [21] - Supportgrupp fika(1)-->
@@ -663,7 +665,7 @@
           <textureID>door</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>placeholder2</song>
       <dialogID>30</dialogID><save>true</save>
     </Item>
             <!-- Rum [25] - Jerrys rum efter support-->
@@ -818,7 +820,7 @@
           <textureID>lagerdorr</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>placeholder2</song>
       <dialogID>36</dialogID><save>true</save>
     </Item>
         <!-- Rum [31] - I staden letandes efter salongen(1)-->
@@ -848,7 +850,7 @@
           <textureID>lagerdorr</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>stad</song>
       <dialogID>0</dialogID><save>false</save>
     </Item>
               <!-- Rum [32] - I staden letandes efter salongen(2)-->
@@ -1347,8 +1349,8 @@
           <textureID>lagerdorr</textureID>
         </Item>
       </doors>
-      <song>null</song>
-      <dialogID>0</dialogID><save>false</save>
+      <song>sjukhus</song>
+      <dialogID>44</dialogID><save>false</save>
     </Item>
             <!-- Rum [50] - Tutorial rum-->
     <Item>
@@ -3191,7 +3193,7 @@
           <textureID>door</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>placeholder2</song>
       <dialogID>138</dialogID>
       <save>false</save>
     </Item>
@@ -3235,7 +3237,7 @@
           <textureID>door</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>stad</song>
       <dialogID>112</dialogID>
       <save>false</save>
     </Item>
@@ -3360,7 +3362,7 @@
           <textureID>door</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>pratmusikradio</song>
       <dialogID>114</dialogID>
       <save>false</save>
     </Item>
@@ -4732,7 +4734,7 @@
           <textureID>horisontelldorr</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>placeholder2</song>
       <dialogID>120</dialogID>
       <save>false</save>
     </Item>
@@ -4786,7 +4788,7 @@
     </Item>
     <!-- Rum [164] - stad vid jerrys lägenhet samtal bli skjuten-->
     <Item>
-      <backgroundID>stad23</backgroundID>
+      <backgroundID>slut1</backgroundID>
       <npcID>
       </npcID>
       <itemID>
@@ -4795,14 +4797,14 @@
       </itemPosition>
       <doors>
         <!--Dörr till jerrys lägenhet-->
-        <Item>
-          <position>600 60</position>
-          <nextRoomID>46</nextRoomID>
-          <door2Position>150 60</door2Position>
-          <isLocked>false</isLocked>
-          <key>null</key>
-          <textureID>staddorr</textureID>
-        </Item>
+          <Item>
+            <position>0 114</position>
+            <nextRoomID>159</nextRoomID>
+            <door2Position>280 45</door2Position>
+            <isLocked>false</isLocked>
+            <key>null</key>
+            <textureID>granddoor</textureID>
+          </Item>
       </doors>
       <song>null</song>
       <dialogID>122</dialogID>
@@ -4828,6 +4830,36 @@
           <key>null</key>
           <textureID>staddorr</textureID>
         </Item>
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+        <!-- Rum [166] - stad vid jerrys lägenhet samtal bli skjuten-->
+    <Item>
+      <backgroundID>slut2</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>149</dialogID>
+      <save>false</save>
+    </Item>        
+    <!-- Rum [166] - stad vid jerrys lägenhet samtal bli skjuten-->
+    <Item>
+      <backgroundID>slut3</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
       </doors>
       <song>null</song>
       <dialogID>0</dialogID>
