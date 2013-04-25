@@ -722,7 +722,7 @@
     <!-- [60] -->
     <Item>
       <!--Knarklangare-->
-      <name>test</name>
+      <name>knarkis</name>
       <position>140 30</position>
       <dialogIDs>
         <Item>133</Item>
@@ -741,6 +741,7 @@
       <dialogIDs>
         <Item>135</Item>
         <Item>136</Item>
+        <Item>0</Item>
       </dialogIDs>
       <itemID>48</itemID>
       <wantedItem>Knife</wantedItem>
@@ -807,6 +808,7 @@
       <dialogIDs>        
         <Item>141</Item>
         <Item>142</Item>
+        <Item>0</Item>
       </dialogIDs>
       <itemID>46</itemID>
       <wantedItem>Wallet</wantedItem>
@@ -815,7 +817,7 @@
     <!-- [67] -->
     <Item>
       <!--Knarlangare under alkohol-->
-      <name>test</name>
+      <name>knarkis</name>
       <position>285 60</position>
       <dialogIDs>
         <Item>132</Item>
