@@ -258,7 +258,7 @@
     </Item>
             <!-- [22] Fel salong -->  
     <Item>
-      <name>ikeakund1</name>
+      <name>fris</name>
       <position>146 83</position>
       <dialogIDs>
         <Item>45</Item>
@@ -683,7 +683,7 @@
     <!-- [57] -->
     <Item>
       <!--Cool jacka snubbe under alkohol står ivägen för gränd -->
-      <name>test</name>
+      <name>jacka</name>
       <position>64 82</position>
       <dialogIDs>
         <Item>148</Item>
@@ -735,7 +735,7 @@
     <Item>
       <!--Kille med cool jacka-->
       <!--ÄNDRA HANS DIALOG-->
-      <name>test</name>
+      <name>jacka</name>
       <position>120 30</position>
       <dialogIDs>
         <Item>135</Item>
@@ -776,7 +776,7 @@
     <Item>
       <!--Man som är reservdelar-->
       <!--HAN BÄR PÅ EN KROPP-->
-      <name>test</name>
+      <name>lodis</name>
       <position>250 60</position>
       <dialogIDs>
         <Item>137</Item>
@@ -802,7 +802,7 @@
     <!-- [66] -->
     <Item>
       <!--Försäljare-->
-      <name>test</name>
+      <name>systemkille</name>
       <position>170 70</position>
       <dialogIDs>        
         <Item>141</Item>
