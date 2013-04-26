@@ -64,7 +64,7 @@
 
           <!-- [5] jkeakund 2 -->  
     <Item>
-      <name>ikeakund2</name>
+      <name>stolkille</name>
       <position>110 35</position>
       <dialogIDs>
         <Item>9</Item>
@@ -176,7 +176,7 @@
                   <!-- [15] Miranda -->  
     <Item>
       <name>fikamiranda</name>
-      <position>260 17</position>
+      <position>260 20</position>
       <dialogIDs>
         <Item>25</Item>
       </dialogIDs>
@@ -187,7 +187,7 @@
               <!-- [16] kille som behöver slips -->  
     <Item>
       <name>villhaslips</name>
-      <position>150 17</position>
+      <position>150 20</position>
       <dialogIDs>
         <Item>50</Item>
         <Item>28</Item>
@@ -198,7 +198,7 @@
     </Item>
                   <!-- [17] kille som har slips -->  
     <Item>
-      <name>test</name>
+      <name>slipskille</name>
       <position>150 30</position>
       <dialogIDs>
         <Item>26</Item>
@@ -281,7 +281,7 @@
 <!-- [24] Miranda på dejt 2 -->  
     <Item>
       <name>grrl</name>
-      <position>146 83</position>
+      <position>260 83</position>
       <dialogIDs>
         <Item>40</Item>
       </dialogIDs>
@@ -292,7 +292,7 @@
     <!-- [25] Miranda på dejt 3 -->  
     <Item>
       <name>grrl</name>
-      <position>146 83</position>
+      <position>30 83</position>
       <dialogIDs>
         <Item>41</Item>
       </dialogIDs>
@@ -347,7 +347,7 @@
     <!-- [30] Miranda tom -->  
     <Item>
       <name>grrl</name>
-      <position>146 83</position>
+      <position>30 83</position>
       <dialogIDs>
         <Item>0</Item>
       </dialogIDs>

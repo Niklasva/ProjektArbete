@@ -638,6 +638,11 @@ Content\Sound\BGM\smyg.xnb
 Content\Sound\BGM\stad.xnb
 Content\Sound\BGM\pratmusikradio.xnb
 Content\Sound\Voice\150.xnb
+Content\Images\Characters\slipskille.xnb
+Content\Images\Characters\slipskilletalk.xnb
+Content\Images\Characters\stolkille.xnb
+Content\Images\Characters\stolkilletalk.xnb
+Content\Sound\BGM\trakiglat.xnb
 Content\Sound\BGM\song.wma
 Content\Sound\BGM\acmidi.wma
 Content\Sound\BGM\air.wma
@@ -649,3 +654,4 @@ Content\Sound\BGM\pino.wma
 Content\Sound\BGM\smyg.wma
 Content\Sound\BGM\stad.wma
 Content\Sound\BGM\pratmusikradio.wma
+Content\Sound\BGM\trakiglat.wma

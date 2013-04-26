@@ -465,7 +465,7 @@
     <Item>
       <name>Weed</name>
       <isPickable>true</isPickable>
-      <description>A bag of weed</description>
+      <description>A rolled joint</description>
       <textureString>Images/Sprites/weed</textureString>
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>

@@ -1371,7 +1371,7 @@
           <textureID>lagerdorr</textureID>
         </Item>
       </doors>
-      <song>null</song>
+      <song>trakiglat</song>
       <dialogID>46</dialogID><save>false</save>
     </Item>
     <!-- Rum [51] - Tutorial rum 2-->
@@ -2235,10 +2235,10 @@
         <Item>0</Item>
       </npcID>
       <itemID>
-        <Item>0</Item>
+        <Item>52</Item>
       </itemID>
       <itemPosition>
-        <Item>0,0</Item>
+        <Item>200,60</Item>
       </itemPosition>
       <doors>        
         <Item>
@@ -3065,7 +3065,7 @@
           <textureID>desertdoor</textureID>
         </Item> 
       </doors>
-      <song>null</song>
+      <song>placeholder2</song>
       <dialogID>0</dialogID>
       <save>false</save>
     </Item> 
