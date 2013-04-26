@@ -278,6 +278,14 @@ namespace Library
             {
                 Registry.playersClothes = Registry.WhichClothes.fall;
             }
+            if (activeLine == "finkladd2")
+            {
+                Registry.playersClothes = Registry.WhichClothes.finkladd2;
+            }
+            if (activeLine == "nyjerry")
+            {
+                Registry.playersClothes = Registry.WhichClothes.vanliga2;
+            }
         }
     }
 

@@ -28,7 +28,7 @@ namespace Library
         public static Song music;
         public static bool musbol = false;
         public static bool pause = false;
-        public enum WhichClothes { vanliga, militar, kvinna, babyjerry, jkea, vanligaKort, finkladd, fall };
+        public enum WhichClothes { vanliga, militar, kvinna, babyjerry, jkea, vanligaKort, finkladd, fall, vanliga2, finkladd2 };
         public static WhichClothes playersClothes = WhichClothes.jkea;
         public static string currentSong = "";
         public static List<Item> itemsInInventory = new List<Item>();
@@ -102,6 +102,15 @@ namespace Library
                 playersClothes = WhichClothes.finkladd;
             if (data[2] == "babyjerry")
                 playersClothes = WhichClothes.babyjerry;
+            if (data[2] == "vanligakort")
+                playersClothes = WhichClothes.vanligaKort;
+            if (data[2] == "fall")
+                playersClothes = WhichClothes.fall;
+            if (data[2] == "vanliga2")
+                playersClothes = WhichClothes.vanliga2;
+            if (data[2] == "finkladd2")
+                playersClothes = WhichClothes.finkladd2;
+
             string[] playerPositionString = data[3].Split(':');
             float tempPlayerX;
             float tempPlayerY;

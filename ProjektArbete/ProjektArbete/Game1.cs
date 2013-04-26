@@ -72,7 +72,8 @@ namespace ProjektArbete
             player = new Player(this, Content.Load<Texture2D>(@"Images/AnimatedSprites/vanligTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/militarTexture"),
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/damjerry"), Content.Load<Texture2D>(@"Images/AnimatedSprites/jerrybaby"),
                 Content.Load<Texture2D>(@"Images/AnimatedSprites/jkeaTexture"), Content.Load<Texture2D>(@"Images/AnimatedSprites/skalligTexture"),
-                Content.Load<Texture2D>(@"Images/AnimatedSprites/finJerry"), Content.Load<Texture2D>(@"Images/AnimatedSprites/fallTexture"), 
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/finJerry"), Content.Load<Texture2D>(@"Images/AnimatedSprites/fallTexture"),
+                Content.Load<Texture2D>(@"Images/AnimatedSprites/nyJerry"), Content.Load<Texture2D>(@"Images/AnimatedSprites/finkladd2"), 
                 Content.Load<Texture2D>(@"Images/Sprites/invBackground"), Window.ClientBounds);
 
             menu = new Menu(Content.Load<Texture2D>(@"Images/MenuImages/splash"), Content.Load<Texture2D>(@"Images/MenuImages/OPENBUTTON"), Content.Load<Texture2D>(@"Images/MenuImages/NEWBUTTON"));
@@ -80,7 +81,7 @@ namespace ProjektArbete
             Registry.npcs = Content.Load<Library.NPC[]>(@"Data/npcs");              // Här händer viktiga saker. NPC-listan i registret skapas
             Registry.dialogs = Content.Load<Library.Dialog[]>(@"Data/dialogs");     // Dialoglistan i Registry skapas
             Registry.rooms = Content.Load<Library.Room[]>(@"Data/rooms");           // Rum i Registry skapas
-            Registry.currentRoom = Registry.rooms[65];                               // Startrummet
+            Registry.currentRoom = Registry.rooms[71];                               // Startrummet
             Registry.currentRoom.LoadContent(this);                                 // GO!
         }
 

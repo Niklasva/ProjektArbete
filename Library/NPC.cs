@@ -85,7 +85,7 @@ namespace Library
         public void Update(GameTime gameTime, Rectangle clientBounds)
         {
             // När man klickar på NPC:n så börjar dialogen
-            if (Mousecontrol.clickedOnItem(position, new Point(stillTexture.Width / 3, stillTexture.Height), Mousecontrol.clicked()) && !isTalking)
+            if (Mousecontrol.clickedOnItem(position, new Point(stillTexture.Width / 3, stillTexture.Height), Mousecontrol.clicked()) && !isTalking && !Registry.inventoryInUse)
             {
                 Talk();
             }
