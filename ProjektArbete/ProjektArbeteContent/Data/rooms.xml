@@ -2320,7 +2320,15 @@
           <isLocked>false</isLocked>
           <key>null</key>
           <textureID>lobbysight</textureID>
-        </Item>       
+        </Item>   
+        <Item>
+          <position>306 40</position>
+          <nextRoomID>168</nextRoomID>
+          <door2Position>10 60</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>desertdoor</textureID>
+        </Item>     
       </doors>
       <song>null</song>
       <dialogID>0</dialogID>
@@ -2358,10 +2366,14 @@
       <itemID>
         <Item>30</Item>
         <Item>31</Item>
+        <Item>53</Item>
+        <Item>54</Item>
       </itemID>
       <itemPosition>
         <Item>50,23</Item>
         <Item>170,89</Item>
+        <Item>133,27</Item>
+        <Item>65,31</Item>
       </itemPosition>
       <doors>           
       </doors>
@@ -2379,9 +2391,13 @@
       </npcID>
       <itemID>
         <Item>30</Item>
+        <Item>53</Item>
+        <Item>54</Item>
       </itemID>
       <itemPosition>
         <Item>50,23</Item>
+        <Item>133,27</Item>
+        <Item>65,31</Item>
       </itemPosition>
       <doors>           
       </doors>
@@ -2394,13 +2410,15 @@
     <Item>
       <backgroundID>intembascell2</backgroundID>
       <npcID>
-        <Item>51</Item>
+        <Item>0</Item>
       </npcID>
       <itemID>
-        <Item>0</Item>
+        <Item>53</Item>
+        <Item>54</Item>
       </itemID>
       <itemPosition>
-        <Item>0,0</Item>
+        <Item>133,27</Item>
+        <Item>65,31</Item>
       </itemPosition>
       <doors>           
       </doors>
@@ -2417,9 +2435,13 @@
       </npcID>
       <itemID>
         <Item>33</Item>
+        <Item>53</Item>
+        <Item>54</Item>
       </itemID>
       <itemPosition>
         <Item>50,23</Item>
+        <Item>133,27</Item>
+        <Item>65,31</Item>
       </itemPosition>
       <doors>
       <Item>
@@ -4850,7 +4872,7 @@
       <dialogID>149</dialogID>
       <save>false</save>
     </Item>        
-    <!-- Rum [166] - stad vid jerrys lägenhet samtal bli skjuten-->
+    <!-- Rum [167] - stad vid jerrys lägenhet samtal bli skjuten-->
     <Item>
       <backgroundID>slut3</backgroundID>
       <npcID>
@@ -4863,6 +4885,53 @@
       </doors>
       <song>null</song>
       <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+        <!-- Rum [168] - upptäckt 2-->
+    <Item>
+      <backgroundID>upptackt</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+        <Item>
+        <position>0 0</position>
+          <nextRoomID>85</nextRoomID>
+          <door2Position>1000 1000</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr1</textureID>
+        </Item>         
+
+        <Item>
+        <position>0 139</position>
+          <nextRoomID>85</nextRoomID>
+          <door2Position>1000 1000</door2Position>
+          <isLocked>false</isLocked>
+          <key>null</key>
+          <textureID>ductdorr2</textureID>
+        </Item>  
+      </doors>
+      <song>null</song>
+      <dialogID>0</dialogID>
+      <save>false</save>
+    </Item>
+            <!-- Rum [169] - transformation-->
+    <Item>
+      <backgroundID>black</backgroundID>
+      <npcID>
+      </npcID>
+      <itemID>
+      </itemID>
+      <itemPosition>
+      </itemPosition>
+      <doors>
+      </doors>
+      <song>null</song>
+      <dialogID>150</dialogID>
       <save>false</save>
     </Item>
   </Asset>

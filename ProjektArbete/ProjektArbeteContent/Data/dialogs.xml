@@ -5594,7 +5594,7 @@
           <speaker>Narrator</speaker>
           <position>180 50</position>
           <line>Jerry took all the things out/and started his transformation</line>
-          <time>7000</time>
+          <time>2000</time>
         </Item>
         <Item>
           <speaker>Kvinna</speaker>
@@ -5605,7 +5605,7 @@
         <Item>
           <speaker>Change room</speaker>
           <position>180 50</position>
-          <line>cr 162 50,50</line>
+          <line>cr 169 1000,1000</line>
           <time>0</time>
         </Item>
         <Item>
@@ -6224,6 +6224,35 @@
           <speaker>null</speaker>
           <position>95 100</position>
           <line>cr 167 1000,1000</line>
+          <time>0</time>
+        </Item>
+        <Item>
+          <speaker>null</speaker>
+          <position>95 100</position>
+          <line>0</line>
+          <time>4040</time>
+        </Item>
+      </lines>
+    </Item>
+        <!-- dialogs[150] - timer övergång-->
+    <Item>
+      <lines>
+        <Item>
+          <speaker>Player</speaker>
+          <position>0 0</position>
+          <line></line>
+          <time>1</time>
+        </Item>        
+        <Item>
+          <speaker>timer</speaker>
+          <position>150 50</position>
+          <line></line>
+          <time>2000</time>
+        </Item>
+        <Item>
+          <speaker>teleport</speaker>
+          <position>200 50</position>
+          <line>cr 161 63,19</line>
           <time>0</time>
         </Item>
         <Item>

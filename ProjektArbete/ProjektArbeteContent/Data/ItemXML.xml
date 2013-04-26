@@ -499,6 +499,26 @@
       <textureString>Images/Sprites/spareparts</textureString>
       <isCombinable>true</isCombinable>
       <combinedItemInt>0</combinedItemInt>
+    </Item>    
+
+    <!-- [53] -->
+    <Item>
+      <name>Air duct</name>
+      <isPickable>false</isPickable>
+      <description>Jerry could fit in there</description>
+      <textureString>Images/Sprites/duct</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
+    </Item>    
+
+    <!-- [54] -->
+    <Item>
+      <name>Fire alarm</name>
+      <isPickable>false</isPickable>
+      <description>Go on! Press it!</description>
+      <textureString>Images/Sprites/fire</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
     </Item>
   </Asset>
 </XnaContent>
