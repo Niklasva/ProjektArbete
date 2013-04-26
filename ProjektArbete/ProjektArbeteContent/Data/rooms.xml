@@ -2238,7 +2238,7 @@
         <Item>52</Item>
       </itemID>
       <itemPosition>
-        <Item>200,60</Item>
+        <Item>113,124</Item>
       </itemPosition>
       <doors>        
         <Item>
@@ -3608,6 +3608,8 @@
       <backgroundID>jerryskok2</backgroundID>
       <npcID>
         <Item>56</Item>
+        <!--Knvihållare -->
+        <Item>68</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -3984,6 +3986,7 @@
     <Item>
       <backgroundID>jerryskok2</backgroundID>
       <npcID>
+        <!--Knvihållare -->
         <Item>68</Item>
       </npcID>
       <itemID>
@@ -4391,6 +4394,8 @@
     <Item>
       <backgroundID>jerryskok2</backgroundID>
       <npcID>
+        <!--Knvihållare -->
+        <Item>68</Item>
       </npcID>
       <itemID>
       </itemID>
@@ -4792,6 +4797,8 @@
     <Item>
       <backgroundID>jerryskok2</backgroundID>
       <npcID>
+        <!--Knvihållare -->
+        <Item>68</Item>
       </npcID>
       <itemID>
       </itemID>
