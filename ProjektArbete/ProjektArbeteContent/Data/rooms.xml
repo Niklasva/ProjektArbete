@@ -4260,12 +4260,12 @@
       <backgroundID>grand2</backgroundID>
       <npcID>
         <Item>61</Item>
+        <Item>73</Item>
       </npcID>
       <itemID>
-        <Item>50</Item>
       </itemID>
       <itemPosition>
-        <Item>52,92</Item>
+        <Item></Item>
       </itemPosition>
       <doors>
         <!--Dörr åt höger-->
@@ -4662,12 +4662,11 @@
     <Item>
       <backgroundID>grand2</backgroundID>
       <npcID>
+        <Item>73</Item>
       </npcID>
       <itemID>
-        <Item>51</Item>
       </itemID>
       <itemPosition>
-        <Item>52,92</Item>
       </itemPosition>
       <doors>
         <!--Dörr åt höger-->

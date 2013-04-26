@@ -736,7 +736,7 @@
       <!--Kille med cool jacka-->
       <!--ÄNDRA HANS DIALOG-->
       <name>jacka</name>
-      <position>120 30</position>
+      <position>120 33</position>
       <dialogIDs>
         <Item>135</Item>
         <Item>136</Item>
@@ -886,6 +886,18 @@
       </dialogIDs>
       <itemID>41</itemID>
       <wantedItem>null</wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>    
+    <!-- [73] verktygslåda m. såg -->
+    <Item>
+      <name>toolbox</name>
+      <position>52 68</position>
+      <dialogIDs>
+        <Item>99</Item>
+        <Item>100</Item>
+      </dialogIDs>
+      <itemID>51</itemID>
+      <wantedItem></wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
   </Asset>
