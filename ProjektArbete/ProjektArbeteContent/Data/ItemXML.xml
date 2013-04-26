@@ -519,6 +519,15 @@
       <textureString>Images/Sprites/fire</textureString>
       <isCombinable>false</isCombinable>
       <combinedItemInt>0</combinedItemInt>
+    </Item>    
+    <!-- [55] -->
+    <Item>
+      <name>Broken bottle</name>
+      <isPickable>true</isPickable>
+      <description>Very sharp</description>
+      <textureString>Images/Sprites/brokenbottle</textureString>
+      <isCombinable>false</isCombinable>
+      <combinedItemInt>0</combinedItemInt>
     </Item>
   </Asset>
 </XnaContent>

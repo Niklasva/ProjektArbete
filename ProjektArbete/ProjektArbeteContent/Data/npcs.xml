@@ -88,7 +88,7 @@
     </Item>
     <!-- [7] Chefen -->  
     <Item>
-      <name>chef</name>
+      <name>boss</name>
       <position>165 80</position>
       <dialogIDs>
       </dialogIDs>
@@ -743,7 +743,7 @@
         <Item>0</Item>
       </dialogIDs>
       <itemID>48</itemID>
-      <wantedItem>Knife</wantedItem>
+      <wantedItem>Broken bottle</wantedItem>
       <lookatplayer>true</lookatplayer>
     </Item>
     <!-- [62] -->
@@ -898,6 +898,18 @@
       </dialogIDs>
       <itemID>51</itemID>
       <wantedItem></wantedItem>
+      <lookatplayer>false</lookatplayer>
+    </Item>    
+    <!-- [74] soptunna -->
+    <Item>
+      <name>trashcan</name>
+      <position>123 25</position>
+      <dialogIDs>
+        <Item>78</Item>
+        <Item>79</Item>
+      </dialogIDs>
+      <itemID>55</itemID>
+      <wantedItem>null</wantedItem>
       <lookatplayer>false</lookatplayer>
     </Item>
   </Asset>

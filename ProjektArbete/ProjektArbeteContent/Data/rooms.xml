@@ -3633,8 +3633,10 @@
       <npcID>
       </npcID>
       <itemID>
+        <Item>55</Item>
       </itemID>
       <itemPosition>
+        <Item>95,116</Item>
       </itemPosition>
       <!--Dörr till höger-->
       <doors>
@@ -4235,10 +4237,13 @@
       <backgroundID>grand</backgroundID>
       <npcID>
         <Item>60</Item>
+        <Item>74</Item>
       </npcID>
       <itemID>
+        <Item>25</Item>
       </itemID>
       <itemPosition>
+        <Item>123,25</Item>
       </itemPosition>
       <doors>
         <!--Dörr neråt-->
